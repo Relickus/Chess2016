@@ -1,19 +1,21 @@
-#ifndef CPAWN_H
-#define	CPAWN_H
+#ifndef CKING_H
+#define	CKING_H
 
-class CPawn {
+class CKing : public CPiece{
 public:
-    CPawn();
-    CPawn(const CPawn& orig);
-    virtual ~CPawn();
+    CKing();
+    CKing(const CKing& orig);
+    virtual ~CKing();
     
     bool isChecked() const;
-    
+
+    void printPiece() const;
+
 private:
 
 };
 
 
 
-#endif	/* CPAWN_H */
+#endif	/* CKING_H */
 

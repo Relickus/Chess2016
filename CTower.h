@@ -1,16 +1,20 @@
-#ifndef CPAWN_H
-#define	CPAWN_H
+#ifndef CTOWER_H
+#define	CTOWER_H
 
-class CPawn {
+class CTower : public CPiece{
 public:
-    CPawn();
-    CPawn(const CPawn& orig);
-    virtual ~CPawn();
+    CTower();
+    CTower(const CTower& orig);
+    virtual ~CTower();
+    
+
+    void printPiece() const;
+
 private:
 
 };
 
 
 
-#endif	/* CPAWN_H */
+#endif	/* CTOWER_H */
 

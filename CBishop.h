@@ -1,16 +1,21 @@
-#ifndef CPAWN_H
-#define	CPAWN_H
+#ifndef CBISHOP_H
+#define	CBISHOP_H
 
-class CPawn {
+class CBishop : public CPiece {
 public:
-    CPawn();
-    CPawn(const CPawn& orig);
-    virtual ~CPawn();
+    CBishop();
+    CBishop(const CBishop& orig);
+    virtual ~CBishop();
+    
+
+    void printPiece() const;
+
+
 private:
 
 };
 
 
 
-#endif	/* CPAWN_H */
+#endif	/* CBISHOP_H */
 

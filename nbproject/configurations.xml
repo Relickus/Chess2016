@@ -4,15 +4,22 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>AllExceptions.h</itemPath>
+      <itemPath>AllPieces.h</itemPath>
       <itemPath>CBishop.h</itemPath>
       <itemPath>CBoard.h</itemPath>
+      <itemPath>CGameSession.h</itemPath>
       <itemPath>CKing.h</itemPath>
       <itemPath>CKnight.h</itemPath>
       <itemPath>COLOR.h</itemPath>
       <itemPath>CPawn.h</itemPath>
       <itemPath>CPiece.h</itemPath>
+      <itemPath>CPiecesBox.h</itemPath>
       <itemPath>CQueen.h</itemPath>
+      <itemPath>CSlot.h</itemPath>
       <itemPath>CTower.h</itemPath>
+      <itemPath>CVisitor.h</itemPath>
+      <itemPath>FIGURENAME.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -21,6 +28,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>CBoard.cpp</itemPath>
+      <itemPath>CPawn.cpp</itemPath>
+      <itemPath>CPiece.cpp</itemPath>
+      <itemPath>CPiecesBox.cpp</itemPath>
+      <itemPath>CSlot.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -44,10 +56,21 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <commandLine>-g -std=c++11</commandLine>
+        </ccTool>
       </compileType>
+      <item path="AllExceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AllPieces.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CBishop.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CBoard.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="CBoard.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CGameSession.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CKing.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -55,13 +78,29 @@
       </item>
       <item path="COLOR.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CPawn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="CPawn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPiece.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CPiece.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CPiecesBox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPiecesBox.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CQueen.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CSlot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSlot.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CTower.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CVisitor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FIGURENAME.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -86,9 +125,17 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="AllExceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AllPieces.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CBishop.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CBoard.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="CBoard.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CGameSession.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CKing.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -96,13 +143,29 @@
       </item>
       <item path="COLOR.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CPawn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="CPawn.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CPiece.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CPiece.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CPiecesBox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPiecesBox.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CQueen.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CSlot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CSlot.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CTower.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CVisitor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FIGURENAME.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

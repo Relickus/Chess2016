@@ -1,16 +1,20 @@
-#ifndef CPAWN_H
-#define	CPAWN_H
+#ifndef CKNIGHT_H
+#define	CKNIGHT_H
 
-class CPawn {
+class CKnight : public CPiece{
 public:
-    CPawn();
-    CPawn(const CPawn& orig);
-    virtual ~CPawn();
+    CKnight();
+    CKnight(const CKnight& orig);
+    virtual ~CKnight();
+    
+
+    void printPiece() const;
+
 private:
 
 };
 
 
 
-#endif	/* CPAWN_H */
+#endif	/* CKNIGHT_H */
 

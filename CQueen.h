@@ -1,16 +1,21 @@
-#ifndef CPAWN_H
-#define	CPAWN_H
+#ifndef CQUEEN_H
+#define	CQUEEN_H
 
-class CPawn {
+class CQueen : public CPiece{
 public:
-    CPawn();
-    CPawn(const CPawn& orig);
-    virtual ~CPawn();
+    CQueen();
+    CQueen(COLOR color);
+    CQueen(const CQueen& orig);
+    virtual ~CQueen();
+    
+
+    void printPiece() const;
+
 private:
 
 };
 
 
 
-#endif	/* CPAWN_H */
+#endif	/* CQUEEN_H */
 
