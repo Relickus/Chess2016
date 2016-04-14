@@ -1,6 +1,9 @@
 #ifndef CQUEEN_H
 #define	CQUEEN_H
 
+#include "CPiece.h"
+#include "COLOR.h"
+
 class CQueen : public CPiece{
 public:
     CQueen();

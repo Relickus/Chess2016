@@ -22,7 +22,7 @@ public:
     
     //CPiece & operator=(const CPiece & oth); // ?? reference na CPiece
     
-private:
+protected:
     
     bool moveUp();
     bool moveDown();

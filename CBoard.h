@@ -10,7 +10,10 @@ public:
     virtual ~CBoard();
     
     void printBoard() const;
+    
 private:
+    
+    bool createPieces();
     
     CSlot slotsArr[8][8];
     const int width;

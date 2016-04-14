@@ -16,5 +16,10 @@ CSlot::~CSlot(){
 }
 
 CPiece * CSlot::getHeldPiece() const{
+    return heldPiece;
+}
+
+void CSlot::setHeldPiece(CPiece* p){
     
+    heldPiece = p;
 }

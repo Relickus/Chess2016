@@ -9,6 +9,18 @@ using namespace std;
 //    v.printPiece(this);
 //}
 
+CPiece::CPiece() {
+
+}
+
+CPiece::CPiece(COLOR color) {
+
+}
+CPiece::~CPiece(){
+    
+}
+
+
 bool CPiece::moveDown(){
     
     if(yPos <= 0)

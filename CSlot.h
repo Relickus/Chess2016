@@ -10,6 +10,7 @@ public:
     virtual ~CSlot();
     
     CPiece * getHeldPiece() const;
+    void setHeldPiece(CPiece * p);
     //void acceptVisitor(const CVisitor & v) const;
 
 private:

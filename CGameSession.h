@@ -9,6 +9,8 @@ public:
     CGameSession();
     CGameSession(const CGameSession& orig);
     virtual ~CGameSession();
+    
+    bool start();
 private:
 
     CBoard gameBoard;

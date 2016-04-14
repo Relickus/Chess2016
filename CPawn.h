@@ -2,10 +2,12 @@
 #define	CPAWN_H
 
 #include "CPiece.h"
+#include "COLOR.h"
 
 class CPawn : public CPiece{
 public:
     CPawn();
+    CPawn(COLOR);
     CPawn(const CPawn& orig);
     virtual ~CPawn();
     
