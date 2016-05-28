@@ -10,10 +10,13 @@ public:
     CKnight(COLOR);
     CKnight(const CKnight& orig);
     virtual ~CKnight();
+
+    virtual MoveList & getLegalMoves(const CBoard &  board);
+
     
 
-    void printPiece() const;
-
+    //void printPiece() const;
+    
 private:
 
 };

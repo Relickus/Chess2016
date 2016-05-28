@@ -5,21 +5,39 @@
 #include <cstring>
 #include <cstdlib>
 
+#define MAXITEMS 5
+
+class CController;
+
 using namespace std;
 
 class CAbstractMenuScreen {
 public:
-    CAbstractMenuScreen();
+    CAbstractMenuScreen(CAbstractMenuScreen * prPar=NULL);
     CAbstractMenuScreen(const CAbstractMenuScreen& orig);
     virtual ~CAbstractMenuScreen();
     
     void show() const;
     void printMenuItem(int i) const;
+    virtual int readInput();
+    int getChoice() const;
+    virtual void setNextMenu() = 0;
+    virtual void setStuff(CController * ctrler) = 0;
+    void showTitle() const;
+
+    
+    CAbstractMenuScreen * nextMenu;
+    CAbstractMenuScreen * prevMenu;
     
 protected:
         
-    string menuItems[5];
-
+    bool validChoice(int i) const;
+    void setNumMenuItems();
+    
+    string menuItems[MAXITEMS];
+    int numItems;
+    int chosenOption;
+    string title;
 };
 
 

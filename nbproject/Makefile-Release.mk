@@ -39,18 +39,28 @@ OBJECTFILES= \
 	${OBJECTDIR}/CBishop.o \
 	${OBJECTDIR}/CBoard.o \
 	${OBJECTDIR}/CColorMenu.o \
+	${OBJECTDIR}/CController.o \
 	${OBJECTDIR}/CDifficultyMenu.o \
+	${OBJECTDIR}/CFilePersistence.o \
+	${OBJECTDIR}/CGUI.o \
+	${OBJECTDIR}/CGameSession.o \
+	${OBJECTDIR}/CHumanPlayer.o \
 	${OBJECTDIR}/CIntelligence.o \
 	${OBJECTDIR}/CKing.o \
 	${OBJECTDIR}/CKnight.o \
+	${OBJECTDIR}/CLoadGameMenu.o \
 	${OBJECTDIR}/CMainMenu.o \
+	${OBJECTDIR}/CMenuHandler.o \
+	${OBJECTDIR}/CMultiplayerOnlineMenu.o \
+	${OBJECTDIR}/COpponent.o \
+	${OBJECTDIR}/COpponentMenu.o \
 	${OBJECTDIR}/CPawn.o \
-	${OBJECTDIR}/CPersistence.o \
 	${OBJECTDIR}/CPiece.o \
-	${OBJECTDIR}/CPiecesBox.o \
 	${OBJECTDIR}/CQueen.o \
 	${OBJECTDIR}/CSlot.o \
 	${OBJECTDIR}/CTower.o \
+	${OBJECTDIR}/MoveList.o \
+	${OBJECTDIR}/MyMove.o \
 	${OBJECTDIR}/main.o
 
 
@@ -98,10 +108,35 @@ ${OBJECTDIR}/CColorMenu.o: CColorMenu.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CColorMenu.o CColorMenu.cpp
 
+${OBJECTDIR}/CController.o: CController.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CController.o CController.cpp
+
 ${OBJECTDIR}/CDifficultyMenu.o: CDifficultyMenu.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CDifficultyMenu.o CDifficultyMenu.cpp
+
+${OBJECTDIR}/CFilePersistence.o: CFilePersistence.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CFilePersistence.o CFilePersistence.cpp
+
+${OBJECTDIR}/CGUI.o: CGUI.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CGUI.o CGUI.cpp
+
+${OBJECTDIR}/CGameSession.o: CGameSession.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CGameSession.o CGameSession.cpp
+
+${OBJECTDIR}/CHumanPlayer.o: CHumanPlayer.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CHumanPlayer.o CHumanPlayer.cpp
 
 ${OBJECTDIR}/CIntelligence.o: CIntelligence.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -118,30 +153,45 @@ ${OBJECTDIR}/CKnight.o: CKnight.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CKnight.o CKnight.cpp
 
+${OBJECTDIR}/CLoadGameMenu.o: CLoadGameMenu.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CLoadGameMenu.o CLoadGameMenu.cpp
+
 ${OBJECTDIR}/CMainMenu.o: CMainMenu.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMainMenu.o CMainMenu.cpp
+
+${OBJECTDIR}/CMenuHandler.o: CMenuHandler.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMenuHandler.o CMenuHandler.cpp
+
+${OBJECTDIR}/CMultiplayerOnlineMenu.o: CMultiplayerOnlineMenu.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMultiplayerOnlineMenu.o CMultiplayerOnlineMenu.cpp
+
+${OBJECTDIR}/COpponent.o: COpponent.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/COpponent.o COpponent.cpp
+
+${OBJECTDIR}/COpponentMenu.o: COpponentMenu.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/COpponentMenu.o COpponentMenu.cpp
 
 ${OBJECTDIR}/CPawn.o: CPawn.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CPawn.o CPawn.cpp
 
-${OBJECTDIR}/CPersistence.o: CPersistence.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CPersistence.o CPersistence.cpp
-
 ${OBJECTDIR}/CPiece.o: CPiece.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CPiece.o CPiece.cpp
-
-${OBJECTDIR}/CPiecesBox.o: CPiecesBox.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CPiecesBox.o CPiecesBox.cpp
 
 ${OBJECTDIR}/CQueen.o: CQueen.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -157,6 +207,16 @@ ${OBJECTDIR}/CTower.o: CTower.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CTower.o CTower.cpp
+
+${OBJECTDIR}/MoveList.o: MoveList.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MoveList.o MoveList.cpp
+
+${OBJECTDIR}/MyMove.o: MyMove.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MyMove.o MyMove.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

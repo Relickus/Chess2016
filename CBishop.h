@@ -10,10 +10,14 @@ public:
     CBishop(COLOR);
     CBishop(const CBishop& orig);
     virtual ~CBishop();
+    //virtual bool isLegalMove(int x, int y) const;
+
+    virtual MoveList & getLegalMoves(const CBoard &  board);
+
+
     
 
-    void printPiece() const;
-
+    //void printPiece() const;
 
 private:
 

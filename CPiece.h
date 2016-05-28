@@ -3,6 +3,13 @@
 
 #include "COLOR.h"
 #include "FIGURENAME.h"
+
+#include "MoveList.h"
+
+#include <iostream>
+
+#include "CBoard.h"
+
 //#include "CVisitor.h"
 
 class CPiece {
@@ -13,14 +20,28 @@ public:
     virtual ~CPiece();
     
     bool takePiece() const;    
+    
+    void printPiece() const;
+    //virtual bool isLegalMove(int x, int y) const = 0;
+    
     FIGURENAME getName() const;
     COLOR getColor() const;
+    int getX() const;
+    int getY() const;
+    virtual MoveList & getLegalMoves(const CBoard &  board) = 0;
     
-    virtual void printPiece() const = 0;
+    bool isFriendPiece(CPiece * tmp) const;
+    virtual int checkField(int x,int y, const CBoard & board);
+    
+    
+    //CPiece * getPieceByLetter(char letter);
     
     //void acceptVisitor(const CVisitor & v) const;
     
     //CPiece & operator=(const CPiece & oth); // ?? reference na CPiece
+    
+    bool isLongRunner;
+    MoveList moveList;
     
 protected:
     
@@ -38,6 +59,7 @@ protected:
     int yPos;
     COLOR color;
     FIGURENAME name;
+    
 };
 
 

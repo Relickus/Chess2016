@@ -1,14 +1,40 @@
 #include "CDifficultyMenu.h"
+#include "CColorMenu.h"
 
-CDifficultyMenu::CDifficultyMenu() {
+CDifficultyMenu::CDifficultyMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbstractMenuScreen(prPar) {
     
     menuItems[0] = "Easy";
     menuItems[1] = "Medium";
     menuItems[2] = "Hard";
     menuItems[3] = "Extreme";
+    menuItems[4] = "BACK";
+    
+    title = "Zvolte obtížnost hry proti PC:";
+    
+    setNumMenuItems();
     
 }
 
 CDifficultyMenu::~CDifficultyMenu(){
     
+}
+
+void CDifficultyMenu::setNextMenu() {
+   
+    delete nextMenu;
+        
+    switch(chosenOption){
+        
+        case(5):
+            nextMenu = prevMenu;
+            break;
+            
+        default:
+            nextMenu = new CColorMenu(this);
+            break;
+    }
+}
+
+void CDifficultyMenu::setStuff(CController* ctrler) {
+
 }

@@ -2,15 +2,18 @@
 #define	CINTELLIGENCE_H
 
 #include "DIFFICULTY.h"
+#include "COpponent.h"
 
 
-class CIntelligence {
+class CIntelligence : public COpponent {
 public:
     CIntelligence();
     CIntelligence(DIFFICULTY d);
     virtual ~CIntelligence();
     void changeDifficulty(DIFFICULTY d);
     void think() const;
+    virtual void makeMove() const;
+
     
 private:
     

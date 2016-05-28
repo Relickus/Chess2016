@@ -5,9 +5,15 @@
 
 class CMainMenu : public CAbstractMenuScreen{
 public:
-    CMainMenu();
+    CMainMenu(CAbstractMenuScreen * prPar=NULL);
     CMainMenu(const CMainMenu& orig);
     virtual ~CMainMenu();
+    virtual void setNextMenu();
+
+    virtual void setStuff(CController* ctrler);
+
+
+    
 private:
 
 };

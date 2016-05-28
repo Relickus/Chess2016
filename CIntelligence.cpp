@@ -16,6 +16,10 @@ CIntelligence::~CIntelligence(){}
 
 void CIntelligence::think() const{   
     
-    // TODO   
+    // TODO   Minimax
+    
+}
+
+void CIntelligence::makeMove() const{
     
 }

@@ -6,8 +6,8 @@ public:
     CPersistence();
     CPersistence(const CPersistence& orig);
     virtual ~CPersistence();
-    bool saveGame() const;
-    bool loadGame(const char * file) const;
+    virtual bool saveGame() const = 0;
+    virtual bool loadGame(const char * file) const = 0;
     
 private:
 

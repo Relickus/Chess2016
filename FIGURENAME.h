@@ -3,7 +3,7 @@
 
 enum FIGURENAME{
     
-    KING,QUEEN,KNIGHT,BISHOP,TOWER,PAWN
+    KING='M',QUEEN='Q',KNIGHT='K',BISHOP='B',TOWER='T',PAWN='P'
     
 };
 

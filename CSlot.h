@@ -1,7 +1,7 @@
 #ifndef CSLOT_H
 #define	CSLOT_H
 
-#include "CPiece.h"
+class CPiece;
 
 class CSlot {
 public:

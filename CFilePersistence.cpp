@@ -1,10 +1,10 @@
-#include "CPersistence.h"
+#include "CFilePersistence.h"
 #include <iostream>
 #include <fstream>
 
 using namespace std;
 
-bool CPersistence::loadGame(const char * file) const {
+bool CFilePersistence::loadGame(const char * file) const {
     
      
         ifstream ifs( file );
@@ -17,7 +17,7 @@ bool CPersistence::loadGame(const char * file) const {
 
 }
 
-bool CPersistence::saveGame() const {
+bool CFilePersistence::saveGame() const {
     
     time_t timestamp;    
     time(&timestamp);

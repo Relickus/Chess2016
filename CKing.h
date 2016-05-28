@@ -13,8 +13,12 @@ public:
     
     bool isChecked() const;
 
-    void printPiece() const;
+    virtual MoveList & getLegalMoves(const CBoard &  board);
+    virtual int checkField(int x, int y, const CBoard& board);
 
+
+
+    //void printPiece() const;
 private:
 
 };

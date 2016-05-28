@@ -1,11 +1,6 @@
-/* 
- * File:   main.cpp
- * Author: vojta
- *
- * Created on 3. dubna 2016, 17:00
- */
-
 #include <cstdlib>
+
+#include "CController.h"
 
 using namespace std;
 
@@ -13,7 +8,14 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
+        
+    CController * c = new CController();
 
+    c->showMenus();
+    c->startGame();
+    
+    
+    delete c;
     return 0;
 }
 

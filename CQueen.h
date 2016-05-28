@@ -4,15 +4,17 @@
 #include "CPiece.h"
 #include "COLOR.h"
 
-class CQueen : public CPiece{
+class CQueen : public CPiece {
 public:
     CQueen();
     CQueen(COLOR color);
     CQueen(const CQueen& orig);
     virtual ~CQueen();
-    
 
-    void printPiece() const;
+    virtual MoveList & getLegalMoves(const CBoard & board);
+
+
+    //    void printPiece() const;
 
 private:
 
