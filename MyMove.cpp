@@ -12,9 +12,11 @@ MyMove::MyMove(const string & movestr){
     toX = movestr.at(3) - 48;
     toY = movestr.at(4) - 49 - 48;
    
+    figure = NULL;  // FIX !
 }
 
-MyMove::MyMove(int tX, int tY, int frX/*=-1*/, int frY/*=-1*/) : toX(tX), toY(tY),fromX(frX),fromY(frY){
+MyMove::MyMove(int tX, int tY, int frX/*=-1*/, int frY/*=-1*/ ) : toX(tX), toY(tY),fromX(frX),fromY(frY){
+    figure = NULL;
 }
 
 MyMove::~MyMove() {
@@ -27,6 +29,8 @@ MyMove::MyMove(const MyMove& oth){
     fromY = oth.fromY;
     toX = oth.toX;
     toY = oth.toY;
+    
+    figure = oth.figure;
 }
 
 bool MyMove::isFicture() const{

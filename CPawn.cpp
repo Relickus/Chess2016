@@ -41,7 +41,7 @@ MoveList & CPawn::getLegalMovesDown(const CBoard & board) {
     this->checkField(getRow() - 1, getCol() - 1, board, true);
     this->checkField(getRow() - 1, getCol() + 1, board, true);
 
-    if (getRow() == CBoard::INIT_ROW_UP) { //initial row, pawn not moved yet  
+    if (getRow() == board.INIT_ROW_UP) { //initial row, pawn not moved yet  
         newRow = getRow()-2;
         this->checkField(newRow, newCol, board, false);
     }
@@ -62,7 +62,7 @@ MoveList & CPawn::getLegalMovesUp(const CBoard & board) {
     this->checkField(getRow() + 1, getCol() - 1, board, true);
     this->checkField(getRow() + 1, getCol() + 1, board, true);
 
-    if (getRow() == CBoard::INIT_ROW_DOWN) { //initial row, pawn not moved yet  
+    if (getRow() == board.INIT_ROW_DOWN) { //initial row, pawn not moved yet  
         newRow = getRow()+2;
         this->checkField(newRow, newCol, board, false);
     }

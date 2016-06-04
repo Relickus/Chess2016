@@ -13,8 +13,8 @@ public:
     MoveList(int MAXMOVES=30);    
     virtual ~MoveList();
     
-    void add(int x,int y,int fx,int fy);    
-    void add(MyMove move);    
+    void add(int x,int y,int fx,int fy,CPiece * tmp = NULL);    
+    void add(MyMove move,CPiece * tmp = NULL);    
     bool isEmpty() const;
     void clear();
     void reserve(int x);

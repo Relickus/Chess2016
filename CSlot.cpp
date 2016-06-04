@@ -29,5 +29,5 @@ void CSlot::setValue(int v) {
 }
 
 int CSlot::getValue() const {
-    return value;
+    return value;   // bigger is better!
 }

@@ -143,7 +143,7 @@ void CCommand::makeMoveQuery(CGameSession & gS) const{
         if(gS.currPlayerPtr == gS.player2){
 
             l = pwn->getLegalMovesDown(gS.gameBoard);
-            if(move.toX == CBoard::LAST_ROW_DOWN){ // hodla jit na protejsi kraj -> promotion
+            if(move.toX == gS.gameBoard.LAST_ROW_DOWN){ // hodla jit na protejsi kraj -> promotion
                 
                 gS.gameBoard.promotePawn(move);                        
                 gS.gameBoard.printBoard();    
@@ -153,7 +153,7 @@ void CCommand::makeMoveQuery(CGameSession & gS) const{
         }
         else{
             l = pwn->getLegalMovesUp(gS.gameBoard);
-            if(move.toX == CBoard::LAST_ROW_UP){   // hodla jit na protejsi kraj -> promotion
+            if(move.toX == gS.gameBoard.LAST_ROW_UP){   // hodla jit na protejsi kraj -> promotion
                 
                gS.gameBoard.promotePawn(move);    
                gS.gameBoard.printBoard(); 

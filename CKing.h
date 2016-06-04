@@ -8,7 +8,6 @@ class CKing : public CPiece{
 public:
     CKing();
     CKing(COLOR col , int x, int y);
-    CKing(const CKing& orig);
     virtual ~CKing();
     
     bool isChecked(const CBoard & board) const;

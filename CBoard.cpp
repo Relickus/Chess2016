@@ -18,11 +18,16 @@ using namespace std;
 CBoard::CBoard() : width(WIDTH), height(HEIGHT) {
         
     for(int i = 0; i < 8; ++i){
-        for (int j = 0; j < ; j++) {
-            slotsArr[i][j].setValue(); 
+        for (int j = 0; j < 8; j++) {
+            slotsArr[i][j].setValue( 8 - abs(i-3) - abs(j-3)); 
         }
 
     }
+    
+    LAST_ROW_DOWN = 0;
+    LAST_ROW_UP = 7;
+    INIT_ROW_DOWN = 1;
+    INIT_ROW_UP = 6;
 }
 
 CBoard::~CBoard(){
@@ -53,15 +58,17 @@ void CBoard::swapFigures(int r1, int c1, int r2, int c2){
         
     int tmpr = r1;
     int tmpc = c1;
+    int tmpval = 0;
     
     if(slotsArr[r1][c1].getHeldPiece() != NULL){
-        slotsArr[r1][c1].getHeldPiece()->setRow(r2);
-        slotsArr[r1][c1].getHeldPiece()->setCol(c2);
+        tmpval = slotsArr[r1][c1].getHeldPiece()->getValue();
+        //slotsArr[r1][c1].getHeldPiece().copyData(slotsArr[r2][c2].getHeldPiece())
     }
     
     if(slotsArr[r2][c2].getHeldPiece() != NULL){
         slotsArr[r2][c2].getHeldPiece()->setRow(tmpr);
         slotsArr[r2][c2].getHeldPiece()->setCol(tmpc);
+        // '''''''''''' TODO SET VALUE
     }
     
     CPiece * tmp = slotsArr[r1][c1].getHeldPiece();
@@ -78,6 +85,9 @@ void CBoard::rotateBoard(){
         }             
     }    
     
+    int tmp = LAST_ROW_DOWN;
+    LAST_ROW_DOWN = LAST_ROW_UP;
+    LAST_ROW_UP = tmp;
 }
 
 void CBoard::createPieces(COLOR colorDown){
@@ -308,7 +318,8 @@ void CBoard::promotePawn(const MyMove& move) {
 }
 
 int CBoard::getSlotValue(int x, int y) const {
-    if(!outOfBoard(x,y))
+    if(!outOfBoard(x,y)){
         return slotsArr[x][y].getValue();
+    }
     return 0;
 }

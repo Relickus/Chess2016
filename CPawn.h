@@ -8,7 +8,6 @@ class CPawn : public CPiece{
 public:
     CPawn();
     CPawn(COLOR col , int x, int y);
-    CPawn(const CPawn& orig);
     virtual ~CPawn();
 
     virtual MoveList & getLegalMoves(const CBoard &  board);

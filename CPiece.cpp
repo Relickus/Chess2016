@@ -195,11 +195,11 @@ int CPiece::checkField(int x, int y, const CBoard & board) {
         if (isFriendPiece(tmp)) { // friend piece
             return 1;
         } else {
-            moveList.add(x, y,rowPos,colPos);
+            moveList.add(x, y,rowPos,colPos,tmp);
             return 1;
         }
     } else {
-        moveList.add(x, y,rowPos,colPos);
+        moveList.add(x, y,rowPos,colPos,NULL);
     }
 
     return 0;

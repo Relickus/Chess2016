@@ -7,7 +7,6 @@
 
 CGameSession::CGameSession() : ipHost(""), player1(NULL),player2(NULL), fileName(""), ready_flag(false),exitRequest(false) {
 
-    //gameBoard = CBoard::initBoard();
     persistence = new CFilePersistence(this);
     currentPlayer = whosTurn = WHITE;
     movePerformed = false;

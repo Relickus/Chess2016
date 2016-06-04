@@ -16,7 +16,6 @@ class CPiece {
 public:
     CPiece();
     CPiece(COLOR color,int row, int col);
-    CPiece(const CPiece& orig);
     virtual ~CPiece();
     
     bool takePiece() const;    
@@ -43,6 +42,7 @@ public:
     static bool validLetter(char c); 
     bool moveTo(const MyMove & move, CBoard & board );    
     int getValue() const;
+    void computeValue();
     
     
     //CPiece * getPieceByLetter(char letter);

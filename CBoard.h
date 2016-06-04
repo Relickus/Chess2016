@@ -13,7 +13,6 @@ using namespace std;
 class CBoard {
 public:
     CBoard();
-    CBoard(const CBoard& orig);
     virtual ~CBoard();
     
     void printBoard() const;
@@ -36,11 +35,11 @@ public:
         // - lepsi bude zkusit tahnout kralem a zavolat king->isChecked na novym policku
     
     
-    static const int INIT_ROW_UP = 6;
-    static const int INIT_ROW_DOWN = 1;
+    int INIT_ROW_UP;
+    int INIT_ROW_DOWN;
 
-    static const int LAST_ROW_UP = 0;
-    static const int LAST_ROW_DOWN = 7;
+    int LAST_ROW_UP;
+    int LAST_ROW_DOWN;
     
 private:
     

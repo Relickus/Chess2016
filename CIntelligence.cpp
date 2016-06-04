@@ -45,12 +45,9 @@ MyMove CIntelligence::getMove(CGameSession & gS){
     
     // minimax vyhodi nejakej move a vrati ho...
     
-    srand(time(NULL));
-    //int randIdx = rand() % (allMoves.size());
-    //
     int bestIdx = getBestIdx(allMoves,gS.gameBoard);
     
-    return allMoves.getMove(.....Idx);    
+    return allMoves.getMove(bestIdx);    
 }
 
 CCommand CIntelligence::getCommand(CGameSession & gS) {
@@ -60,22 +57,53 @@ CCommand CIntelligence::getCommand(CGameSession & gS) {
 
 int CIntelligence::getBestIdx(MoveList& list,CBoard & board) const {
 
-    int bestAvg = 99;
-    int bestIdx = -1;
+    if(difficulty == 0){
+        srand(time(NULL));
+        return rand() % (allMoves.size());
+    }
+    
+    int bestValPcs = 0;
+    int bestValSlot = 0;
+    int bestIdxPcs = -1;
+    int bestIdxSlot = -1;
+    int bestIdxTotal = 0;
+    int bestValueTotal = 0;
     
     
     for (int i = 0; i < list.size(); i++) {
-        list.getMove(i).figure->getValue();
-
+        CPiece * pcs = list.getMove(i).figure;
+        if(pcs == NULL)
+            continue;
+        int v = (pcs->getValue())*10; // !!!!!!!!!!!!!!! TODO VYRAZENA FIGURA
+        
+        if(v > bestValPcs){
+            bestValPcs = v;
+            bestIdxPcs = i;
+        }
     }
-
     
     for (int i = 0; i < list.size(); i++) {
         
         MyMove tmp = list.getMove(i);
-        board.getSlotValue(tmp.toX,tmp.toY);
-
+        int v = board.getSlotValue(tmp.toX,tmp.toY);
+        if(v > bestValSlot){
+            bestValSlot = v;
+            bestIdxSlot = i;
+        }
+        if(list.getMove(i).figure == NULL)
+            continue;
+        else{
+            
+            if(list.getMove(i).figure->getValue()*10 + v > bestValueTotal){
+                bestValueTotal = list.getMove(i).figure->getValue()*10 + v;
+                bestIdxTotal = i;
+            }
+        }
     }
-
     
+    if(difficulty == 1)
+        return bestIdxPcs > bestIdxSlot ? bestIdxPcs : bestIdxSlot;
+    
+    else
+        return bestIdxTotal;    
 }

@@ -112,7 +112,7 @@ int CKing::checkField(int x, int y, const CBoard& board) {
 //            }
         }
     } else {
-        moveList.add(x, y,rowPos,colPos);
+        moveList.add(x, y,rowPos,colPos,NULL);
         return 1;
     }
 }

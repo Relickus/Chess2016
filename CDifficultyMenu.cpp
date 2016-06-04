@@ -8,8 +8,7 @@ CDifficultyMenu::CDifficultyMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbst
     menuItems[0] = "Easy";
     menuItems[1] = "Medium";
     menuItems[2] = "Hard";
-    menuItems[3] = "Extreme";
-    menuItems[4] = "BACK";
+    menuItems[3] = "BACK";
     
     title = "Zvolte obtížnost hry proti PC:";
     
@@ -39,9 +38,9 @@ void CDifficultyMenu::setNextMenu() {
 
 void CDifficultyMenu::setStuff(CController* ctrler) {
 
-    if(chosenOption != 5){
+    if(chosenOption != 4){
         CIntelligence * tmp = dynamic_cast<CIntelligence*>(ctrler->getGameSess().player2);
-        tmp->changeDifficulty(2*chosenOption);
+        tmp->changeDifficulty(chosenOption-1);
     }
     
 }

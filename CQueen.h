@@ -8,7 +8,6 @@ class CQueen : public CPiece {
 public:
     CQueen();
     CQueen(COLOR col,int x, int y);
-    CQueen(const CQueen& orig);
     virtual ~CQueen();
 
     virtual MoveList & getLegalMoves(const CBoard & board);
