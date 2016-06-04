@@ -9,17 +9,21 @@ CBishop::CBishop() {
     isLongRunner = true;
 
     moveList.reserve(15);
+    value = 3;
+
 }
 
 CBishop::~CBishop() {
 
 }
 
-CBishop::CBishop(COLOR col) : CPiece(col) {
+CBishop::CBishop(COLOR clr, int row, int col) : CPiece(clr,row,col) {
     name = BISHOP;
     isLongRunner = true;
 
     moveList.reserve(15);
+    value = 3;
+
 }
 //
 //void CBishop::printPiece() const{
@@ -30,11 +34,11 @@ CBishop::CBishop(COLOR col) : CPiece(col) {
 //
 //    // smí jezdit jen sikmo do vsech stran
 //    
-//    if(x == getX() && y ==getY())   // nesmi zustat na miste
+//    if(x == getRow() && y ==getCol())   // nesmi zustat na miste
 //        return false;
 //    
 //    
-//    if( abs(x-getX()) != abs(y-getY()) )    // pouze diagonalni tah toto splni
+//    if( abs(x-getRow()) != abs(y-getCol()) )    // pouze diagonalni tah toto splni
 //        return false;
 //    
 //    
@@ -47,59 +51,46 @@ MoveList & CBishop::getLegalMoves(const CBoard & board) {
 
     //up left
 
-    int newX = getX();
-    int newY = getY();
+    int newRow = getRow();
+    int newCol = getCol();
 
-    for (int y = 0, x = 0; newX >= 0 && newY < 8; y++, x--) {
+    for (;newRow < 8 && newCol >= 0; newRow++, newCol--) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
-        newY = newY + y;
-
     }
 
     // up right
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int y = 0, x = 0; newX < 8 && newY < 8; y++, x++) {
+    for (;newRow < 8 && newCol < 8; newRow++, newCol++) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
-        newY = newY + y;
     }
 
     //down left
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int y = 0, x = 0; newX >= 0 && newY >= 0; y--, x--) {
+    for (; newRow >= 0 && newCol >= 0; newRow--, newCol--) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
-        newY = newY + y;
     }
 
     //down right
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int y = 0, x = 0; newX < 8 && newY >= 0; y--, x++) {
+    for (;newRow >= 0 && newCol < 8; newRow--, newCol++) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
-        newY = newY + y;
     }
 
 

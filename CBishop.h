@@ -7,7 +7,7 @@
 class CBishop : public CPiece {
 public:
     CBishop();
-    CBishop(COLOR);
+    CBishop(COLOR col , int x, int y);
     CBishop(const CBishop& orig);
     virtual ~CBishop();
     //virtual bool isLegalMove(int x, int y) const;

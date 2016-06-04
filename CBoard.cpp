@@ -7,9 +7,8 @@
 
 #include "CGameSession.h"
 #include "CBoard.h"
-#include "MyMove.h"
-
 #include <iostream>
+#include <fstream>
 
 #define WIDTH 8   // get rid of this ?
 #define HEIGHT 8
@@ -18,6 +17,12 @@ using namespace std;
 
 CBoard::CBoard() : width(WIDTH), height(HEIGHT) {
         
+    for(int i = 0; i < 8; ++i){
+        for (int j = 0; j < ; j++) {
+            slotsArr[i][j].setValue(); 
+        }
+
+    }
 }
 
 CBoard::~CBoard(){
@@ -26,6 +31,54 @@ CBoard::~CBoard(){
     // tedy volaj se destruktor CSlot na kazdy policko
 }
 
+void CBoard::moveFigure(const MyMove & move){
+    
+    CPiece * tmp = slotsArr[move.toX][move.toY].getHeldPiece();
+    
+    delete tmp;
+    
+    tmp = slotsArr[move.fromX][move.fromY].getHeldPiece();
+        
+    slotsArr[move.toX][move.toY].setHeldPiece(tmp);
+    
+    slotsArr[move.fromX][move.fromY].setHeldPiece(NULL);
+    
+    tmp->setRow(move.toX);
+    tmp->setCol(move.toY);    
+}
+
+
+void CBoard::swapFigures(int r1, int c1, int r2, int c2){
+    
+        
+    int tmpr = r1;
+    int tmpc = c1;
+    
+    if(slotsArr[r1][c1].getHeldPiece() != NULL){
+        slotsArr[r1][c1].getHeldPiece()->setRow(r2);
+        slotsArr[r1][c1].getHeldPiece()->setCol(c2);
+    }
+    
+    if(slotsArr[r2][c2].getHeldPiece() != NULL){
+        slotsArr[r2][c2].getHeldPiece()->setRow(tmpr);
+        slotsArr[r2][c2].getHeldPiece()->setCol(tmpc);
+    }
+    
+    CPiece * tmp = slotsArr[r1][c1].getHeldPiece();
+    slotsArr[r1][c1].setHeldPiece( slotsArr[r2][c2].getHeldPiece() );
+    slotsArr[r2][c2].setHeldPiece(tmp);    
+    
+}
+
+void CBoard::rotateBoard(){
+    
+    for(int i = 0; i < 4; ++i){
+        for(int j = 0; j<8; ++j){                
+            swapFigures(i,j,7-i,7-j);            
+        }             
+    }    
+    
+}
 
 void CBoard::createPieces(COLOR colorDown){
     
@@ -33,8 +86,7 @@ void CBoard::createPieces(COLOR colorDown){
     
     // standart possitions for Q and K when WHITE is down
     int queenPos = 3;
-    int kingPos = 4;
-    
+    int kingPos = 4;    
     
     COLOR colorUp = (colorDown == WHITE ? BLACK : WHITE);
     
@@ -47,37 +99,42 @@ void CBoard::createPieces(COLOR colorDown){
             
     try{
     
-    slotsArr[7][0].setHeldPiece( new CTower(colorUp) );
-    slotsArr[7][7].setHeldPiece( new CTower(colorUp) );
+    slotsArr[7][0].setHeldPiece( new CTower(colorUp, 7,0) );
+    slotsArr[7][7].setHeldPiece( new CTower(colorUp, 7,7) );
+ 
+    slotsArr[7][1].setHeldPiece( new CKnight(colorUp, 7,1) );
+    slotsArr[7][6].setHeldPiece( new CKnight(colorUp, 7,6) );
+ 
+    slotsArr[7][2].setHeldPiece( new CBishop(colorUp, 7,2) );
+    slotsArr[7][5].setHeldPiece( new CBishop(colorUp, 7,5) );
     
-    slotsArr[7][1].setHeldPiece( new CKnight(colorUp) );
-    slotsArr[7][6].setHeldPiece( new CKnight(colorUp) );
-    
-    slotsArr[7][2].setHeldPiece( new CBishop(colorUp) );
-    slotsArr[7][5].setHeldPiece( new CBishop(colorUp) );
-    
-    slotsArr[7][queenPos].setHeldPiece( new CQueen(colorUp) );
-    slotsArr[7][kingPos].setHeldPiece( new CKing(colorUp) );
+    slotsArr[7][queenPos].setHeldPiece( new CQueen(colorUp, 7,queenPos) );
+    slotsArr[7][kingPos].setHeldPiece( new CKing(colorUp, 7,kingPos) );
     
     for(int i = 0; i < 8; ++i)
-        slotsArr[6][i].setHeldPiece( new CPawn(colorUp) );
+        slotsArr[6][i].setHeldPiece( new CPawn(colorUp,6,i) );
     
     // create Player1's peaces (down):
     
-    slotsArr[0][0].setHeldPiece( new CTower(colorDown) );
-    slotsArr[0][7].setHeldPiece( new CTower(colorDown) );
+    slotsArr[0][0].setHeldPiece( new CTower(colorDown, 0, 0) );
+    slotsArr[0][7].setHeldPiece( new CTower(colorDown, 0, 7) );
     
-    slotsArr[0][1].setHeldPiece( new CKnight(colorDown) );
-    slotsArr[0][6].setHeldPiece( new CKnight(colorDown) );
+    slotsArr[0][1].setHeldPiece( new CKnight(colorDown, 0, 1) );
+    slotsArr[0][6].setHeldPiece( new CKnight(colorDown, 0, 6) );
     
-    slotsArr[0][2].setHeldPiece( new CBishop(colorDown) );
-    slotsArr[0][5].setHeldPiece( new CBishop(colorDown) );
+    slotsArr[0][2].setHeldPiece( new CBishop(colorDown, 0, 2) );
+    slotsArr[0][5].setHeldPiece( new CBishop(colorDown, 0, 5) );
     
-    slotsArr[0][queenPos].setHeldPiece( new CQueen(colorDown) );
-    slotsArr[0][kingPos].setHeldPiece( new CKing(colorDown) );
+    slotsArr[0][queenPos].setHeldPiece( new CQueen(colorDown, 0, queenPos) );
+    slotsArr[0][kingPos].setHeldPiece( new CKing(colorDown, 0, kingPos) );
     
     for(int i = 0; i < 8; ++i)
-        slotsArr[1][i].setHeldPiece( new CPawn(colorDown) );
+        slotsArr[1][i].setHeldPiece( new CPawn(colorDown, 1, i) );
+    
+    for(int i = 5; i >= 2; --i)
+        for (int j = 0; j < 8; j++) 
+            slotsArr[i][j].setHeldPiece(NULL);    
+        
     
     } catch (std::exception ex){
         throw "Chyba pri vytvareni figurek";
@@ -86,12 +143,20 @@ void CBoard::createPieces(COLOR colorDown){
     
 }
 
-void CBoard::initBoard(const CGameSession * gameSess) {
+void CBoard::translateMove(MyMove & move){
     
-   createPieces(gameSess->player1color);    
+    move.fromX = 7-move.fromX;
+    move.fromY = 7-move.fromY;
+    move.toX = 7-move.toX;
+    move.toY = 7-move.toY;
 }
 
-void CBoard::printPossibleMoves(CPiece * pc) const{
+void CBoard::initBoard(const CGameSession * gameSess) {
+    
+   createPieces(gameSess->player1->getPlayerColor());    
+}
+
+void CBoard::printPossibleMoves(const MoveList & list) const{
     
     
     ///get possible moves - ziskej pole coordinates kam se figurka muze pohnout
@@ -104,20 +169,28 @@ void CBoard::printPossibleMoves(CPiece * pc) const{
     
     // cout << "_________________"<<endl;         
     
-    for(int i=0; i<width; ++i){
-        for (int j = 0; j < height; j++) {
+    for(int i=7; i>=0; --i){
+        for (int j = 0; j<8; ++j) {
             if(j == 0)
-                cout << 7-i << " |";
+                cout << i << " |";
             
             tmp  = slotsArr[i][j].getHeldPiece();
             
-            if( tmp == NULL )
-                cout << " ";
-            else
-                tmp->printPiece();
+            if( tmp == NULL ){
+                if(list.contains(MyMove(i,j)))
+                    cout<<"*";
+                else
+                    cout << " ";
+            }
+            else{
+                if(!list.contains(MyMove(i,j)))
+                    tmp->printPiece();
+                else
+                    cout<<"#";
+            }
             cout <<"|";
             
-            if(j == height-1)
+            if(j == 7)
                 cout<<endl;
         }
     }
@@ -137,8 +210,40 @@ void CBoard::printBoard() const{
     
     // cout << "_________________"<<endl;         
     
-    for(int i=0; i<width; ++i){
-        for (int j = 0; j < height; j++) {
+    for(int i=7; i>=0; --i){
+        for (int j = 0; j < 8; ++j) {
+            if(j == 0)
+                cout << i << " |";
+            
+            tmp  = slotsArr[i][j].getHeldPiece();
+            
+            if( tmp == NULL )
+                cout << " ";
+            else
+                tmp->printPiece();
+            cout <<"|";
+            
+            if(j == 7)
+                cout<<endl;
+        }
+    }
+    
+   
+    cout << "   a b c d e f g h"<<endl;   
+    
+    cout << endl<< endl;
+}
+
+void CBoard::printRotate() {
+
+    rotateBoard();
+    
+      CPiece * tmp=NULL;
+    
+    // cout << "_________________"<<endl;         
+    
+    for(int i=7; i>=0; --i){
+        for (int j = 0; j < 8; ++j) {
             if(j == 0)
                 cout << 7-i << " |";
             
@@ -150,163 +255,60 @@ void CBoard::printBoard() const{
                 tmp->printPiece();
             cout <<"|";
             
-            if(j == height-1)
+            if(j == 7)
                 cout<<endl;
         }
     }
     
    
-    cout << "   a b c d e f g h"<<endl;   
+    cout << "   h g f e d c b a"<<endl;   
     
     cout << endl<< endl;
+    
+    rotateBoard();
 }
 
-//void CBoard::loadFromFile(const string & filename){
-//    
-//    ifstream ifs("filename");
-//    string rowstr;
-//    
-//    
-//    for(int i = 0; i < 8; ++i){     
-//        getline(ifs,rowstr,'\n');
-//        if(!ifs.good())
-//            throw "CHYBA VE CTENI SOUBORU";
-//        
-//        for(int j = 0; j < 8; ++j){
-//            slotsArr[i][j] = CPiece::getPieceByLetter(rowstr.at(j));
-//        }
-//        
-//        
-//    }
-//    
-//}
-
-CPiece * CBoard::getPiece(int x, int y) const{
+CPiece * CBoard::getPiece(int row, int col) const{
     
-    return slotsArr[x][y].getHeldPiece();
+    return slotsArr[row][col].getHeldPiece();
 }
 
 bool CBoard::outOfBoard(int x, int y) const {
-    return x < 0 || x > 8 || y < 0 || y > 8;
+    return x < 0 || x >= 8 || y < 0 || y >= 8;
 }
 
-bool CBoard::fieldChecked(int x, int y, CPiece * playerspiece) const {  // mozna vratit nejaky pole figurek co to policko sachujou?
+void CBoard::setField(int row, int col, CPiece * pc){
+    slotsArr[row][col].setHeldPiece(pc);
+}
+
+void CBoard::copy(CBoard & oth){
     
-    //search left up diagonal for checking enemy piecies 
-    int newX = x-1;
-    int newY = y+1;
-    
-    while(!outOfBoard(newX,newY)){
-        
-        if(getPiece(newX,newY) == NULL)
-            continue;
-        
-        
-        if(getPiece(newX,newY)->isFriendPiece(playerspiece))
-                break;
-        
-         else{   // enemy figure
-                
-            MyMove tmp(x,y,getPiece(newX,newY));
-            MoveList tmplist = getPiece(newX,newY)->getLegalMoves(*this);
-             
-            if(tmplist.contains(tmp))   // je tam nejaka enemy figurka ktera toto policko checkuje
-                return true;
-            else
-                break;
+    if(this == &oth)
+        return;
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            
+            delete slotsArr[i][j].getHeldPiece();
+            slotsArr[i][j].setHeldPiece(oth.slotsArr[i][j].getHeldPiece());
+            oth.slotsArr[i][j].setHeldPiece(NULL);
         }
-        
-        newX = newX--;
-        newY = newY++;
     }
+}
+
+void CBoard::promotePawn(const MyMove& move) {
+
+    COLOR col = slotsArr[move.fromX][move.fromY].getHeldPiece()->getColor();
     
-    // right up
-    
-     newX = x+1;
-     newY = x+1;
-     
-     while(!outOfBoard(newX,newY)){
+    delete slotsArr[move.toX][move.toY].getHeldPiece();        
+    delete slotsArr[move.fromX][move.fromY].getHeldPiece();
+    slotsArr[move.fromX][move.fromY].setHeldPiece(NULL);
         
-        if(getPiece(newX,newY) == NULL)
-            continue;
-        
-        
-        if(getPiece(newX,newY)->isFriendPiece(playerspiece))
-                break;
-        
-         else{   // enemy figure
-                
-            MyMove tmp(x,y,getPiece(newX,newY));
-            MoveList tmplist = getPiece(newX,newY)->getLegalMoves(*this);
-             
-            if(tmplist.contains(tmp))   // je tam nejaka enemy figurka ktera toto policko checkuje
-                return true;
-            else
-                break;
-        }
-        
-        newX = newX++;
-        newY = newY++;
-    }
-     
-     // left down
-    
-     newX = x-1;
-     newY = x-1;
-     
-     while(!outOfBoard(newX,newY)){
-        
-        if(getPiece(newX,newY) == NULL)
-            continue;
-        
-        
-        if(getPiece(newX,newY)->isFriendPiece(playerspiece))
-                break;
-        
-         else{   // enemy figure
-                
-            MyMove tmp(x,y,getPiece(newX,newY));
-            MoveList tmplist = getPiece(newX,newY)->getLegalMoves(*this);
-             
-            if(tmplist.contains(tmp))   // je tam nejaka enemy figurka ktera toto policko checkuje
-                return true;
-            else
-                break;
-        }
-        
-        newX = newX--;
-        newY = newY--;
-    }
-     
-     // right down
-    
-     newX = x+1;
-     newY = x-1;
-     
-     while(!outOfBoard(newX,newY)){
-        
-        if(getPiece(newX,newY) == NULL)
-            continue;
-        
-        
-        if(getPiece(newX,newY)->isFriendPiece(playerspiece))
-                break;
-        
-         else{   // enemy figure
-                
-            MyMove tmp(x,y,getPiece(newX,newY));
-            MoveList tmplist = getPiece(newX,newY)->getLegalMoves(*this);
-             
-            if(tmplist.contains(tmp))   // je tam nejaka enemy figurka ktera toto policko checkuje
-                return true;
-            else
-                break;
-        }
-        
-        newX = newX++;
-        newY = newY--;
-    }
-     
-    
-    return false;
+    slotsArr[move.toX][move.toY].setHeldPiece(new CQueen(col,move.toX,move.toY));    
+}
+
+int CBoard::getSlotValue(int x, int y) const {
+    if(!outOfBoard(x,y))
+        return slotsArr[x][y].getValue();
+    return 0;
 }

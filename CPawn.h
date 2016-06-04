@@ -4,16 +4,16 @@
 #include "CPiece.h"
 #include "COLOR.h"
 
-#define INIT_ROW 1  // ??? jak to udelam s rotaci sachovnice? prevrati se i rows nebo se to bude nejak prepocitavat?
-
 class CPawn : public CPiece{
 public:
     CPawn();
-    CPawn(COLOR);
+    CPawn(COLOR col , int x, int y);
     CPawn(const CPawn& orig);
     virtual ~CPawn();
 
     virtual MoveList & getLegalMoves(const CBoard &  board);
+    MoveList & getLegalMovesUp(const CBoard &  board);
+    MoveList & getLegalMovesDown(const CBoard &  board);
     virtual int checkField(int x, int y, const CBoard& board, bool sidestep);
 
     

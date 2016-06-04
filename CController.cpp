@@ -3,6 +3,7 @@
 #include "CDifficultyMenu.h"
 #include "CColorMenu.h"
 #include "CGUI.h"
+#include "CCommand.h"
 
 CController::CController(){
     
@@ -18,9 +19,6 @@ void CController::deleteMenus(){
     if(menu == NULL)    // vse uz je smazano (treba proto ze jsem BACKoval zpatky v menu)
         return;
     
-    while(tmp->prevMenu != NULL)    //dojedu na zacatek spojaku menus
-        tmp = tmp->prevMenu;
-    
     while(tmp->nextMenu != NULL){   // mazu od zacatku do konce
         
         tmp = tmp->nextMenu;
@@ -29,6 +27,8 @@ void CController::deleteMenus(){
     }
     
     delete tmp;
+    
+    menu = NULL;
 }
 
 
@@ -39,27 +39,78 @@ CController::~CController(){
 
 void CController::showMenus(){    
         
-    while(menu != NULL){
-        menu->show();
-        cout << "vybrano: "<< menu->readInput()<<endl;
-        menu->setStuff(this);
-        menu->setNextMenu();
+    CAbstractMenuScreen * tmpmenu = menu;
+    
+    while(tmpmenu != NULL){
+        tmpmenu->show();
+        cout << "vybrano: "<< tmpmenu->readInput()<<endl;
+        tmpmenu->setStuff(this);
+        tmpmenu->setNextMenu();
         
-        menu = menu -> nextMenu;
-        
+        if( tmpmenu -> nextMenu == NULL && tmpmenu -> prevMenu == NULL ){
+            deleteMenus();
+            break;
+        }
+        else{
+            tmpmenu = tmpmenu->nextMenu;
+        }
     }
-        
 }
 
 void CController::startGame(){
-    game.start();
+    if(!game.gameReady()){    //jsme na main menu a vybrali Exit
+        //game.end();
+        return;
+    }
+    else
+        game.start();
+    
+    gameLoop(); 
+    game.end();
+}
+
+void CController::gameLoop(){
+                
+    cin.ignore();
+    game.currentPlayer = WHITE;
+    game.currPlayerPtr = (game.player1->getPlayerColor() == WHITE ? game.player1 : game.player2);
+        
+    while(true){
+        
+        CCommand command;
+        
+        while(command.command == UNKNOWN){   
+            command = game.currPlayerPtr-> getCommand(game);
+        }
+        
+        command.executeCommand(game);
+        
+        
+        if(game.exitRequest)
+            break;
+        
+        if(game.movePerformed){
+            game.switchPlayers();
+            game.movePerformed = false;
+        }
+        
+    }
+    
+}
+
+void CController::endGame(){
+    game.end();
 }
 
 void CController::printBoard() const{
     
-    gui.printBoard(game.getBoard());
+    game.gameBoard.printBoard();
 }
 
 CGameSession& CController::getGameSess() {
     return game;
+}
+
+void CController::setTurn(COLOR col) {
+    game.setTurn(col);
 }

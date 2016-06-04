@@ -3,19 +3,24 @@
 
 #include <iostream>
 
+using namespace std;
+
 class CPiece;
 
 struct MyMove{
     
     MyMove();
-    MyMove(int X, int Y, CPiece * takenfigure=NULL);
+    MyMove(const MyMove & oth);
+    MyMove(const string & movestr);
+    MyMove(int tX, int tY,int frX=-1,int frY=-1);       // POZOR, nejdrive TO , pak FROM souradnice
     ~MyMove();
+    bool isFicture() const;
     
-    int x;
-    int y;
-    
-    CPiece * takenFigure;
-    
+    int fromX;
+    int fromY;
+    int toX;
+    int toY;
+    CPiece * figure;
 };
 
 

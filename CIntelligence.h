@@ -2,22 +2,25 @@
 #define	CINTELLIGENCE_H
 
 #include "DIFFICULTY.h"
-#include "COpponent.h"
+#include "CPlayer.h"
 
 
-class CIntelligence : public COpponent {
+class CIntelligence : public CPlayer {
 public:
     CIntelligence();
-    CIntelligence(DIFFICULTY d);
+    CIntelligence(int d);
     virtual ~CIntelligence();
-    void changeDifficulty(DIFFICULTY d);
+    void changeDifficulty(int d);
     void think() const;
-    virtual void makeMove() const;
+    virtual MyMove getMove(CGameSession & gamesess);
+    virtual CCommand getCommand(CGameSession & gS);
+    int getBestIdx(MoveList & list,CBoard & board) const;
 
+    
     
 private:
     
-    DIFFICULTY difficulty;
+    int difficulty;
 };
 
 

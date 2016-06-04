@@ -23,3 +23,11 @@ void CSlot::setHeldPiece(CPiece* p){
     
     heldPiece = p;
 }
+
+void CSlot::setValue(int v) {
+    value = v;
+}
+
+int CSlot::getValue() const {
+    return value;
+}

@@ -13,14 +13,20 @@ public:
     MoveList(int MAXMOVES=30);    
     virtual ~MoveList();
     
-    void add(int x,int y,CPiece * takenpiece = NULL);    
+    void add(int x,int y,int fx,int fy);    
+    void add(MyMove move);    
     bool isEmpty() const;
     void clear();
     void reserve(int x);
-    bool contains(const MyMove & move) const;
+    bool contains(const MyMove& move) const;
+    void concat(const MoveList & list);
+    MyMove getMove(int idx) const;
+    int size() const;
     
     vector<MyMove> moveVec;
     int numMoves;
+    
+    void print() const;
 };
 
 

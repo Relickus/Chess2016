@@ -1,36 +1,79 @@
-#include "CFilePersistence.h"
 #include <iostream>
 #include <fstream>
+#include "CFilePersistence.h"
+#include "CPiece.h"
 
 using namespace std;
 
-bool CFilePersistence::loadGame(const char * file) const {
+CFilePersistence::CFilePersistence(CGameSession* gamePtr) : CPersistence(gamePtr){
+}
+
+CFilePersistence::CFilePersistence() : CPersistence() {
+}
+
+
+bool CFilePersistence::load(const char * file) const {
     
      
-        ifstream ifs( file );
-
-        if( ! ifs.is_open() ){
-            
-            cout << "Nepodarilo se nacist soubor \""<< file <<"\" "<<endl;
-            return false;
-        }
+//        ifstream ifs( file );
+//
+//        if( ! ifs.is_open() ){
+//            
+//            cout << "Nepodarilo se nacist soubor \""<< file <<"\" "<<endl;
+//            return false;
+//        }
 
 }
 
-bool CFilePersistence::saveGame() const {
+void CFilePersistence::save() const {
+     
+    string savefile;
     
-    time_t timestamp;    
-    time(&timestamp);
+    cout << "Zadejte nazev souboru:"<<endl;
     
-    string s( ctime(&timestamp) );
-    
-    ofstream ofs( s.c_str() );
+    ofstream ofs;
+    while(true){
 
-        if( ! ofs.is_open() ){
-        
-            cout << "Nepodarilo se vytvorit soubor \""<< s <<"\" "<<endl;
-            return false;
+        cin.clear();
+        //cin.ignore();
+        getline(cin,savefile);
+        ofs.open(savefile);
+
+        if(!cin.good() || !ofs.good()){
+            ofs.clear();
+            cin.clear();
+            savefile.clear();
+            cout << "Nepovedlo se vytvorit soubor, zadejte jiny nazev:" << endl;
         }
+        else
+            break;
+    }
     
-
+    string line;
+    string tmp;
+    
+    for(int i=7; i >=0 ;--i ){
+        for (int j = 0; j < 8; j++) {
+            
+            CPiece * pcs =  gamePtr->gameBoard.getPiece(i,j);  
+            if(pcs == NULL){
+                line+='#';
+                continue;
+            }
+            if(pcs->getColor() == WHITE){
+                tmp = toupper(pcs->getName());
+            }
+            else{
+                tmp = tolower(pcs->getName());
+            }
+            line+= tmp;
+        }
+        line += '\n';
+        ofs << line;
+        line.clear();                
+    }
+    
+    ofs << gamePtr->player1->getPlayerColor()<<gamePtr->whosTurn;
+    cout << "Hra uspesne ulozena."<<endl;
+    ofs.close();
 }

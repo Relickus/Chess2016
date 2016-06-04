@@ -7,7 +7,7 @@
 class CTower : public CPiece{
 public:
     CTower();
-    CTower(COLOR col);
+    CTower(COLOR col,int x, int y);
     CTower(const CTower& orig);
     virtual ~CTower();
 

@@ -6,18 +6,19 @@ CTower::CTower() {
     isLongRunner = true;
 
     moveList.reserve(15);
-
+    value = 5;
 }
 
 CTower::~CTower() {
 
 }
 
-CTower::CTower(COLOR col) : CPiece(col) {
+CTower::CTower(COLOR clr , int row, int col) : CPiece(clr,row,col) {
     name = TOWER;
     isLongRunner = true;
 
     moveList.reserve(15);
+    value = 5;
 
 }
 //
@@ -29,57 +30,51 @@ MoveList & CTower::getLegalMoves(const CBoard & board) {
 
     moveList.clear();
 
-    //up
+     //up
 
-    int newX = getX();
-    int newY = getY();
+    int newRow = getRow();
+    int newCol = getCol();
 
-    for (int y = 0; newY < 8; y++) {
+    for (;newRow < 8; newRow++) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
 
-        newY = newY + y;
     }
 
     // down
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int y = 0; newY >= 0; y--) {
+    for (; newRow >= 0; newRow--) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newY = newY + y;
     }
 
     //left
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int x = 0; newX < 8; x++) {
+    for (;newCol >= 0; newCol--) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
     }
 
     //right
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int x = 0; newX >= 0; x--) {
+    for (;newCol < 8; newCol++) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
     }
+
 
 
     return moveList;

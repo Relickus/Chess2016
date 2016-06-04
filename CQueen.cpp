@@ -7,6 +7,7 @@ CQueen::CQueen() {
     isLongRunner = true;
 
     moveList.reserve(30);
+    value = 10;
 
 }
 
@@ -14,12 +15,13 @@ CQueen::~CQueen() {
 
 }
 
-CQueen::CQueen(COLOR col) : CPiece(col) {
+CQueen::CQueen(COLOR clr , int row, int col) : CPiece(clr,row,col) {
 
     name = QUEEN;
     isLongRunner = true;
 
     moveList.reserve(30);
+    value = 10;
 
 }
 
@@ -33,111 +35,91 @@ MoveList & CQueen::getLegalMoves(const CBoard & board) {
 
     //up
 
-    int newX = getX();
-    int newY = getY();
+    int newRow = getRow();
+    int newCol = getCol();
 
-    for (int y = 0; newY < 8; y++) {
+    for (;newRow < 8; newRow++) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
 
-        newY = newY + y;
     }
 
     // down
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int y = 0; newY >= 0; y--) {
+    for (; newRow >= 0; newRow--) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newY = newY + y;
     }
 
     //left
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int x = 0; newX < 8; x++) {
+    for (;newCol >= 0; newCol--) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
     }
 
     //right
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int x = 0; newX >= 0; x--) {
+    for (;newCol < 8; newCol++) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
     }
 
-    //up left
+   //up left
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int y = 0, x = 0; newX >= 0 && newY < 8; y++, x--) {
+    for (;newRow < 8 && newCol >= 0; newRow++, newCol--) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
-        newY = newY + y;
-
     }
 
     // up right
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int y = 0, x = 0; newX < 8 && newY < 8; y++, x++) {
+    for (;newRow < 8 && newCol < 8; newRow++, newCol++) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
-        newY = newY + y;
     }
 
     //down left
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int y = 0, x = 0; newX >= 0 && newY >= 0; y--, x--) {
+    for (; newRow >= 0 && newCol >= 0; newRow--, newCol--) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
-        newY = newY + y;
     }
 
     //down right
 
-    newX = getX();
-    newY = getY();
+    newRow = getRow();
+    newCol = getCol();
 
-    for (int y = 0, x = 0; newX < 8 && newY >= 0; y--, x++) {
+    for (;newRow >= 0 && newCol < 8; newRow--, newCol++) {
 
-        if (checkField(newX, newY, board) == 1)
+        if (checkField(newRow, newCol, board) == 1)
             break;
-
-        newX = newX + x;
-        newY = newY + y;
     }
 
 

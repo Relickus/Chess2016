@@ -1,31 +1,53 @@
 #ifndef CGAMESESSION_H
 #define	CGAMESESSION_H
 
-#include "COpponent.h"
+#include "CPlayer.h"
 #include "COLOR.h"
 #include <iostream>
 #include "CBoard.h"
 
+class CPersistence;
+class CPlayer;
 
 using namespace std;
 
 class CGameSession {
 public:
     CGameSession();
-    CGameSession(const CGameSession & orig);
     virtual ~CGameSession();
     
     void start();
     void end();
     
-    const CBoard & getBoard() const;
+    CBoard & getBoard();
+    void setGameReady();
+    bool gameReady() const;
+    void setPlayerColors(COLOR col);
+    void setTurn(COLOR col);
+    static bool validateMove(const string & move);
+    static bool validatePos(const string & move);
+    MyMove waitForMove();    
+    bool performMove(MyMove & move);
+    bool movesQuery(string & str);
+    void switchPlayers();
+
     
     CBoard gameBoard;
-    COLOR player1color;
+    COLOR currentPlayer;
+    CPlayer * currPlayerPtr;
     string ipHost;
-    COpponent * opponent;
     string fileName;
-    int difficulty;
+    bool ready_flag;
+    COLOR whosTurn;
+    bool exitRequest;
+    CPersistence * persistence;
+    bool movePerformed;
+    
+    CPlayer * player1;
+    CPlayer * player2;
+
+    
+
     
     
 private:        /// !!!!!!!!! gettery a settery

@@ -7,11 +7,11 @@
 class CKing : public CPiece{
 public:
     CKing();
-    CKing(COLOR);
+    CKing(COLOR col , int x, int y);
     CKing(const CKing& orig);
     virtual ~CKing();
     
-    bool isChecked() const;
+    bool isChecked(const CBoard & board) const;
 
     virtual MoveList & getLegalMoves(const CBoard &  board);
     virtual int checkField(int x, int y, const CBoard& board);

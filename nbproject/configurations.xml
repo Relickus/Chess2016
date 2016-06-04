@@ -6,6 +6,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="Enums" projectFiles="true">
         <itemPath>COLOR.h</itemPath>
+        <itemPath>COMMAND.h</itemPath>
         <itemPath>DIFFICULTY.h</itemPath>
         <itemPath>FIGURENAME.h</itemPath>
       </logicalFolder>
@@ -13,10 +14,12 @@
         <itemPath>CAbstractMenuScreen.h</itemPath>
         <itemPath>CColorMenu.h</itemPath>
         <itemPath>CDifficultyMenu.h</itemPath>
+        <itemPath>CHostJoinMenu.h</itemPath>
         <itemPath>CLoadGameMenu.h</itemPath>
         <itemPath>CMainMenu.h</itemPath>
         <itemPath>CMenuHandler.h</itemPath>
-        <itemPath>CMultiplayerOnlineMenu.h</itemPath>
+        <itemPath>CMultiplayerHostMenu.h</itemPath>
+        <itemPath>CMultiplayerJoinMenu.h</itemPath>
         <itemPath>COpponentMenu.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Pieces" projectFiles="true">
@@ -32,15 +35,15 @@
       <itemPath>AllExceptions.h</itemPath>
       <itemPath>AllPieces.h</itemPath>
       <itemPath>CBoard.h</itemPath>
+      <itemPath>CCommand.h</itemPath>
       <itemPath>CController.h</itemPath>
       <itemPath>CFilePersistence.h</itemPath>
       <itemPath>CGUI.h</itemPath>
       <itemPath>CGameSession.h</itemPath>
-      <itemPath>CHumanPlayer.h</itemPath>
       <itemPath>CIntelligence.h</itemPath>
-      <itemPath>COpponent.h</itemPath>
+      <itemPath>CLocalPlayer.h</itemPath>
       <itemPath>CPersistence.h</itemPath>
-      <itemPath>CPiecesBox.h</itemPath>
+      <itemPath>CPlayer.h</itemPath>
       <itemPath>CSingleplayerMenu.h</itemPath>
       <itemPath>CSlot.h</itemPath>
       <itemPath>CVisitor.h</itemPath>
@@ -58,10 +61,12 @@
         <itemPath>CAbstractMenuScreen.cpp</itemPath>
         <itemPath>CColorMenu.cpp</itemPath>
         <itemPath>CDifficultyMenu.cpp</itemPath>
+        <itemPath>CHostJoinMenu.cpp</itemPath>
         <itemPath>CLoadGameMenu.cpp</itemPath>
         <itemPath>CMainMenu.cpp</itemPath>
         <itemPath>CMenuHandler.cpp</itemPath>
-        <itemPath>CMultiplayerOnlineMenu.cpp</itemPath>
+        <itemPath>CMultiplayerHostMenu.cpp</itemPath>
+        <itemPath>CMultiplayerJoinMenu.cpp</itemPath>
         <itemPath>COpponentMenu.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Pieces" projectFiles="true">
@@ -74,13 +79,15 @@
         <itemPath>CTower.cpp</itemPath>
       </logicalFolder>
       <itemPath>CBoard.cpp</itemPath>
+      <itemPath>CCommand.cpp</itemPath>
       <itemPath>CController.cpp</itemPath>
       <itemPath>CFilePersistence.cpp</itemPath>
       <itemPath>CGUI.cpp</itemPath>
       <itemPath>CGameSession.cpp</itemPath>
-      <itemPath>CHumanPlayer.cpp</itemPath>
       <itemPath>CIntelligence.cpp</itemPath>
-      <itemPath>COpponent.cpp</itemPath>
+      <itemPath>CLocalPlayer.cpp</itemPath>
+      <itemPath>CPersistence.cpp</itemPath>
+      <itemPath>CPlayer.cpp</itemPath>
       <itemPath>CSlot.cpp</itemPath>
       <itemPath>MoveList.cpp</itemPath>
       <itemPath>MyMove.cpp</itemPath>
@@ -133,6 +140,10 @@
       </item>
       <item path="CColorMenu.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CCommand.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCommand.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CController.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CController.h" ex="false" tool="3" flavor2="0">
@@ -153,9 +164,9 @@
       </item>
       <item path="CGameSession.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="CHumanPlayer.cpp" ex="false" tool="1" flavor2="0">
+      <item path="CHostJoinMenu.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="CHumanPlayer.h" ex="false" tool="3" flavor2="0">
+      <item path="CHostJoinMenu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CIntelligence.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -173,6 +184,10 @@
       </item>
       <item path="CLoadGameMenu.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CLocalPlayer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CLocalPlayer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CMainMenu.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CMainMenu.h" ex="false" tool="3" flavor2="0">
@@ -181,15 +196,17 @@
       </item>
       <item path="CMenuHandler.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="CMultiplayerOnlineMenu.cpp" ex="false" tool="1" flavor2="0">
+      <item path="CMultiplayerHostMenu.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="CMultiplayerOnlineMenu.h" ex="false" tool="3" flavor2="0">
+      <item path="CMultiplayerHostMenu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMultiplayerJoinMenu.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMultiplayerJoinMenu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="COLOR.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="COpponent.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="COpponent.h" ex="false" tool="3" flavor2="0">
+      <item path="COMMAND.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="COpponentMenu.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -199,13 +216,17 @@
       </item>
       <item path="CPawn.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CPersistence.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="CPersistence.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CPiece.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CPiece.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="CPiecesBox.h" ex="false" tool="3" flavor2="0">
+      <item path="CPlayer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPlayer.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CQueen.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -280,6 +301,10 @@
       </item>
       <item path="CColorMenu.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CCommand.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CCommand.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CController.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CController.h" ex="false" tool="3" flavor2="0">
@@ -300,9 +325,9 @@
       </item>
       <item path="CGameSession.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="CHumanPlayer.cpp" ex="false" tool="1" flavor2="0">
+      <item path="CHostJoinMenu.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="CHumanPlayer.h" ex="false" tool="3" flavor2="0">
+      <item path="CHostJoinMenu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CIntelligence.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -320,6 +345,10 @@
       </item>
       <item path="CLoadGameMenu.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CLocalPlayer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CLocalPlayer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CMainMenu.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CMainMenu.h" ex="false" tool="3" flavor2="0">
@@ -328,15 +357,17 @@
       </item>
       <item path="CMenuHandler.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="CMultiplayerOnlineMenu.cpp" ex="false" tool="1" flavor2="0">
+      <item path="CMultiplayerHostMenu.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="CMultiplayerOnlineMenu.h" ex="false" tool="3" flavor2="0">
+      <item path="CMultiplayerHostMenu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CMultiplayerJoinMenu.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CMultiplayerJoinMenu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="COLOR.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="COpponent.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="COpponent.h" ex="false" tool="3" flavor2="0">
+      <item path="COMMAND.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="COpponentMenu.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -346,13 +377,17 @@
       </item>
       <item path="CPawn.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CPersistence.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="CPersistence.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CPiece.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CPiece.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="CPiecesBox.h" ex="false" tool="3" flavor2="0">
+      <item path="CPlayer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CPlayer.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CQueen.cpp" ex="false" tool="1" flavor2="0">
       </item>

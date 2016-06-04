@@ -15,7 +15,7 @@
 class CPiece {
 public:
     CPiece();
-    CPiece(COLOR color);
+    CPiece(COLOR color,int row, int col);
     CPiece(const CPiece& orig);
     virtual ~CPiece();
     
@@ -26,12 +26,23 @@ public:
     
     FIGURENAME getName() const;
     COLOR getColor() const;
-    int getX() const;
-    int getY() const;
-    virtual MoveList & getLegalMoves(const CBoard &  board) = 0;
+    int getRow() const;
+    int getCol() const;
     
-    bool isFriendPiece(CPiece * tmp) const;
-    virtual int checkField(int x,int y, const CBoard & board);
+    void setRow(int r);
+    void setCol(int c);
+    
+    virtual MoveList & getLegalMoves(const CBoard &  board) = 0;
+    bool equals(FIGURENAME fig) const;
+    
+    bool isFriendPiece(const CPiece * tmp) const;
+    bool isFriendPiece(COLOR col) const;
+    virtual int checkField(int row,int col, const CBoard & board);
+    
+    static CPiece * getPieceByLetter(char c, int row, int col);
+    static bool validLetter(char c); 
+    bool moveTo(const MyMove & move, CBoard & board );    
+    int getValue() const;
     
     
     //CPiece * getPieceByLetter(char letter);
@@ -55,10 +66,11 @@ protected:
     bool moveLeft(unsigned);
     bool moveRight(unsigned);
 
-    int xPos;
-    int yPos;
+    int rowPos;
+    int colPos;
     COLOR color;
     FIGURENAME name;
+    int value;
     
 };
 

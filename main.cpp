@@ -6,22 +6,41 @@
 
 using namespace std;
 
-/*
- * 
- */
 int main(int argc, char** argv) {
         
     CController * c = new CController();
 
     c->showMenus();
     
-    c->getGameSess().start();
+    c->startGame();
     
-    MoveList l = c->getGameSess().gameBoard.getPiece(0,1)->getLegalMoves(c->getGameSess().gameBoard);
+//    CBoard & brd = c->getGameSess().gameBoard;
+//
+//    
+//    brd.rotateBoard();
+//    
+//    brd.printBoard();
+//    
+//    MoveList l = brd.getPiece(1,3)->getLegalMoves(brd);
+//    
+//    l.print();
+//    
+//    brd.printPossibleMoves(l);
+//    
+//    
+//   brd.getPiece(1,4)->moveTo(MyMove(3,4),brd);
+//   brd.getPiece(1,3)->moveTo(MyMove(3,3),brd);
+//   
+//   brd.printBoard();
+//   
+//   l = brd.getPiece(0,4)->getLegalMoves(brd);
+//
+//   brd.printPossibleMoves(l);
+//   
+//   brd.getPiece(3,4)->moveTo(MyMove(1,3),brd);
+   
+   
     
-    l.print();
-    
-    c->getGameSess().gameBoard.printPossibleMoves(l);
 //    
 //    CKing * k = dynamic_cast<CKing*>(c->getGameSess().gameBoard.getPiece(0,4));
 //    
@@ -30,7 +49,6 @@ int main(int argc, char** argv) {
 //    
 //    cout << k->isChecked(b);
 //    
-    c->endGame();
     delete c;
     return 0;
 }

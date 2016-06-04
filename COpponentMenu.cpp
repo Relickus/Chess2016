@@ -1,9 +1,12 @@
 
 #include "COpponentMenu.h"
-#include "CMultiplayerOnlineMenu.h"
+#include "CMultiplayerJoinMenu.h"
 #include "CMultiplayerLocalMenu.h"
 #include "CDifficultyMenu.h"
 #include "CColorMenu.h"
+#include "CController.h"
+#include "CIntelligence.h"
+#include "CLocalPlayer.h"
 
 COpponentMenu::COpponentMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbstractMenuScreen(prPar){
     
@@ -18,7 +21,6 @@ COpponentMenu::COpponentMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbstract
 }
 
 COpponentMenu::~COpponentMenu() {
-
 }
 
 
@@ -32,12 +34,12 @@ void COpponentMenu::setNextMenu(){
             nextMenu = new CDifficultyMenu(this);
             break;
             
-        case(2) : 
+        case(2) :             
             nextMenu = new CColorMenu(this);
             break;
             
         case(3) : 
-            nextMenu = new CMultiplayerOnlineMenu(this);
+            nextMenu = new CMultiplayerJoinMenu(this);
             break;
         
         case(4) : 
@@ -46,7 +48,7 @@ void COpponentMenu::setNextMenu(){
     }    
 }
 
-COpponent* COpponentMenu::getOpponent() const {
+CPlayer * COpponentMenu::getOpponent() const {
 
     
     
@@ -54,4 +56,22 @@ COpponent* COpponentMenu::getOpponent() const {
 
 void COpponentMenu::setStuff(CController* ctrler) {
 
+    delete  ctrler->getGameSess().player1;
+    ctrler->getGameSess().player1 = new CLocalPlayer();
+    
+    switch(chosenOption){
+        
+        case(1):
+            delete ctrler->getGameSess().player2;
+            ctrler->getGameSess().player2 = new CIntelligence();
+            break;
+        case(2):
+            delete ctrler->getGameSess().player2;
+            ctrler->getGameSess().player2 = new CLocalPlayer();        
+            break;
+        case(3):
+             //ctrler->getGameSess().player2 = new CRemotePlayer();   
+             break;
+    }
+    // cntr-> get game session . opponent = tmpoponent
 }

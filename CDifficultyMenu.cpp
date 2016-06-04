@@ -1,5 +1,7 @@
 #include "CDifficultyMenu.h"
 #include "CColorMenu.h"
+#include "CController.h"
+#include "CIntelligence.h"
 
 CDifficultyMenu::CDifficultyMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbstractMenuScreen(prPar) {
     
@@ -37,4 +39,9 @@ void CDifficultyMenu::setNextMenu() {
 
 void CDifficultyMenu::setStuff(CController* ctrler) {
 
+    if(chosenOption != 5){
+        CIntelligence * tmp = dynamic_cast<CIntelligence*>(ctrler->getGameSess().player2);
+        tmp->changeDifficulty(2*chosenOption);
+    }
+    
 }

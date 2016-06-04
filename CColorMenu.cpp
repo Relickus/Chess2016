@@ -36,6 +36,11 @@ void CColorMenu::setNextMenu() {
 
 void CColorMenu::setStuff(CController* ctrler) {
 
-    ctrler -> getGameSess().player1color = (chosenOption == 1 ? WHITE : BLACK);
-    
+    if(chosenOption != 3){
+        COLOR col = (chosenOption == 1 ? WHITE : BLACK);
+        ctrler -> getGameSess().setPlayerColors(col);
+        ctrler -> getGameSess().whosTurn = (chosenOption == 1 ? WHITE : BLACK);
+                
+        ctrler -> getGameSess().setGameReady();
+    }
 }

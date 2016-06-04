@@ -6,10 +6,9 @@
 class CFilePersistence : public CPersistence {
 public:
     CFilePersistence();
-    CFilePersistence(const CFilePersistence& orig);
-    virtual ~CFilePersistence();
-    bool saveGame() const;
-    bool loadGame(const char * file) const;
+    CFilePersistence(CGameSession * gamePtr);
+    void save() const;
+    bool load(const char * file) const;
     
 private:
 

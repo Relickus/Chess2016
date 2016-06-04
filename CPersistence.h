@@ -1,15 +1,22 @@
 #ifndef CPERSISTENCE_H
 #define	CPERSISTENCE_H
 
+#include <iostream>
+#include "CGameSession.h"
+
+using namespace std;
+
 class CPersistence {
 public:
     CPersistence();
-    CPersistence(const CPersistence& orig);
+    CPersistence(CGameSession * b);
     virtual ~CPersistence();
-    virtual bool saveGame() const = 0;
-    virtual bool loadGame(const char * file) const = 0;
+    virtual void save() const = 0;
+    virtual bool load(const char * file) const = 0;
     
-private:
+protected:
+    
+    CGameSession * gamePtr;
 
 };
 

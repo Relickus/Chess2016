@@ -2,6 +2,11 @@
 #include "CMainMenu.h"
 #include "COpponentMenu.h"
 #include "CLoadGameMenu.h"
+#include "CController.h"
+
+#define OPT_NEW 1
+#define OPT_LOAD 2
+#define OPT_EXIT 3
 
 
 CMainMenu::CMainMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbstractMenuScreen(prPar){
@@ -25,15 +30,15 @@ void CMainMenu::setNextMenu() {
         
     switch(chosenOption){
         
-        case(1) : 
+        case(OPT_NEW) : 
             nextMenu = new COpponentMenu(this);
             break;
         
-        case(2) : 
+        case(OPT_LOAD) : 
             nextMenu = new CLoadGameMenu(this);
             break;
         
-        case(3) : 
+        case(OPT_EXIT) : 
             nextMenu = NULL;
             break;
             
@@ -43,5 +48,6 @@ void CMainMenu::setNextMenu() {
 }
 
 void CMainMenu::setStuff(CController* ctrler) {
-
+    
+    
 }

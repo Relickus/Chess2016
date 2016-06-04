@@ -1,10 +1,10 @@
-#include "CMultiplayerOnlineMenu.h"
+#include "CMultiplayerJoinMenu.h"
 #include "CColorMenu.h"
 #include <climits>
 
-void CMultiplayerOnlineMenu::setNextMenu(){}
+void CMultiplayerJoinMenu::setNextMenu(){}
 
-CMultiplayerOnlineMenu::CMultiplayerOnlineMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbstractMenuScreen(prPar) {
+CMultiplayerJoinMenu::CMultiplayerJoinMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbstractMenuScreen(prPar) {
 
     title = "Zadejte IPv4 adresu serveru, nebo \"back\" pro navrat zpet:";
     
@@ -12,11 +12,11 @@ CMultiplayerOnlineMenu::CMultiplayerOnlineMenu(CAbstractMenuScreen * prPar /* =N
 
     setNumMenuItems();
 }
-CMultiplayerOnlineMenu::~CMultiplayerOnlineMenu() {
+CMultiplayerJoinMenu::~CMultiplayerJoinMenu() {
 
 }
 
-bool CMultiplayerOnlineMenu::validIP(const string & ip) const{
+bool CMultiplayerJoinMenu::validIP(const string & ip) const{
     
     if(ip.length() < 7 || ip.length() > 15){
         return false;
@@ -42,7 +42,7 @@ bool CMultiplayerOnlineMenu::validIP(const string & ip) const{
     return true;
 }
 
-int CMultiplayerOnlineMenu::readInput(){
+int CMultiplayerJoinMenu::readInput(){
     
     string ipstr;    
     
@@ -80,6 +80,6 @@ int CMultiplayerOnlineMenu::readInput(){
     return 0;
 }
 
-void CMultiplayerOnlineMenu::setStuff(CController* ctrler) {
+void CMultiplayerJoinMenu::setStuff(CController* ctrler) {
 
 }

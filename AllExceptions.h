@@ -3,6 +3,10 @@
 
 
 class MoveOutOfBoardException{};
+class BadFileReadException{};
+class InvalidFileCharacterException{};
+class BadInputException{};
+class BadCommandException{};
 
 
 #endif	/* ALLEXCEPTIONS_H */

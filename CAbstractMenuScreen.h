@@ -17,7 +17,7 @@ public:
     CAbstractMenuScreen(const CAbstractMenuScreen& orig);
     virtual ~CAbstractMenuScreen();
     
-    void show() const;
+    virtual void show() const;
     void printMenuItem(int i) const;
     virtual int readInput();
     int getChoice() const;

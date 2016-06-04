@@ -10,9 +10,14 @@ MoveList::MoveList(int MAXMOVES) : numMoves(0){
     moveVec.clear();
 }
 
-void MoveList::add(int x, int y, CPiece * takenpiece){
+void MoveList::add(MyMove move){
+    moveVec.push_back(move);
+    numMoves++;
+}
+
+void MoveList::add(int x, int y,int fx,int fy){
     
-   moveVec.push_back( MyMove(x,y,takenpiece) ); 
+   moveVec.push_back( MyMove(x,y,fx,fy) ); 
     numMoves++;
 }
 
@@ -31,13 +36,39 @@ void MoveList::reserve(int x){
 
 bool MoveList::contains(const MyMove& move) const {
 
-//    auto it = find(moveVec.begin(),moveVec.end(),move);
-   // if(it != moveVec.end())
-    //    return true;
+    for(size_t i = 0; i < moveVec.size(); ++i){        
+        if(moveVec.at(i).toX == move.toX && moveVec.at(i).toY == move.toY )
+            return true;
+    }
     
     return false;    
 }
 
 MoveList::~MoveList() {
 
+}
+
+
+void MoveList::print() const{
+    
+    for(auto & i : moveVec){
+        cout << "[" <<i.toX<<","<<i.toY<<"]"<<endl;
+    }
+}
+
+void MoveList::concat(const MoveList& list) {
+
+    for(size_t i = 0; i < list.moveVec.size(); ++i){
+        add(list.getMove(i));
+    }
+    numMoves = numMoves + list.numMoves;
+}
+
+MyMove MoveList::getMove(int idx) const{
+    
+    return moveVec.at(idx);
+}
+
+int MoveList::size() const {
+    return moveVec.size();
 }

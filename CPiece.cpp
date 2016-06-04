@@ -4,6 +4,12 @@
 #include "AllExceptions.h"
 
 #include "MoveList.h"
+#include "CPawn.h"
+#include "CBishop.h"
+#include "CKnight.h"
+#include "CTower.h"
+#include "CKing.h"
+#include "CQueen.h"
 
 using namespace std;
 //
@@ -16,7 +22,7 @@ CPiece::CPiece() {
 
 }
 
-CPiece::CPiece(COLOR col) : color(col) {
+CPiece::CPiece(COLOR clr, int row, int col) : color(clr), rowPos(row), colPos(col) {
 
 }
 
@@ -24,82 +30,86 @@ CPiece::~CPiece() {
 
 }
 
+bool CPiece::equals(FIGURENAME fig) const{
+     return tolower(getName()) == tolower(fig);
+}
+
 bool CPiece::moveDown() {
 
-    if (yPos <= 0)
+    if (colPos <= 0)
         throw MoveOutOfBoardException();
 
-    --yPos;
+    --colPos;
 
     return true;
 }
 
 bool CPiece::moveUp() {
 
-    if (yPos >= 7)
+    if (colPos >= 7)
         throw MoveOutOfBoardException();
 
-    ++yPos;
+    ++colPos;
 
     return true;
 }
 
 bool CPiece::moveLeft() {
 
-    if (xPos <= 0)
+    if (rowPos <= 0)
         throw MoveOutOfBoardException();
 
-    --xPos;
+    --rowPos;
 
     return true;
 }
 
 bool CPiece::moveRight() {
 
-    if (xPos >= 7)
+    if (rowPos >= 7)
         throw MoveOutOfBoardException();
 
-    ++xPos;
+    ++rowPos;
 
     return true;
 }
 
 bool CPiece::moveDown(unsigned int by) {
 
-    if (yPos - by < 0)
+    if (colPos - by < 0)
         throw MoveOutOfBoardException();
 
-    yPos -= by;
+    colPos -= by;
 
     return true;
 }
 
 bool CPiece::moveUp(unsigned int by) {
 
-    if (yPos + by > 7)
+    if (colPos + by > 7)
         throw MoveOutOfBoardException();
 
-    yPos += by;
+    colPos += by;
 
     return true;
 }
 
 bool CPiece::moveLeft(unsigned int by) {
 
-    if (xPos - by < 0)
+    if (rowPos - by < 0)
         throw MoveOutOfBoardException();
 
-    xPos -= by;
+    rowPos -= by;
 
     return true;
 }
 
 bool CPiece::moveRight(unsigned int by) {
 
-    if (xPos + by > 7)
+    if (rowPos + by > 7)
         throw MoveOutOfBoardException();
 
-    xPos += by;
+    rowPos += by;
 
     return true;
 }
@@ -115,9 +125,9 @@ COLOR CPiece::getColor() const {
 void CPiece::printPiece() const {
 
     if (color == WHITE)
-        cout << (char) tolower(getName());
+        cout << (char) toupper(getName());
     else
-        cout << (char) getName();
+        cout << (char) tolower(getName());
 }
 
 //static CPiece * CPiece::getPieceByLetter(char letter){
@@ -146,22 +156,36 @@ void CPiece::printPiece() const {
 //        }    
 //}
 
-int CPiece::getX() const {
-    return xPos;
+int CPiece::getRow() const {
+    return rowPos;
 }
 
-int CPiece::getY() const {
-    return yPos;
+int CPiece::getCol() const {
+    return colPos;
 }
 
-bool CPiece::isFriendPiece(CPiece * tmp) const {
+void CPiece::setRow(int r){
+    rowPos = r;
+}
+
+void CPiece::setCol(int c){
+    colPos = c;
+}
+
+bool CPiece::isFriendPiece(const CPiece * tmp) const {
 
     return this->getColor() == tmp->getColor();
 }
 
+bool CPiece::isFriendPiece(COLOR col) const {
+
+    return this->getColor() == col;
+}
+
+
 int CPiece::checkField(int x, int y, const CBoard & board) {
 
-    if (y == getY() && x == getX())
+    if (y == getCol() && x == getRow())
         return 0;
 
     CPiece * tmp = board.getPiece(x, y);
@@ -171,12 +195,85 @@ int CPiece::checkField(int x, int y, const CBoard & board) {
         if (isFriendPiece(tmp)) { // friend piece
             return 1;
         } else {
-            moveList.add(x, y, board.getPiece(x, y));
+            moveList.add(x, y,rowPos,colPos);
             return 1;
         }
     } else {
-        moveList.add(x, y);
+        moveList.add(x, y,rowPos,colPos);
     }
 
     return 0;
+}
+
+bool CPiece::validLetter(char c){
+    
+    if(c == '#')
+        return true;
+    
+    char tmp = toupper(c);
+    
+    switch(tmp){
+        case(PAWN):
+        case(TOWER):
+        case(QUEEN):
+        case(KNIGHT):
+        case(BISHOP):
+        case(KING):
+            return true;
+            
+        default : 
+            return false;    
+    }
+    
+}
+
+ CPiece * CPiece::getPieceByLetter(char c,int row,int col){
+     
+     if(!CPiece::validLetter(c))
+         throw InvalidFileCharacterException();
+     
+     COLOR clr;
+     
+     if(islower(c))
+         clr = BLACK;
+     else 
+         clr = WHITE;
+     
+     
+     switch(toupper(c)){
+         
+         case('#'):     // empty field             
+             return NULL;
+         
+         case(PAWN):
+             return new CPawn(clr,row,col);
+         
+         case(BISHOP):
+             return new CBishop(clr,row,col);
+         
+         case(KNIGHT):
+             return new CKnight(clr,row,col);
+         
+         case(TOWER):
+             return new CTower(clr,row,col);
+         
+         case(QUEEN):
+             return new CQueen(clr,row,col);
+         
+         case(KING):
+             return new CKing(clr,row,col);         
+     }
+     
+ }
+
+ 
+ bool CPiece::moveTo(const MyMove & move, CBoard & board ){
+     
+     
+     board.moveFigure(move);
+            
+     return true;
+ }
+ int CPiece::getValue() const {
+     return value;
 }

@@ -1,0 +1,10 @@
+#ifndef COMMAND_H
+#define	COMMAND_H
+
+enum COMMAND{
+    MOVES,ROTATE,MAKEMOVE,EXIT,SAVE,UNKNOWN
+};
+
+
+#endif	/* COMMAND_H */
+

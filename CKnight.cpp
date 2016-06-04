@@ -7,17 +7,19 @@ CKnight::CKnight() {
     isLongRunner = false;
 
     moveList.reserve(5);
+    value = 5;
 }
 
 CKnight::~CKnight() {
 
 }
 
-CKnight::CKnight(COLOR col) : CPiece(col) {
+CKnight::CKnight(COLOR clr , int row, int col) : CPiece(clr,row,col) {
     name = KNIGHT;
     isLongRunner = false;
 
     moveList.reserve(5);
+    value = 5;
 
 }
 //
@@ -31,36 +33,65 @@ MoveList & CKnight::getLegalMoves(const CBoard & board) {
 
     //up left
 
-    int newX = getX() - 1;
-    int newY = getY() + 2;
+    int newRow = getRow() + 2;
+    int newCol = getCol() - 1;
 
-    if (!board.outOfBoard(newX, newY))
-        checkField(newX, newY, board);
+    if (!board.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, board);
 
 
     // up right
 
-    newX = getX() + 1;
-    newY = getY() + 2;
+    newRow = getRow() + 2;
+    newCol = getCol() + 1;
 
-    if (!board.outOfBoard(newX, newY))
-        checkField(newX, newY, board);
+    if (!board.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, board);
 
     // down left
 
-    newX = getX() - 1;
-    newY = getY() - 2;
+    newRow = getRow() - 1;
+    newCol = getCol() - 2;
 
-    if (!board.outOfBoard(newX, newY))
-        checkField(newX, newY, board);
+    if (!board.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, board);
 
     // down right
 
-    newX = getX() + 1;
-    newY = getY() - 2;
+    newRow = getRow() - 1;
+    newCol = getCol() + 2;
 
-    if (!board.outOfBoard(newX, newY))
-        checkField(newX, newY, board);
+    if (!board.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, board);
+    
+    //up left 2
+    
+    newRow = getRow() + 1;
+    newCol = getCol() - 2;
 
+    if (!board.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, board);
+    
+    //up right 2
+    newRow = getRow() + 1;
+    newCol = getCol() + 2;
+
+    if (!board.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, board);
+    
+    //down left 2
+    newRow = getRow() - 2;
+    newCol = getCol() - 1;
+
+    if (!board.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, board);
+    
+    //down right 2
+    newRow = getRow() - 2;
+    newCol = getCol() + 1;
+
+    if (!board.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, board);
+    
     return moveList;
 }
