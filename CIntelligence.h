@@ -20,6 +20,7 @@ public:
     
 private:
     
+    void eraseCheckMoves(MoveList & l, CGameSession & gS) const;
     int difficulty;
 };
 

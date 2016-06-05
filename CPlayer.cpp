@@ -1,12 +1,10 @@
 #include "CPlayer.h"
+#include "CKing.h"
 
-CPlayer::CPlayer(){
+CPlayer::CPlayer() : playersKing(NULL){
     
 }
 
-CPlayer::CPlayer(const CPlayer& orig) {
-
-}
 
 CPlayer::~CPlayer(){
     
@@ -37,4 +35,12 @@ void CPlayer::findAllFigures(const CBoard& board){
         
     }
     
+}
+
+bool CPlayer::kingIsChecked(CGameSession & gS) const{
+    return playersKing->isChecked(gS.gameBoard);
+}
+
+void CPlayer::setKing(CKing* k) {
+    playersKing = k;
 }

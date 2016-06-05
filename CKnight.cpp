@@ -27,7 +27,7 @@ CKnight::CKnight(COLOR clr , int row, int col) : CPiece(clr,row,col) {
 //        
 //}
 
-MoveList & CKnight::getLegalMoves(const CBoard & board) {
+MoveList & CKnight::getLegalMoves(const CGameSession & gS) {
 
     moveList.clear();
 
@@ -36,8 +36,8 @@ MoveList & CKnight::getLegalMoves(const CBoard & board) {
     int newRow = getRow() + 2;
     int newCol = getCol() - 1;
 
-    if (!board.outOfBoard(newRow, newCol))
-        checkField(newRow, newCol, board);
+    if (!gS.gameBoard.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, gS.gameBoard);
 
 
     // up right
@@ -45,53 +45,57 @@ MoveList & CKnight::getLegalMoves(const CBoard & board) {
     newRow = getRow() + 2;
     newCol = getCol() + 1;
 
-    if (!board.outOfBoard(newRow, newCol))
-        checkField(newRow, newCol, board);
+    if (!gS.gameBoard.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, gS.gameBoard);
 
     // down left
 
     newRow = getRow() - 1;
     newCol = getCol() - 2;
 
-    if (!board.outOfBoard(newRow, newCol))
-        checkField(newRow, newCol, board);
+    if (!gS.gameBoard.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, gS.gameBoard);
 
     // down right
 
     newRow = getRow() - 1;
     newCol = getCol() + 2;
 
-    if (!board.outOfBoard(newRow, newCol))
-        checkField(newRow, newCol, board);
+    if (!gS.gameBoard.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, gS.gameBoard);
     
     //up left 2
     
     newRow = getRow() + 1;
     newCol = getCol() - 2;
 
-    if (!board.outOfBoard(newRow, newCol))
-        checkField(newRow, newCol, board);
+    if (!gS.gameBoard.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, gS.gameBoard);
     
     //up right 2
     newRow = getRow() + 1;
     newCol = getCol() + 2;
 
-    if (!board.outOfBoard(newRow, newCol))
-        checkField(newRow, newCol, board);
+    if (!gS.gameBoard.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, gS.gameBoard);
     
     //down left 2
     newRow = getRow() - 2;
     newCol = getCol() - 1;
 
-    if (!board.outOfBoard(newRow, newCol))
-        checkField(newRow, newCol, board);
+    if (!gS.gameBoard.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, gS.gameBoard);
     
     //down right 2
     newRow = getRow() - 2;
     newCol = getCol() + 1;
 
-    if (!board.outOfBoard(newRow, newCol))
-        checkField(newRow, newCol, board);
+    if (!gS.gameBoard.outOfBoard(newRow, newCol))
+        checkField(newRow, newCol, gS.gameBoard);
     
     return moveList;
+}
+
+CPiece* CKnight::copyPiece(CPiece* pcs) {
+    return new CKnight(pcs->getColor(),pcs->getRow(),pcs->getCol());
 }

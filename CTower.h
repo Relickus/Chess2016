@@ -10,8 +10,10 @@ public:
     CTower(COLOR col,int x, int y);
     virtual ~CTower();
 
-    virtual MoveList & getLegalMoves(const CBoard &  board);
+    virtual MoveList & getLegalMoves(const CGameSession & gS);
     //virtual bool isLegalMove(int x, int y) const;
+
+    virtual CPiece* copyPiece(CPiece* pcs);
 
 
     //void printPiece() const;

@@ -79,6 +79,10 @@ void CController::gameLoop(){
         
         CCommand command;
         
+        if(game.isCheckMate()){
+            break;
+        }
+        
         while(command.command == UNKNOWN){   
             command = game.currPlayerPtr-> getCommand(game);
         }

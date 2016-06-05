@@ -11,15 +11,14 @@ MoveList::MoveList(int MAXMOVES) : numMoves(0){
 }
 
 void MoveList::add(MyMove move,CPiece * tmp){
+    move.figure = tmp;
     moveVec.push_back(move);
-    moveVec.rbegin()->figure = tmp;
     numMoves++;
 }
 
 void MoveList::add(int x, int y,int fx,int fy,CPiece * tmp){
     
-   moveVec.push_back( MyMove(x,y,fx,fy) ); 
-   moveVec.rbegin()->figure = tmp;
+   moveVec.push_back( MyMove(x,y,fx,fy,tmp) ); 
     numMoves++;
 }
 
@@ -56,16 +55,17 @@ void MoveList::print() const{
     for(auto & i : moveVec){
         cout << "[" <<i.fromX<<","<<i.fromY<<"] -> [" << i.toX << ","<<i.toY<<"], ";
         if(i.figure==NULL)
-            cout << "null" <<endl;
+            cout << "null";
         else
             i.figure->printPiece();
+        cout <<endl;
     }
 }
 
 void MoveList::concat(const MoveList& list) {
 
     for(size_t i = 0; i < list.moveVec.size(); ++i){
-        add(list.getMove(i));
+        add(list.getMove(i),list.getMove(i).figure);
     }
     numMoves = numMoves + list.numMoves;
 }

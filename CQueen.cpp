@@ -29,7 +29,7 @@ CQueen::CQueen(COLOR clr , int row, int col) : CPiece(clr,row,col) {
 //        
 //}
 
-MoveList & CQueen::getLegalMoves(const CBoard & board) {
+MoveList & CQueen::getLegalMoves(const CGameSession & gS) {
 
     moveList.clear();
 
@@ -40,7 +40,7 @@ MoveList & CQueen::getLegalMoves(const CBoard & board) {
 
     for (;newRow < 8; newRow++) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
 
     }
@@ -52,7 +52,7 @@ MoveList & CQueen::getLegalMoves(const CBoard & board) {
 
     for (; newRow >= 0; newRow--) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -63,7 +63,7 @@ MoveList & CQueen::getLegalMoves(const CBoard & board) {
 
     for (;newCol >= 0; newCol--) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -74,7 +74,7 @@ MoveList & CQueen::getLegalMoves(const CBoard & board) {
 
     for (;newCol < 8; newCol++) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -85,7 +85,7 @@ MoveList & CQueen::getLegalMoves(const CBoard & board) {
 
     for (;newRow < 8 && newCol >= 0; newRow++, newCol--) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -96,7 +96,7 @@ MoveList & CQueen::getLegalMoves(const CBoard & board) {
 
     for (;newRow < 8 && newCol < 8; newRow++, newCol++) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -107,7 +107,7 @@ MoveList & CQueen::getLegalMoves(const CBoard & board) {
 
     for (; newRow >= 0 && newCol >= 0; newRow--, newCol--) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -118,7 +118,7 @@ MoveList & CQueen::getLegalMoves(const CBoard & board) {
 
     for (;newRow >= 0 && newCol < 8; newRow--, newCol++) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -126,4 +126,8 @@ MoveList & CQueen::getLegalMoves(const CBoard & board) {
     return moveList;
 
 
+}
+
+CPiece* CQueen::copyPiece(CPiece* pcs) {
+    return new CQueen(pcs->getColor(),pcs->getRow(),pcs->getCol());
 }

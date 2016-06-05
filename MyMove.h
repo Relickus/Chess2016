@@ -12,7 +12,7 @@ struct MyMove{
     MyMove();
     MyMove(const MyMove & oth);
     MyMove(const string & movestr);
-    MyMove(int tX, int tY,int frX=-1,int frY=-1);       // POZOR, nejdrive TO , pak FROM souradnice
+    MyMove(int tX, int tY,int frX=-1,int frY=-1,CPiece * tmp=NULL);       // POZOR, nejdrive TO , pak FROM souradnice
     ~MyMove();
     bool isFicture() const;
     

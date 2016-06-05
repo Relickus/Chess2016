@@ -35,6 +35,8 @@ void CCommand::executeCommand(CGameSession & gS) {
         case(MAKEMOVE):
             makeMoveQuery(gS);
             break;
+        case(SURRENDER):
+            surrenderQuery(gS);
             
         default:
             break;
@@ -100,20 +102,7 @@ void CCommand::movesQuery(CGameSession & gS) const{
         return;
     }
 
-    MoveList l;
-
-    if(tmp->getName() == PAWN){
-     CPawn * pwn = dynamic_cast<CPawn*>(tmp);
-
-        if(gS.currPlayerPtr == gS.player2){
-
-            l = pwn->getLegalMovesDown(gS.gameBoard);
-        }
-        else
-            l = pwn->getLegalMovesUp(gS.gameBoard);
-    }
-    else
-        l = tmp->getLegalMoves(gS.gameBoard);
+    MoveList l = tmp->getLegalMoves(gS);
 
     gS.gameBoard.printPossibleMoves(l);
         
@@ -137,40 +126,19 @@ void CCommand::makeMoveQuery(CGameSession & gS) const{
     
     // legalni figurka 
     
-    if(tmp->getName() == PAWN){
-     CPawn * pwn = dynamic_cast<CPawn*>(tmp);
-
-        if(gS.currPlayerPtr == gS.player2){
-
-            l = pwn->getLegalMovesDown(gS.gameBoard);
-            if(move.toX == gS.gameBoard.LAST_ROW_DOWN){ // hodla jit na protejsi kraj -> promotion
-                
-                gS.gameBoard.promotePawn(move);                        
-                gS.gameBoard.printBoard();    
-                gS.movePerformed = true;
-                return;
-            }
-        }
-        else{
-            l = pwn->getLegalMovesUp(gS.gameBoard);
-            if(move.toX == gS.gameBoard.LAST_ROW_UP){   // hodla jit na protejsi kraj -> promotion
-                
-               gS.gameBoard.promotePawn(move);    
-               gS.gameBoard.printBoard(); 
-               gS.movePerformed = true;
-               return;
-            }
-        }
-    }
-    else
-        l = tmp->getLegalMoves(gS.gameBoard);
+     l = tmp->getLegalMoves(gS);
 
     if(!l.contains(move)){
         cout << "Tento tah neni mozny." << endl;
         return;
     }
       
-    gS.gameBoard.moveFigure(move);
+    if( ! gS.gameBoard.tryMove(move,gS)){
+    
+        cout << "Nelze tahnout do sachu." << endl;    
+        return;
+    }
+    
     gS.gameBoard.printBoard();
     
     gS.movePerformed = true;
@@ -179,3 +147,10 @@ void CCommand::makeMoveQuery(CGameSession & gS) const{
 void CCommand::rotateQuery(CGameSession & gS) const {
     gS.gameBoard.printRotate();
 }
+
+
+void CCommand::surrenderQuery(CGameSession & gS) const{
+    cout << "Checkmate! Vyhrava "<<(gS.currentPlayer==BLACK?"BILY":"CERNY")<<endl;
+    exitQuery(gS);
+}
+

@@ -3,7 +3,6 @@
 #include "CPiece.h"
 #include "AllExceptions.h"
 
-#include "MoveList.h"
 #include "CPawn.h"
 #include "CBishop.h"
 #include "CKnight.h"
@@ -277,3 +276,4 @@ bool CPiece::validLetter(char c){
  int CPiece::getValue() const {
      return value;
 }
+ 

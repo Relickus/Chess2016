@@ -55,7 +55,10 @@ void CGameSession::start() {
 
     if (fileName.empty())
         gameBoard.initBoard(this);
-    
+    //else
+        //loadgame
+        
+    assignKings();    
     gameBoard.printBoard();
     
     exitRequest = false;
@@ -109,4 +112,36 @@ bool CGameSession::performMove(MyMove& move){
     gameBoard.moveFigure(move);
     
     return true;
+}
+
+
+
+bool CGameSession::isCheckMate() {
+
+    currPlayerPtr->findAllFigures(gameBoard);
+    MoveList l;
+    
+    for(size_t i = 0; i < currPlayerPtr->figuresVec.size(); ++i){
+        MoveList tmp = currPlayerPtr->figuresVec.at(i)->getLegalMoves(*this);
+        l.concat(tmp);
+    }
+    
+    if(l.isEmpty())
+        return true;
+    
+    return false;
+}
+
+void CGameSession::assignKings() {
+
+    COLOR col = player1->getPlayerColor();    
+    player1->setKing( gameBoard.findKing(col) );
+    
+    col = player2->getPlayerColor();    
+    player2->setKing( gameBoard.findKing(col));
+    
+}
+
+void CGameSession::updateKings(){
+    assignKings();
 }

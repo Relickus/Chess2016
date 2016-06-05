@@ -30,6 +30,9 @@ public:
     bool performMove(MyMove & move);
     bool movesQuery(string & str);
     void switchPlayers();
+    bool isCheckMate();
+    void assignKings();
+    void updateKings();
 
     
     CBoard gameBoard;

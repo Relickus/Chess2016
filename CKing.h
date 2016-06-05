@@ -3,6 +3,7 @@
 
 #include "CPiece.h"
 #include "COLOR.h"
+#include "CGameSession.h"
 
 class CKing : public CPiece{
 public:
@@ -12,8 +13,11 @@ public:
     
     bool isChecked(const CBoard & board) const;
 
-    virtual MoveList & getLegalMoves(const CBoard &  board);
+    virtual MoveList & getLegalMoves(const CGameSession & gS);
     virtual int checkField(int x, int y, const CBoard& board);
+
+    virtual CPiece* copyPiece(CPiece* pcs);
+
 
 
 

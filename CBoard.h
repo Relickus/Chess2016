@@ -7,6 +7,7 @@
 #include "MoveList.h"
 
 class CGameSession;
+class CKing;
 
 using namespace std;
 
@@ -14,6 +15,7 @@ class CBoard {
 public:
     CBoard();
     virtual ~CBoard();
+    CBoard(const CBoard & oth);
     
     void printBoard() const;
     void printRotate();
@@ -30,6 +32,10 @@ public:
     void moveFigure(const MyMove & move);
     void promotePawn(const MyMove & move);
     int getSlotValue(int x,int y) const;
+    bool tryMove(const MyMove & move,CGameSession & gS) const;
+    void undoMove(MyMove & move,CGameSession & gS) const;
+    CKing * findKing(COLOR col) const;
+
     
     //bool fieldChecked(int x, int y, CPiece * playerspiece) const;
         // - lepsi bude zkusit tahnout kralem a zavolat king->isChecked na novym policku

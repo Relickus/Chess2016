@@ -1,5 +1,6 @@
 #include "CPawn.h"
 #include "CQueen.h"
+#include "CGameSession.h"
 
 CPawn::CPawn() {
 
@@ -36,12 +37,12 @@ MoveList & CPawn::getLegalMovesDown(const CBoard & board) {
     int newRow = getRow()-1;
     int newCol = getCol();
 
-    this->checkField(newRow, newCol, board, false);
+    int firststep = this->checkField(newRow, newCol, board, false);
     
     this->checkField(getRow() - 1, getCol() - 1, board, true);
     this->checkField(getRow() - 1, getCol() + 1, board, true);
 
-    if (getRow() == board.INIT_ROW_UP) { //initial row, pawn not moved yet  
+    if (getRow() == board.INIT_ROW_UP && firststep != 2) { //initial row, pawn not moved yet  
         newRow = getRow()-2;
         this->checkField(newRow, newCol, board, false);
     }
@@ -57,12 +58,12 @@ MoveList & CPawn::getLegalMovesUp(const CBoard & board) {
     int newRow = getRow()+1;
     int newCol = getCol();
 
-    this->checkField(newRow, newCol, board, false);
+    int firststep = this->checkField(newRow, newCol, board, false);
     
     this->checkField(getRow() + 1, getCol() - 1, board, true);
     this->checkField(getRow() + 1, getCol() + 1, board, true);
 
-    if (getRow() == board.INIT_ROW_DOWN) { //initial row, pawn not moved yet  
+    if (getRow() == board.INIT_ROW_DOWN && firststep != 2) { //initial row, pawn not moved yet  
         newRow = getRow()+2;
         this->checkField(newRow, newCol, board, false);
     }
@@ -70,8 +71,12 @@ MoveList & CPawn::getLegalMovesUp(const CBoard & board) {
     return moveList;
 }
 
-MoveList & CPawn::getLegalMoves(const CBoard & board) {
-    cout << "ZAVOLANA STARA METODA GETLEGAL MOVES VE PAWNOVI" << endl;
+MoveList & CPawn::getLegalMoves(const CGameSession & gS) {
+    if(gS.currPlayerPtr == gS.player1)
+        return getLegalMovesUp(gS.gameBoard);
+    else
+        return getLegalMovesDown(gS.gameBoard);
+    
 }
 
 int CPawn::checkField(int x, int y, const CBoard& board, bool sidestep) {
@@ -85,10 +90,10 @@ int CPawn::checkField(int x, int y, const CBoard& board, bool sidestep) {
     CPiece * tmp = board.getPiece(x, y);
 
     if (!sidestep) {
-        if (tmp != NULL) {
-            return 1;
+        if (tmp != NULL) {  // nekdo stoji primo pred pawnem
+            return 2;
         } else {
-            moveList.add(x, y,rowPos,colPos);
+            moveList.add(x, y,rowPos,colPos,NULL);
             return 0;
         }
     }
@@ -101,8 +106,12 @@ int CPawn::checkField(int x, int y, const CBoard& board, bool sidestep) {
     else if (isFriendPiece(tmp)) {
         return 1;
     } else {
-        moveList.add(x, y,rowPos,colPos);
+        moveList.add(x, y,rowPos,colPos,tmp);
         return 0;
     }
 
+}
+
+CPiece* CPawn::copyPiece(CPiece* pcs) {
+    return new CPawn(pcs->getColor(),pcs->getRow(),pcs->getCol());
 }

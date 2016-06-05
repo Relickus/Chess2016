@@ -26,7 +26,7 @@ CTower::CTower(COLOR clr , int row, int col) : CPiece(clr,row,col) {
 //        
 //}
 
-MoveList & CTower::getLegalMoves(const CBoard & board) {
+MoveList & CTower::getLegalMoves(const CGameSession & gS) {
 
     moveList.clear();
 
@@ -37,7 +37,7 @@ MoveList & CTower::getLegalMoves(const CBoard & board) {
 
     for (;newRow < 8; newRow++) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
 
     }
@@ -49,7 +49,7 @@ MoveList & CTower::getLegalMoves(const CBoard & board) {
 
     for (; newRow >= 0; newRow--) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -60,7 +60,7 @@ MoveList & CTower::getLegalMoves(const CBoard & board) {
 
     for (;newCol >= 0; newCol--) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -71,7 +71,7 @@ MoveList & CTower::getLegalMoves(const CBoard & board) {
 
     for (;newCol < 8; newCol++) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -79,4 +79,8 @@ MoveList & CTower::getLegalMoves(const CBoard & board) {
 
     return moveList;
 
+}
+
+CPiece* CTower::copyPiece(CPiece* pcs) {
+    return new CTower(pcs->getColor(),pcs->getRow(),pcs->getCol());
 }

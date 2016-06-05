@@ -5,12 +5,10 @@
 #include "FIGURENAME.h"
 
 #include "MoveList.h"
+#include "CBoard.h"
 
 #include <iostream>
 
-#include "CBoard.h"
-
-//#include "CVisitor.h"
 
 class CPiece {
 public:
@@ -31,7 +29,7 @@ public:
     void setRow(int r);
     void setCol(int c);
     
-    virtual MoveList & getLegalMoves(const CBoard &  board) = 0;
+    virtual MoveList & getLegalMoves(const CGameSession & gS) = 0;
     bool equals(FIGURENAME fig) const;
     
     bool isFriendPiece(const CPiece * tmp) const;
@@ -43,6 +41,7 @@ public:
     bool moveTo(const MyMove & move, CBoard & board );    
     int getValue() const;
     void computeValue();
+    virtual CPiece * copyPiece(CPiece * pcs) = 0;
     
     
     //CPiece * getPieceByLetter(char letter);

@@ -23,25 +23,51 @@ void CIntelligence::think() const{
     
 }
 
+void CIntelligence::eraseCheckMoves(MoveList & l, CGameSession & gS) const{
+        
+    MoveList tmplist;
+    
+    for(size_t i = 0; i < l.size();++i){
+        MyMove m = l.getMove(i);
+        
+        if( ! gS.gameBoard.tryMove(m,gS)){
+        }
+        else{
+            tmplist.add(m,m.figure);
+        }        
+//        gS.gameBoard.undoMove(move, gS);   
+    }
+
+    l.clear();
+    l.concat(tmplist);    
+}   
+
+
 MyMove CIntelligence::getMove(CGameSession & gS){
     
     allMoves.clear();
+    MoveList l;
     
     findAllFigures(gS.gameBoard);    
     
-    for(size_t i = 0; i < figuresVec.size(); ++i){
-        MoveList l;
+    for(size_t i = 0; i < figuresVec.size(); ++i){        
         if(figuresVec.at(i)->getName() == PAWN){
             CPawn * pwn = dynamic_cast<CPawn*>(figuresVec.at(i));
             l = pwn->getLegalMovesDown(gS.gameBoard);
         }
         else
-            l = figuresVec.at(i)->getLegalMoves(gS.gameBoard); 
+            l = figuresVec.at(i)->getLegalMoves(gS); 
         
         allMoves.concat(l); 
     }
+         
+    eraseCheckMoves(l,gS);
     
     allMoves.print();
+
+    if(allMoves.isEmpty()){
+        return MyMove(-1,-1,-1,-1);
+    }    
     
     // minimax vyhodi nejakej move a vrati ho...
     
@@ -52,7 +78,12 @@ MyMove CIntelligence::getMove(CGameSession & gS){
 
 CCommand CIntelligence::getCommand(CGameSession & gS) {
     
-    return CCommand(getMove(gS));
+    MyMove m = getMove(gS);
+    if(m.isFicture()){
+        return CCommand(SURRENDER);
+    }
+    
+    return CCommand(m);
 }
 
 int CIntelligence::getBestIdx(MoveList& list,CBoard & board) const {

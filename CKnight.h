@@ -10,7 +10,9 @@ public:
     CKnight(COLOR col , int x, int y);
     virtual ~CKnight();
 
-    virtual MoveList & getLegalMoves(const CBoard &  board);
+    virtual MoveList & getLegalMoves(const CGameSession & gS);
+
+    virtual CPiece* copyPiece(CPiece* pcs);
 
     
 

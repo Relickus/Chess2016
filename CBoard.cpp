@@ -5,7 +5,6 @@
 #include "CTower.h"
 #include "CQueen.h"
 
-#include "CGameSession.h"
 #include "CBoard.h"
 #include <iostream>
 #include <fstream>
@@ -30,6 +29,25 @@ CBoard::CBoard() : width(WIDTH), height(HEIGHT) {
     INIT_ROW_UP = 6;
 }
 
+CBoard::CBoard(const CBoard& oth) : width(WIDTH), height(HEIGHT)  {
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            
+            if(oth.slotsArr[i][j].getHeldPiece() == NULL)
+                slotsArr[i][j].setHeldPiece(NULL);
+            else{
+                CPiece * pcs = oth.slotsArr[i][j].getHeldPiece();
+                slotsArr[i][j].setHeldPiece( pcs->copyPiece(pcs) );
+            }
+        }
+    }
+
+    
+    
+}
+
+
 CBoard::~CBoard(){
     
     // není potřeba - sachovnice je staticky alokovane 2D pole CSlotu a pri jeho destrukci se volaji destruktory jednotlivych policek
@@ -37,7 +55,7 @@ CBoard::~CBoard(){
 }
 
 void CBoard::moveFigure(const MyMove & move){
-    
+        
     CPiece * tmp = slotsArr[move.toX][move.toY].getHeldPiece();
     
     delete tmp;
@@ -115,10 +133,10 @@ void CBoard::createPieces(COLOR colorDown){
     slotsArr[7][1].setHeldPiece( new CKnight(colorUp, 7,1) );
     slotsArr[7][6].setHeldPiece( new CKnight(colorUp, 7,6) );
  
-    slotsArr[7][2].setHeldPiece( new CBishop(colorUp, 7,2) );
-    slotsArr[7][5].setHeldPiece( new CBishop(colorUp, 7,5) );
+    //slotsArr[7][2].setHeldPiece( new CBishop(colorUp, 7,2) );
+    //slotsArr[7][5].setHeldPiece( new CBishop(colorUp, 7,5) );
     
-    slotsArr[7][queenPos].setHeldPiece( new CQueen(colorUp, 7,queenPos) );
+    //slotsArr[7][queenPos].setHeldPiece( new CQueen(colorUp, 7,queenPos) );
     slotsArr[7][kingPos].setHeldPiece( new CKing(colorUp, 7,kingPos) );
     
     for(int i = 0; i < 8; ++i)
@@ -138,14 +156,16 @@ void CBoard::createPieces(COLOR colorDown){
     slotsArr[0][queenPos].setHeldPiece( new CQueen(colorDown, 0, queenPos) );
     slotsArr[0][kingPos].setHeldPiece( new CKing(colorDown, 0, kingPos) );
     
-    for(int i = 0; i < 8; ++i)
+    for(int i = 0; i < 7; ++i)
         slotsArr[1][i].setHeldPiece( new CPawn(colorDown, 1, i) );
+    slotsArr[5][7].setHeldPiece(new CPawn(colorDown,5,7));
     
     for(int i = 5; i >= 2; --i)
-        for (int j = 0; j < 8; j++) 
+        for (int j = 0; j < 8; j++) {
+            if(i == 5 && j==7)
+                continue;
             slotsArr[i][j].setHeldPiece(NULL);    
-        
-    
+        }    
     } catch (std::exception ex){
         throw "Chyba pri vytvareni figurek";
     }
@@ -322,4 +342,55 @@ int CBoard::getSlotValue(int x, int y) const {
         return slotsArr[x][y].getValue();
     }
     return 0;
+}
+
+bool CBoard::tryMove(const MyMove & move,CGameSession & gS) const {
+
+    CBoard ficture(gS.gameBoard);
+    
+    if(gS.gameBoard.getPiece(move.fromX,move.fromY)->getName() == PAWN){        
+        if(gS.currPlayerPtr == gS.player1){
+            if(move.toX == INIT_ROW_UP)
+                ficture.promotePawn(move);
+        }
+        else{
+            if(move.toY == INIT_ROW_DOWN)
+                ficture.promotePawn(move);                
+        }
+    }
+    else
+        ficture.moveFigure(move);
+    
+    
+    cout << "FICTURE BOARD: " << endl;
+    ficture.printBoard();
+    
+    CKing * tmpking = ficture.findKing(gS.currPlayerPtr->getPlayerColor());
+    
+    if(tmpking->isChecked(ficture))
+        return false;
+    
+    return true;
+}
+
+void CBoard::undoMove(MyMove & move,CGameSession & gS) const {
+
+}
+
+CKing * CBoard::findKing(COLOR col) const{    
+    
+    for(int i=0; i < 8 ;++i){
+        for (int j = 0; j < 8; j++) {
+            if(getPiece(i,j) == NULL)
+                continue;
+                    
+            if(getPiece(i,j)->getName() == KING && getPiece(i,j)->getColor() == col){
+                CPiece * tmp = getPiece(i,j);
+                CKing * tmpking = dynamic_cast<CKing*>(tmp);
+                return tmpking;
+            }
+        }
+    }
+    
+    
 }

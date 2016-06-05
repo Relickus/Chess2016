@@ -3,6 +3,7 @@
 
 #include "CBishop.h"
 #include "CPiece.h"
+#include "CGameSession.h"
 
 CBishop::CBishop() {
     name = BISHOP;
@@ -45,7 +46,7 @@ CBishop::CBishop(COLOR clr, int row, int col) : CPiece(clr,row,col) {
 //    return true;
 //}
 
-MoveList & CBishop::getLegalMoves(const CBoard & board) {
+MoveList & CBishop::getLegalMoves(const CGameSession & gS) {
 
     moveList.clear();
 
@@ -56,7 +57,7 @@ MoveList & CBishop::getLegalMoves(const CBoard & board) {
 
     for (;newRow < 8 && newCol >= 0; newRow++, newCol--) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -67,7 +68,7 @@ MoveList & CBishop::getLegalMoves(const CBoard & board) {
 
     for (;newRow < 8 && newCol < 8; newRow++, newCol++) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -78,7 +79,7 @@ MoveList & CBishop::getLegalMoves(const CBoard & board) {
 
     for (; newRow >= 0 && newCol >= 0; newRow--, newCol--) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
@@ -89,10 +90,14 @@ MoveList & CBishop::getLegalMoves(const CBoard & board) {
 
     for (;newRow >= 0 && newCol < 8; newRow--, newCol++) {
 
-        if (checkField(newRow, newCol, board) == 1)
+        if (checkField(newRow, newCol, gS.gameBoard) == 1)
             break;
     }
 
 
     return moveList;
+}
+
+CPiece* CBishop::copyPiece(CPiece* pcs) {
+    return new CBishop(pcs->getColor(),pcs->getRow(),pcs->getCol());
 }

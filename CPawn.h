@@ -10,10 +10,12 @@ public:
     CPawn(COLOR col , int x, int y);
     virtual ~CPawn();
 
-    virtual MoveList & getLegalMoves(const CBoard &  board);
+    virtual MoveList & getLegalMoves(const CGameSession & gS);
     MoveList & getLegalMovesUp(const CBoard &  board);
     MoveList & getLegalMovesDown(const CBoard &  board);
     virtual int checkField(int x, int y, const CBoard& board, bool sidestep);
+
+    virtual CPiece* copyPiece(CPiece* pcs);
 
     
     //void printPiece() const;

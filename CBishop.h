@@ -11,7 +11,10 @@ public:
     virtual ~CBishop();
     //virtual bool isLegalMove(int x, int y) const;
 
-    virtual MoveList & getLegalMoves(const CBoard &  board);
+    virtual MoveList & getLegalMoves(const CGameSession & gS);
+
+    virtual CPiece* copyPiece(CPiece* pcs);
+
 
 
     

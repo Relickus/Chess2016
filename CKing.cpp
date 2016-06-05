@@ -28,7 +28,7 @@ CKing::CKing(COLOR clr , int row, int col) : CPiece(clr,row,col) {
 //        
 //}
 
-MoveList & CKing::getLegalMoves(const CBoard & board) {
+MoveList & CKing::getLegalMoves(const CGameSession & gS) {
 
     moveList.clear();
 
@@ -37,53 +37,53 @@ MoveList & CKing::getLegalMoves(const CBoard & board) {
     int newRow = getRow() - 1;
     int newCol = getCol() + 1;
 
-    this->checkField(newRow, newCol, board);
+    this->checkField(newRow, newCol, gS.gameBoard);
 
     // up right
 
     newRow = getRow() + 1;
     newCol = getCol() + 1;
 
-    this->checkField(newRow, newCol, board);
+    this->checkField(newRow, newCol, gS.gameBoard);
 
     // down left
 
     newRow = getRow() - 1;
     newCol = getCol() - 1;
 
-    this->checkField(newRow, newCol, board);
+    this->checkField(newRow, newCol, gS.gameBoard);
 
     // down right
 
     newRow = getRow() + 1;
     newCol = getCol() - 1;
 
-    this->checkField(newRow, newCol, board);
+    this->checkField(newRow, newCol, gS.gameBoard);
 
     // up 
 
     newRow = getRow();
     newCol = getCol() + 1;
 
-    this->checkField(newRow, newCol, board);
+    this->checkField(newRow, newCol, gS.gameBoard);
     // down
 
     newRow = getRow();
     newCol = getCol() - 1;
 
-    this->checkField(newRow, newCol, board);
+    this->checkField(newRow, newCol, gS.gameBoard);
     // left
 
     newRow = getRow() - 1;
     newCol = getCol();
 
-    this->checkField(newRow, newCol, board);
+    this->checkField(newRow, newCol, gS.gameBoard);
     // right
 
     newRow = getRow() + 1;
     newCol = getCol();
 
-    this->checkField(newRow, newCol, board);
+    this->checkField(newRow, newCol, gS.gameBoard);
 
 
     return moveList;
@@ -355,4 +355,8 @@ bool CKing::isChecked(const CBoard & board) const {
     return false;
     
     
+}
+
+CPiece* CKing::copyPiece(CPiece* pcs) {
+    return new CKing(pcs->getColor(),pcs->getRow(),pcs->getCol());
 }

@@ -21,8 +21,8 @@ public:
     void exitQuery(CGameSession & gS) const;
     void saveQuery(CGameSession & gS) const;
     void rotateQuery(CGameSession & gS) const;
-    void makeMoveQuery(CGameSession & gS) const;     
-
+    void makeMoveQuery(CGameSession & gS) const;  
+    void surrenderQuery(CGameSession & gS) const;
     
     COMMAND command;
     
@@ -30,7 +30,7 @@ private:
     int x;
     int y;
     MyMove move;
-
+    
 };
 
 

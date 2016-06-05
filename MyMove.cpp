@@ -15,8 +15,7 @@ MyMove::MyMove(const string & movestr){
     figure = NULL;  // FIX !
 }
 
-MyMove::MyMove(int tX, int tY, int frX/*=-1*/, int frY/*=-1*/ ) : toX(tX), toY(tY),fromX(frX),fromY(frY){
-    figure = NULL;
+MyMove::MyMove(int tX, int tY, int frX/*=-1*/, int frY/*=-1*/ ,CPiece * tmp) : toX(tX), toY(tY),fromX(frX),fromY(frY), figure(tmp){
 }
 
 MyMove::~MyMove() {
