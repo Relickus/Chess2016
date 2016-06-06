@@ -1,4 +1,4 @@
-
+#include "AllExceptions.h"
 #include "CLoadGameMenu.h"
 #include "CController.h"
 #include "CPiece.h"

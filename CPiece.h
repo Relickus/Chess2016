@@ -3,12 +3,13 @@
 
 #include "COLOR.h"
 #include "FIGURENAME.h"
-
 #include "MoveList.h"
-#include "CBoard.h"
 
 #include <iostream>
 
+class CBoard;
+class CGameSession;
+class MyMove;
 
 class CPiece {
 public:

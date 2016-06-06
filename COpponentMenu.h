@@ -3,8 +3,7 @@
 #define	COPPONENTMENU_H
 
 #include "CAbstractMenuScreen.h"
-#include "CPlayer.h"
-
+class CPlayer;
 
 class COpponentMenu : public CAbstractMenuScreen{
 public:

@@ -3,6 +3,7 @@
 #include "CPiece.h"
 #include "CCommand.h"
 #include "CPawn.h"
+#include "CGameSession.h"
 
 CIntelligence::CIntelligence(){
 }
@@ -51,17 +52,12 @@ MyMove CIntelligence::getMove(CGameSession & gS){
     findAllFigures(gS.gameBoard);    
     
     for(size_t i = 0; i < figuresVec.size(); ++i){        
-        if(figuresVec.at(i)->getName() == PAWN){
-            CPawn * pwn = dynamic_cast<CPawn*>(figuresVec.at(i));
-            l = pwn->getLegalMovesDown(gS.gameBoard);
-        }
-        else
-            l = figuresVec.at(i)->getLegalMoves(gS); 
+          l = figuresVec.at(i)->getLegalMoves(gS); 
         
         allMoves.concat(l); 
     }
          
-    eraseCheckMoves(l,gS);
+    eraseCheckMoves(allMoves,gS);
     
     allMoves.print();
 

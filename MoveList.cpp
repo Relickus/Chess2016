@@ -67,7 +67,7 @@ void MoveList::concat(const MoveList& list) {
     for(size_t i = 0; i < list.moveVec.size(); ++i){
         add(list.getMove(i),list.getMove(i).figure);
     }
-    numMoves = numMoves + list.numMoves;
+    numMoves = moveVec.size();
 }
 
 MyMove MoveList::getMove(int idx) const{

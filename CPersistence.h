@@ -2,7 +2,8 @@
 #define	CPERSISTENCE_H
 
 #include <iostream>
-#include "CGameSession.h"
+
+class CGameSession;
 
 using namespace std;
 

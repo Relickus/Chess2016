@@ -1,6 +1,7 @@
 
 #include "CKnight.h"
 #include "CPiece.h"
+#include "CGameSession.h"
 
 CKnight::CKnight() {
     name = KNIGHT;

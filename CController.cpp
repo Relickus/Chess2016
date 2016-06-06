@@ -2,8 +2,12 @@
 #include "CMainMenu.h"
 #include "CDifficultyMenu.h"
 #include "CColorMenu.h"
-#include "CGUI.h"
 #include "CCommand.h"
+#include "CPlayer.h"
+
+#include "CAbstractMenuScreen.h"
+#include "CGameSession.h"
+#include "CGUI.h"
 
 CController::CController(){
     
@@ -80,7 +84,9 @@ void CController::gameLoop(){
         CCommand command;
         
         if(game.isCheckMate()){
-            break;
+            command.command = SURRENDER;
+            command.executeCommand(game);
+            return;
         }
         
         while(command.command == UNKNOWN){   

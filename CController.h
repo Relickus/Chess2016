@@ -1,9 +1,10 @@
 #ifndef CCONTROLLER_H
 #define	CCONTROLLER_H
 
-#include "CAbstractMenuScreen.h"
+#include "COLOR.h"
 #include "CGameSession.h"
 #include "CGUI.h"
+class CAbstractMenuScreen;
 
 
 class CController {

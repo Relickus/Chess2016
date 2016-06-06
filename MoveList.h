@@ -4,6 +4,8 @@
 #include <vector>
 #include <iostream>
 #include "MyMove.h"
+
+
 class CPiece;
 
 using namespace std;

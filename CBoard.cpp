@@ -4,8 +4,10 @@
 #include "CPawn.h"
 #include "CTower.h"
 #include "CQueen.h"
+#include "AllExceptions.h"
+#include "CGameSession.h"
+#include "CPlayer.h"
 
-#include "CBoard.h"
 #include <iostream>
 #include <fstream>
 
@@ -55,7 +57,14 @@ CBoard::~CBoard(){
 }
 
 void CBoard::moveFigure(const MyMove & move){
-        
+    
+    if(getPiece(move.fromX,move.fromY)->getName() == PAWN){        
+        if(move.toX == INIT_ROW_UP || move.toX == INIT_ROW_DOWN ){
+            promotePawn(move);
+            return;
+        }
+    }            
+            
     CPiece * tmp = slotsArr[move.toX][move.toY].getHeldPiece();
     
     delete tmp;
@@ -157,7 +166,7 @@ void CBoard::createPieces(COLOR colorDown){
     slotsArr[0][kingPos].setHeldPiece( new CKing(colorDown, 0, kingPos) );
     
     for(int i = 0; i < 7; ++i)
-        slotsArr[1][i].setHeldPiece( new CPawn(colorDown, 1, i) );
+        slotsArr[1][i].setHeldPiece( new CQueen(colorDown, 1, i) );
     slotsArr[5][7].setHeldPiece(new CPawn(colorDown,5,7));
     
     for(int i = 5; i >= 2; --i)
@@ -182,6 +191,10 @@ void CBoard::translateMove(MyMove & move){
 }
 
 void CBoard::initBoard(const CGameSession * gameSess) {
+    
+    
+    // CYKLI TO PRI SACHU - UDELAT INIT TAK ABYCH SE RYCHLE DOSTAL DO SACHU - osetrit cykleni
+    // fixnout aby kral mohl vzit figurku kdyz je v sachu ale nesmi pri tom zase do sachu
     
    createPieces(gameSess->player1->getPlayerColor());    
 }
@@ -348,19 +361,7 @@ bool CBoard::tryMove(const MyMove & move,CGameSession & gS) const {
 
     CBoard ficture(gS.gameBoard);
     
-    if(gS.gameBoard.getPiece(move.fromX,move.fromY)->getName() == PAWN){        
-        if(gS.currPlayerPtr == gS.player1){
-            if(move.toX == INIT_ROW_UP)
-                ficture.promotePawn(move);
-        }
-        else{
-            if(move.toY == INIT_ROW_DOWN)
-                ficture.promotePawn(move);                
-        }
-    }
-    else
-        ficture.moveFigure(move);
-    
+    ficture.moveFigure(move);    
     
     cout << "FICTURE BOARD: " << endl;
     ficture.printBoard();

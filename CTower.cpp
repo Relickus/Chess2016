@@ -1,5 +1,7 @@
 
 #include "CTower.h"
+#include "CGameSession.h"
+
 
 CTower::CTower() {
     name = TOWER;

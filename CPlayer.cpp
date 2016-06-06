@@ -1,6 +1,10 @@
 #include "CPlayer.h"
 #include "CKing.h"
 
+#include "CGameSession.h"
+#include "MoveList.h"
+#include "CPiece.h"
+
 CPlayer::CPlayer() : playersKing(NULL){
     
 }

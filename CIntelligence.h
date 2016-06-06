@@ -2,6 +2,7 @@
 #define	CINTELLIGENCE_H
 
 #include "DIFFICULTY.h"
+
 #include "CPlayer.h"
 
 

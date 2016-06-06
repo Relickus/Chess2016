@@ -1,4 +1,4 @@
-
+#include "AllExceptions.h"
 #include "CLocalPlayer.h"
 #include "CGameSession.h"
 #include "CPawn.h"

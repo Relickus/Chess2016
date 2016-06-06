@@ -1,16 +1,17 @@
 #ifndef COPPONENT_H
 #define	COPPONENT_H
 
-#include "CGameSession.h"
-#include "MoveList.h"
-#include "CPiece.h"
 #include "COLOR.h"
+#include "MoveList.h"
 #include <vector>
 
 using namespace std;
 
 class CCommand;
 class CGameSession;
+class CPiece;
+class CKing;
+class CBoard;
 
 class CPlayer {
 public:

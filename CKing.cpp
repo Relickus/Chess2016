@@ -1,6 +1,8 @@
 #include "CKing.h"
 #include "CPiece.h"
 #include "CBoard.h"
+#include "CGameSession.h"
+
 
 CKing::CKing() {
     name = KING;
@@ -125,8 +127,11 @@ bool CKing::isChecked(const CBoard & board) const {
     
     while(!board.outOfBoard(newRow,newCol)){
         
-        if(board.getPiece(newRow,newCol) == NULL)
+        if(board.getPiece(newRow,newCol) == NULL){
+            newRow++;
+            newCol--;
             continue;        
+        }
                         
         if(board.getPiece(newRow,newCol)->isFriendPiece(this))    //friend figure
                 break;
@@ -161,8 +166,11 @@ bool CKing::isChecked(const CBoard & board) const {
     
     while(!board.outOfBoard(newRow,newCol)){
         
-        if(board.getPiece(newRow,newCol) == NULL)
+        if(board.getPiece(newRow,newCol) == NULL){
+            newRow++;
+            newCol++;
             continue;        
+        }
                         
         if(board.getPiece(newRow,newCol)->isFriendPiece(this))    //friend figure
                 break;
@@ -197,8 +205,11 @@ bool CKing::isChecked(const CBoard & board) const {
      
     while(!board.outOfBoard(newRow,newCol)){
         
-        if(board.getPiece(newRow,newCol) == NULL)
+        if(board.getPiece(newRow,newCol) == NULL){
+            newRow--;
+            newCol--;
             continue;        
+        }
                         
         if(board.getPiece(newRow,newCol)->isFriendPiece(this))    //friend figure
                 break;
@@ -225,8 +236,11 @@ bool CKing::isChecked(const CBoard & board) const {
      
      while(!board.outOfBoard(newRow,newCol)){
         
-        if(board.getPiece(newRow,newCol) == NULL)
+        if(board.getPiece(newRow,newCol) == NULL){
+            newRow--;
+            newCol++;        
             continue;        
+        }
                         
         if(board.getPiece(newRow,newCol)->isFriendPiece(this))    //friend figure
                 break;
@@ -253,8 +267,10 @@ bool CKing::isChecked(const CBoard & board) const {
      
      while(!board.outOfBoard(newRow,newCol)){
         
-        if(board.getPiece(newRow,newCol) == NULL)
+        if(board.getPiece(newRow,newCol) == NULL){
+            newCol++;
             continue;        
+        }
                         
         if(board.getPiece(newRow,newCol)->isFriendPiece(this))    //friend figure
                 break;
@@ -280,8 +296,10 @@ bool CKing::isChecked(const CBoard & board) const {
      
      while(!board.outOfBoard(newRow,newCol)){
         
-        if(board.getPiece(newRow,newCol) == NULL)
+        if(board.getPiece(newRow,newCol) == NULL){
+            newCol--;
             continue;        
+        }
                         
         if(board.getPiece(newRow,newCol)->isFriendPiece(this))    //friend figure
                 break;
@@ -306,8 +324,10 @@ bool CKing::isChecked(const CBoard & board) const {
      
      while(!board.outOfBoard(newRow,newCol)){
         
-        if(board.getPiece(newRow,newCol) == NULL)
+        if(board.getPiece(newRow,newCol) == NULL){
+            newRow--;
             continue;        
+        }
                         
         if(board.getPiece(newRow,newCol)->isFriendPiece(this))    //friend figure
                 break;
@@ -333,8 +353,10 @@ bool CKing::isChecked(const CBoard & board) const {
      
      while(!board.outOfBoard(newRow,newCol)){
         
-        if(board.getPiece(newRow,newCol) == NULL)
+        if(board.getPiece(newRow,newCol) == NULL){
+            newRow++;
             continue;        
+        }
                         
         if(board.getPiece(newRow,newCol)->isFriendPiece(this))    //friend figure
                 break;

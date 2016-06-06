@@ -2,6 +2,8 @@
 #include <fstream>
 #include "CFilePersistence.h"
 #include "CPiece.h"
+#include "CPlayer.h"
+#include "CGameSession.h"
 
 using namespace std;
 

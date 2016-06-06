@@ -1,7 +1,6 @@
 #ifndef CGAMESESSION_H
 #define	CGAMESESSION_H
 
-#include "CPlayer.h"
 #include "COLOR.h"
 #include <iostream>
 #include "CBoard.h"
@@ -27,7 +26,7 @@ public:
     static bool validateMove(const string & move);
     static bool validatePos(const string & move);
     MyMove waitForMove();    
-    bool performMove(MyMove & move);
+    bool performMove(const MyMove & move);
     bool movesQuery(string & str);
     void switchPlayers();
     bool isCheckMate();
@@ -49,9 +48,6 @@ public:
     CPlayer * player1;
     CPlayer * player2;
 
-    
-
-    
     
 private:        /// !!!!!!!!! gettery a settery
     

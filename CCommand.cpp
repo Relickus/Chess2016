@@ -2,6 +2,11 @@
 #include "CCommand.h"
 #include "CPawn.h"
 
+#include "MyMove.h"
+#include "CPersistence.h"
+#include "CGameSession.h"
+#include "AllExceptions.h"
+
 
 CCommand::CCommand() {
     command = UNKNOWN;
@@ -138,10 +143,12 @@ void CCommand::makeMoveQuery(CGameSession & gS) const{
         cout << "Nelze tahnout do sachu." << endl;    
         return;
     }
+    else{
+        gS.performMove(move);
+        gS.gameBoard.printBoard();
+        gS.movePerformed = true;
+    }
     
-    gS.gameBoard.printBoard();
-    
-    gS.movePerformed = true;
 }
 
 void CCommand::rotateQuery(CGameSession & gS) const {
@@ -150,7 +157,7 @@ void CCommand::rotateQuery(CGameSession & gS) const {
 
 
 void CCommand::surrenderQuery(CGameSession & gS) const{
-    cout << "Checkmate! Vyhrava "<<(gS.currentPlayer==BLACK?"BILY":"CERNY")<<endl;
+    cout << "======= Checkmate! Vyhrava "<<(gS.currentPlayer==BLACK?"BILY ":"CERNY ")<<"======="<<endl;
     exitQuery(gS);
 }
 

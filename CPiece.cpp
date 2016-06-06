@@ -2,6 +2,7 @@
 
 #include "CPiece.h"
 #include "AllExceptions.h"
+#include "CGameSession.h"
 
 #include "CPawn.h"
 #include "CBishop.h"
@@ -9,6 +10,8 @@
 #include "CTower.h"
 #include "CKing.h"
 #include "CQueen.h"
+
+#include "CBoard.h"
 
 using namespace std;
 //

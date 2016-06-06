@@ -2,8 +2,6 @@
 #define	CABSTRACTCMENUSCREEN_H
 
 #include <iostream>
-#include <cstring>
-#include <cstdlib>
 
 #define MAXITEMS 5
 

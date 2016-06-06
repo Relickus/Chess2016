@@ -1,6 +1,8 @@
 
 #include "CQueen.h"
 #include "CPiece.h"
+#include "CGameSession.h"
+
 
 CQueen::CQueen() {
     name = QUEEN;

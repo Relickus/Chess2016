@@ -1,7 +1,9 @@
 #include "CGameSession.h"
-#include "CPiece.h"
-#include "CPawn.h"
 #include "CFilePersistence.h"
+#include "CPlayer.h"
+#include "CPiece.h"
+#include "MyMove.h"
+#include "MoveList.h"
 #include <climits>
 #include <fstream>
 
@@ -104,7 +106,7 @@ void CGameSession::setTurn(COLOR col) {
     currentPlayer = whosTurn = col;
 }
 
-bool CGameSession::performMove(MyMove& move){
+bool CGameSession::performMove(const MyMove& move){
             
     CPiece * tmp = gameBoard.getPiece(move.fromX,move.fromY);
     
@@ -116,7 +118,7 @@ bool CGameSession::performMove(MyMove& move){
 
 
 
-bool CGameSession::isCheckMate() {
+bool CGameSession::isCheckMate() { // TOHLE JE SPATNE - checkmate je kdyz neni zadny tah ktery nevede na sach
 
     currPlayerPtr->findAllFigures(gameBoard);
     MoveList l;
@@ -129,7 +131,13 @@ bool CGameSession::isCheckMate() {
     if(l.isEmpty())
         return true;
     
-    return false;
+    for(size_t i = 0; i < l.size(); ++i){
+        
+        if ( gameBoard.tryMove(l.getMove(i),*this) )
+            return false;
+    }
+    
+    return true;
 }
 
 void CGameSession::assignKings() {

@@ -3,7 +3,8 @@
 
 #include "CPiece.h"
 #include "COLOR.h"
-#include "CGameSession.h"
+
+class CGameSession;
 
 class CKing : public CPiece{
 public:

@@ -1,13 +1,15 @@
 
 #ifndef CBOARD_H
 #define	CBOARD_H
-#include "CSlot.h"
 #include "COLOR.h"
-#include "AllExceptions.h"
-#include "MoveList.h"
+#include "CSlot.h"
 
 class CGameSession;
+class CPiece;
 class CKing;
+class CSlot;
+class MoveList;
+class MyMove;
 
 using namespace std;
 

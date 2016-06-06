@@ -4,7 +4,6 @@
 #include "CAbstractMenuScreen.h"
 #include "CBoard.h"
 
-
 class CLoadGameMenu : public CAbstractMenuScreen {
 public:
     CLoadGameMenu(CAbstractMenuScreen * prPar=NULL);

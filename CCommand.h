@@ -1,11 +1,10 @@
 #ifndef CCOMMAND_H
 #define	CCOMMAND_H
 
-#include "CCommand.h"
-#include "CGameSession.h"
 #include "COMMAND.h"
 #include "MyMove.h"
-#include "CPersistence.h"
+
+class CGameSession;
 
 using namespace std;
 
