@@ -19,7 +19,7 @@ public:
     
     bool takePiece() const;    
     
-    void printPiece() const;
+    void printPiece(ostream & os) const;
     //virtual bool isLegalMove(int x, int y) const = 0;
     
     FIGURENAME getName() const;

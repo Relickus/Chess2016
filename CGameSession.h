@@ -4,6 +4,7 @@
 #include "COLOR.h"
 #include <iostream>
 #include "CBoard.h"
+#include "CNetworking.h"
 
 class CPersistence;
 class CPlayer;
@@ -32,24 +33,24 @@ public:
     bool isCheckMate();
     void assignKings();
     void updateKings();
+    bool isTie() const;
 
     
     CBoard gameBoard;
     COLOR currentPlayer;
-    CPlayer * currPlayerPtr;
     string ipHost;
     string fileName;
     bool ready_flag;
     COLOR whosTurn;
     bool exitRequest;
-    CPersistence * persistence;
     bool movePerformed;
     
     CPlayer * player1;
     CPlayer * player2;
-
+    CPlayer * currPlayerPtr;
+    CPersistence * persistence;
     
-private:        /// !!!!!!!!! gettery a settery
+private:       
     
     
     

@@ -20,7 +20,7 @@ using namespace std;
 //    v.printPiece(this);
 //}
 
-CPiece::CPiece() {
+CPiece::CPiece() : rowPos(-1),colPos(-1){
 
 }
 
@@ -124,12 +124,12 @@ COLOR CPiece::getColor() const {
     return color;
 }
 
-void CPiece::printPiece() const {
+void CPiece::printPiece(ostream & os) const {
 
     if (color == WHITE)
-        cout << (char) toupper(getName());
+        os << (char) toupper(getName());
     else
-        cout << (char) tolower(getName());
+        os << (char) tolower(getName());
 }
 
 //static CPiece * CPiece::getPieceByLetter(char letter){
@@ -159,10 +159,14 @@ void CPiece::printPiece() const {
 //}
 
 int CPiece::getRow() const {
+    if(rowPos >7 || rowPos < 0)
+        cout << "SPATNEJ ROW"<<endl;
     return rowPos;
 }
 
 int CPiece::getCol() const {
+    if(colPos >7 || colPos < 0)
+        cout << "SPATNEJ COL"<<endl;
     return colPos;
 }
 

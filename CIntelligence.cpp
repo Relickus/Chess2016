@@ -59,7 +59,8 @@ MyMove CIntelligence::getMove(CGameSession & gS){
          
     eraseCheckMoves(allMoves,gS);
     
-    allMoves.print();
+    //cout<<"moves:"<<endl;
+    //allMoves.print();
 
     if(allMoves.isEmpty()){
         return MyMove(-1,-1,-1,-1);
@@ -78,7 +79,7 @@ CCommand CIntelligence::getCommand(CGameSession & gS) {
     if(m.isFicture()){
         return CCommand(SURRENDER);
     }
-    
+    m.printMove();
     return CCommand(m);
 }
 
@@ -101,7 +102,7 @@ int CIntelligence::getBestIdx(MoveList& list,CBoard & board) const {
         CPiece * pcs = list.getMove(i).figure;
         if(pcs == NULL)
             continue;
-        int v = (pcs->getValue())*10; // !!!!!!!!!!!!!!! TODO VYRAZENA FIGURA
+        int v = (pcs->getValue())*10; 
         
         if(v > bestValPcs){
             bestValPcs = v;
@@ -128,9 +129,6 @@ int CIntelligence::getBestIdx(MoveList& list,CBoard & board) const {
         }
     }
     
-    if(difficulty == 1)
-        return bestIdxPcs > bestIdxSlot ? bestIdxPcs : bestIdxSlot;
-    
-    else
-        return bestIdxTotal;    
+    return bestIdxPcs > bestIdxSlot ? bestIdxPcs : bestIdxSlot;
+       
 }

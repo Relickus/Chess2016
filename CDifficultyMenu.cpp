@@ -3,6 +3,8 @@
 #include "CController.h"
 #include "CIntelligence.h"
 
+#define OPT_BACK 4
+
 CDifficultyMenu::CDifficultyMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbstractMenuScreen(prPar) {
     
     menuItems[0] = "Easy";
@@ -26,7 +28,7 @@ void CDifficultyMenu::setNextMenu() {
         
     switch(chosenOption){
         
-        case(5):
+        case(OPT_BACK):
             nextMenu = prevMenu;
             break;
             

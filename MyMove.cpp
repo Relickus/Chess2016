@@ -1,4 +1,5 @@
 #include "MyMove.h"
+#include "CPiece.h"
 
 
 MyMove::MyMove() : figure (NULL) {
@@ -37,4 +38,13 @@ bool MyMove::isFicture() const{
     if(fromX == -1)
         return true;
     return false;
+}
+
+void MyMove::printMove() const {
+    cout<< "*** PC tahne z: ["<<fromX<<","<<fromY<<"] na ["<<toX<<","<<toY<<"]";
+    if(figure != NULL){
+        cout<<" a bere figurku: ";
+        figure->printPiece(cout);
+    }
+        cout<<endl;
 }

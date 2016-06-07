@@ -2,6 +2,7 @@
 #define	CHOSTJOINMENU_H
 
 #include "CAbstractMenuScreen.h"
+#include "CNetworking.h"
 
 class CHostJoinMenu : public CAbstractMenuScreen{
 public:
@@ -16,6 +17,7 @@ public:
 
 private:
 
+    CNetworking net;
 };
 
 

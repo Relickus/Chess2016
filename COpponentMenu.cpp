@@ -7,6 +7,9 @@
 #include "CController.h"
 #include "CIntelligence.h"
 #include "CLocalPlayer.h"
+#include "CRemotePlayer.h"
+
+#define OPT_BACK 5
 
 COpponentMenu::COpponentMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbstractMenuScreen(prPar){
     
@@ -15,7 +18,8 @@ COpponentMenu::COpponentMenu(CAbstractMenuScreen * prPar /* =NULL*/) : CAbstract
     menuItems[0] = "Singleplayer game";
     menuItems[1] = "Local Multiplayer game";
     menuItems[2] = "Online multiplayer game";
-    menuItems[3] = "BACK";
+    menuItems[3] = "AI vs. AI";
+    menuItems[4] = "BACK";
     
     setNumMenuItems();
 }
@@ -42,16 +46,13 @@ void COpponentMenu::setNextMenu(){
             nextMenu = new CMultiplayerJoinMenu(this);
             break;
         
-        case(4) : 
+        case(4):
+            nextMenu = NULL;
+            break;
+        case(OPT_BACK) : 
             nextMenu = prevMenu;
             break;
     }    
-}
-
-CPlayer * COpponentMenu::getOpponent() const {
-
-    
-    
 }
 
 void COpponentMenu::setStuff(CController* ctrler) {
@@ -70,7 +71,17 @@ void COpponentMenu::setStuff(CController* ctrler) {
             ctrler->getGameSess().player2 = new CLocalPlayer();        
             break;
         case(3):
-             //ctrler->getGameSess().player2 = new CRemotePlayer();   
+             delete ctrler->getGameSess().player2;
+             ctrler->getGameSess().player2 = new CRemotePlayer();   
+             break;
+        case(4):
+             delete ctrler->getGameSess().player1;
+             delete ctrler->getGameSess().player2;
+             ctrler->getGameSess().player1 = new CIntelligence(0);   
+             ctrler->getGameSess().player2 = new CIntelligence(0);  
+             
+             ctrler -> getGameSess().setPlayerColors(WHITE);
+             ctrler->getGameSess().setGameReady();
              break;
     }
     // cntr-> get game session . opponent = tmpoponent

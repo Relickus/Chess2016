@@ -3,6 +3,8 @@
 #include "CGameSession.h"
 #include "CController.h"
 
+#define OPT_BACK 3
+
 CColorMenu::CColorMenu(CAbstractMenuScreen * prPar/* =NULL*/) : CAbstractMenuScreen(prPar) {
     
     title = "Zvolte barvu figurek hráče č.1:";
@@ -23,7 +25,7 @@ void CColorMenu::setNextMenu() {
     delete nextMenu;
     
     switch(chosenOption){
-        case(3) : 
+        case(OPT_BACK) : 
             nextMenu = prevMenu;
             break;
             
@@ -36,6 +38,9 @@ void CColorMenu::setNextMenu() {
 
 void CColorMenu::setStuff(CController* ctrler) {
 
+    if(nextMenu != NULL)
+        return;
+    
     if(chosenOption != 3){
         COLOR col = (chosenOption == 1 ? WHITE : BLACK);
         ctrler -> getGameSess().setPlayerColors(col);

@@ -40,8 +40,15 @@ void CCommand::executeCommand(CGameSession & gS) {
         case(MAKEMOVE):
             makeMoveQuery(gS);
             break;
+        case(CHECK):
+            checkQuery(gS);
+            break;
         case(SURRENDER):
             surrenderQuery(gS);
+            break;
+        case(TIE):
+            tieQuery(gS);
+            break;
             
         default:
             break;
@@ -140,7 +147,7 @@ void CCommand::makeMoveQuery(CGameSession & gS) const{
       
     if( ! gS.gameBoard.tryMove(move,gS)){
     
-        cout << "Nelze tahnout do sachu." << endl;    
+        cout << "Tento tah vede na šach, vyberte jiný tah." << endl;    
         return;
     }
     else{
@@ -161,3 +168,12 @@ void CCommand::surrenderQuery(CGameSession & gS) const{
     exitQuery(gS);
 }
 
+
+void CCommand::checkQuery(CGameSession & gS) const{
+    cout << "Pozor, jste v sachu!" << endl;    
+}
+
+void CCommand::tieQuery(CGameSession& gS) const {
+    cout<<" Nastala patova situace, nikdo nevyhral."<<endl;
+    exitQuery(gS);
+}

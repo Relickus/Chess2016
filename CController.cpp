@@ -63,7 +63,7 @@ void CController::showMenus(){
 
 void CController::startGame(){
     if(!game.gameReady()){    //jsme na main menu a vybrali Exit
-        //game.end();
+        game.end();
         return;
     }
     else
@@ -76,10 +76,15 @@ void CController::startGame(){
 void CController::gameLoop(){
                 
     cin.ignore();
-    game.currentPlayer = WHITE;
-    game.currPlayerPtr = (game.player1->getPlayerColor() == WHITE ? game.player1 : game.player2);
+    game.currentPlayer = WHITE; 
+   game.currPlayerPtr = (game.player1->getPlayerColor() == WHITE ? game.player1 : game.player2);
         
     while(true){
+        
+        cout<<"===================="<<endl;
+        game.gameBoard.printDebug();
+        game.gameBoard.printBoard();
+        cout<<"===================="<<endl;
         
         CCommand command;
         
@@ -87,6 +92,16 @@ void CController::gameLoop(){
             command.command = SURRENDER;
             command.executeCommand(game);
             return;
+        }
+        else if(game.isTie()){
+            command.command = TIE;
+            command.executeCommand(game);
+            return;
+        }
+        else if(game.currPlayerPtr->kingIsChecked(game)){
+            CCommand checkcom;
+            checkcom.command = CHECK;
+            checkcom.executeCommand(game);
         }
         
         while(command.command == UNKNOWN){   
@@ -121,6 +136,3 @@ CGameSession& CController::getGameSess() {
     return game;
 }
 
-void CController::setTurn(COLOR col) {
-    game.setTurn(col);
-}

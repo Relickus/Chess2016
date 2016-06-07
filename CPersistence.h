@@ -13,7 +13,7 @@ public:
     CPersistence(CGameSession * b);
     virtual ~CPersistence();
     virtual void save() const = 0;
-    virtual bool load(const char * file) const = 0;
+    virtual bool load(const string & filename) = 0;
     
 protected:
     

@@ -20,6 +20,7 @@ public:
     CBoard(const CBoard & oth);
     
     void printBoard() const;
+    void printDebug() const;
     void printRotate();
     static void translateMove(MyMove & move);
     void initBoard(const CGameSession * gameSess);    

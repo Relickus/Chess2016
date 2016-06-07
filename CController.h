@@ -18,7 +18,6 @@ public:
     void startGame();
     void endGame();
     CGameSession & getGameSess();
-    void setTurn(COLOR col);
     void gameLoop();
     
 private:

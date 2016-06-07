@@ -12,7 +12,7 @@ public:
     CKing(COLOR col , int x, int y);
     virtual ~CKing();
     
-    bool isChecked(const CBoard & board) const;
+    bool isChecked(const CBoard & board,bool currentPlayerDown) const;
 
     virtual MoveList & getLegalMoves(const CGameSession & gS);
     virtual int checkField(int x, int y, const CBoard& board);

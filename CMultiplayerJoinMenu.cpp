@@ -8,9 +8,6 @@ CMultiplayerJoinMenu::CMultiplayerJoinMenu(CAbstractMenuScreen * prPar /* =NULL*
 
     title = "Zadejte IPv4 adresu serveru, nebo \"back\" pro navrat zpet:";
     
-    nextMenu = new CColorMenu();
-
-    setNumMenuItems();
 }
 CMultiplayerJoinMenu::~CMultiplayerJoinMenu() {
 

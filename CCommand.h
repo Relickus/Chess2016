@@ -22,7 +22,8 @@ public:
     void rotateQuery(CGameSession & gS) const;
     void makeMoveQuery(CGameSession & gS) const;  
     void surrenderQuery(CGameSession & gS) const;
-    
+    void checkQuery(CGameSession & gS) const;
+    void tieQuery(CGameSession & gS) const;
     COMMAND command;
     
 private:

@@ -18,6 +18,11 @@ COLOR CPlayer::getPlayerColor() const {
     return playerColor;
 }
 
+void CPlayer::printPlayerColor(ostream & os) const {
+    char c = toupper(getPlayerColor());
+    os << c;
+}
+
 COLOR CPlayer::setPlayerColor(COLOR col) {
     playerColor = col;
 }
@@ -42,7 +47,9 @@ void CPlayer::findAllFigures(const CBoard& board){
 }
 
 bool CPlayer::kingIsChecked(CGameSession & gS) const{
-    return playersKing->isChecked(gS.gameBoard);
+    
+    bool tmp = (gS.currPlayerPtr == gS.player1);
+    return playersKing->isChecked(gS.gameBoard,tmp);
 }
 
 void CPlayer::setKing(CKing* k) {

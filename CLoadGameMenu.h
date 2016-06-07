@@ -3,6 +3,7 @@
 
 #include "CAbstractMenuScreen.h"
 #include "CBoard.h"
+#include "CFilePersistence.h"
 
 class CLoadGameMenu : public CAbstractMenuScreen {
 public:
@@ -15,6 +16,8 @@ public:
     bool confirmLoad();
     virtual void setStuff(CController* ctrler);
     bool findFile(const string & file) const;
+    virtual void show() const;
+
 
 
 private:
@@ -25,6 +28,7 @@ private:
     COLOR tmpColor;
     COLOR tmpTurn;
     bool loadSuccessful;
+    CFilePersistence * persistence;
 
 };
 

@@ -42,13 +42,16 @@
       <itemPath>CGameSession.h</itemPath>
       <itemPath>CIntelligence.h</itemPath>
       <itemPath>CLocalPlayer.h</itemPath>
+      <itemPath>CNetworking.h</itemPath>
       <itemPath>CPersistence.h</itemPath>
       <itemPath>CPlayer.h</itemPath>
+      <itemPath>CRemotePlayer.h</itemPath>
       <itemPath>CSingleplayerMenu.h</itemPath>
       <itemPath>CSlot.h</itemPath>
       <itemPath>CVisitor.h</itemPath>
       <itemPath>MoveList.h</itemPath>
       <itemPath>MyMove.h</itemPath>
+      <itemPath>TGameLoad.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -86,8 +89,10 @@
       <itemPath>CGameSession.cpp</itemPath>
       <itemPath>CIntelligence.cpp</itemPath>
       <itemPath>CLocalPlayer.cpp</itemPath>
+      <itemPath>CNetworking.cpp</itemPath>
       <itemPath>CPersistence.cpp</itemPath>
       <itemPath>CPlayer.cpp</itemPath>
+      <itemPath>CRemotePlayer.cpp</itemPath>
       <itemPath>CSlot.cpp</itemPath>
       <itemPath>MoveList.cpp</itemPath>
       <itemPath>MyMove.cpp</itemPath>
@@ -115,8 +120,11 @@
       </toolsSet>
       <compileType>
         <ccTool>
-          <commandLine>-g -std=c++11</commandLine>
+          <commandLine>-g -std=c++11 -O0</commandLine>
         </ccTool>
+        <linkerTool>
+          <commandLine>-lpthread</commandLine>
+        </linkerTool>
       </compileType>
       <item path="AllDefines.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -204,6 +212,10 @@
       </item>
       <item path="CMultiplayerJoinMenu.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CNetworking.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CNetworking.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="COLOR.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="COMMAND.h" ex="false" tool="3" flavor2="0">
@@ -232,6 +244,10 @@
       </item>
       <item path="CQueen.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CRemotePlayer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CRemotePlayer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CSingleplayerMenu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CSlot.cpp" ex="false" tool="1" flavor2="0">
@@ -255,6 +271,8 @@
       <item path="MyMove.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="MyMove.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TGameLoad.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -365,6 +383,10 @@
       </item>
       <item path="CMultiplayerJoinMenu.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CNetworking.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CNetworking.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="COLOR.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="COMMAND.h" ex="false" tool="3" flavor2="0">
@@ -393,6 +415,10 @@
       </item>
       <item path="CQueen.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="CRemotePlayer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CRemotePlayer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CSingleplayerMenu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CSlot.cpp" ex="false" tool="1" flavor2="0">
@@ -416,6 +442,8 @@
       <item path="MyMove.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="MyMove.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TGameLoad.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

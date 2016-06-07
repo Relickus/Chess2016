@@ -9,7 +9,6 @@ class COpponentMenu : public CAbstractMenuScreen{
 public:
     COpponentMenu(CAbstractMenuScreen * prPar=NULL);
     virtual ~COpponentMenu();   
-    CPlayer * getOpponent() const;
     void setNextMenu();
 
     virtual void setStuff(CController* ctrler);

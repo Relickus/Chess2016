@@ -19,6 +19,7 @@ public:
     virtual ~CPlayer();
     virtual MyMove getMove(CGameSession & gS) = 0;
     COLOR getPlayerColor() const;
+    void printPlayerColor(ostream & os) const;
     COLOR setPlayerColor(COLOR col);
     void findAllFigures(const CBoard & board);
     virtual CCommand getCommand(CGameSession & gS) = 0;

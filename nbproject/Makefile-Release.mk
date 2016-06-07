@@ -55,12 +55,14 @@ OBJECTFILES= \
 	${OBJECTDIR}/CMenuHandler.o \
 	${OBJECTDIR}/CMultiplayerHostMenu.o \
 	${OBJECTDIR}/CMultiplayerJoinMenu.o \
+	${OBJECTDIR}/CNetworking.o \
 	${OBJECTDIR}/COpponentMenu.o \
 	${OBJECTDIR}/CPawn.o \
 	${OBJECTDIR}/CPersistence.o \
 	${OBJECTDIR}/CPiece.o \
 	${OBJECTDIR}/CPlayer.o \
 	${OBJECTDIR}/CQueen.o \
+	${OBJECTDIR}/CRemotePlayer.o \
 	${OBJECTDIR}/CSlot.o \
 	${OBJECTDIR}/CTower.o \
 	${OBJECTDIR}/MoveList.o \
@@ -192,6 +194,11 @@ ${OBJECTDIR}/CMultiplayerJoinMenu.o: CMultiplayerJoinMenu.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMultiplayerJoinMenu.o CMultiplayerJoinMenu.cpp
 
+${OBJECTDIR}/CNetworking.o: CNetworking.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CNetworking.o CNetworking.cpp
+
 ${OBJECTDIR}/COpponentMenu.o: COpponentMenu.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -221,6 +228,11 @@ ${OBJECTDIR}/CQueen.o: CQueen.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CQueen.o CQueen.cpp
+
+${OBJECTDIR}/CRemotePlayer.o: CRemotePlayer.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CRemotePlayer.o CRemotePlayer.cpp
 
 ${OBJECTDIR}/CSlot.o: CSlot.cpp 
 	${MKDIR} -p ${OBJECTDIR}

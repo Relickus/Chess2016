@@ -57,7 +57,7 @@ void MoveList::print() const{
         if(i.figure==NULL)
             cout << "null";
         else
-            i.figure->printPiece();
+            i.figure->printPiece(cout);
         cout <<endl;
     }
 }

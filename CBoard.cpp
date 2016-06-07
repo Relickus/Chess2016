@@ -36,16 +36,20 @@ CBoard::CBoard(const CBoard& oth) : width(WIDTH), height(HEIGHT)  {
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             
-            if(oth.slotsArr[i][j].getHeldPiece() == NULL)
+            CPiece * pcs = oth.slotsArr[i][j].getHeldPiece();
+
+            if(pcs == NULL)
                 slotsArr[i][j].setHeldPiece(NULL);
             else{
-                CPiece * pcs = oth.slotsArr[i][j].getHeldPiece();
                 slotsArr[i][j].setHeldPiece( pcs->copyPiece(pcs) );
             }
         }
     }
 
-    
+    LAST_ROW_DOWN = oth.LAST_ROW_DOWN;
+    LAST_ROW_UP = oth.LAST_ROW_UP;
+    INIT_ROW_DOWN = oth.INIT_ROW_DOWN;
+    INIT_ROW_UP = oth.INIT_ROW_UP;
     
 }
 
@@ -59,7 +63,7 @@ CBoard::~CBoard(){
 void CBoard::moveFigure(const MyMove & move){
     
     if(getPiece(move.fromX,move.fromY)->getName() == PAWN){        
-        if(move.toX == INIT_ROW_UP || move.toX == INIT_ROW_DOWN ){
+        if(move.toX == LAST_ROW_UP || move.toX == LAST_ROW_DOWN ){
             promotePawn(move);
             return;
         }
@@ -142,10 +146,10 @@ void CBoard::createPieces(COLOR colorDown){
     slotsArr[7][1].setHeldPiece( new CKnight(colorUp, 7,1) );
     slotsArr[7][6].setHeldPiece( new CKnight(colorUp, 7,6) );
  
-    //slotsArr[7][2].setHeldPiece( new CBishop(colorUp, 7,2) );
-    //slotsArr[7][5].setHeldPiece( new CBishop(colorUp, 7,5) );
+    slotsArr[7][2].setHeldPiece( new CBishop(colorUp, 7,2) );
+    slotsArr[7][5].setHeldPiece( new CBishop(colorUp, 7,5) );
     
-    //slotsArr[7][queenPos].setHeldPiece( new CQueen(colorUp, 7,queenPos) );
+    slotsArr[7][queenPos].setHeldPiece( new CQueen(colorUp, 7,queenPos) );
     slotsArr[7][kingPos].setHeldPiece( new CKing(colorUp, 7,kingPos) );
     
     for(int i = 0; i < 8; ++i)
@@ -165,16 +169,14 @@ void CBoard::createPieces(COLOR colorDown){
     slotsArr[0][queenPos].setHeldPiece( new CQueen(colorDown, 0, queenPos) );
     slotsArr[0][kingPos].setHeldPiece( new CKing(colorDown, 0, kingPos) );
     
-    for(int i = 0; i < 7; ++i)
-        slotsArr[1][i].setHeldPiece( new CQueen(colorDown, 1, i) );
-    slotsArr[5][7].setHeldPiece(new CPawn(colorDown,5,7));
-    
+    for(int i = 0; i < 8; ++i)
+        slotsArr[1][i].setHeldPiece( new CPawn(colorDown, 1, i) ); 
+   
     for(int i = 5; i >= 2; --i)
         for (int j = 0; j < 8; j++) {
-            if(i == 5 && j==7)
-                continue;
             slotsArr[i][j].setHeldPiece(NULL);    
-        }    
+        }
+    
     } catch (std::exception ex){
         throw "Chyba pri vytvareni figurek";
     }
@@ -227,7 +229,7 @@ void CBoard::printPossibleMoves(const MoveList & list) const{
             }
             else{
                 if(!list.contains(MyMove(i,j)))
-                    tmp->printPiece();
+                    tmp->printPiece(cout);
                 else
                     cout<<"#";
             }
@@ -263,7 +265,7 @@ void CBoard::printBoard() const{
             if( tmp == NULL )
                 cout << " ";
             else
-                tmp->printPiece();
+                tmp->printPiece(cout);
             cout <<"|";
             
             if(j == 7)
@@ -276,6 +278,34 @@ void CBoard::printBoard() const{
     
     cout << endl<< endl;
 }
+
+void CBoard::printDebug() const {
+
+     CPiece * tmp=NULL;
+    
+    // cout << "_________________"<<endl;         
+    
+    for(int i=7; i>=0; --i){
+        for (int j = 0; j < 8; ++j) {
+            
+            tmp  = slotsArr[i][j].getHeldPiece();
+            
+            if( tmp == NULL ){
+                cout << "null na :"<<i<<","<<j<<endl;
+                continue;
+            }
+            else{
+                cout<<"pole: "<<i<<","<<j<<" -adresa: "<< tmp <<", fig: "<<tmp->getName()<<",  barva: "<<tmp->getColor()<<endl;
+                
+            }
+            
+        }
+    }
+     
+    cout << endl<< endl;
+    
+}
+
 
 void CBoard::printRotate() {
 
@@ -295,7 +325,7 @@ void CBoard::printRotate() {
             if( tmp == NULL )
                 cout << " ";
             else
-                tmp->printPiece();
+                tmp->printPiece(cout);
             cout <<"|";
             
             if(j == 7)
@@ -363,12 +393,15 @@ bool CBoard::tryMove(const MyMove & move,CGameSession & gS) const {
     
     ficture.moveFigure(move);    
     
-    cout << "FICTURE BOARD: " << endl;
-    ficture.printBoard();
+    //cout << "FICTURE BOARD: " << endl;
+    //ficture.printBoard();
     
     CKing * tmpking = ficture.findKing(gS.currPlayerPtr->getPlayerColor());
     
-    if(tmpking->isChecked(ficture))
+    bool currentPlayerDown = (gS.currPlayerPtr == gS.player1);
+        
+    cout << endl;
+    if(tmpking->isChecked(ficture,currentPlayerDown))
         return false;
     
     return true;

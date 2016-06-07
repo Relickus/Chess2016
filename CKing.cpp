@@ -104,14 +104,12 @@ int CKing::checkField(int x, int y, const CBoard& board) {
     if (tmp != NULL) {
         if (isFriendPiece(tmp)) {
             return 1;
-        } else {
-            // ....... VEZMI JI - LEGAL JEN POKUD SE NEDOSTANE DO SACHU                
-//            if (!board.fieldChecked(x,y,tmp)) {
-//                moveList.add(x, y, board.getPiece(x, y));
-//                return 1;
-//            } else {
-//                return 1;
-//            }
+        } 
+        else {  //kral bere figurku
+    
+        moveList.add(x, y,rowPos,colPos,tmp);
+        return 1;
+            
         }
     } else {
         moveList.add(x, y,rowPos,colPos,NULL);
@@ -119,7 +117,7 @@ int CKing::checkField(int x, int y, const CBoard& board) {
     }
 }
 
-bool CKing::isChecked(const CBoard & board) const {
+bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
     
     //search left up diagonal for checking enemy pieces 
     int newRow = getRow()+1;
@@ -138,11 +136,17 @@ bool CKing::isChecked(const CBoard & board) const {
         
          else{   // enemy figure
                 
-            if( board.getPiece(newRow,newCol)->equals(PAWN) ){  //na diagonale NEKDE ciha pawn
-                if(newRow == getRow()-1 && newCol == getCol()+1){ // je v dosahu
+            if( board.getPiece(newRow,newCol)->equals(KING)){  //na diagonale NEKDE ciha pawn nebo king
+                if(newRow == getRow()+1 && newCol == getCol()-1){ // je v dosahu na sach
                     return true;
                 }
                 else    // neni v dosahu - je neskodnej
+                    break;
+            }
+            else if( board.getPiece(newRow,newCol)->equals(PAWN)){
+                if(currentPlayerDown && newRow == getRow()+1 && newCol == getCol()-1)
+                    return true;
+                else
                     break;
             }
             else if( board.getPiece(newRow,newCol)->equals(BISHOP)
@@ -177,11 +181,17 @@ bool CKing::isChecked(const CBoard & board) const {
         
          else{   // enemy figure
                 
-            if( board.getPiece(newRow,newCol)->equals(PAWN) ){  //na diagonale NEKDE ciha pawn
-                if(newRow == getRow()-1 && newCol == getCol()+1){ // je v dosahu
+            if( board.getPiece(newRow,newCol)->equals(KING)){  //na diagonale NEKDE ciha pawn nebo king
+                if(newRow == getRow()+1 && newCol == getCol()+1){ // je v dosahu
                     return true;
                 }
                 else    // neni v dosahu - je neskodnej
+                    break;
+            }
+            else if( board.getPiece(newRow,newCol)->equals(PAWN)){
+                if(currentPlayerDown && newRow == getRow()+1 && newCol == getCol()+1)
+                    return true;
+                else
                     break;
             }
             else if( board.getPiece(newRow,newCol)->equals(BISHOP)
@@ -216,9 +226,17 @@ bool CKing::isChecked(const CBoard & board) const {
         
          else{   // enemy figure
             
-            if( board.getPiece(newRow,newCol)->equals(BISHOP)
-            ||  board.getPiece(newRow,newCol)->equals(QUEEN) ){ // na diagonale sachujou bishop nebo queen
-                
+            if( board.getPiece(newRow,newCol)->equals(KING) && newCol == getCol()-1 && newRow == getRow()-1 ){ // v dosahu ciha king
+                    return true;
+            }
+           else if( board.getPiece(newRow,newCol)->equals(PAWN)){
+                if( currentPlayerDown==false && newRow == getRow()-1 && newCol == getCol()-1)
+                    return true;
+                else 
+                    break;
+           }
+            else if( board.getPiece(newRow,newCol)->equals(BISHOP)  //na diagonale NEKDE ciha pawn nebo king
+            ||  board.getPiece(newRow,newCol)->equals(QUEEN)){
                 return true;                
             }
             else
@@ -246,8 +264,17 @@ bool CKing::isChecked(const CBoard & board) const {
                 break;
         
          else{   // enemy figure
-            
-            if( board.getPiece(newRow,newCol)->equals(BISHOP)
+             
+            if( board.getPiece(newRow,newCol)->equals(KING) && newCol == getCol()+1 && newRow == getRow()-1){ // v dosahu ciha king
+                return true;
+            }
+            else if( board.getPiece(newRow,newCol)->equals(PAWN)){
+                if( currentPlayerDown==false && newRow == getRow()-1 && newCol == getCol()+1)
+                    return true;
+                else
+                    break;
+            }
+            else if( board.getPiece(newRow,newCol)->equals(BISHOP)
             ||  board.getPiece(newRow,newCol)->equals(QUEEN)  ){ // na diagonale sachujou bishop nebo queen
                 
                 return true;                
@@ -276,9 +303,12 @@ bool CKing::isChecked(const CBoard & board) const {
                 break;
         
          else{   // enemy figure
-            
-            if( board.getPiece(newRow,newCol)->equals(TOWER)
-            ||  board.getPiece(newRow,newCol)->equals(QUEEN) ){ // na diagonale sachujou bishop nebo queen
+               
+            if( board.getPiece(newRow,newCol)->equals(KING) && newCol == getCol()+1){  // v dosahu ciha king
+                    return true;
+            }
+            else if( board.getPiece(newRow,newCol)->equals(TOWER)
+            ||  board.getPiece(newRow,newCol)->equals(QUEEN) ){
                 
                 return true;                
             }
@@ -299,14 +329,16 @@ bool CKing::isChecked(const CBoard & board) const {
         if(board.getPiece(newRow,newCol) == NULL){
             newCol--;
             continue;        
-        }
-                        
+        }          
         if(board.getPiece(newRow,newCol)->isFriendPiece(this))    //friend figure
                 break;
         
          else{   // enemy figure
             
-            if( board.getPiece(newRow,newCol)->equals(TOWER)
+            if( board.getPiece(newRow,newCol)->equals(KING) && newCol == getCol()-1){    // v dosahu ciha king
+                return true;
+            }
+            else if( board.getPiece(newRow,newCol)->equals(TOWER)
             ||  board.getPiece(newRow,newCol)->equals(QUEEN)  ){ 
                 
                 return true;                
@@ -333,9 +365,12 @@ bool CKing::isChecked(const CBoard & board) const {
                 break;
         
          else{   // enemy figure
-            
-            if( board.getPiece(newRow,newCol)->equals(TOWER)
-            ||  board.getPiece(newRow,newCol)->equals(QUEEN)  ){ // na diagonale sachujou bishop nebo queen
+           
+            if( board.getPiece(newRow,newCol)->equals(KING) && newRow == getRow()-1){  // v dosahu ciha king
+                    return true;
+            }
+            else if( board.getPiece(newRow,newCol)->equals(TOWER)
+            ||  board.getPiece(newRow,newCol)->equals(QUEEN)  ){ 
                 
                 return true;                
             }
@@ -362,9 +397,12 @@ bool CKing::isChecked(const CBoard & board) const {
                 break;
         
          else{   // enemy figure
-            
-            if( board.getPiece(newRow,newCol)->equals(TOWER)
-            ||  board.getPiece(newRow,newCol)->equals(QUEEN) ){ // na diagonale sachujou bishop nebo queen
+              
+            if( board.getPiece(newRow,newCol)->equals(KING) && newRow == getRow()+1 ){  // v dosahu ciha king
+                    return true;
+            }
+            else if( board.getPiece(newRow,newCol)->equals(TOWER)
+            ||  board.getPiece(newRow,newCol)->equals(QUEEN) ){
                 
                 return true;                
             }

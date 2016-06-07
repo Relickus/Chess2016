@@ -7,7 +7,10 @@
 #include <climits>
 #include <fstream>
 
-CGameSession::CGameSession() : ipHost(""), player1(NULL),player2(NULL), fileName(""), ready_flag(false),exitRequest(false) {
+CGameSession::CGameSession() 
+    
+    : ipHost(""), player1(NULL),player2(NULL), whosTurn(WHITE),
+    fileName(""), ready_flag(false),exitRequest(false) {
 
     persistence = new CFilePersistence(this);
     currentPlayer = whosTurn = WHITE;
@@ -152,4 +155,16 @@ void CGameSession::assignKings() {
 
 void CGameSession::updateKings(){
     assignKings();
+}
+
+bool CGameSession::isTie() const {
+    player1->findAllFigures(gameBoard);
+    player2->findAllFigures(gameBoard);
+    
+    cout<<"pl1 ma figurek: "<<player1->figuresVec.size()<<", pl2 ma: "<<player2->figuresVec.size()<<endl;
+    
+    if( (player1->figuresVec.size() +  player2->figuresVec.size()) == 2)   //pokud zbyvaji jen 2 figurky musi to byt kralove
+        return true;
+    
+    return false;
 }

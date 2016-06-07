@@ -2,6 +2,7 @@
 #define	CMULTIPLAYERHOSTMENU_H
 
 #include "CAbstractMenuScreen.h"
+#include "CNetworking.h"
 
 
 class CMultiplayerHostMenu : public CAbstractMenuScreen{
@@ -13,12 +14,11 @@ public:
     virtual void setStuff(CController* ctrler);
     virtual void setNextMenu();
     virtual void show() const;
-
-
-
+    virtual int readInput();
 
 private:
 
+    CNetworking net;
 };
 
 
