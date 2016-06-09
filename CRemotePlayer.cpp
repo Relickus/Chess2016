@@ -1,4 +1,3 @@
-
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -7,25 +6,19 @@
 #include <netdb.h>
 #include <unistd.h>
 
+// -------------- includy pro sitovani ---------------
+
 #include "CRemotePlayer.h"
 #include "CGameSession.h"
 #include "CCommand.h"
 
 using namespace std;
 
-CRemotePlayer::CRemotePlayer() {
-
-}
-
 CRemotePlayer::CRemotePlayer(int socket) : cliSocket(socket) {
 
 }
 
-CRemotePlayer::~CRemotePlayer() {
-
-}
-
-CCommand CRemotePlayer::getCommand(CGameSession& gS) {
+CCommand CRemotePlayer::getCommand(const CGameSession& gS) {
 
     MyMove m = getMove(gS,cliSocket);
     MyMove exitm(-2,-2,-2,-2);
@@ -37,12 +30,12 @@ CCommand CRemotePlayer::getCommand(CGameSession& gS) {
     }
     m.rotateMove();
     m.printMove();      
-    m.figure = gS.gameBoard.getPiece(m.toX,m.toY);
+    m.figure = gS.getBoard().getPiece(m.toX,m.toY);
     
     return CCommand(m);
 }
 
-MyMove CRemotePlayer::getMove(CGameSession& gS,int cliSocket) {
+MyMove CRemotePlayer::getMove(const CGameSession& gS,int cliSocket) {
 
     return gS.networking.getMove(cliSocket);
 }

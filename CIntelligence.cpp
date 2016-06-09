@@ -5,7 +5,7 @@
 #include "CPawn.h"
 #include "CGameSession.h"
 
-CIntelligence::CIntelligence(){
+CIntelligence::CIntelligence() : difficulty(0){
 }
 
 CIntelligence::CIntelligence(int d) : difficulty(d) {
@@ -16,22 +16,15 @@ void CIntelligence::changeDifficulty(int d) {
     difficulty = d;
 }
 
-CIntelligence::~CIntelligence(){}
 
-void CIntelligence::think() const{   
-    
-    // TODO   Minimax
-    
-}
-
-void CIntelligence::eraseCheckMoves(MoveList & l, CGameSession & gS) const{
+void CIntelligence::eraseCheckMoves(MoveList & l, const CGameSession & gS){
         
     MoveList tmplist;
     
     for(size_t i = 0; i < l.size();++i){
         MyMove m = l.getMove(i);
         
-        if( ! gS.gameBoard.tryMove(m,gS)){
+        if( ! gS.getBoard().tryMove(m,gS)){
         }
         else{
             tmplist.add(m,m.figure);
@@ -44,12 +37,12 @@ void CIntelligence::eraseCheckMoves(MoveList & l, CGameSession & gS) const{
 }   
 
 
-MyMove CIntelligence::getMove(CGameSession & gS,int cliSocket){
+MyMove CIntelligence::getMove(const CGameSession & gS,int cliSocket) {
     
     allMoves.clear();
     MoveList l;
     
-    findAllFigures(gS.gameBoard);    
+    findAllFigures(gS.getBoard());    
     
     for(size_t i = 0; i < figuresVec.size(); ++i){        
           l = figuresVec.at(i)->getLegalMoves(gS); 
@@ -68,12 +61,12 @@ MyMove CIntelligence::getMove(CGameSession & gS,int cliSocket){
     
     // minimax vyhodi nejakej move a vrati ho...
     
-    int bestIdx = getBestIdx(allMoves,gS.gameBoard);
+    int bestIdx = getBestIdx(allMoves,gS.getBoard());
     
     return allMoves.getMove(bestIdx);    
 }
 
-CCommand CIntelligence::getCommand(CGameSession & gS) {
+CCommand CIntelligence::getCommand(const CGameSession & gS){
     
     MyMove m = getMove(gS);
     if(m.isFicture()){
@@ -83,7 +76,7 @@ CCommand CIntelligence::getCommand(CGameSession & gS) {
     return CCommand(m);
 }
 
-int CIntelligence::getBestIdx(MoveList& list,CBoard & board) const {
+int CIntelligence::getBestIdx(MoveList& list,const CBoard & board) const {
 
     if(difficulty == 0){
         srand(time(NULL));
@@ -129,7 +122,7 @@ int CIntelligence::getBestIdx(MoveList& list,CBoard & board) const {
         }
     }
     
-    cout << "BESTidxpcs/idxslot/idxtotal:"<< bestIdxPcs<<","<<bestIdxSlot<<","<<bestIdxTotal<<endl;
+    //cout << "BESTidxpcs/idxslot/idxtotal:"<< bestIdxPcs<<","<<bestIdxSlot<<","<<bestIdxTotal<<endl;
     if(difficulty == 1)
         return bestValPcs > bestValSlot ? bestIdxPcs : bestIdxSlot;
     

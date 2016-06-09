@@ -46,7 +46,7 @@ int openCliSocket ( const char * srvName, int srvPort )
   return s;
 }
 
-MyMove CNetworking::getMove(int cliSocket) const {
+MyMove CNetworking::getMove(const int cliSocket) const {
 
     char buffer[10] = { 0 };
     int l = recv ( cliSocket, buffer, sizeof ( buffer ), 0 );
@@ -65,7 +65,7 @@ MyMove CNetworking::getMove(int cliSocket) const {
     return m;
 }
 
-void CNetworking::sendCommand(CCommand & command, int FromSock ) const {
+void CNetworking::sendCommand(const CCommand & command, int FromSock ) const {
 
     if(FromSock == -1)
         return;
@@ -97,19 +97,13 @@ void CNetworking::sendCommand(CCommand & command, int FromSock ) const {
 }
 
 
-int CNetworking::getSocket() {
+int CNetworking::getSocket() const{
 
     return openCliSocket ( "localhost", 2666 );
 }
 
-void CNetworking::clientReady(int sock){
-    
-    cout << "Posilam ready..." << endl;
-    send ( sock, "READY", 5+1, 0 );
-    
-}
 
-bool CNetworking::waitForStart(int socket) const {
+bool CNetworking::waitForStart(const int socket) const {
 
     char buffer[10] = {0};    
     
@@ -128,7 +122,7 @@ bool CNetworking::waitForStart(int socket) const {
     return false;
 }
 
-COLOR CNetworking::recvPlayerColor(int socket) const{
+COLOR CNetworking::recvPlayerColor(const int socket) const{
 
     char buffer[3] = { 0 };
     

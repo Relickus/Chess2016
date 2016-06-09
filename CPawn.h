@@ -15,14 +15,7 @@ public:
     MoveList & getLegalMovesDown(const CBoard &  board);
     virtual int checkField(int x, int y, const CBoard& board, bool sidestep);
 
-    virtual CPiece* copyPiece(CPiece* pcs);
-
-    
-    //void printPiece() const;
-      
-private:
-    
-    //bool promoteToQueen();    // - tohle by mel udelat CController
+    virtual CPiece* copyPiece(const CPiece * pcs) const;
 
 };
 

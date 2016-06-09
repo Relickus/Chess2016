@@ -70,8 +70,7 @@ void COpponentMenu::setStuff(CController* ctrler) {
             ctrler->getGameSess().player2 = new CLocalPlayer();        
             break;
         case(3):
-             delete ctrler->getGameSess().player2;
-             ctrler->getGameSess().player2 = new CRemotePlayer();   
+             delete ctrler->getGameSess().player2;  
              break;
         case(4):
              delete ctrler->getGameSess().player1;

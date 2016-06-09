@@ -16,7 +16,6 @@ struct MyMove{
     bool operator==(const MyMove & oth) const;
     MyMove(int tX, int tY,int frX=-1,int frY=-1,CPiece * tmp=NULL);       // POZOR, nejdrive TO , pak FROM souradnice
     void rotateMove();
-    ~MyMove();
     void printMove() const;
     bool isFicture() const;
     void tocstring(char * buffer) const;

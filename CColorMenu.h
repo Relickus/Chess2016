@@ -6,15 +6,9 @@
 class CColorMenu : public CAbstractMenuScreen{
 public:
     CColorMenu(CAbstractMenuScreen * prPar=NULL);
-    CColorMenu(const CColorMenu& orig);
     virtual ~CColorMenu();
     virtual void setNextMenu();
     virtual void setStuff(CController * ctrler);
-
-
-
-    
-private:
 
 };
 

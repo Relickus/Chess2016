@@ -14,29 +14,29 @@ class MyMove;
 using namespace std;
 
 class CBoard {
+    
+    static void translateMove(MyMove & move);
+    
 public:
     CBoard();
-    virtual ~CBoard();
+    ~CBoard();
     CBoard(const CBoard & oth);
+    void copy(const CBoard & oth);
     
     void printBoard() const;
     void printDebug() const;
-    void printRotate();
-    static void translateMove(MyMove & move);
-    void initBoard(const CGameSession * gameSess);    
+    void printRotate() const;
     void printPossibleMoves(const MoveList & list) const;
+    
+    void initBoard(const CGameSession * gameSess);    
     CPiece * getPiece(int x, int y) const;
     bool outOfBoard(int x,int y) const;
-    void setField(int row, int col, CPiece * pc);
-    
-    void copy(CBoard & oth);
+    void setField(int row, int col, CPiece * pc);    
     void swapFigures(int r1,int c1, int r2,int c2);
     void rotateBoard();
     void moveFigure(const MyMove & move);
-    void promotePawn(const MyMove & move);
     int getSlotValue(int x,int y) const;
-    bool tryMove(const MyMove & move,CGameSession & gS) const;
-    void undoMove(MyMove & move,CGameSession & gS) const;
+    bool tryMove(const MyMove & move,const CGameSession & gS) const;
     CKing * findKing(COLOR col) const;
 
     
@@ -53,6 +53,7 @@ public:
 private:
     
     void createPieces(COLOR colorUp);
+    void promotePawn(const MyMove & move);
     
     CSlot slotsArr[8][8];
     const int width;

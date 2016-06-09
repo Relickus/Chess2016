@@ -8,7 +8,7 @@ class CFilePersistence : public CPersistence {
 public:
     CFilePersistence();
     CFilePersistence(CGameSession * gamePtr);
-    void save() const;
+    virtual void save() const;
     virtual bool load(const string & filename);
     
 private:

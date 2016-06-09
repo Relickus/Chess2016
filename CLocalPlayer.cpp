@@ -5,7 +5,7 @@
 #include "CCommand.h"
 #include <climits>
 
-MyMove CLocalPlayer::getMove(CGameSession& gS, int cliSocket) {
+MyMove CLocalPlayer::getMove(const CGameSession& gS, int cliSocket){
 }
 
 
@@ -36,7 +36,7 @@ CLocalPlayer::~CLocalPlayer() {
 
 }
 
-CCommand CLocalPlayer::getCommand(CGameSession & gS) {
+CCommand CLocalPlayer::getCommand(const CGameSession & gS){
 
     CCommand com;
     string tmp;

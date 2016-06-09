@@ -72,7 +72,7 @@ void CGameSession::end() {
     persistence = NULL;
 }
 
-CBoard & CGameSession::getBoard() {
+const CBoard & CGameSession::getBoard() const {
     return gameBoard;
 }
 
@@ -114,7 +114,7 @@ bool CGameSession::performMove(const MyMove& move){
 
 
 
-bool CGameSession::isCheckMate() {
+bool CGameSession::isCheckMate() const {
     
     currPlayerPtr->findAllFigures(gameBoard);
     MoveList l;

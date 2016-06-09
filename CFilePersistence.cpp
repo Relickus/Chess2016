@@ -127,7 +127,7 @@ void CFilePersistence::save() const {
     for(int i=7; i >=0 ;--i ){
         for (int j = 0; j < 8; j++) {
             
-            CPiece * pcs =  gamePtr->gameBoard.getPiece(i,j);  
+            CPiece * pcs =  gamePtr->getBoard().getPiece(i,j);  
             if(pcs == NULL){
                 line+='#';
                 continue;

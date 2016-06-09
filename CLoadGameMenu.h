@@ -8,7 +8,6 @@
 class CLoadGameMenu : public CAbstractMenuScreen {
 public:
     CLoadGameMenu(CAbstractMenuScreen * prPar=NULL);
-    CLoadGameMenu(const CLoadGameMenu& orig);
     virtual ~CLoadGameMenu();
     virtual void setNextMenu();
     int readInput();
@@ -17,8 +16,6 @@ public:
     virtual void setStuff(CController* ctrler);
     bool findFile(const string & file) const;
     virtual void show() const;
-
-
 
 private:
     

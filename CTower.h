@@ -11,13 +11,7 @@ public:
     virtual ~CTower();
 
     virtual MoveList & getLegalMoves(const CGameSession & gS);
-    //virtual bool isLegalMove(int x, int y) const;
-
-    virtual CPiece* copyPiece(CPiece* pcs);
-
-
-    //void printPiece() const;
-private:
+    virtual CPiece* copyPiece(const CPiece * pcs) const;
 
 };
 

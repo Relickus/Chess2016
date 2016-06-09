@@ -16,7 +16,8 @@
 
 using namespace std;
 
-CBoard::CBoard() : width(WIDTH), height(HEIGHT) {
+CBoard::CBoard() : width(WIDTH), height(HEIGHT), 
+                LAST_ROW_DOWN(0),LAST_ROW_UP(7),INIT_ROW_DOWN(1),INIT_ROW_UP(6){
         
     for(int i = 0; i < 8; ++i){
         for (int j = 0; j < 8; j++) {
@@ -24,11 +25,6 @@ CBoard::CBoard() : width(WIDTH), height(HEIGHT) {
         }
 
     }
-    
-    LAST_ROW_DOWN = 0;
-    LAST_ROW_UP = 7;
-    INIT_ROW_DOWN = 1;
-    INIT_ROW_UP = 6;
 }
 
 CBoard::CBoard(const CBoard& oth) : width(WIDTH), height(HEIGHT)  {
@@ -310,7 +306,7 @@ void CBoard::printDebug() const {
 }
 
 
-void CBoard::printRotate() {
+void CBoard::printRotate() const {
 
     
       CPiece * tmp=NULL;
@@ -355,7 +351,7 @@ void CBoard::setField(int row, int col, CPiece * pc){
     slotsArr[row][col].setHeldPiece(pc);
 }
 
-void CBoard::copy(CBoard & oth){
+void CBoard::copy(const CBoard & oth){
     
     if(this == &oth)
         return;
@@ -394,9 +390,9 @@ int CBoard::getSlotValue(int x, int y) const {
     return 0;
 }
 
-bool CBoard::tryMove(const MyMove & move,CGameSession & gS) const {
+bool CBoard::tryMove(const MyMove & move,const CGameSession & gS) const {
 
-    CBoard ficture(gS.gameBoard);
+    CBoard ficture(gS.getBoard());
     
     ficture.moveFigure(move);    
     
@@ -411,10 +407,6 @@ bool CBoard::tryMove(const MyMove & move,CGameSession & gS) const {
         return false;
     
     return true;
-}
-
-void CBoard::undoMove(MyMove & move,CGameSession & gS) const {
-
 }
 
 CKing * CBoard::findKing(COLOR col) const{    

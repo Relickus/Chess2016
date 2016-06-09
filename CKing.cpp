@@ -6,7 +6,7 @@
 
 CKing::CKing() {
     name = KING;
-    isLongRunner = false;
+    
 
     moveList.reserve(10);
     value = 50;
@@ -19,16 +19,12 @@ CKing::~CKing() {
 
 CKing::CKing(COLOR clr , int row, int col) : CPiece(clr,row,col) {
     name = KING;
-    isLongRunner = false;
+    
 
     moveList.reserve(10);
     value = 50;
 
 }
-//
-//void CKing::printPiece() const{
-//        
-//}
 
 MoveList & CKing::getLegalMoves(const CGameSession & gS) {
 
@@ -39,53 +35,53 @@ MoveList & CKing::getLegalMoves(const CGameSession & gS) {
     int newRow = getRow() - 1;
     int newCol = getCol() + 1;
 
-    this->checkField(newRow, newCol, gS.gameBoard);
+    this->checkField(newRow, newCol, gS.getBoard());
 
     // up right
 
     newRow = getRow() + 1;
     newCol = getCol() + 1;
 
-    this->checkField(newRow, newCol, gS.gameBoard);
+    this->checkField(newRow, newCol, gS.getBoard());
 
     // down left
 
     newRow = getRow() - 1;
     newCol = getCol() - 1;
 
-    this->checkField(newRow, newCol, gS.gameBoard);
+    this->checkField(newRow, newCol, gS.getBoard());
 
     // down right
 
     newRow = getRow() + 1;
     newCol = getCol() - 1;
 
-    this->checkField(newRow, newCol, gS.gameBoard);
+    this->checkField(newRow, newCol, gS.getBoard());
 
     // up 
 
     newRow = getRow();
     newCol = getCol() + 1;
 
-    this->checkField(newRow, newCol, gS.gameBoard);
+    this->checkField(newRow, newCol, gS.getBoard());
     // down
 
     newRow = getRow();
     newCol = getCol() - 1;
 
-    this->checkField(newRow, newCol, gS.gameBoard);
+    this->checkField(newRow, newCol, gS.getBoard());
     // left
 
     newRow = getRow() - 1;
     newCol = getCol();
 
-    this->checkField(newRow, newCol, gS.gameBoard);
+    this->checkField(newRow, newCol, gS.getBoard());
     // right
 
     newRow = getRow() + 1;
     newCol = getCol();
 
-    this->checkField(newRow, newCol, gS.gameBoard);
+    this->checkField(newRow, newCol, gS.getBoard());
 
 
     return moveList;
@@ -417,6 +413,6 @@ bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
     
 }
 
-CPiece* CKing::copyPiece(CPiece* pcs) {
+CPiece* CKing::copyPiece(const CPiece* pcs) const{
     return new CKing(pcs->getColor(),pcs->getRow(),pcs->getCol());
 }

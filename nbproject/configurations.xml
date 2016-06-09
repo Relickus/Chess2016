@@ -17,9 +17,6 @@
         <itemPath>CHostJoinMenu.h</itemPath>
         <itemPath>CLoadGameMenu.h</itemPath>
         <itemPath>CMainMenu.h</itemPath>
-        <itemPath>CMenuHandler.h</itemPath>
-        <itemPath>CMultiplayerHostMenu.h</itemPath>
-        <itemPath>CMultiplayerJoinMenu.h</itemPath>
         <itemPath>COpponentMenu.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Pieces" projectFiles="true">
@@ -47,7 +44,6 @@
       <itemPath>CServer.h</itemPath>
       <itemPath>CSingleplayerMenu.h</itemPath>
       <itemPath>CSlot.h</itemPath>
-      <itemPath>CVisitor.h</itemPath>
       <itemPath>MoveList.h</itemPath>
       <itemPath>MyMove.h</itemPath>
       <itemPath>TGameLoad.h</itemPath>
@@ -66,9 +62,6 @@
         <itemPath>CHostJoinMenu.cpp</itemPath>
         <itemPath>CLoadGameMenu.cpp</itemPath>
         <itemPath>CMainMenu.cpp</itemPath>
-        <itemPath>CMenuHandler.cpp</itemPath>
-        <itemPath>CMultiplayerHostMenu.cpp</itemPath>
-        <itemPath>CMultiplayerJoinMenu.cpp</itemPath>
         <itemPath>COpponentMenu.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Pieces" projectFiles="true">
@@ -196,18 +189,6 @@
       </item>
       <item path="CMainMenu.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="CMenuHandler.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CMenuHandler.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CMultiplayerHostMenu.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CMultiplayerHostMenu.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CMultiplayerJoinMenu.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CMultiplayerJoinMenu.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="CNetworking.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CNetworking.h" ex="false" tool="3" flavor2="0">
@@ -257,8 +238,6 @@
       <item path="CTower.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CTower.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CVisitor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DIFFICULTY.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -367,18 +346,6 @@
       </item>
       <item path="CMainMenu.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="CMenuHandler.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CMenuHandler.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CMultiplayerHostMenu.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CMultiplayerHostMenu.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CMultiplayerJoinMenu.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CMultiplayerJoinMenu.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="CNetworking.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CNetworking.h" ex="false" tool="3" flavor2="0">
@@ -428,8 +395,6 @@
       <item path="CTower.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CTower.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CVisitor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DIFFICULTY.h" ex="false" tool="3" flavor2="0">
       </item>

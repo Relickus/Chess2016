@@ -7,7 +7,6 @@
 
 #include "CAbstractMenuScreen.h"
 #include "CGameSession.h"
-#include "CGUI.h"
 
 CController::CController(){
     
@@ -122,7 +121,7 @@ void CController::gameLoop(){
             break;
         
         if(game.movePerformed){    
-          if(game.currPlayerPtr == game.player1){  // hral jsem ja, poslu svuj tah druhymu
+          if(game.onlineGame && game.currPlayerPtr == game.player1){  // hral jsem ja, poslu svuj tah druhymu
                game.networking.sendCommand(command,game.player2->getSocket());
             }
         
@@ -139,10 +138,6 @@ void CController::endGame(){
     game.end();
 }
 
-void CController::printBoard() const{
-    
-    game.gameBoard.printBoard();
-}
 
 CGameSession& CController::getGameSess() {
     return game;

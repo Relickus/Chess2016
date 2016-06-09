@@ -2,12 +2,6 @@
 #include "CPiece.h"
 #include  <iostream>
 
-
-//
-//CSlot::acceptVisitor(const CVisitor& v) const{
-//    heldPiece.acceptVisitor(v);
-//}
-
 CSlot::CSlot() : heldPiece(NULL){
 
 }

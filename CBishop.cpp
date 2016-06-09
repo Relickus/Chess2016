@@ -7,7 +7,7 @@
 
 CBishop::CBishop() {
     name = BISHOP;
-    isLongRunner = true;
+    
 
     moveList.reserve(15);
     value = 3;
@@ -20,31 +20,12 @@ CBishop::~CBishop() {
 
 CBishop::CBishop(COLOR clr, int row, int col) : CPiece(clr,row,col) {
     name = BISHOP;
-    isLongRunner = true;
+    
 
     moveList.reserve(15);
     value = 3;
 
 }
-//
-//void CBishop::printPiece() const{
-//        
-//}
-//
-//bool CBishop::isLegalMove(int x, int y) const {
-//
-//    // smí jezdit jen sikmo do vsech stran
-//    
-//    if(x == getRow() && y ==getCol())   // nesmi zustat na miste
-//        return false;
-//    
-//    
-//    if( abs(x-getRow()) != abs(y-getCol()) )    // pouze diagonalni tah toto splni
-//        return false;
-//    
-//    
-//    return true;
-//}
 
 MoveList & CBishop::getLegalMoves(const CGameSession & gS) {
 
@@ -57,7 +38,7 @@ MoveList & CBishop::getLegalMoves(const CGameSession & gS) {
 
     for (;newRow < 8 && newCol >= 0; newRow++, newCol--) {
 
-        if (checkField(newRow, newCol, gS.gameBoard) == 1)
+        if (checkField(newRow, newCol, gS.getBoard()) == 1)
             break;
     }
 
@@ -68,7 +49,7 @@ MoveList & CBishop::getLegalMoves(const CGameSession & gS) {
 
     for (;newRow < 8 && newCol < 8; newRow++, newCol++) {
 
-        if (checkField(newRow, newCol, gS.gameBoard) == 1)
+        if (checkField(newRow, newCol, gS.getBoard()) == 1)
             break;
     }
 
@@ -79,7 +60,7 @@ MoveList & CBishop::getLegalMoves(const CGameSession & gS) {
 
     for (; newRow >= 0 && newCol >= 0; newRow--, newCol--) {
 
-        if (checkField(newRow, newCol, gS.gameBoard) == 1)
+        if (checkField(newRow, newCol, gS.getBoard()) == 1)
             break;
     }
 
@@ -90,7 +71,7 @@ MoveList & CBishop::getLegalMoves(const CGameSession & gS) {
 
     for (;newRow >= 0 && newCol < 8; newRow--, newCol++) {
 
-        if (checkField(newRow, newCol, gS.gameBoard) == 1)
+        if (checkField(newRow, newCol, gS.getBoard()) == 1)
             break;
     }
 
@@ -98,6 +79,6 @@ MoveList & CBishop::getLegalMoves(const CGameSession & gS) {
     return moveList;
 }
 
-CPiece* CBishop::copyPiece(CPiece* pcs) {
+CPiece* CBishop::copyPiece(const CPiece * pcs) const  {
     return new CBishop(pcs->getColor(),pcs->getRow(),pcs->getCol());
 }

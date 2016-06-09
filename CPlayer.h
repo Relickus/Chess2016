@@ -16,14 +16,13 @@ class CBoard;
 class CPlayer {
 public:
     CPlayer();
-    virtual ~CPlayer();
-    virtual MyMove getMove(CGameSession & gS,int cliSocket=-1) = 0;
+    virtual MyMove getMove(const CGameSession & gS,int cliSocket=-1) = 0;
     COLOR getPlayerColor() const;
     void printPlayerColor(ostream & os) const;
     COLOR setPlayerColor(COLOR col);
     void findAllFigures(const CBoard & board);
-    virtual CCommand getCommand(CGameSession & gS) = 0;
-    bool kingIsChecked(CGameSession & gS) const;
+    virtual CCommand getCommand(const CGameSession & gS) = 0;
+    bool kingIsChecked(const CGameSession & gS) const;
     void setKing(CKing * k);
     virtual int getSocket() const;
     

@@ -3,7 +3,6 @@
 
 #include "COLOR.h"
 #include "CGameSession.h"
-#include "CGUI.h"
 class CAbstractMenuScreen;
 
 
@@ -14,7 +13,6 @@ public:
     virtual ~CController();
     
     void showMenus();
-    void printBoard() const;
     void startGame();
     void endGame();
     CGameSession & getGameSess();
@@ -26,8 +24,7 @@ private:
 
     CAbstractMenuScreen * menu;
     CGameSession game;
-    CGUI gui;
-    
+    //CGUI gui;
 };
 
 #endif	/* CCONTROLLER_H */

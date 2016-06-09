@@ -14,11 +14,6 @@
 #include "CBoard.h"
 
 using namespace std;
-//
-//void CPiece::acceptVisitor(const CVisitor & v) const{
-//        
-//    v.printPiece(this);
-//}
 
 CPiece::CPiece() : rowPos(-1),colPos(-1){
 
@@ -36,85 +31,6 @@ bool CPiece::equals(FIGURENAME fig) const{
      return tolower(getName()) == tolower(fig);
 }
 
-bool CPiece::moveDown() {
-
-    if (colPos <= 0)
-        throw MoveOutOfBoardException();
-
-    --colPos;
-
-    return true;
-}
-
-bool CPiece::moveUp() {
-
-    if (colPos >= 7)
-        throw MoveOutOfBoardException();
-
-    ++colPos;
-
-    return true;
-}
-
-bool CPiece::moveLeft() {
-
-    if (rowPos <= 0)
-        throw MoveOutOfBoardException();
-
-    --rowPos;
-
-    return true;
-}
-
-bool CPiece::moveRight() {
-
-    if (rowPos >= 7)
-        throw MoveOutOfBoardException();
-
-    ++rowPos;
-
-    return true;
-}
-
-bool CPiece::moveDown(unsigned int by) {
-
-    if (colPos - by < 0)
-        throw MoveOutOfBoardException();
-
-    colPos -= by;
-
-    return true;
-}
-
-bool CPiece::moveUp(unsigned int by) {
-
-    if (colPos + by > 7)
-        throw MoveOutOfBoardException();
-
-    colPos += by;
-
-    return true;
-}
-
-bool CPiece::moveLeft(unsigned int by) {
-
-    if (rowPos - by < 0)
-        throw MoveOutOfBoardException();
-
-    rowPos -= by;
-
-    return true;
-}
-
-bool CPiece::moveRight(unsigned int by) {
-
-    if (rowPos + by > 7)
-        throw MoveOutOfBoardException();
-
-    rowPos += by;
-
-    return true;
-}
 
 FIGURENAME CPiece::getName() const {
     return name;
@@ -131,32 +47,6 @@ void CPiece::printPiece(ostream & os) const {
     else
         os << (char) tolower(getName());
 }
-
-//static CPiece * CPiece::getPieceByLetter(char letter){
-//    
-//        COLOR tmpcol;
-//        if(islower(letter)){
-//            tmpcol = BLACK;
-//            letter = toupper(letter);
-//        }
-//        else 
-//            tmpcol = WHITE;
-//        
-//        switch(letter){        
-//            case(KING):
-//                return new CKing(tmpcol);
-//            case(QUEEN):
-//                return new CQueen(tmpcol);
-//            case(BISHOP):
-//                return new CBishop(tmpcol);
-//            case(PAWN):
-//                return new CPawn(tmpcol);
-//            case(TOWER):
-//                return new CTower(tmpcol);
-//            case(KNIGHT):
-//                return new CKnight(tmpcol);            
-//        }    
-//}
 
 int CPiece::getRow() const {
     if(rowPos >7 || rowPos < 0)

@@ -5,7 +5,7 @@
 CPawn::CPawn() {
 
     name = PAWN;
-    isLongRunner = false;
+    
 
     moveList.reserve(15);
     value = 1;
@@ -17,17 +17,12 @@ CPawn::~CPawn() {
 
 CPawn::CPawn(COLOR clr , int row, int col) : CPiece(clr,row,col) {
     name = PAWN;
-    isLongRunner = false;
+    
 
     moveList.reserve(15);
     value = 1;
 
 }
-//
-//void CPawn::printPiece() const{
-//        
-//}
-
 
 MoveList & CPawn::getLegalMovesDown(const CBoard & board) {
     
@@ -73,9 +68,9 @@ MoveList & CPawn::getLegalMovesUp(const CBoard & board) {
 
 MoveList & CPawn::getLegalMoves(const CGameSession & gS) {
     if(gS.currPlayerPtr == gS.player1)
-        return getLegalMovesUp(gS.gameBoard);
+        return getLegalMovesUp(gS.getBoard());
     else
-        return getLegalMovesDown(gS.gameBoard);
+        return getLegalMovesDown(gS.getBoard());
     
 }
 
@@ -112,6 +107,6 @@ int CPawn::checkField(int x, int y, const CBoard& board, bool sidestep) {
 
 }
 
-CPiece* CPawn::copyPiece(CPiece* pcs) {
+CPiece* CPawn::copyPiece(const CPiece * pcs) const{
     return new CPawn(pcs->getColor(),pcs->getRow(),pcs->getCol());
 }

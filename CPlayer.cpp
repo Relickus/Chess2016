@@ -9,11 +9,6 @@ CPlayer::CPlayer() : playersKing(NULL){
     
 }
 
-
-CPlayer::~CPlayer(){
-    
-}
-
 COLOR CPlayer::getPlayerColor() const {
     return playerColor;
 }
@@ -46,10 +41,10 @@ void CPlayer::findAllFigures(const CBoard& board){
     
 }
 
-bool CPlayer::kingIsChecked(CGameSession & gS) const{
+bool CPlayer::kingIsChecked(const CGameSession & gS) const{
     
     bool tmp = (gS.currPlayerPtr == gS.player1);
-    return playersKing->isChecked(gS.gameBoard,tmp);
+    return playersKing->isChecked(gS.getBoard(),tmp);
 }
 
 void CPlayer::setKing(CKing* k) {

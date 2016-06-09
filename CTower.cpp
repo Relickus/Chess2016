@@ -5,7 +5,7 @@
 
 CTower::CTower() {
     name = TOWER;
-    isLongRunner = true;
+    
 
     moveList.reserve(15);
     value = 5;
@@ -17,16 +17,12 @@ CTower::~CTower() {
 
 CTower::CTower(COLOR clr , int row, int col) : CPiece(clr,row,col) {
     name = TOWER;
-    isLongRunner = true;
+    
 
     moveList.reserve(15);
     value = 5;
 
 }
-//
-//void CTower::printPiece() const{
-//        
-//}
 
 MoveList & CTower::getLegalMoves(const CGameSession & gS) {
 
@@ -39,7 +35,7 @@ MoveList & CTower::getLegalMoves(const CGameSession & gS) {
 
     for (;newRow < 8; newRow++) {
 
-        if (checkField(newRow, newCol, gS.gameBoard) == 1)
+        if (checkField(newRow, newCol, gS.getBoard()) == 1)
             break;
 
     }
@@ -51,7 +47,7 @@ MoveList & CTower::getLegalMoves(const CGameSession & gS) {
 
     for (; newRow >= 0; newRow--) {
 
-        if (checkField(newRow, newCol, gS.gameBoard) == 1)
+        if (checkField(newRow, newCol, gS.getBoard()) == 1)
             break;
     }
 
@@ -62,7 +58,7 @@ MoveList & CTower::getLegalMoves(const CGameSession & gS) {
 
     for (;newCol >= 0; newCol--) {
 
-        if (checkField(newRow, newCol, gS.gameBoard) == 1)
+        if (checkField(newRow, newCol, gS.getBoard()) == 1)
             break;
     }
 
@@ -73,7 +69,7 @@ MoveList & CTower::getLegalMoves(const CGameSession & gS) {
 
     for (;newCol < 8; newCol++) {
 
-        if (checkField(newRow, newCol, gS.gameBoard) == 1)
+        if (checkField(newRow, newCol, gS.getBoard()) == 1)
             break;
     }
 
@@ -83,6 +79,6 @@ MoveList & CTower::getLegalMoves(const CGameSession & gS) {
 
 }
 
-CPiece* CTower::copyPiece(CPiece* pcs) {
+CPiece* CTower::copyPiece(const CPiece * pcs) const{
     return new CTower(pcs->getColor(),pcs->getRow(),pcs->getCol());
 }

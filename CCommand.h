@@ -20,12 +20,12 @@ public:
     void movesQuery(CGameSession & gS) const;
     void exitQuery(CGameSession & gS) const;
     void saveQuery(CGameSession & gS) const;
-    void rotateQuery(CGameSession & gS) const;
+    void rotateQuery(const CGameSession & gS) const;
     void makeMoveQuery(CGameSession & gS) const;  
     void surrenderQuery(CGameSession & gS) const;
     void checkQuery(CGameSession & gS) const;
     void tieQuery(CGameSession & gS) const;
-    MyMove & getMoveRef();
+    const MyMove & getMoveRef() const;
     
     COMMAND command;
     

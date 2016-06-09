@@ -10,18 +10,15 @@ class CIntelligence : public CPlayer {
 public:
     CIntelligence();
     CIntelligence(int d);
-    virtual ~CIntelligence();
     void changeDifficulty(int d);
-    void think() const;
-    virtual MyMove getMove(CGameSession & gS,int cliSocket=-1);
-    virtual CCommand getCommand(CGameSession & gS);
-    int getBestIdx(MoveList & list,CBoard & board) const;
+    virtual MyMove getMove(const CGameSession & gS,int cliSocket=-1);
+    virtual CCommand getCommand(const CGameSession & gS);
 
-    
     
 private:
     
-    void eraseCheckMoves(MoveList & l, CGameSession & gS) const;
+    int getBestIdx(MoveList & list,const CBoard & board) const;
+    void eraseCheckMoves(MoveList & l, const CGameSession & gS);
     int difficulty;
 };
 

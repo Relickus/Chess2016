@@ -11,14 +11,7 @@ public:
     virtual ~CKnight();
 
     virtual MoveList & getLegalMoves(const CGameSession & gS);
-
-    virtual CPiece* copyPiece(CPiece* pcs);
-
-    
-
-    //void printPiece() const;
-    
-private:
+    virtual CPiece* copyPiece(const CPiece * pcs) const;
 
 };
 

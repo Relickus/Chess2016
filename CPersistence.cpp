@@ -7,6 +7,3 @@ CPersistence::CPersistence(CGameSession* b) {
 CPersistence::CPersistence() {
     gamePtr = NULL;
 }
-
-CPersistence::~CPersistence(){
-}

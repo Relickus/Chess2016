@@ -116,37 +116,37 @@ void CCommand::saveQuery(CGameSession & gS) const{
 
 void CCommand::movesQuery(CGameSession & gS) const{          
 
-    CPiece * tmp = gS.gameBoard.getPiece(x,y);
+    CPiece * tmp = gS.getBoard().getPiece(x,y);
 
     if(tmp == NULL){
-        cout << "Empty field."<<endl;
+        cout << "Prázdné pole."<<endl;
         //cin.ignore(INT_MAX,'\n');
         return;
     }
     if(!(tmp->isFriendPiece(gS.currentPlayer))){
-        cout << "Not your figure."<<endl;
+        cout << "Toto není tvá figurka."<<endl;
         //cin.ignore(INT_MAX,'\n');
         return;
     }
 
     MoveList l = tmp->getLegalMoves(gS);
 
-    gS.gameBoard.printPossibleMoves(l);
+    gS.getBoard().printPossibleMoves(l);
         
 }
 
 void CCommand::makeMoveQuery(CGameSession & gS) const{          
 
     MoveList l;
-    CPiece * tmp = gS.gameBoard.getPiece(move.fromX,move.fromY);
+    CPiece * tmp = gS.getBoard().getPiece(move.fromX,move.fromY);
     
     if(tmp == NULL){
-        cout << "Empty field."<<endl;
+        cout << "Prázdné pole."<<endl;
         //cin.ignore(INT_MAX,'\n');
         return;
     }
     if(!(tmp->isFriendPiece(gS.currentPlayer))){
-        cout << "Not your figure."<<endl;
+        cout << "Toto není tvá figurka."<<endl;
         //cin.ignore(INT_MAX,'\n');
         return;
     }
@@ -156,44 +156,44 @@ void CCommand::makeMoveQuery(CGameSession & gS) const{
      l = tmp->getLegalMoves(gS);
 
     if(!l.contains(move)){
-        cout << "Tento tah neni mozny." << endl;
+        cout << "Tento tah není možný." << endl;
         return;
     }
       
-    if( ! gS.gameBoard.tryMove(move,gS)){
+    if( ! gS.getBoard().tryMove(move,gS)){
     
         cout << "Tento tah vede na šach, vyberte jiný tah." << endl;    
         return;
     }
     else{
         gS.performMove(move);
-        gS.gameBoard.printBoard();
+        gS.getBoard().printBoard();
         gS.movePerformed = true;
     }
     
 }
 
-void CCommand::rotateQuery(CGameSession & gS) const {
-    gS.gameBoard.printRotate();
+void CCommand::rotateQuery(const CGameSession & gS) const {
+    gS.getBoard().printRotate();
 }
 
 
 void CCommand::surrenderQuery(CGameSession & gS) const{
-    cout << "======= Checkmate! Vyhrava "<<(gS.currentPlayer==BLACK?"BILY ":"CERNY ")<<"======="<<endl;
+    cout << "======= Checkmate! Vyhrává "<<(gS.currentPlayer==BLACK?"BÍLÝ ":"ČERNÝ ")<<"======="<<endl;
     exitQuery(gS);
 }
 
 
 void CCommand::checkQuery(CGameSession & gS) const{
-    cout << "Pozor, hrac "<< (gS.currentPlayer==BLACK?"CERNY":"BILY")<<" je v sachu!" << endl;    
+    cout << "Pozor, hráč "<< (gS.currentPlayer==BLACK?"ČERNÝ":"BÍLÝ")<<" je v šachu!" << endl;    
 }
 
 void CCommand::tieQuery(CGameSession& gS) const {
-    cout<<" Nastala patova situace, nikdo nevyhral."<<endl;
+    cout<<" Nastala patová situace, nikdo nevyhrál."<<endl;
     exitQuery(gS);
 }
 
-MyMove& CCommand::getMoveRef() {
+const MyMove& CCommand::getMoveRef() const{
 
     return move;
 }

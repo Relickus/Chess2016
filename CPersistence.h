@@ -11,7 +11,6 @@ class CPersistence {
 public:
     CPersistence();
     CPersistence(CGameSession * b);
-    virtual ~CPersistence();
     virtual void save() const = 0;
     virtual bool load(const string & filename) = 0;
     

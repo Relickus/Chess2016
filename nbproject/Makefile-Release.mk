@@ -52,9 +52,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/CLoadGameMenu.o \
 	${OBJECTDIR}/CLocalPlayer.o \
 	${OBJECTDIR}/CMainMenu.o \
-	${OBJECTDIR}/CMenuHandler.o \
-	${OBJECTDIR}/CMultiplayerHostMenu.o \
-	${OBJECTDIR}/CMultiplayerJoinMenu.o \
 	${OBJECTDIR}/CNetworking.o \
 	${OBJECTDIR}/COpponentMenu.o \
 	${OBJECTDIR}/CPawn.o \
@@ -179,21 +176,6 @@ ${OBJECTDIR}/CMainMenu.o: CMainMenu.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMainMenu.o CMainMenu.cpp
-
-${OBJECTDIR}/CMenuHandler.o: CMenuHandler.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMenuHandler.o CMenuHandler.cpp
-
-${OBJECTDIR}/CMultiplayerHostMenu.o: CMultiplayerHostMenu.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMultiplayerHostMenu.o CMultiplayerHostMenu.cpp
-
-${OBJECTDIR}/CMultiplayerJoinMenu.o: CMultiplayerJoinMenu.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMultiplayerJoinMenu.o CMultiplayerJoinMenu.cpp
 
 ${OBJECTDIR}/CNetworking.o: CNetworking.cpp 
 	${MKDIR} -p ${OBJECTDIR}

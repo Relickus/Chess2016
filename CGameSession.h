@@ -14,31 +14,29 @@ using namespace std;
 
 class CGameSession {
 public:
+    static bool validateMove(const string & move);
+    static bool validatePos(const string & move);
+    
     CGameSession();
-    virtual ~CGameSession();
+    ~CGameSession();
     
     void start();
     void end();
     
-    CBoard & getBoard();
+    const CBoard & getBoard() const;
     void setGameReady();
     bool gameReady() const;
     void setPlayerColors(COLOR col);
     void setTurn(COLOR col);
-    static bool validateMove(const string & move);
-    static bool validatePos(const string & move);
-    MyMove waitForMove();    
     bool performMove(const MyMove & move);
-    bool movesQuery(string & str);
     void switchPlayers();
-    bool isCheckMate();
+    bool isCheckMate() const;
     void assignKings();
     void updateKings();
     bool isTie() const;
     void netGameInit();
 
     
-    CBoard gameBoard;
     COLOR currentPlayer;
     string ipHost;
     string fileName;
@@ -57,8 +55,9 @@ public:
     CServer server;
     
 private:       
+    CBoard gameBoard;
     
-    
+   friend class CLoadGameMenu; 
     
 };
 

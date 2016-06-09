@@ -17,13 +17,7 @@ public:
     virtual MoveList & getLegalMoves(const CGameSession & gS);
     virtual int checkField(int x, int y, const CBoard& board);
 
-    virtual CPiece* copyPiece(CPiece* pcs);
-
-
-
-
-    //void printPiece() const;
-private:
+    virtual CPiece* copyPiece(const CPiece* pcs) const ;
 
 };
 

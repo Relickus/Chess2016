@@ -13,9 +13,6 @@ public:
 
     virtual void setStuff(CController* ctrler);
 
-    
-private:
-
 };
 
 

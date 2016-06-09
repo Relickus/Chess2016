@@ -9,12 +9,11 @@ class CRemotePlayer;
 class CNetworking {
 public:
     
-    void clientReady(int sock);
-    MyMove getMove(int sock) const;
-    void sendCommand(CCommand & command,int FromSock) const;
-    int getSocket();
-    bool waitForStart(int socket) const;
-    COLOR recvPlayerColor(int socket) const;    
+    MyMove getMove(const int sock) const;
+    void sendCommand(const CCommand & command,int FromSock) const;
+    int getSocket() const;
+    bool waitForStart(const int socket) const;
+    COLOR recvPlayerColor(const int socket) const;    
 
     //int openSrvSocket ( const char * srvName, int srvPort);
     //void serveClient ( int s );
