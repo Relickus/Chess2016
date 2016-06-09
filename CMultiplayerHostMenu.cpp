@@ -27,7 +27,6 @@ int CMultiplayerHostMenu::readInput() {
     string addr = "localhost:2666";
     cout <<"Startuji server na adrese : " << addr<<endl;
     
-    net.startServer();
  
 }
 

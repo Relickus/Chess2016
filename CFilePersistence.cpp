@@ -45,6 +45,8 @@ ifstream ifs(filename);
                 ifs.close();
                 return false;
             }
+            if(tLoad.board.getPiece(i,j) != NULL)
+                cout << " NECO TAM BYLO TED SEM TO PREPSAL"<<endl;            
             tLoad.board.setField(i, j, tmp);
         }
     }

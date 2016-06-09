@@ -13,7 +13,7 @@ public:
     virtual ~CIntelligence();
     void changeDifficulty(int d);
     void think() const;
-    virtual MyMove getMove(CGameSession & gamesess);
+    virtual MyMove getMove(CGameSession & gS,int cliSocket=-1);
     virtual CCommand getCommand(CGameSession & gS);
     int getBestIdx(MoveList & list,CBoard & board) const;
 

@@ -55,3 +55,7 @@ bool CPlayer::kingIsChecked(CGameSession & gS) const{
 void CPlayer::setKing(CKing* k) {
     playersKing = k;
 }
+
+int CPlayer::getSocket() const {
+
+}

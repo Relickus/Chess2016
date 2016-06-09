@@ -1,4 +1,6 @@
 
+#include <unistd.h>
+
 #include "CHostJoinMenu.h"
 #include "CMultiplayerJoinMenu.h"
 #include "CMultiplayerHostMenu.h"
@@ -7,6 +9,8 @@
 #include "CLocalPlayer.h"
 #include "CRemotePlayer.h"
 
+#define OPT_HOST 1
+#define OPT_JOIN 2
 #define OPT_BACK 3
 
 CHostJoinMenu::CHostJoinMenu(CAbstractMenuScreen* prPar){
@@ -32,12 +36,14 @@ void CHostJoinMenu::setNextMenu() {
             nextMenu = prevMenu;
             break;            
             
-        case(1):
-           nextMenu = new CColorMenu(this);  
+        case(OPT_HOST):
+           //nextMenu = new CColorMenu(this);  
+            nextMenu = NULL;
             break;
             
-        case(2):
-            nextMenu = new CMultiplayerJoinMenu(this);  
+        case(OPT_JOIN):
+            //nextMenu = new CMultiplayerJoinMenu(this);  
+            nextMenu = NULL;
             break;
                         
     }
@@ -49,25 +55,36 @@ CHostJoinMenu::~CHostJoinMenu(){
 }
 
 void CHostJoinMenu::setStuff(CController* ctrler) {
-
-     delete ctrler->getGameSess().player1;
-     delete ctrler->getGameSess().player2;
-
-     switch(chosenOption){
-        case(0) : 
-            ctrler->getGameSess().player1 = new CLocalPlayer();
-            ctrler->getGameSess().player2 = new CRemotePlayer();
-          break;
-        case(1) :
-            ctrler->getGameSess().player1 = new CLocalPlayer();
-            ctrler->getGameSess().player2 = new CRemotePlayer();
+ 
+    int sock = -1;
+    int ret;
+    COLOR col;
+    
+    switch(chosenOption){
+        
+     //---------------server cast----------------
+        
+        case(OPT_HOST) :  
             
-//            if( net.startServer() == -1){
-//                
-//            }
-//            
+            ret = ctrler->startServer();
+               if(ret == -1){
+                   cout<<"SERVER SE NEPODARILO SPUSTIT!"<<endl;
+                   ctrler->endGame();
+                   return;
+               }
+               // pote co skonci server na signal
+        ctrler->endGame();
+        return;
+     //---------------------------------------------------------  
+
+        case(OPT_JOIN) :
+            delete ctrler->getGameSess().player1;
+            delete ctrler->getGameSess().player2;
+            ctrler->getGameSess().netGameInit();
+            
          break;  
        default:
+           cout<<"nevalidni moznost v hostjoinmenu"<<endl;
            break;
              
     }

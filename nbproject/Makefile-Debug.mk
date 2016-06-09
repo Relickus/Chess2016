@@ -63,6 +63,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/CPlayer.o \
 	${OBJECTDIR}/CQueen.o \
 	${OBJECTDIR}/CRemotePlayer.o \
+	${OBJECTDIR}/CServer.o \
 	${OBJECTDIR}/CSlot.o \
 	${OBJECTDIR}/CTower.o \
 	${OBJECTDIR}/MoveList.o \
@@ -233,6 +234,11 @@ ${OBJECTDIR}/CRemotePlayer.o: CRemotePlayer.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CRemotePlayer.o CRemotePlayer.cpp
+
+${OBJECTDIR}/CServer.o: CServer.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CServer.o CServer.cpp
 
 ${OBJECTDIR}/CSlot.o: CSlot.cpp 
 	${MKDIR} -p ${OBJECTDIR}

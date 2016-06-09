@@ -7,14 +7,16 @@
 class CRemotePlayer : public CPlayer{
 public:
     CRemotePlayer();
+    CRemotePlayer(int socket);
     virtual ~CRemotePlayer();
     virtual CCommand getCommand(CGameSession& gS);
-    virtual MyMove getMove(CGameSession& gS);
+    virtual MyMove getMove(CGameSession& gS, int cliSocket=-1);
+    virtual int getSocket() const;
 
 
-private:
+    int cliSocket;
+    int enemySocket;
     
-    CNetworking net;
 };
 
 

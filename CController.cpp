@@ -77,25 +77,31 @@ void CController::gameLoop(){
                 
     cin.ignore();
     game.currentPlayer = WHITE; 
-   game.currPlayerPtr = (game.player1->getPlayerColor() == WHITE ? game.player1 : game.player2);
-        
+   game.currPlayerPtr = (game.player1->getPlayerColor() == WHITE ? game.player1 : game.player2); 
+   
     while(true){
         
-        cout<<"===================="<<endl;
-        game.gameBoard.printDebug();
-        game.gameBoard.printBoard();
-        cout<<"===================="<<endl;
+//        cout<<"===================="<<endl;
+//        game.gameBoard.printDebug();
+//        game.gameBoard.printBoard();
+//        cout<<"===================="<<endl;
         
         CCommand command;
         
         if(game.isCheckMate()){
             command.command = SURRENDER;
             command.executeCommand(game);
+             
+            //if(game.currPlayerPtr == game.player1)  // hral jsem ja, poslu svuj tah druhymu
+            //    game.player2-> sendMove(command.move);
+            
             return;
         }
         else if(game.isTie()){
             command.command = TIE;
             command.executeCommand(game);
+          //  if(game.currPlayerPtr == game.player1)  // hral jsem ja, poslu svuj tah druhymu
+          //      game.player2-> sendMove(command.move);
             return;
         }
         else if(game.currPlayerPtr->kingIsChecked(game)){
@@ -105,18 +111,24 @@ void CController::gameLoop(){
         }
         
         while(command.command == UNKNOWN){   
+            if(game.currPlayerPtr == game.player2)
+                cout << "Cekam na tah protihrace..." << endl;
             command = game.currPlayerPtr-> getCommand(game);
         }
         
-        command.executeCommand(game);
-        
-        
+        command.executeCommand(game);        
+                
         if(game.exitRequest)
             break;
         
-        if(game.movePerformed){
+        if(game.movePerformed){    
+          if(game.currPlayerPtr == game.player1){  // hral jsem ja, poslu svuj tah druhymu
+               game.networking.sendCommand(command,game.player2->getSocket());
+            }
+        
             game.switchPlayers();
             game.movePerformed = false;
+            
         }
         
     }
@@ -134,5 +146,15 @@ void CController::printBoard() const{
 
 CGameSession& CController::getGameSess() {
     return game;
+}
+
+int CController::startServer() {
+    
+    if( game.server.startServer() == -1)    // server bezi
+        return -1;    
+    
+    //game.networking.createSockets();
+    
+    return 0;
 }
 

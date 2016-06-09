@@ -23,10 +23,6 @@ public:
 private:
     
     string fileGame;
-    CBoard tmpboard;
-    char colorChar;
-    COLOR tmpColor;
-    COLOR tmpTurn;
     bool loadSuccessful;
     CFilePersistence * persistence;
 

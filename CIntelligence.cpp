@@ -44,7 +44,7 @@ void CIntelligence::eraseCheckMoves(MoveList & l, CGameSession & gS) const{
 }   
 
 
-MyMove CIntelligence::getMove(CGameSession & gS){
+MyMove CIntelligence::getMove(CGameSession & gS,int cliSocket){
     
     allMoves.clear();
     MoveList l;
@@ -92,8 +92,8 @@ int CIntelligence::getBestIdx(MoveList& list,CBoard & board) const {
     
     int bestValPcs = 0;
     int bestValSlot = 0;
-    int bestIdxPcs = -1;
-    int bestIdxSlot = -1;
+    int bestIdxPcs = 0;
+    int bestIdxSlot = 0;
     int bestIdxTotal = 0;
     int bestValueTotal = 0;
     
@@ -129,6 +129,13 @@ int CIntelligence::getBestIdx(MoveList& list,CBoard & board) const {
         }
     }
     
-    return bestIdxPcs > bestIdxSlot ? bestIdxPcs : bestIdxSlot;
-       
+    cout << "BESTidxpcs/idxslot/idxtotal:"<< bestIdxPcs<<","<<bestIdxSlot<<","<<bestIdxTotal<<endl;
+    if(difficulty == 1)
+        return bestValPcs > bestValSlot ? bestIdxPcs : bestIdxSlot;
+    
+    if( (bestValueTotal >= bestValPcs && bestValPcs >= bestValSlot)
+     || (bestValueTotal >= bestValSlot && bestValSlot >= bestValPcs ) )
+        return bestIdxTotal;
+    else
+         return bestValPcs > bestValSlot ? bestIdxPcs : bestIdxSlot;  
 }

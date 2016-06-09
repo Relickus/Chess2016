@@ -1,6 +1,8 @@
 #include "CGameSession.h"
 #include "CFilePersistence.h"
 #include "CPlayer.h"
+#include "CLocalPlayer.h"
+#include "CRemotePlayer.h"
 #include "CPiece.h"
 #include "MyMove.h"
 #include "MoveList.h"
@@ -10,7 +12,7 @@
 CGameSession::CGameSession() 
     
     : ipHost(""), player1(NULL),player2(NULL), whosTurn(WHITE),
-    fileName(""), ready_flag(false),exitRequest(false) {
+    fileName(""), ready_flag(false),exitRequest(false),onlineGame(false) {
 
     persistence = new CFilePersistence(this);
     currentPlayer = whosTurn = WHITE;
@@ -39,15 +41,6 @@ bool CGameSession::validatePos(const string & pos){
 }
 
 
-MyMove CGameSession::waitForMove(){
-    
-    // pozdeji to vsechno tahnout pres CGUI (in i out)
-        
-    // tady bude jen opponent -> getMove() nebo makeMove() a kdyz to bude AI tak ta si v pameti zrotuje board
-    // kdyz to bude human player tak se zavola opponent metoda zase z CHumanPlayer a tam se to nerotuje
-    
-}
-
 void CGameSession::switchPlayers(){
         
     whosTurn = currentPlayer = (currentPlayer == WHITE ? BLACK : WHITE);
@@ -60,7 +53,7 @@ void CGameSession::start() {
 
     if (fileName.empty())
         gameBoard.initBoard(this);
-    //else
+    
         //loadgame
         
     assignKings();    
@@ -121,8 +114,8 @@ bool CGameSession::performMove(const MyMove& move){
 
 
 
-bool CGameSession::isCheckMate() { // TOHLE JE SPATNE - checkmate je kdyz neni zadny tah ktery nevede na sach
-
+bool CGameSession::isCheckMate() {
+    
     currPlayerPtr->findAllFigures(gameBoard);
     MoveList l;
     
@@ -161,10 +154,29 @@ bool CGameSession::isTie() const {
     player1->findAllFigures(gameBoard);
     player2->findAllFigures(gameBoard);
     
-    cout<<"pl1 ma figurek: "<<player1->figuresVec.size()<<", pl2 ma: "<<player2->figuresVec.size()<<endl;
+   // cout<<"pl1 ma figurek: "<<player1->figuresVec.size()<<", pl2 ma: "<<player2->figuresVec.size()<<endl;
     
     if( (player1->figuresVec.size() +  player2->figuresVec.size()) == 2)   //pokud zbyvaji jen 2 figurky musi to byt kralove
         return true;
     
     return false;
+}
+
+void CGameSession::netGameInit() {
+    
+            onlineGame = true;
+            player1 = new CLocalPlayer();
+            
+            int sock = networking.getSocket();
+            player2 = new CRemotePlayer(sock);
+                       
+            COLOR col = networking.recvPlayerColor(sock);
+            cout << "Vase barva je "<< (col==WHITE?"BILA":"CERNA") << endl;
+            
+            setPlayerColors(col);
+            //networking.clientReady(sock);           
+            networking.waitForStart(sock);
+            
+              //wait for GO
+            setGameReady();
 }

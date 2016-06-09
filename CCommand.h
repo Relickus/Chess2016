@@ -3,6 +3,7 @@
 
 #include "COMMAND.h"
 #include "MyMove.h"
+#include "CController.h"
 
 class CGameSession;
 
@@ -24,12 +25,16 @@ public:
     void surrenderQuery(CGameSession & gS) const;
     void checkQuery(CGameSession & gS) const;
     void tieQuery(CGameSession & gS) const;
+    MyMove & getMoveRef();
+    
     COMMAND command;
     
 private:
     int x;
     int y;
     MyMove move;
+    
+    friend CController;
     
 };
 

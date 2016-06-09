@@ -5,48 +5,9 @@
 #include "CCommand.h"
 #include <climits>
 
-
-MyMove CLocalPlayer::getMove(CGameSession & gS){
-//    
-//    MyMove m = readInput(gS);
-//    MyMove fict(-1,-1,-1,-1);
-//    
-//    if(m.isFicture())
-//        return fict;
-//    
-//    CPiece * tmp = gS.gameBoard.getPiece(m.fromX,m.fromY);
-//    
-//    if(tmp == NULL){
-//        cout << "Null field" << endl;
-//        return fict;
-//    }
-//    else if(!(tmp->isFriendPiece(playerColor))){
-//        cout << "Not your figure" << endl;
-//        return fict;
-//    }
-//  
-//    MoveList l;
-//    
-//    if(tmp->getName() == PAWN){
-//        CPawn * pwn = dynamic_cast<CPawn*>(tmp);
-//        
-//        if(gS.currPlayerPtr == gS.player2){
-//            
-//            l = pwn->getLegalMovesDown(gS.gameBoard);
-//        }
-//        else
-//            l = pwn->getLegalMovesUp(gS.gameBoard);
-//    }
-//    else
-//        l = tmp->getLegalMoves(gS.gameBoard);
-//        
-//    if(!l.contains(m)){
-//        cout << "Tento tah neni mozny." << endl;
-//        return fict;
-//    }
-//    
-//    return m;
+MyMove CLocalPlayer::getMove(CGameSession& gS, int cliSocket) {
 }
+
 
 void CLocalPlayer::badInput() const{
     

@@ -1,0 +1,1 @@
+CAbstractMenuScreen.o: CAbstractMenuScreen.cpp CAbstractMenuScreen.h

@@ -19,6 +19,7 @@ public:
     void endGame();
     CGameSession & getGameSess();
     void gameLoop();
+    int startServer();
     
 private:
     void deleteMenus();

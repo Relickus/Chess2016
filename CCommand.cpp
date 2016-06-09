@@ -6,6 +6,7 @@
 #include "CPersistence.h"
 #include "CGameSession.h"
 #include "AllExceptions.h"
+#include "CPlayer.h"
 
 
 CCommand::CCommand() {
@@ -79,10 +80,15 @@ void CCommand::makeCommand(const string & str) {
     else if(str == "save")
             command = SAVE;
     else if(str.size() == 5){
-        if(CGameSession::validateMove(str))
+        if(CGameSession::validateMove(str)){
             command = MAKEMOVE;
             MyMove m(str);
             move = m;
+        }
+        else{
+            command = UNKNOWN;
+            throw BadCommandException();
+        }
     }
     
     else{
@@ -92,6 +98,15 @@ void CCommand::makeCommand(const string & str) {
 }
 
 void CCommand::exitQuery(CGameSession & gS) const{
+    if(gS.onlineGame){  // exit pozadavek vzesel ode me
+        if( gS.currPlayerPtr==gS.player1){
+            CCommand com(EXIT);
+            gS.networking.sendCommand(com,gS.player2->getSocket());
+        }
+        else{
+            cout << "Prijat EXIT pozadavek."<<endl<<"Konec hry." << endl;
+        }
+    }
     gS.exitRequest = true;
 }
 void CCommand::saveQuery(CGameSession & gS) const{
@@ -170,10 +185,15 @@ void CCommand::surrenderQuery(CGameSession & gS) const{
 
 
 void CCommand::checkQuery(CGameSession & gS) const{
-    cout << "Pozor, jste v sachu!" << endl;    
+    cout << "Pozor, hrac "<< (gS.currentPlayer==BLACK?"CERNY":"BILY")<<" je v sachu!" << endl;    
 }
 
 void CCommand::tieQuery(CGameSession& gS) const {
     cout<<" Nastala patova situace, nikdo nevyhral."<<endl;
     exitQuery(gS);
+}
+
+MyMove& CCommand::getMoveRef() {
+
+    return move;
 }

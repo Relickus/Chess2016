@@ -1,0 +1,86 @@
+CAbstractMenuScreen.o: CAbstractMenuScreen.cpp CAbstractMenuScreen.h
+CBishop.o: CBishop.cpp CBishop.h CPiece.h COLOR.h FIGURENAME.h MoveList.h \
+ MyMove.h CGameSession.h CBoard.h CSlot.h CNetworking.h
+CBoard.o: CBoard.cpp CBishop.h CPiece.h COLOR.h FIGURENAME.h MoveList.h \
+ MyMove.h CKing.h CKnight.h CPawn.h CTower.h CQueen.h AllExceptions.h \
+ CGameSession.h CBoard.h CSlot.h CNetworking.h CPlayer.h
+CColorMenu.o: CColorMenu.cpp CColorMenu.h CAbstractMenuScreen.h \
+ CGameSession.h COLOR.h CBoard.h CSlot.h CNetworking.h CController.h \
+ CGUI.h
+CCommand.o: CCommand.cpp CCommand.h COMMAND.h MyMove.h CPawn.h CPiece.h \
+ COLOR.h FIGURENAME.h MoveList.h CPersistence.h CGameSession.h CBoard.h \
+ CSlot.h CNetworking.h AllExceptions.h
+CController.o: CController.cpp CController.h COLOR.h CGameSession.h \
+ CBoard.h CSlot.h CNetworking.h CGUI.h CMainMenu.h CAbstractMenuScreen.h \
+ CDifficultyMenu.h CColorMenu.h CCommand.h COMMAND.h MyMove.h CPlayer.h \
+ MoveList.h
+CDifficultyMenu.o: CDifficultyMenu.cpp CDifficultyMenu.h \
+ CAbstractMenuScreen.h CColorMenu.h CController.h COLOR.h CGameSession.h \
+ CBoard.h CSlot.h CNetworking.h CGUI.h CIntelligence.h DIFFICULTY.h \
+ CPlayer.h MoveList.h MyMove.h
+CFilePersistence.o: CFilePersistence.cpp AllExceptions.h \
+ CFilePersistence.h CPersistence.h TGameLoad.h CBoard.h COLOR.h CSlot.h \
+ CPiece.h FIGURENAME.h MoveList.h MyMove.h CPlayer.h CGameSession.h \
+ CNetworking.h
+CGameSession.o: CGameSession.cpp CGameSession.h COLOR.h CBoard.h CSlot.h \
+ CNetworking.h CFilePersistence.h CPersistence.h TGameLoad.h CPlayer.h \
+ MoveList.h MyMove.h CPiece.h FIGURENAME.h
+CGUI.o: CGUI.cpp CGUI.h CBoard.h COLOR.h CSlot.h
+CIntelligence.o: CIntelligence.cpp CIntelligence.h DIFFICULTY.h CPlayer.h \
+ COLOR.h MoveList.h MyMove.h CPiece.h FIGURENAME.h CCommand.h COMMAND.h \
+ CPawn.h CGameSession.h CBoard.h CSlot.h CNetworking.h
+CKing.o: CKing.cpp CKing.h CPiece.h COLOR.h FIGURENAME.h MoveList.h \
+ MyMove.h CBoard.h CSlot.h CGameSession.h CNetworking.h
+CKnight.o: CKnight.cpp CKnight.h CPiece.h COLOR.h FIGURENAME.h MoveList.h \
+ MyMove.h CGameSession.h CBoard.h CSlot.h CNetworking.h
+CLoadGameMenu.o: CLoadGameMenu.cpp AllExceptions.h CLoadGameMenu.h \
+ CAbstractMenuScreen.h CBoard.h COLOR.h CSlot.h CFilePersistence.h \
+ CPersistence.h TGameLoad.h CController.h CGameSession.h CNetworking.h \
+ CGUI.h CPiece.h FIGURENAME.h MoveList.h MyMove.h CLocalPlayer.h \
+ CPlayer.h CIntelligence.h DIFFICULTY.h
+CLocalPlayer.o: CLocalPlayer.cpp AllExceptions.h CLocalPlayer.h CPlayer.h \
+ COLOR.h MoveList.h MyMove.h CGameSession.h CBoard.h CSlot.h \
+ CNetworking.h CPawn.h CPiece.h FIGURENAME.h CCommand.h COMMAND.h
+CMainMenu.o: CMainMenu.cpp CMainMenu.h CAbstractMenuScreen.h \
+ COpponentMenu.h CLoadGameMenu.h CBoard.h COLOR.h CSlot.h \
+ CFilePersistence.h CPersistence.h TGameLoad.h CController.h \
+ CGameSession.h CNetworking.h CGUI.h
+CMenuHandler.o: CMenuHandler.cpp
+CMultiplayerHostMenu.o: CMultiplayerHostMenu.cpp CMultiplayerHostMenu.h \
+ CAbstractMenuScreen.h CNetworking.h CColorMenu.h
+CMultiplayerJoinMenu.o: CMultiplayerJoinMenu.cpp CMultiplayerJoinMenu.h \
+ CAbstractMenuScreen.h CColorMenu.h
+CMultiplayerLocalMenu.o: CMultiplayerLocalMenu.cpp \
+ CMultiplayerLocalMenu.h CAbstractMenuScreen.h
+COpponentMenu.o: COpponentMenu.cpp COpponentMenu.h CAbstractMenuScreen.h \
+ CMultiplayerJoinMenu.h CMultiplayerLocalMenu.h CDifficultyMenu.h \
+ CColorMenu.h CController.h COLOR.h CGameSession.h CBoard.h CSlot.h \
+ CNetworking.h CGUI.h CIntelligence.h DIFFICULTY.h CPlayer.h MoveList.h \
+ MyMove.h CLocalPlayer.h CRemotePlayer.h
+CPawn.o: CPawn.cpp CPawn.h CPiece.h COLOR.h FIGURENAME.h MoveList.h \
+ MyMove.h CQueen.h CGameSession.h CBoard.h CSlot.h CNetworking.h
+CPersistence.o: CPersistence.cpp CPersistence.h
+CPiece.o: CPiece.cpp CPiece.h COLOR.h FIGURENAME.h MoveList.h MyMove.h \
+ AllExceptions.h CGameSession.h CBoard.h CSlot.h CNetworking.h CPawn.h \
+ CBishop.h CKnight.h CTower.h CKing.h CQueen.h
+CPlayer.o: CPlayer.cpp CPlayer.h COLOR.h MoveList.h MyMove.h CKing.h \
+ CPiece.h FIGURENAME.h CGameSession.h CBoard.h CSlot.h CNetworking.h
+CQueen.o: CQueen.cpp CQueen.h CPiece.h COLOR.h FIGURENAME.h MoveList.h \
+ MyMove.h CGameSession.h CBoard.h CSlot.h CNetworking.h
+CRemotePlayer.o: CRemotePlayer.cpp CRemotePlayer.h CNetworking.h \
+ CPlayer.h COLOR.h MoveList.h MyMove.h CGameSession.h CBoard.h CSlot.h \
+ CCommand.h COMMAND.h
+CSlot.o: CSlot.cpp CSlot.h CPiece.h COLOR.h FIGURENAME.h MoveList.h \
+ MyMove.h
+CTower.o: CTower.cpp CTower.h COLOR.h CPiece.h FIGURENAME.h MoveList.h \
+ MyMove.h CGameSession.h CBoard.h CSlot.h CNetworking.h
+CHostJoinMenu.o: CHostJoinMenu.cpp CHostJoinMenu.h CAbstractMenuScreen.h \
+ CNetworking.h CMultiplayerJoinMenu.h CMultiplayerHostMenu.h CColorMenu.h \
+ CController.h COLOR.h CGameSession.h CBoard.h CSlot.h CGUI.h \
+ CLocalPlayer.h CPlayer.h MoveList.h MyMove.h CRemotePlayer.h
+main.o: main.cpp CController.h COLOR.h CGameSession.h CBoard.h CSlot.h \
+ CNetworking.h CGUI.h CPiece.h FIGURENAME.h MoveList.h MyMove.h CKing.h
+MoveList.o: MoveList.cpp MoveList.h MyMove.h CPiece.h COLOR.h \
+ FIGURENAME.h
+MyMove.o: MyMove.cpp MyMove.h CPiece.h COLOR.h FIGURENAME.h MoveList.h
+TGameLoad.o: TGameLoad.cpp

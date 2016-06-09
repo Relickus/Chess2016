@@ -164,6 +164,7 @@ void CLoadGameMenu::setStuff(CController* ctrler) {
         ctrler->getGameSess().gameBoard.copy(persistence->tLoad.board);
         ctrler->getGameSess().setPlayerColors(persistence->tLoad.player1col);        
         ctrler->getGameSess().setTurn(persistence->tLoad.whosTurn);
+        ctrler->getGameSess().fileName = fileGame;
 
         ctrler->getGameSess().setGameReady();
 

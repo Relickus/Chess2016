@@ -31,9 +31,7 @@
         <itemPath>CQueen.h</itemPath>
         <itemPath>CTower.h</itemPath>
       </logicalFolder>
-      <itemPath>AllDefines.h</itemPath>
       <itemPath>AllExceptions.h</itemPath>
-      <itemPath>AllPieces.h</itemPath>
       <itemPath>CBoard.h</itemPath>
       <itemPath>CCommand.h</itemPath>
       <itemPath>CController.h</itemPath>
@@ -46,6 +44,7 @@
       <itemPath>CPersistence.h</itemPath>
       <itemPath>CPlayer.h</itemPath>
       <itemPath>CRemotePlayer.h</itemPath>
+      <itemPath>CServer.h</itemPath>
       <itemPath>CSingleplayerMenu.h</itemPath>
       <itemPath>CSlot.h</itemPath>
       <itemPath>CVisitor.h</itemPath>
@@ -93,6 +92,7 @@
       <itemPath>CPersistence.cpp</itemPath>
       <itemPath>CPlayer.cpp</itemPath>
       <itemPath>CRemotePlayer.cpp</itemPath>
+      <itemPath>CServer.cpp</itemPath>
       <itemPath>CSlot.cpp</itemPath>
       <itemPath>MoveList.cpp</itemPath>
       <itemPath>MyMove.cpp</itemPath>
@@ -126,11 +126,7 @@
           <commandLine>-lpthread</commandLine>
         </linkerTool>
       </compileType>
-      <item path="AllDefines.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="AllExceptions.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="AllPieces.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CAbstractMenuScreen.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -247,6 +243,10 @@
       <item path="CRemotePlayer.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CRemotePlayer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CServer.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CSingleplayerMenu.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -297,11 +297,7 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="AllDefines.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="AllExceptions.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="AllPieces.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CAbstractMenuScreen.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -418,6 +414,10 @@
       <item path="CRemotePlayer.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CRemotePlayer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CServer.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CSingleplayerMenu.h" ex="false" tool="3" flavor2="0">
       </item>

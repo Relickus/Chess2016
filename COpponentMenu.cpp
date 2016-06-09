@@ -1,7 +1,6 @@
 
 #include "COpponentMenu.h"
-#include "CMultiplayerJoinMenu.h"
-#include "CMultiplayerLocalMenu.h"
+#include "CHostJoinMenu.h"
 #include "CDifficultyMenu.h"
 #include "CColorMenu.h"
 #include "CController.h"
@@ -43,7 +42,7 @@ void COpponentMenu::setNextMenu(){
             break;
             
         case(3) : 
-            nextMenu = new CMultiplayerJoinMenu(this);
+            nextMenu = new CHostJoinMenu(this);
             break;
         
         case(4):

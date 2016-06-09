@@ -1,0 +1,1 @@
+TGameLoad.o: TGameLoad.cpp

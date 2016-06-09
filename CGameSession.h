@@ -5,6 +5,7 @@
 #include <iostream>
 #include "CBoard.h"
 #include "CNetworking.h"
+#include "CServer.h"
 
 class CPersistence;
 class CPlayer;
@@ -34,6 +35,7 @@ public:
     void assignKings();
     void updateKings();
     bool isTie() const;
+    void netGameInit();
 
     
     CBoard gameBoard;
@@ -44,11 +46,15 @@ public:
     COLOR whosTurn;
     bool exitRequest;
     bool movePerformed;
+    bool onlineGame;
     
     CPlayer * player1;
     CPlayer * player2;
     CPlayer * currPlayerPtr;
     CPersistence * persistence;
+    
+    CNetworking networking;
+    CServer server;
     
 private:       
     

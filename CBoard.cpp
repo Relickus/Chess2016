@@ -117,8 +117,11 @@ void CBoard::rotateBoard(){
     }    
     
     int tmp = LAST_ROW_DOWN;
+    int tmp2 = INIT_ROW_DOWN;
     LAST_ROW_DOWN = LAST_ROW_UP;
     LAST_ROW_UP = tmp;
+    INIT_ROW_DOWN = INIT_ROW_UP;
+    INIT_ROW_UP = tmp2;
 }
 
 void CBoard::createPieces(COLOR colorDown){
@@ -309,16 +312,15 @@ void CBoard::printDebug() const {
 
 void CBoard::printRotate() {
 
-    rotateBoard();
     
       CPiece * tmp=NULL;
     
     // cout << "_________________"<<endl;         
     
-    for(int i=7; i>=0; --i){
-        for (int j = 0; j < 8; ++j) {
-            if(j == 0)
-                cout << 7-i << " |";
+    for(int i=0; i<8; ++i){
+        for (int j = 7; j >= 0; --j) {
+            if(j == 7)
+                cout << i << " |";
             
             tmp  = slotsArr[i][j].getHeldPiece();
             
@@ -328,7 +330,7 @@ void CBoard::printRotate() {
                 tmp->printPiece(cout);
             cout <<"|";
             
-            if(j == 7)
+            if(j == 0)
                 cout<<endl;
         }
     }
@@ -338,7 +340,6 @@ void CBoard::printRotate() {
     
     cout << endl<< endl;
     
-    rotateBoard();
 }
 
 CPiece * CBoard::getPiece(int row, int col) const{
@@ -363,8 +364,14 @@ void CBoard::copy(CBoard & oth){
         for (int j = 0; j < 8; j++) {
             
             delete slotsArr[i][j].getHeldPiece();
-            slotsArr[i][j].setHeldPiece(oth.slotsArr[i][j].getHeldPiece());
-            oth.slotsArr[i][j].setHeldPiece(NULL);
+            
+            CPiece * othpcs = oth.slotsArr[i][j].getHeldPiece();
+            CPiece * pcs = NULL;
+            if(othpcs != NULL){
+                pcs= othpcs->copyPiece(othpcs);
+            }
+            
+            slotsArr[i][j].setHeldPiece(pcs);
         }
     }
 }
@@ -400,7 +407,6 @@ bool CBoard::tryMove(const MyMove & move,CGameSession & gS) const {
     
     bool currentPlayerDown = (gS.currPlayerPtr == gS.player1);
         
-    cout << endl;
     if(tmpking->isChecked(ficture,currentPlayerDown))
         return false;
     
