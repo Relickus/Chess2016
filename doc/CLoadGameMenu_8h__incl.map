@@ -1,0 +1,9 @@
+<map id="CLoadGameMenu.h" name="CLoadGameMenu.h">
+<area shape="rect" id="node2" href="$CAbstractMenuScreen_8h.html" title="CAbstractMenuScreen.h" alt="" coords="5,80,169,107"/>
+<area shape="rect" id="node4" href="$CBoard_8h.html" title="CBoard.h" alt="" coords="348,229,424,256"/>
+<area shape="rect" id="node7" href="$CFilePersistence_8h.html" title="CFilePersistence.h" alt="" coords="213,80,347,107"/>
+<area shape="rect" id="node5" href="$COLOR_8h.html" title="COLOR.h" alt="" coords="264,304,343,331"/>
+<area shape="rect" id="node6" href="$CSlot_8h.html" title="CSlot.h" alt="" coords="368,304,435,331"/>
+<area shape="rect" id="node8" href="$CPersistence_8h.html" title="CPersistence.h" alt="" coords="116,155,227,181"/>
+<area shape="rect" id="node9" href="$TGameLoad_8h.html" title="TGameLoad.h" alt="" coords="252,155,356,181"/>
+</map>

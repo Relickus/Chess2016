@@ -15,11 +15,7 @@ public:
     bool waitForStart(const int socket) const;
     COLOR recvPlayerColor(const int socket) const;    
 
-    //int openSrvSocket ( const char * srvName, int srvPort);
-    //void serveClient ( int s );
-    
-    friend int openCliSocket ( const char * srvName, int srvPort );
-    
+    friend int openCliSocket ( const char * srvName, int srvPort );    
     
     friend class CHostJoinMenu;
     friend class CRemotePlayer;

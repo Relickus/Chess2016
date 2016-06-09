@@ -1,0 +1,35 @@
+<map id="CSlot.h" name="CSlot.h">
+<area shape="rect" id="node2" href="$CBoard_8h.html" title="CBoard.h" alt="" coords="1421,80,1497,107"/>
+<area shape="rect" id="node34" href="$CSlot_8cpp.html" title="CSlot.cpp" alt="" coords="1523,80,1601,107"/>
+<area shape="rect" id="node3" href="$CGameSession_8h.html" title="CGameSession.h" alt="" coords="841,229,967,256"/>
+<area shape="rect" id="node23" href="$CKing_8cpp.html" title="CKing.cpp" alt="" coords="1308,304,1389,331"/>
+<area shape="rect" id="node26" href="$CPiece_8cpp.html" title="CPiece.cpp" alt="" coords="1415,304,1505,331"/>
+<area shape="rect" id="node31" href="$TGameLoad_8h.html" title="TGameLoad.h" alt="" coords="1637,155,1741,181"/>
+<area shape="rect" id="node33" href="$CLoadGameMenu_8h.html" title="CLoadGameMenu.h" alt="" coords="1913,304,2052,331"/>
+<area shape="rect" id="node4" href="$CBishop_8cpp.html" title="CBishop.cpp" alt="" coords="797,304,893,331"/>
+<area shape="rect" id="node5" href="$CBoard_8cpp.html" title="CBoard.cpp" alt="" coords="919,304,1009,331"/>
+<area shape="rect" id="node6" href="$CColorMenu_8cpp.html" title="CColorMenu.cpp" alt="" coords="143,379,263,405"/>
+<area shape="rect" id="node7" href="$CController_8h.html" title="CController.h" alt="" coords="1084,304,1183,331"/>
+<area shape="rect" id="node9" href="$CCommand_8cpp.html" title="CCommand.cpp" alt="" coords="952,453,1068,480"/>
+<area shape="rect" id="node10" href="$CController_8cpp.html" title="CController.cpp" alt="" coords="1094,453,1207,480"/>
+<area shape="rect" id="node11" href="$CIntelligence_8cpp.html" title="CIntelligence.cpp" alt="" coords="5,453,128,480"/>
+<area shape="rect" id="node12" href="$CLocalPlayer_8cpp.html" title="CLocalPlayer.cpp" alt="" coords="345,453,471,480"/>
+<area shape="rect" id="node14" href="$CRemotePlayer_8cpp.html" title="CRemotePlayer.cpp" alt="" coords="593,453,732,480"/>
+<area shape="rect" id="node21" href="$CFilePersistence_8cpp.html" title="CFilePersistence.cpp" alt="" coords="1692,304,1839,331"/>
+<area shape="rect" id="node22" href="$CGameSession_8cpp.html" title="CGameSession.cpp" alt="" coords="1529,304,1668,331"/>
+<area shape="rect" id="node24" href="$CKnight_8cpp.html" title="CKnight.cpp" alt="" coords="85,304,179,331"/>
+<area shape="rect" id="node25" href="$CPawn_8cpp.html" title="CPawn.cpp" alt="" coords="204,304,295,331"/>
+<area shape="rect" id="node27" href="$CPlayer_8cpp.html" title="CPlayer.cpp" alt="" coords="319,304,413,331"/>
+<area shape="rect" id="node28" href="$CQueen_8cpp.html" title="CQueen.cpp" alt="" coords="438,304,532,331"/>
+<area shape="rect" id="node29" href="$CTower_8cpp.html" title="CTower.cpp" alt="" coords="557,304,651,331"/>
+<area shape="rect" id="node30" href="$MyMove_8cpp.html" title="MyMove.cpp" alt="" coords="675,304,772,331"/>
+<area shape="rect" id="node8" href="$CCommand_8h.html" title="CCommand.h" alt="" coords="887,379,989,405"/>
+<area shape="rect" id="node15" href="$CDifficultyMenu_8cpp.html" title="CDifficultyMenu.cpp" alt="" coords="287,379,427,405"/>
+<area shape="rect" id="node16" href="$CHostJoinMenu_8cpp.html" title="CHostJoinMenu.cpp" alt="" coords="452,379,592,405"/>
+<area shape="rect" id="node17" href="$CLoadGameMenu_8cpp.html" title="CLoadGameMenu.cpp" alt="" coords="1800,379,1952,405"/>
+<area shape="rect" id="node18" href="$CMainMenu_8cpp.html" title="CMainMenu.cpp" alt="" coords="1065,379,1181,405"/>
+<area shape="rect" id="node19" href="$COpponentMenu_8cpp.html" title="COpponentMenu.cpp" alt="" coords="618,379,763,405"/>
+<area shape="rect" id="node20" href="$main_8cpp.html" title="main.cpp" alt="" coords="788,379,861,405"/>
+<area shape="rect" id="node13" href="$CNetworking_8cpp.html" title="CNetworking.cpp" alt="" coords="805,453,928,480"/>
+<area shape="rect" id="node32" href="$CFilePersistence_8h.html" title="CFilePersistence.h" alt="" coords="1727,229,1860,256"/>
+</map>

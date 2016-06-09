@@ -1,0 +1,40 @@
+<map id="CCommand::executeCommand" name="CCommand::executeCommand">
+<area shape="rect" id="node2" href="$classCCommand.html#a7f0f386213ae7d8b0e6a2e0d255d75f7" title="Exit game call. " alt="" coords="531,56,687,83"/>
+<area shape="rect" id="node9" href="$classCCommand.html#a7370e44f83d00e378dddc16010f0837b" title="Savegame call. " alt="" coords="280,459,443,485"/>
+<area shape="rect" id="node11" href="$classCCommand.html#abb6c2cf35710ab85b09f3e83830cb6b4" title="Performs move stored in command. " alt="" coords="522,208,697,235"/>
+<area shape="rect" id="node20" href="$classCCommand.html#a2ba108865ef959387997f201c7a3fa58" title="Rotates the chessboard. " alt="" coords="525,461,693,488"/>
+<area shape="rect" id="node22" href="$classCCommand.html#a81ce6e521a5e72a85f64e69129cb6591" title="Performs a move stored in move variable. " alt="" coords="262,357,461,384"/>
+<area shape="rect" id="node37" href="$classCCommand.html#abc6c0e1ef4a090d8c3fc76a7fa779806" title="Informs players about occured check. " alt="" coords="276,509,447,536"/>
+<area shape="rect" id="node38" href="$classCCommand.html#a8024cfd6bbf41e3e09b14c17559b4439" title="Checkmate reached &#45; call for surrender of the caller . " alt="" coords="267,60,456,87"/>
+<area shape="rect" id="node39" href="$classCCommand.html#a487d3b7d0219f332e628deb08af5b4a5" title="Informs players about a tie. " alt="" coords="287,117,436,144"/>
+<area shape="rect" id="node3" href="$classCNetworking.html#a633ac995adfe291050c8a58d187a9cb2" title="CNetworking::sendCommand" alt="" coords="757,5,952,32"/>
+<area shape="rect" id="node8" href="$classCPlayer.html#ac853e2cefd674cb2423b7984092281ef" title="CPlayer::getSocket" alt="" coords="787,56,923,83"/>
+<area shape="rect" id="node4" href="$classCCommand.html#a53caf89e344a45dbe74b88fb571aa114" title="Returns reference to the move stored in the command. " alt="" coords="1000,5,1171,32"/>
+<area shape="rect" id="node5" href="$structMyMove.html#a20b4648386af9bbcb608d1a7fbdfde4a" title="Transforms the move to a c string. " alt="" coords="1020,56,1151,83"/>
+<area shape="rect" id="node6" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="1228,309,1351,336"/>
+<area shape="rect" id="node7" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="1226,233,1353,260"/>
+<area shape="rect" id="node10" href="$classCPersistence.html#ab37aa48590551b7c078a626de3a45374" title="CPersistence::save" alt="" coords="541,765,678,792"/>
+<area shape="rect" id="node12" href="$classCGameSession.html#a79377377ae34656ff4e08a5ebeab617c" title="CGameSession::getBoard" alt="" coords="767,411,942,437"/>
+<area shape="rect" id="node13" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="1023,664,1148,691"/>
+<area shape="rect" id="node15" href="$classCPiece.html#ae3b4d45a0dcce19f6ab63141e1ac4e2b" title="zjistí zda zadaná figurka je přátelská " alt="" coords="1009,309,1161,336"/>
+<area shape="rect" id="node16" href="$classCPiece.html#afa32e14ab50a1c9a7ccfd4ae16cec722" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="774,259,935,285"/>
+<area shape="rect" id="node17" href="$classCBoard.html#af71060bd5e5db1e4e7353e9188494aab" title="CBoard::printPossibleMoves" alt="" coords="761,157,949,184"/>
+<area shape="rect" id="node14" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="1219,563,1360,589"/>
+<area shape="rect" id="node18" href="$classMoveList.html#aa4d88e0ffd12ebe5fd6380bdf40be4fc" title="Checks whether the list of moves contains a move given by parameter. " alt="" coords="1019,107,1151,133"/>
+<area shape="rect" id="node19" href="$classCPiece.html#a5fba9e836aeb692798c7934508c64265" title="Vytiskne figurku do zadaného ostreamu. " alt="" coords="1020,208,1151,235"/>
+<area shape="rect" id="node21" href="$classCBoard.html#ab87849bb760a34c7735f876cb505e34b" title="CBoard::printRotate" alt="" coords="785,461,924,488"/>
+<area shape="rect" id="node23" href="$classCBoard.html#a645a6f7ae910711654c658ec70b60c15" title="CBoard::tryMove" alt="" coords="549,512,670,539"/>
+<area shape="rect" id="node35" href="$classCGameSession.html#a1b2bea8b21eabd70f75d6951ec610ecc" title="CGameSession::performMove" alt="" coords="510,715,709,741"/>
+<area shape="rect" id="node36" href="$classCBoard.html#a3eef678314b1f58138cd65ee6326b468" title="CBoard::printBoard" alt="" coords="788,309,921,336"/>
+<area shape="rect" id="node24" href="$classCBoard.html#a73a19e1342c51fca65b22476be65a1d2" title="CBoard::moveFigure" alt="" coords="783,765,926,792"/>
+<area shape="rect" id="node29" href="$classCPlayer.html#a22151098bdc4104bfde15e24622383b2" title="CPlayer::getPlayerColor" alt="" coords="773,613,936,640"/>
+<area shape="rect" id="node30" href="$classCKing.html#a16946d6973149a82fb9a7080d3f84cd9" title="CKing::isChecked" alt="" coords="791,512,919,539"/>
+<area shape="rect" id="node25" href="$classCBoard.html#afa5237480a0f40baaa858304928c0835" title="CBoard::promotePawn" alt="" coords="1008,715,1163,741"/>
+<area shape="rect" id="node26" href="$classCSlot.html#a11fcc439d4fa3c462b59399ffe22932e" title="Sets given figure to the slot. " alt="" coords="1219,816,1360,843"/>
+<area shape="rect" id="node27" href="$classCPiece.html#af37acc3e3a0b34610438af3529e0bfda" title="Nastaví řádek figurky. " alt="" coords="1026,816,1145,843"/>
+<area shape="rect" id="node28" href="$classCPiece.html#a0c0f25396546c06b88dae749fb8780cb" title="Nastaví sloupec figurky. " alt="" coords="1030,867,1141,893"/>
+<area shape="rect" id="node31" href="$classCPiece.html#a568170ade16d97665bda8687b5466bd9" title="Vrátí řádek figurky. " alt="" coords="1026,512,1145,539"/>
+<area shape="rect" id="node32" href="$classCPiece.html#a43402773984ff68b9056a5f5a2760805" title="Vrátí sloupec figurky. " alt="" coords="1030,563,1141,589"/>
+<area shape="rect" id="node33" href="$classCBoard.html#a4661312b5193b143d0c856c3f50958ae" title="CBoard::outOfBoard" alt="" coords="1015,613,1155,640"/>
+<area shape="rect" id="node34" href="$classCPiece.html#a120157637b9503bf41a7fe0c3f7f112e" title="Zjistí typ figurky. " alt="" coords="1030,360,1141,387"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="CFilePersistence::save" name="CFilePersistence::save">
+<area shape="rect" id="node2" href="$classCGameSession.html#a79377377ae34656ff4e08a5ebeab617c" title="CGameSession::getBoard" alt="" coords="214,5,389,32"/>
+<area shape="rect" id="node3" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="239,56,364,83"/>
+<area shape="rect" id="node5" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="240,107,363,133"/>
+<area shape="rect" id="node6" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="238,157,365,184"/>
+<area shape="rect" id="node7" href="$classCPlayer.html#aa075347110486ddfd27fe4c6efa8a21d" title="CPlayer::printPlayerColor" alt="" coords="216,208,387,235"/>
+<area shape="rect" id="node4" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="448,56,589,83"/>
+<area shape="rect" id="node8" href="$classCPlayer.html#a22151098bdc4104bfde15e24622383b2" title="CPlayer::getPlayerColor" alt="" coords="437,208,600,235"/>
+</map>

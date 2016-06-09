@@ -1,0 +1,9 @@
+<map id="CBoard::rotateBoard" name="CBoard::rotateBoard">
+<area shape="rect" id="node2" href="$classCBoard.html#a79e02042acf883a83aa293ffd60d6a5c" title="CBoard::swapFigures" alt="" coords="195,132,343,159"/>
+<area shape="rect" id="node3" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="392,5,533,32"/>
+<area shape="rect" id="node4" href="$classCPiece.html#acf3f48b07e7ce7ba23a332bf0aca09b7" title="Vrátí hodnotu figurky. " alt="" coords="401,56,525,83"/>
+<area shape="rect" id="node5" href="$classCPiece.html#af37acc3e3a0b34610438af3529e0bfda" title="Nastaví řádek figurky. " alt="" coords="403,107,522,133"/>
+<area shape="rect" id="node6" href="$classCPiece.html#a0c0f25396546c06b88dae749fb8780cb" title="Nastaví sloupec figurky. " alt="" coords="407,157,518,184"/>
+<area shape="rect" id="node7" href="$classCSlot.html#a11fcc439d4fa3c462b59399ffe22932e" title="Sets given figure to the slot. " alt="" coords="392,208,533,235"/>
+<area shape="rect" id="node8" href="$classCPiece.html#a3db6c5abf9b1c3a98fd32aab1dbec80a" title="Nastaví hodnotu figurky. " alt="" coords="401,259,525,285"/>
+</map>

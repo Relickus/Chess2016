@@ -1,0 +1,7 @@
+<map id="CGameSession::isTie" name="CGameSession::isTie">
+<area shape="rect" id="node2" href="$classCPlayer.html#a434322e24ed1ddd2d4f21b0ee30ab9b4" title="CPlayer::findAllFigures" alt="" coords="206,31,362,57"/>
+<area shape="rect" id="node3" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="424,5,549,32"/>
+<area shape="rect" id="node5" href="$classCPiece.html#ae3b4d45a0dcce19f6ab63141e1ac4e2b" title="zjistí zda zadaná figurka je přátelská " alt="" coords="411,56,563,83"/>
+<area shape="rect" id="node4" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="611,5,752,32"/>
+<area shape="rect" id="node6" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="620,56,743,83"/>
+</map>

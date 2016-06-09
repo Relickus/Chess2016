@@ -1,0 +1,14 @@
+<map id="CPiece::equals" name="CPiece::equals">
+<area shape="rect" id="node2" href="$classCKing.html#a16946d6973149a82fb9a7080d3f84cd9" title="CKing::isChecked" alt="" coords="165,123,293,149"/>
+<area shape="rect" id="node3" href="$classCBoard.html#a645a6f7ae910711654c658ec70b60c15" title="CBoard::tryMove" alt="" coords="363,97,485,124"/>
+<area shape="rect" id="node13" href="$classCPlayer.html#a4f38b586ae6470d24b30555899200804" title="CPlayer::kingIsChecked" alt="" coords="342,148,506,175"/>
+<area shape="rect" id="node4" href="$classCCommand.html#a81ce6e521a5e72a85f64e69129cb6591" title="Performs a move stored in move variable. " alt="" coords="555,72,754,99"/>
+<area shape="rect" id="node9" href="$classCGameSession.html#a89bfd10ec4dac41f6e5bb0e355b31a91" title="CGameSession::isCheckMate" alt="" coords="807,123,1006,149"/>
+<area shape="rect" id="node10" href="$classCIntelligence.html#a3c08e688716a03c720cda32041ace495" title="Removes all faulty (check) moves from the list of all possible moves. " alt="" coords="567,6,743,47"/>
+<area shape="rect" id="node5" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="803,72,1010,99"/>
+<area shape="rect" id="node6" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="1073,123,1229,149"/>
+<area shape="rect" id="node7" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="1291,123,1448,149"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1496,123,1547,149"/>
+<area shape="rect" id="node11" href="$classCIntelligence.html#ad7376ed80dd34513cac0c7c73ca98689" title="Gets move from AI. " alt="" coords="829,13,985,40"/>
+<area shape="rect" id="node12" href="$classCIntelligence.html#a4c0e370bdd530600470d811568c71703" title="Gets command from AI. " alt="" coords="1059,13,1243,40"/>
+</map>

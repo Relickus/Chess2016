@@ -1,0 +1,6 @@
+<map id="CIntelligence" name="CIntelligence">
+<area shape="rect" id="node2" href="$classCPlayer.html" title="{CPlayer\n|# playerColor\l# figuresVec\l# CGameSession\l|+ CPlayer()\l+ getMove()\l+ getPlayerColor()\l+ printPlayerColor()\l+ setPlayerColor()\l+ findAllFigures()\l+ getCommand()\l+ kingIsChecked()\l+ setKing()\l+ getSocket()\l}" alt="" coords="11,929,145,1167"/>
+<area shape="rect" id="node3" href="$classCKing.html" title="{CKing\n||+ CKing()\l+ CKing()\l+ ~CKing()\l+ isChecked()\l+ getLegalMoves()\l+ checkField()\l+ copyPiece()\l}" alt="" coords="83,699,212,864"/>
+<area shape="rect" id="node4" href="$classCPiece.html" title="Abstraktní nadtřída pro figurku. " alt="" coords="81,323,223,635"/>
+<area shape="rect" id="node5" href="$classMoveList.html" title="Kontejner na tahy. " alt="" coords="29,5,131,259"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="CBoard::printRotate" name="CBoard::printRotate">
+<area shape="rect" id="node2" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="192,5,333,32"/>
+<area shape="rect" id="node3" href="$classCPiece.html#a5fba9e836aeb692798c7934508c64265" title="Vytiskne figurku do zadaného ostreamu. " alt="" coords="197,56,328,83"/>
+<area shape="rect" id="node4" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="382,56,509,83"/>
+</map>

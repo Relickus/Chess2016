@@ -1,0 +1,5 @@
+<map id="CBoard::CBoard" name="CBoard::CBoard">
+<area shape="rect" id="node2" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="173,5,315,32"/>
+<area shape="rect" id="node3" href="$classCSlot.html#a11fcc439d4fa3c462b59399ffe22932e" title="Sets given figure to the slot. " alt="" coords="173,56,315,83"/>
+<area shape="rect" id="node4" href="$classCPiece.html#ac02016cc45aec392c75785c65d2a66e2" title="Zkopíruje instanci figurky. " alt="" coords="177,107,311,133"/>
+</map>

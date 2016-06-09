@@ -1,0 +1,5 @@
+<map id="openSrvSocket" name="openSrvSocket">
+<area shape="rect" id="node2" href="$classCServer.html#a9b303ce2fe3307782d3cb125beb911f8" title="Initialization of the server. " alt="" coords="166,5,309,32"/>
+<area shape="rect" id="node3" href="$classCController.html#a3131db475bdc526b8dcb3db8acf9b7f9" title="Zavolá inicializaci serveru. " alt="" coords="357,5,517,32"/>
+<area shape="rect" id="node4" href="$classCHostJoinMenu.html#a5edadbb731e40f4643e542a935bbc03d" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="565,5,736,32"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="CBoard::promotePawn" name="CBoard::promotePawn">
+<area shape="rect" id="node2" href="$classCBoard.html#a73a19e1342c51fca65b22476be65a1d2" title="CBoard::moveFigure" alt="" coords="209,56,351,83"/>
+<area shape="rect" id="node3" href="$classCBoard.html#a645a6f7ae910711654c658ec70b60c15" title="CBoard::tryMove" alt="" coords="439,56,561,83"/>
+<area shape="rect" id="node13" href="$classCGameSession.html#a1b2bea8b21eabd70f75d6951ec610ecc" title="CGameSession::performMove" alt="" coords="401,5,599,32"/>
+<area shape="rect" id="node14" href="$classCPiece.html#aeff9e366bfa7a2f2140ee4fc2a11cce3" title="Pohne figurkou na zadané místo. " alt="" coords="440,107,560,133"/>
+<area shape="rect" id="node4" href="$classCCommand.html#a81ce6e521a5e72a85f64e69129cb6591" title="Performs a move stored in move variable. " alt="" coords="649,5,847,32"/>
+<area shape="rect" id="node9" href="$classCGameSession.html#a89bfd10ec4dac41f6e5bb0e355b31a91" title="CGameSession::isCheckMate" alt="" coords="901,56,1099,83"/>
+<area shape="rect" id="node10" href="$classCIntelligence.html#a3c08e688716a03c720cda32041ace495" title="Removes all faulty (check) moves from the list of all possible moves. " alt="" coords="660,107,836,149"/>
+<area shape="rect" id="node5" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="897,5,1103,32"/>
+<area shape="rect" id="node6" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="1166,31,1322,57"/>
+<area shape="rect" id="node7" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="1384,31,1541,57"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1589,31,1640,57"/>
+<area shape="rect" id="node11" href="$classCIntelligence.html#ad7376ed80dd34513cac0c7c73ca98689" title="Gets move from AI. " alt="" coords="922,115,1078,141"/>
+<area shape="rect" id="node12" href="$classCIntelligence.html#a4c0e370bdd530600470d811568c71703" title="Gets command from AI. " alt="" coords="1152,115,1336,141"/>
+</map>

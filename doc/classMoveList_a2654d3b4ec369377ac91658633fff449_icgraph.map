@@ -1,0 +1,10 @@
+<map id="MoveList::size" name="MoveList::size">
+<area shape="rect" id="node2" href="$classCGameSession.html#a89bfd10ec4dac41f6e5bb0e355b31a91" title="CGameSession::isCheckMate" alt="" coords="161,5,359,32"/>
+<area shape="rect" id="node6" href="$classCIntelligence.html#a3c08e688716a03c720cda32041ace495" title="Removes all faulty (check) moves from the list of all possible moves. " alt="" coords="172,57,348,98"/>
+<area shape="rect" id="node9" href="$classCIntelligence.html#a5202db31f83bf0cc8959bae3a9b204af" title="Gets index of the best move in the list of possible moves. " alt="" coords="175,123,345,149"/>
+<area shape="rect" id="node3" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="409,5,565,32"/>
+<area shape="rect" id="node4" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="627,5,784,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="845,5,896,32"/>
+<area shape="rect" id="node7" href="$classCIntelligence.html#ad7376ed80dd34513cac0c7c73ca98689" title="Gets move from AI. " alt="" coords="409,93,565,120"/>
+<area shape="rect" id="node8" href="$classCIntelligence.html#a4c0e370bdd530600470d811568c71703" title="Gets command from AI. " alt="" coords="613,93,797,120"/>
+</map>

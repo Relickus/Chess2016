@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classCPlayer.html" title="CPlayer" alt="" coords="5,56,75,83"/>
+<area shape="rect" id="node2" href="$classCIntelligence.html" title="Subclass of CPlayer representing AI. " alt="" coords="131,5,229,32"/>
+<area shape="rect" id="node3" href="$classCLocalPlayer.html" title="CLocalPlayer" alt="" coords="130,56,230,83"/>
+<area shape="rect" id="node4" href="$classCRemotePlayer.html" title="CRemotePlayer" alt="" coords="123,107,237,133"/>
+</map>

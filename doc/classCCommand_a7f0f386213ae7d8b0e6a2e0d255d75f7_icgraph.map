@@ -1,0 +1,8 @@
+<map id="CCommand::exitQuery" name="CCommand::exitQuery">
+<area shape="rect" id="node2" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="449,23,655,50"/>
+<area shape="rect" id="node6" href="$classCCommand.html#a8024cfd6bbf41e3e09b14c17559b4439" title="Checkmate reached &#45; call for surrender of the caller . " alt="" coords="211,23,400,50"/>
+<area shape="rect" id="node7" href="$classCCommand.html#a487d3b7d0219f332e628deb08af5b4a5" title="Informs players about a tie. " alt="" coords="231,74,380,101"/>
+<area shape="rect" id="node3" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="705,23,861,50"/>
+<area shape="rect" id="node4" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="909,23,1067,50"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1115,23,1165,50"/>
+</map>

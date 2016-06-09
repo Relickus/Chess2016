@@ -1,0 +1,7 @@
+<map id="CPlayer::setKing" name="CPlayer::setKing">
+<area shape="rect" id="node2" href="$classCGameSession.html#a54e1d50627caf17b46a648d7486fd61a" title="CGameSession::assignKings" alt="" coords="177,31,370,57"/>
+<area shape="rect" id="node3" href="$classCGameSession.html#ab3b7fd58569c2eb0269cbead738ec3eb" title="CGameSession::start" alt="" coords="442,5,590,32"/>
+<area shape="rect" id="node6" href="$classCGameSession.html#ac5a72d6cd686b82b3fa94eb0748ad6d2" title="CGameSession::updateKings" alt="" coords="419,56,613,83"/>
+<area shape="rect" id="node4" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="661,5,819,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="867,5,917,32"/>
+</map>

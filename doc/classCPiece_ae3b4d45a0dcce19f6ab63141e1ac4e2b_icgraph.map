@@ -1,0 +1,28 @@
+<map id="CPiece::isFriendPiece" name="CPiece::isFriendPiece">
+<area shape="rect" id="node2" href="$classCCommand.html#abb6c2cf35710ab85b09f3e83830cb6b4" title="Performs move stored in command. " alt="" coords="645,5,819,32"/>
+<area shape="rect" id="node7" href="$classCCommand.html#a81ce6e521a5e72a85f64e69129cb6591" title="Performs a move stored in move variable. " alt="" coords="633,56,831,83"/>
+<area shape="rect" id="node8" href="$classCKing.html#a7f12beabaef82d62151746455cdf7f8a" title="Ověří zda se dá táhnou na toto políčko. " alt="" coords="209,313,338,340"/>
+<area shape="rect" id="node10" href="$classCKing.html#a16946d6973149a82fb9a7080d3f84cd9" title="CKing::isChecked" alt="" coords="209,237,337,264"/>
+<area shape="rect" id="node17" href="$classCPawn.html#a5b0438eee7c386a506860f42e29feb16" title="CPawn::checkField" alt="" coords="205,376,341,403"/>
+<area shape="rect" id="node21" href="$classCPiece.html#ae51336ab8fb2ad0f7ab1f71024d96d57" title="Ověří zda se dá táhnou na toto políčko. " alt="" coords="205,528,341,555"/>
+<area shape="rect" id="node26" href="$classCPlayer.html#a434322e24ed1ddd2d4f21b0ee30ab9b4" title="CPlayer::findAllFigures" alt="" coords="654,173,810,200"/>
+<area shape="rect" id="node3" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="881,56,1087,83"/>
+<area shape="rect" id="node4" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="1150,199,1306,225"/>
+<area shape="rect" id="node5" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="1368,199,1525,225"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1573,199,1624,225"/>
+<area shape="rect" id="node9" href="$classCKing.html#a265927532ae98eccfd355ffd433218dd" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="409,325,564,352"/>
+<area shape="rect" id="node11" href="$classCBoard.html#a645a6f7ae910711654c658ec70b60c15" title="CBoard::tryMove" alt="" coords="426,224,547,251"/>
+<area shape="rect" id="node16" href="$classCPlayer.html#a4f38b586ae6470d24b30555899200804" title="CPlayer::kingIsChecked" alt="" coords="902,275,1066,301"/>
+<area shape="rect" id="node12" href="$classCGameSession.html#a89bfd10ec4dac41f6e5bb0e355b31a91" title="CGameSession::isCheckMate" alt="" coords="885,224,1083,251"/>
+<area shape="rect" id="node13" href="$classCIntelligence.html#a3c08e688716a03c720cda32041ace495" title="Removes all faulty (check) moves from the list of all possible moves. " alt="" coords="644,107,820,149"/>
+<area shape="rect" id="node14" href="$classCIntelligence.html#ad7376ed80dd34513cac0c7c73ca98689" title="Gets move from AI. " alt="" coords="906,119,1062,145"/>
+<area shape="rect" id="node15" href="$classCIntelligence.html#a4c0e370bdd530600470d811568c71703" title="Gets command from AI. " alt="" coords="1136,119,1320,145"/>
+<area shape="rect" id="node18" href="$classCPawn.html#ac90a0b73d6f0f2558cdba6d6dfcbf110" title="CPawn::getLegalMovesDown" alt="" coords="389,376,584,403"/>
+<area shape="rect" id="node20" href="$classCPawn.html#a1dea2f417ad1b6948f321aae7a347b40" title="CPawn::getLegalMovesUp" alt="" coords="397,427,576,453"/>
+<area shape="rect" id="node19" href="$classCPawn.html#aa6bd04ee2f351f7d29b9facf58ac935e" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="651,401,813,428"/>
+<area shape="rect" id="node22" href="$classCBishop.html#ad046b015fa527cfd92ade2b84fcde255" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="403,477,571,504"/>
+<area shape="rect" id="node23" href="$classCKnight.html#a8e0161ebd926aed60bee72b54e4ea9d7" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="404,528,569,555"/>
+<area shape="rect" id="node24" href="$classCQueen.html#a2332321ad42f08713b699bd8eacd372c" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="403,579,570,605"/>
+<area shape="rect" id="node25" href="$classCTower.html#ada23bbc3683a66ba1ccc5bfbd60ae1b0" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="405,629,569,656"/>
+<area shape="rect" id="node27" href="$classCGameSession.html#adfdd26cb1ef25a67dca62980c735feea" title="CGameSession::isTie" alt="" coords="909,173,1059,200"/>
+</map>

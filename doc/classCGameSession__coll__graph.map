@@ -1,0 +1,11 @@
+<map id="CGameSession" name="CGameSession">
+<area shape="rect" id="node3" href="$classCPersistence.html" title="{CPersistence\n||+ CPersistence()\l+ CPersistence()\l+ save()\l+ load()\l}" alt="" coords="254,1785,375,1906"/>
+<area shape="rect" id="node2" href="$classCNetworking.html" title="{CNetworking\n||+ getMove()\l+ sendCommand()\l+ getSocket()\l+ waitForStart()\l+ recvPlayerColor()\l}" alt="" coords="5,1031,139,1167"/>
+<area shape="rect" id="node4" href="$classCPlayer.html" title="{CPlayer\n|# playerColor\l# figuresVec\l# CGameSession\l|+ CPlayer()\l+ getMove()\l+ getPlayerColor()\l+ printPlayerColor()\l+ setPlayerColor()\l+ findAllFigures()\l+ getCommand()\l+ kingIsChecked()\l+ setKing()\l+ getSocket()\l}" alt="" coords="163,979,297,1218"/>
+<area shape="rect" id="node5" href="$classCKing.html" title="{CKing\n||+ CKing()\l+ CKing()\l+ ~CKing()\l+ isChecked()\l+ getLegalMoves()\l+ checkField()\l+ copyPiece()\l}" alt="" coords="187,699,316,864"/>
+<area shape="rect" id="node6" href="$classCPiece.html" title="Abstraktní nadtřída pro figurku. " alt="" coords="187,323,329,635"/>
+<area shape="rect" id="node9" href="$classCSlot.html" title="Class reprezenting a slot of a chessboard. " alt="" coords="341,699,461,864"/>
+<area shape="rect" id="node7" href="$classMoveList.html" title="Kontejner na tahy. " alt="" coords="135,5,237,259"/>
+<area shape="rect" id="node8" href="$classCBoard.html" title="{CBoard\n|+ INIT_ROW_UP\l+ INIT_ROW_DOWN\l+ LAST_ROW_UP\l+ LAST_ROW_DOWN\l&#45; width\l&#45; height\l|+ CBoard()\l+ ~CBoard()\l+ CBoard()\l+ copy()\l+ printBoard()\l+ printDebug()\l+ printRotate()\l+ printPossibleMoves()\l+ initBoard()\l+ getPiece()\land 8 more...\l&#45; createPieces()\l&#45; promotePawn()\l&#45; translateMove()\l}" alt="" coords="323,928,480,1269"/>
+<area shape="rect" id="node10" href="$classCServer.html" title="Class performing all server operations. " alt="" coords="504,979,643,1218"/>
+</map>

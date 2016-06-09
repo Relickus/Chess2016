@@ -1,0 +1,8 @@
+<map id="CIntelligence::getBestIdx" name="CIntelligence::getBestIdx">
+<area shape="rect" id="node2" href="$classMoveList.html#a2654d3b4ec369377ac91658633fff449" title="Returns size of the list of moves. " alt="" coords="245,5,352,32"/>
+<area shape="rect" id="node3" href="$classMoveList.html#a3b9438e5eb55a8586d39e2c543ca462f" title="Returns a move to a given position in the list of moves. " alt="" coords="232,56,365,83"/>
+<area shape="rect" id="node4" href="$classCPiece.html#acf3f48b07e7ce7ba23a332bf0aca09b7" title="Vrátí hodnotu figurky. " alt="" coords="237,107,361,133"/>
+<area shape="rect" id="node5" href="$classCBoard.html#a3f236edbf7ef1d857ab04295a6c4dde0" title="CBoard::getSlotValue" alt="" coords="225,157,373,184"/>
+<area shape="rect" id="node6" href="$classCBoard.html#a4661312b5193b143d0c856c3f50958ae" title="CBoard::outOfBoard" alt="" coords="422,132,562,159"/>
+<area shape="rect" id="node7" href="$classCSlot.html#a5b7fdf5abedc3f953ca5ccdb47cb06dd" title="Gets a value of the slot. " alt="" coords="435,183,549,209"/>
+</map>

@@ -1,0 +1,51 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classCController.html#af933682c06c49fa6d6fd9f3c39ecd7d0" title="Zavolá zobrazení aktuálního menu. " alt="" coords="105,172,271,199"/>
+<area shape="rect" id="node11" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="109,800,267,827"/>
+<area shape="rect" id="node3" href="$classCAbstractMenuScreen.html#a395d44282a4e99338eb9d19e68fbe532" title="Fisplays whole menu. " alt="" coords="339,253,493,294"/>
+<area shape="rect" id="node6" href="$classCAbstractMenuScreen.html#a3baf551d772d04ddcb9575f9880188e5" title="Reads input from user. " alt="" coords="339,5,493,46"/>
+<area shape="rect" id="node8" href="$classCAbstractMenuScreen.html#a80b30e7230d6a0285cfda53124471479" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="339,70,493,111"/>
+<area shape="rect" id="node9" href="$classCAbstractMenuScreen.html#abe97fec393443114fd9a85b2d23d8349" title="Sets pointer to next menu. " alt="" coords="339,135,493,177"/>
+<area shape="rect" id="node10" href="$classCController.html#aba94c26bcf29ef10f57db4443c396c87" title="Vymaže menu obrazovky. " alt="" coords="331,201,501,228"/>
+<area shape="rect" id="node4" href="$classCAbstractMenuScreen.html#afe39f2406a98c48adc06a728702ebeff" title="Shows title of the current menu. " alt="" coords="587,253,741,294"/>
+<area shape="rect" id="node5" href="$classCAbstractMenuScreen.html#a5786ed4023db23224060b644f1e489f1" title="Displays a single item from menu. " alt="" coords="587,187,741,229"/>
+<area shape="rect" id="node7" href="$classCAbstractMenuScreen.html#af86c55c4cac61097ba5bcdd06c065c64" title="Checks if the given index is withing range of options in this menu. " alt="" coords="587,5,741,46"/>
+<area shape="rect" id="node12" href="$classCGameSession.html#a2685f97b7a267db4eca02893715f8d2e" title="CGameSession::gameReady" alt="" coords="320,800,512,827"/>
+<area shape="rect" id="node13" href="$classCGameSession.html#a04abb22dd048c3bad248214ccd139a22" title="CGameSession::end" alt="" coords="345,851,487,877"/>
+<area shape="rect" id="node14" href="$classCGameSession.html#ab3b7fd58569c2eb0269cbead738ec3eb" title="CGameSession::start" alt="" coords="842,1231,990,1257"/>
+<area shape="rect" id="node25" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="338,749,494,776"/>
+<area shape="rect" id="node15" href="$classCBoard.html#a5f0f6a71a74f9d46b1c31ca433441687" title="CBoard::initBoard" alt="" coords="1099,1231,1224,1257"/>
+<area shape="rect" id="node19" href="$classCGameSession.html#a54e1d50627caf17b46a648d7486fd61a" title="CGameSession::assignKings" alt="" coords="1065,1281,1258,1308"/>
+<area shape="rect" id="node22" href="$classCBoard.html#a3eef678314b1f58138cd65ee6326b468" title="CBoard::printBoard" alt="" coords="1095,1060,1228,1087"/>
+<area shape="rect" id="node16" href="$classCBoard.html#aa0664f5faa1248e368f0e4a09bfd749e" title="CBoard::createPieces" alt="" coords="1329,1231,1479,1257"/>
+<area shape="rect" id="node18" href="$classCPlayer.html#a22151098bdc4104bfde15e24622383b2" title="CPlayer::getPlayerColor" alt="" coords="1323,1180,1485,1207"/>
+<area shape="rect" id="node17" href="$classCSlot.html#a11fcc439d4fa3c462b59399ffe22932e" title="Sets given figure to the slot. " alt="" coords="1564,1231,1705,1257"/>
+<area shape="rect" id="node20" href="$classCPlayer.html#ab8c7bcf9cf00657eb9ea5e2cd6f0007f" title="CPlayer::setKing" alt="" coords="1343,1281,1465,1308"/>
+<area shape="rect" id="node21" href="$classCBoard.html#a51b305865eaef1a90f90652d4d9683b6" title="CBoard::findKing" alt="" coords="1343,1332,1465,1359"/>
+<area shape="rect" id="node23" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="1333,1053,1475,1080"/>
+<area shape="rect" id="node24" href="$classCPiece.html#a5fba9e836aeb692798c7934508c64265" title="Vytiskne figurku do zadaného ostreamu. " alt="" coords="1339,1104,1469,1131"/>
+<area shape="rect" id="node26" href="$classCGameSession.html#a89bfd10ec4dac41f6e5bb0e355b31a91" title="CGameSession::isCheckMate" alt="" coords="565,977,763,1004"/>
+<area shape="rect" id="node35" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="561,623,767,649"/>
+<area shape="rect" id="node37" href="$classCNetworking.html#a633ac995adfe291050c8a58d187a9cb2" title="CNetworking::sendCommand" alt="" coords="1307,332,1501,359"/>
+<area shape="rect" id="node40" href="$classCPlayer.html#ac853e2cefd674cb2423b7984092281ef" title="CPlayer::getSocket" alt="" coords="1336,408,1472,435"/>
+<area shape="rect" id="node48" href="$classCGameSession.html#adfdd26cb1ef25a67dca62980c735feea" title="CGameSession::isTie" alt="" coords="589,851,739,877"/>
+<area shape="rect" id="node49" href="$classCPlayer.html#a4f38b586ae6470d24b30555899200804" title="CPlayer::kingIsChecked" alt="" coords="1079,775,1243,801"/>
+<area shape="rect" id="node50" href="$classCGameSession.html#a6fb9d821aa696574db7b874037d23f29" title="CGameSession::switchPlayers" alt="" coords="562,724,766,751"/>
+<area shape="rect" id="node27" href="$classCPlayer.html#a434322e24ed1ddd2d4f21b0ee30ab9b4" title="CPlayer::findAllFigures" alt="" coords="838,876,994,903"/>
+<area shape="rect" id="node28" href="$classMoveList.html#a5e0cbcdb80fd74a9e13fbd3523226dbb" title="Concatenates the list of moves with another list. " alt="" coords="855,1028,977,1055"/>
+<area shape="rect" id="node29" href="$classMoveList.html#a3b9438e5eb55a8586d39e2c543ca462f" title="Returns a move to a given position in the list of moves. " alt="" coords="1095,1117,1228,1144"/>
+<area shape="rect" id="node30" href="$classMoveList.html#a2aea273e36c8347e606e83a26016b67c" title="Checks whether the list of moves is empty. " alt="" coords="851,1079,981,1105"/>
+<area shape="rect" id="node31" href="$classMoveList.html#a2654d3b4ec369377ac91658633fff449" title="Returns size of the list of moves. " alt="" coords="863,927,969,953"/>
+<area shape="rect" id="node32" href="$classCBoard.html#a645a6f7ae910711654c658ec70b60c15" title="CBoard::tryMove" alt="" coords="1101,876,1222,903"/>
+<area shape="rect" id="node33" href="$classCGameSession.html#a79377377ae34656ff4e08a5ebeab617c" title="CGameSession::getBoard" alt="" coords="1317,775,1491,801"/>
+<area shape="rect" id="node34" href="$classCKing.html#a16946d6973149a82fb9a7080d3f84cd9" title="CKing::isChecked" alt="" coords="1340,851,1468,877"/>
+<area shape="rect" id="node36" href="$classCCommand.html#a7f0f386213ae7d8b0e6a2e0d255d75f7" title="Exit game call. " alt="" coords="1083,420,1239,447"/>
+<area shape="rect" id="node41" href="$classCCommand.html#a7370e44f83d00e378dddc16010f0837b" title="Savegame call. " alt="" coords="835,471,997,497"/>
+<area shape="rect" id="node42" href="$classCCommand.html#abb6c2cf35710ab85b09f3e83830cb6b4" title="Performs move stored in command. " alt="" coords="1074,673,1249,700"/>
+<area shape="rect" id="node43" href="$classCCommand.html#a2ba108865ef959387997f201c7a3fa58" title="Rotates the chessboard. " alt="" coords="1077,724,1245,751"/>
+<area shape="rect" id="node44" href="$classCCommand.html#a81ce6e521a5e72a85f64e69129cb6591" title="Performs a move stored in move variable. " alt="" coords="817,825,1015,852"/>
+<area shape="rect" id="node45" href="$classCCommand.html#abc6c0e1ef4a090d8c3fc76a7fa779806" title="Informs players about occured check. " alt="" coords="831,623,1001,649"/>
+<area shape="rect" id="node46" href="$classCCommand.html#a8024cfd6bbf41e3e09b14c17559b4439" title="Checkmate reached &#45; call for surrender of the caller . " alt="" coords="821,420,1011,447"/>
+<area shape="rect" id="node47" href="$classCCommand.html#a487d3b7d0219f332e628deb08af5b4a5" title="Informs players about a tie. " alt="" coords="841,521,991,548"/>
+<area shape="rect" id="node38" href="$classCCommand.html#a53caf89e344a45dbe74b88fb571aa114" title="Returns reference to the move stored in the command. " alt="" coords="1549,357,1720,384"/>
+<area shape="rect" id="node39" href="$structMyMove.html#a20b4648386af9bbcb608d1a7fbdfde4a" title="Transforms the move to a c string. " alt="" coords="1569,307,1700,333"/>
+</map>

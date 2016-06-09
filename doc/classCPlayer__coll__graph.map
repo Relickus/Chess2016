@@ -1,0 +1,5 @@
+<map id="CPlayer" name="CPlayer">
+<area shape="rect" id="node2" href="$classCKing.html" title="{CKing\n||+ CKing()\l+ CKing()\l+ ~CKing()\l+ isChecked()\l+ getLegalMoves()\l+ checkField()\l+ copyPiece()\l}" alt="" coords="76,699,205,864"/>
+<area shape="rect" id="node3" href="$classCPiece.html" title="Abstraktní nadtřída pro figurku. " alt="" coords="74,323,216,635"/>
+<area shape="rect" id="node4" href="$classMoveList.html" title="Kontejner na tahy. " alt="" coords="22,5,124,259"/>
+</map>

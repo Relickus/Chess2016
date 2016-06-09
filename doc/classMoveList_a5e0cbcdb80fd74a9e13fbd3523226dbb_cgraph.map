@@ -1,0 +1,4 @@
+<map id="MoveList::concat" name="MoveList::concat">
+<area shape="rect" id="node2" href="$classMoveList.html#a2c75649c9f41cee1185f562436c0cae3" title="Adds a move given explicitly by parameters. " alt="" coords="191,5,295,32"/>
+<area shape="rect" id="node3" href="$classMoveList.html#a3b9438e5eb55a8586d39e2c543ca462f" title="Returns a move to a given position in the list of moves. " alt="" coords="176,56,309,83"/>
+</map>

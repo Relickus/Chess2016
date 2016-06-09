@@ -1,0 +1,6 @@
+<map id="CQueen.h" name="CQueen.h">
+<area shape="rect" id="node2" href="$CBoard_8cpp.html" title="CBoard.cpp" alt="" coords="5,80,96,107"/>
+<area shape="rect" id="node3" href="$CPawn_8cpp.html" title="CPawn.cpp" alt="" coords="120,80,211,107"/>
+<area shape="rect" id="node4" href="$CPiece_8cpp.html" title="CPiece.cpp" alt="" coords="235,80,325,107"/>
+<area shape="rect" id="node5" href="$CQueen_8cpp.html" title="CQueen.cpp" alt="" coords="350,80,444,107"/>
+</map>

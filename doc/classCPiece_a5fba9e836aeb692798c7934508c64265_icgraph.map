@@ -1,0 +1,16 @@
+<map id="CPiece::printPiece" name="CPiece::printPiece">
+<area shape="rect" id="node2" href="$classCBoard.html#af71060bd5e5db1e4e7353e9188494aab" title="CBoard::printPossibleMoves" alt="" coords="185,5,373,32"/>
+<area shape="rect" id="node8" href="$classCBoard.html#a3eef678314b1f58138cd65ee6326b468" title="CBoard::printBoard" alt="" coords="212,107,345,133"/>
+<area shape="rect" id="node11" href="$classCBoard.html#ab87849bb760a34c7735f876cb505e34b" title="CBoard::printRotate" alt="" coords="209,56,348,83"/>
+<area shape="rect" id="node13" href="$structMyMove.html#a773a0754282481c6ee42d87e3a5a833d" title="Prints a move. " alt="" coords="210,208,347,235"/>
+<area shape="rect" id="node3" href="$classCCommand.html#abb6c2cf35710ab85b09f3e83830cb6b4" title="Performs move stored in command. " alt="" coords="435,5,610,32"/>
+<area shape="rect" id="node4" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="673,69,879,96"/>
+<area shape="rect" id="node5" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="929,76,1085,103"/>
+<area shape="rect" id="node6" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="1133,105,1291,132"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1339,105,1389,132"/>
+<area shape="rect" id="node9" href="$classCCommand.html#a81ce6e521a5e72a85f64e69129cb6591" title="Performs a move stored in move variable. " alt="" coords="423,107,622,133"/>
+<area shape="rect" id="node10" href="$classCGameSession.html#ab3b7fd58569c2eb0269cbead738ec3eb" title="CGameSession::start" alt="" coords="702,145,850,172"/>
+<area shape="rect" id="node12" href="$classCCommand.html#a2ba108865ef959387997f201c7a3fa58" title="Rotates the chessboard. " alt="" coords="439,56,607,83"/>
+<area shape="rect" id="node14" href="$classCIntelligence.html#a4c0e370bdd530600470d811568c71703" title="Gets command from AI. " alt="" coords="431,208,615,235"/>
+<area shape="rect" id="node15" href="$classCRemotePlayer.html#aeba537b713457ed92ab0a4a64fc380c0" title="CRemotePlayer::getCommand" alt="" coords="422,259,623,285"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="CGameSession::end" name="CGameSession::end">
+<area shape="rect" id="node2" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="231,5,388,32"/>
+<area shape="rect" id="node4" href="$classCController.html#a9599658eda7cf2e1ded45a99b04bc2b7" title="Zavolá ukončení hry a uvolnění dyn. " alt="" coords="233,56,385,83"/>
+<area shape="rect" id="node6" href="$classCGameSession.html#af382190866712840b01964090d2e8e41" title="CGameSession::~CGameSession" alt="" coords="198,107,421,133"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="529,5,580,32"/>
+<area shape="rect" id="node5" href="$classCHostJoinMenu.html#a5edadbb731e40f4643e542a935bbc03d" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="469,56,640,83"/>
+</map>

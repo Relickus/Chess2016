@@ -1,0 +1,5 @@
+<map id="CBoard" name="CBoard">
+<area shape="rect" id="node2" href="$classCSlot.html" title="Class reprezenting a slot of a chessboard. " alt="" coords="24,699,144,864"/>
+<area shape="rect" id="node3" href="$classCPiece.html" title="Abstraktní nadtřída pro figurku. " alt="" coords="13,323,155,635"/>
+<area shape="rect" id="node4" href="$classMoveList.html" title="Kontejner na tahy. " alt="" coords="33,5,135,259"/>
+</map>

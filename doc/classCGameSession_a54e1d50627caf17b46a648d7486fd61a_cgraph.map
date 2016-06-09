@@ -1,0 +1,7 @@
+<map id="CGameSession::assignKings" name="CGameSession::assignKings">
+<area shape="rect" id="node2" href="$classCPlayer.html#a22151098bdc4104bfde15e24622383b2" title="CPlayer::getPlayerColor" alt="" coords="248,5,411,32"/>
+<area shape="rect" id="node3" href="$classCPlayer.html#ab8c7bcf9cf00657eb9ea5e2cd6f0007f" title="CPlayer::setKing" alt="" coords="269,56,390,83"/>
+<area shape="rect" id="node4" href="$classCBoard.html#a51b305865eaef1a90f90652d4d9683b6" title="CBoard::findKing" alt="" coords="269,107,390,133"/>
+<area shape="rect" id="node5" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="459,107,584,133"/>
+<area shape="rect" id="node6" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="632,107,773,133"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="CLoadGameMenu::readInput" name="CLoadGameMenu::readInput">
+<area shape="rect" id="node2" href="$classCLoadGameMenu.html#a9a373501d64b4af44fb991637e489d13" title="Checks whether a given file exists. " alt="" coords="259,5,437,32"/>
+<area shape="rect" id="node3" href="$classCLoadGameMenu.html#a7709b3b58b9576807885f0a444d803ae" title="Asks user to confirm or deny a game load. " alt="" coords="245,56,451,83"/>
+<area shape="rect" id="node4" href="$classCLoadGameMenu.html#a7131748adc2da19d270777db66887547" title="Calls for a game load from given file. " alt="" coords="243,107,453,133"/>
+<area shape="rect" id="node5" href="$classCFilePersistence.html#a715837b705b2c24327fb81e31dbbfa22" title="CFilePersistence::load" alt="" coords="501,107,656,133"/>
+<area shape="rect" id="node6" href="$classCPiece.html#ab2a8bb24723ef93ce49e89ea152e7bd7" title="CPiece::getPieceByLetter" alt="" coords="704,56,877,83"/>
+<area shape="rect" id="node8" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="728,107,853,133"/>
+<area shape="rect" id="node10" href="$classCBoard.html#aff72116648a3ce86cd4e489331c24051" title="CBoard::setField" alt="" coords="731,157,851,184"/>
+<area shape="rect" id="node7" href="$classCPiece.html#acb1abe4debf559a77790371d9e99c220" title="CPiece::validLetter" alt="" coords="929,56,1063,83"/>
+<area shape="rect" id="node9" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="925,107,1067,133"/>
+<area shape="rect" id="node11" href="$classCSlot.html#a11fcc439d4fa3c462b59399ffe22932e" title="Sets given figure to the slot. " alt="" coords="925,157,1067,184"/>
+</map>

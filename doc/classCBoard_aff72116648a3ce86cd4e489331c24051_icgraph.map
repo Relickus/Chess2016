@@ -1,0 +1,5 @@
+<map id="CBoard::setField" name="CBoard::setField">
+<area shape="rect" id="node2" href="$classCFilePersistence.html#a715837b705b2c24327fb81e31dbbfa22" title="CFilePersistence::load" alt="" coords="173,5,328,32"/>
+<area shape="rect" id="node3" href="$classCLoadGameMenu.html#a7131748adc2da19d270777db66887547" title="Calls for a game load from given file. " alt="" coords="376,5,587,32"/>
+<area shape="rect" id="node4" href="$classCLoadGameMenu.html#a9f32792ff37028cba0276338857e4ee7" title="Reads input from user. " alt="" coords="635,5,824,32"/>
+</map>

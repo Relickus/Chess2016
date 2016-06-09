@@ -1,0 +1,7 @@
+<map id="CPersistence::save" name="CPersistence::save">
+<area shape="rect" id="node2" href="$classCCommand.html#a7370e44f83d00e378dddc16010f0837b" title="Savegame call. " alt="" coords="192,5,355,32"/>
+<area shape="rect" id="node3" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="403,5,610,32"/>
+<area shape="rect" id="node4" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="659,5,815,32"/>
+<area shape="rect" id="node5" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="864,5,1021,32"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1069,5,1120,32"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="CCommand::exitQuery" name="CCommand::exitQuery">
+<area shape="rect" id="node2" href="$classCNetworking.html#a633ac995adfe291050c8a58d187a9cb2" title="CNetworking::sendCommand" alt="" coords="211,31,405,57"/>
+<area shape="rect" id="node7" href="$classCPlayer.html#ac853e2cefd674cb2423b7984092281ef" title="CPlayer::getSocket" alt="" coords="240,81,376,108"/>
+<area shape="rect" id="node3" href="$classCCommand.html#a53caf89e344a45dbe74b88fb571aa114" title="Returns reference to the move stored in the command. " alt="" coords="453,5,624,32"/>
+<area shape="rect" id="node4" href="$structMyMove.html#a20b4648386af9bbcb608d1a7fbdfde4a" title="Transforms the move to a c string. " alt="" coords="473,56,604,83"/>
+<area shape="rect" id="node5" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="675,31,797,57"/>
+<area shape="rect" id="node6" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="673,81,799,108"/>
+</map>

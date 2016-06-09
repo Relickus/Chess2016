@@ -33,7 +33,6 @@
       <itemPath>CCommand.h</itemPath>
       <itemPath>CController.h</itemPath>
       <itemPath>CFilePersistence.h</itemPath>
-      <itemPath>CGUI.h</itemPath>
       <itemPath>CGameSession.h</itemPath>
       <itemPath>CIntelligence.h</itemPath>
       <itemPath>CLocalPlayer.h</itemPath>
@@ -42,7 +41,6 @@
       <itemPath>CPlayer.h</itemPath>
       <itemPath>CRemotePlayer.h</itemPath>
       <itemPath>CServer.h</itemPath>
-      <itemPath>CSingleplayerMenu.h</itemPath>
       <itemPath>CSlot.h</itemPath>
       <itemPath>MoveList.h</itemPath>
       <itemPath>MyMove.h</itemPath>
@@ -155,8 +153,6 @@
       </item>
       <item path="CGUI.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="CGUI.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="CGameSession.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CGameSession.h" ex="false" tool="3" flavor2="0">
@@ -228,8 +224,6 @@
       <item path="CServer.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CServer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CSingleplayerMenu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CSlot.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -312,8 +306,6 @@
       </item>
       <item path="CGUI.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="CGUI.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="CGameSession.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CGameSession.h" ex="false" tool="3" flavor2="0">
@@ -385,8 +377,6 @@
       <item path="CServer.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CServer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CSingleplayerMenu.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="CSlot.cpp" ex="false" tool="1" flavor2="0">
       </item>

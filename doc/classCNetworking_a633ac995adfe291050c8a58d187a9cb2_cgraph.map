@@ -1,0 +1,6 @@
+<map id="CNetworking::sendCommand" name="CNetworking::sendCommand">
+<area shape="rect" id="node2" href="$classCCommand.html#a53caf89e344a45dbe74b88fb571aa114" title="Returns reference to the move stored in the command. " alt="" coords="248,5,419,32"/>
+<area shape="rect" id="node3" href="$structMyMove.html#a20b4648386af9bbcb608d1a7fbdfde4a" title="Transforms the move to a c string. " alt="" coords="268,56,399,83"/>
+<area shape="rect" id="node4" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="469,31,592,57"/>
+<area shape="rect" id="node5" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="467,81,594,108"/>
+</map>

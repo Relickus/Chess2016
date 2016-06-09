@@ -1,4 +1,9 @@
-#include <cstdlib>
+/**
+* @file main.cpp
+* @author V. Mach
+*
+*
+*/
 
 #include "CController.h"
 #include "CPiece.h"

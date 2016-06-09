@@ -1,0 +1,4 @@
+<map id="CAbstractMenuScreen::show" name="CAbstractMenuScreen::show">
+<area shape="rect" id="node2" href="$classCAbstractMenuScreen.html#afe39f2406a98c48adc06a728702ebeff" title="Shows title of the current menu. " alt="" coords="208,5,363,46"/>
+<area shape="rect" id="node3" href="$classCAbstractMenuScreen.html#a5786ed4023db23224060b644f1e489f1" title="Displays a single item from menu. " alt="" coords="208,70,363,111"/>
+</map>

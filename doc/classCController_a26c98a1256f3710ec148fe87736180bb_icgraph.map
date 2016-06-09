@@ -1,0 +1,6 @@
+<map id="CController::getGameSess" name="CController::getGameSess">
+<area shape="rect" id="node2" href="$classCDifficultyMenu.html#a068d8fb51f1ccbd068ebd8bfe3673b2b" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="237,5,408,32"/>
+<area shape="rect" id="node3" href="$classCHostJoinMenu.html#a5edadbb731e40f4643e542a935bbc03d" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="237,56,408,83"/>
+<area shape="rect" id="node4" href="$classCLoadGameMenu.html#af07d1bc6a6d127e5c82dcced68495d3a" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="232,107,413,133"/>
+<area shape="rect" id="node5" href="$classCOpponentMenu.html#a33eb9434e2f81d62c88fede06dc41e15" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="235,157,410,184"/>
+</map>

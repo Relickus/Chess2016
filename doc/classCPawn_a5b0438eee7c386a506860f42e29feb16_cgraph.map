@@ -1,0 +1,10 @@
+<map id="CPawn::checkField" name="CPawn::checkField">
+<area shape="rect" id="node2" href="$classCBoard.html#a4661312b5193b143d0c856c3f50958ae" title="CBoard::outOfBoard" alt="" coords="195,5,335,32"/>
+<area shape="rect" id="node3" href="$classCPiece.html#a568170ade16d97665bda8687b5466bd9" title="Vrátí řádek figurky. " alt="" coords="206,56,325,83"/>
+<area shape="rect" id="node4" href="$classCPiece.html#a43402773984ff68b9056a5f5a2760805" title="Vrátí sloupec figurky. " alt="" coords="210,107,321,133"/>
+<area shape="rect" id="node5" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="203,157,328,184"/>
+<area shape="rect" id="node7" href="$classMoveList.html#a2c75649c9f41cee1185f562436c0cae3" title="Adds a move given explicitly by parameters. " alt="" coords="213,208,317,235"/>
+<area shape="rect" id="node8" href="$classCPiece.html#ae3b4d45a0dcce19f6ab63141e1ac4e2b" title="zjistí zda zadaná figurka je přátelská " alt="" coords="189,259,341,285"/>
+<area shape="rect" id="node6" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="389,157,531,184"/>
+<area shape="rect" id="node9" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="399,259,521,285"/>
+</map>

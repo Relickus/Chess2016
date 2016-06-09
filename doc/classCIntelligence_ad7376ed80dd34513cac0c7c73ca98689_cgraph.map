@@ -1,0 +1,32 @@
+<map id="CIntelligence::getMove" name="CIntelligence::getMove">
+<area shape="rect" id="node2" href="$classMoveList.html#acc44a5052925bc3542e33c44abb227fb" title="Clears the list of moves. " alt="" coords="454,132,565,159"/>
+<area shape="rect" id="node3" href="$classCPlayer.html#a434322e24ed1ddd2d4f21b0ee30ab9b4" title="CPlayer::findAllFigures" alt="" coords="642,31,798,57"/>
+<area shape="rect" id="node8" href="$classCGameSession.html#a79377377ae34656ff4e08a5ebeab617c" title="CGameSession::getBoard" alt="" coords="633,120,807,147"/>
+<area shape="rect" id="node9" href="$classMoveList.html#a5e0cbcdb80fd74a9e13fbd3523226dbb" title="Concatenates the list of moves with another list. " alt="" coords="448,335,571,361"/>
+<area shape="rect" id="node11" href="$classMoveList.html#a3b9438e5eb55a8586d39e2c543ca462f" title="Returns a move to a given position in the list of moves. " alt="" coords="653,436,787,463"/>
+<area shape="rect" id="node12" href="$classCIntelligence.html#a3c08e688716a03c720cda32041ace495" title="Removes all faulty (check) moves from the list of all possible moves. " alt="" coords="211,273,387,314"/>
+<area shape="rect" id="node27" href="$classMoveList.html#a2aea273e36c8347e606e83a26016b67c" title="Checks whether the list of moves is empty. " alt="" coords="233,639,364,665"/>
+<area shape="rect" id="node28" href="$classCIntelligence.html#a5202db31f83bf0cc8959bae3a9b204af" title="Gets index of the best move in the list of possible moves. " alt="" coords="214,487,383,513"/>
+<area shape="rect" id="node4" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="871,157,996,184"/>
+<area shape="rect" id="node6" href="$classCPiece.html#ae3b4d45a0dcce19f6ab63141e1ac4e2b" title="zjistí zda zadaná figurka je přátelská " alt="" coords="857,5,1009,32"/>
+<area shape="rect" id="node5" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="1059,208,1200,235"/>
+<area shape="rect" id="node7" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="1068,81,1191,108"/>
+<area shape="rect" id="node10" href="$classMoveList.html#a2c75649c9f41cee1185f562436c0cae3" title="Adds a move given explicitly by parameters. " alt="" coords="668,335,772,361"/>
+<area shape="rect" id="node13" href="$classMoveList.html#a2654d3b4ec369377ac91658633fff449" title="Returns size of the list of moves. " alt="" coords="456,436,563,463"/>
+<area shape="rect" id="node14" href="$classCBoard.html#a645a6f7ae910711654c658ec70b60c15" title="CBoard::tryMove" alt="" coords="449,233,570,260"/>
+<area shape="rect" id="node15" href="$classCBoard.html#a73a19e1342c51fca65b22476be65a1d2" title="CBoard::moveFigure" alt="" coords="649,233,791,260"/>
+<area shape="rect" id="node21" href="$classCPlayer.html#a22151098bdc4104bfde15e24622383b2" title="CPlayer::getPlayerColor" alt="" coords="639,284,801,311"/>
+<area shape="rect" id="node22" href="$classCKing.html#a16946d6973149a82fb9a7080d3f84cd9" title="CKing::isChecked" alt="" coords="656,171,784,197"/>
+<area shape="rect" id="node16" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="1066,461,1193,488"/>
+<area shape="rect" id="node17" href="$classCBoard.html#afa5237480a0f40baaa858304928c0835" title="CBoard::promotePawn" alt="" coords="856,259,1011,285"/>
+<area shape="rect" id="node18" href="$classCSlot.html#a11fcc439d4fa3c462b59399ffe22932e" title="Sets given figure to the slot. " alt="" coords="1059,309,1200,336"/>
+<area shape="rect" id="node19" href="$classCPiece.html#af37acc3e3a0b34610438af3529e0bfda" title="Nastaví řádek figurky. " alt="" coords="874,512,993,539"/>
+<area shape="rect" id="node20" href="$classCPiece.html#a0c0f25396546c06b88dae749fb8780cb" title="Nastaví sloupec figurky. " alt="" coords="878,411,989,437"/>
+<area shape="rect" id="node23" href="$classCPiece.html#a568170ade16d97665bda8687b5466bd9" title="Vrátí řádek figurky. " alt="" coords="874,56,993,83"/>
+<area shape="rect" id="node24" href="$classCPiece.html#a43402773984ff68b9056a5f5a2760805" title="Vrátí sloupec figurky. " alt="" coords="878,107,989,133"/>
+<area shape="rect" id="node25" href="$classCBoard.html#a4661312b5193b143d0c856c3f50958ae" title="CBoard::outOfBoard" alt="" coords="863,461,1003,488"/>
+<area shape="rect" id="node26" href="$classCPiece.html#a120157637b9503bf41a7fe0c3f7f112e" title="Zjistí typ figurky. " alt="" coords="878,309,989,336"/>
+<area shape="rect" id="node29" href="$classCPiece.html#acf3f48b07e7ce7ba23a332bf0aca09b7" title="Vrátí hodnotu figurky. " alt="" coords="447,537,571,564"/>
+<area shape="rect" id="node30" href="$classCBoard.html#a3f236edbf7ef1d857ab04295a6c4dde0" title="CBoard::getSlotValue" alt="" coords="435,639,583,665"/>
+<area shape="rect" id="node31" href="$classCSlot.html#a5b7fdf5abedc3f953ca5ccdb47cb06dd" title="Gets a value of the slot. " alt="" coords="663,588,777,615"/>
+</map>

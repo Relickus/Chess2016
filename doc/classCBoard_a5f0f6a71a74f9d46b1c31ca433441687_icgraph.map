@@ -1,0 +1,5 @@
+<map id="CBoard::initBoard" name="CBoard::initBoard">
+<area shape="rect" id="node2" href="$classCGameSession.html#ab3b7fd58569c2eb0269cbead738ec3eb" title="CGameSession::start" alt="" coords="179,5,327,32"/>
+<area shape="rect" id="node3" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="376,5,533,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="581,5,632,32"/>
+</map>

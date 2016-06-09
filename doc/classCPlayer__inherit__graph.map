@@ -1,0 +1,5 @@
+<map id="CPlayer" name="CPlayer">
+<area shape="rect" id="node2" href="$classCIntelligence.html" title="Subclass of CPlayer representing AI. " alt="" coords="5,323,152,488"/>
+<area shape="rect" id="node3" href="$classCLocalPlayer.html" title="{CLocalPlayer\n||+ CLocalPlayer()\l+ ~CLocalPlayer()\l+ getMove()\l+ readInput()\l+ badInput()\l+ getCommand()\l}" alt="" coords="176,330,304,481"/>
+<area shape="rect" id="node4" href="$classCRemotePlayer.html" title="{CRemotePlayer\n|+ cliSocket\l+ enemySocket\l|+ CRemotePlayer()\l+ getCommand()\l+ getMove()\l+ getSocket()\l}" alt="" coords="329,337,463,473"/>
+</map>

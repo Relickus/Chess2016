@@ -1,0 +1,5 @@
+<map id="CCommand" name="CCommand">
+<area shape="rect" id="node2" href="$structMyMove.html" title="Class representing a move from one slot to another. " alt="" coords="25,699,132,952"/>
+<area shape="rect" id="node3" href="$classCPiece.html" title="Abstraktní nadtřída pro figurku. " alt="" coords="7,323,149,635"/>
+<area shape="rect" id="node4" href="$classMoveList.html" title="Kontejner na tahy. " alt="" coords="27,5,129,259"/>
+</map>

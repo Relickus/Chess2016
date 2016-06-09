@@ -1,0 +1,5 @@
+<map id="openCliSocket" name="openCliSocket">
+<area shape="rect" id="node2" href="$classCNetworking.html#a28ec5711352b20ead8568ff676c79892" title="CNetworking::getSocket" alt="" coords="160,5,325,32"/>
+<area shape="rect" id="node3" href="$classCGameSession.html#ab94b776d517bcd8975816d673f054f87" title="CGameSession::netGameInit" alt="" coords="374,5,567,32"/>
+<area shape="rect" id="node4" href="$classCHostJoinMenu.html#a5edadbb731e40f4643e542a935bbc03d" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="616,5,787,32"/>
+</map>

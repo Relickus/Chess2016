@@ -16,6 +16,7 @@ using namespace std;
 
 // ========================= FUNKCE ================================
 
+
 int openSrvSocket ( const char * srvName, int srvPort )
 {
   struct addrinfo * ai;
@@ -55,6 +56,7 @@ int openSrvSocket ( const char * srvName, int srvPort )
   freeaddrinfo ( ai );
   return s;
 }
+
 int CServer::serveClient ( int fromSock )
 {
     char buffer[10] = { 0 };
@@ -104,9 +106,8 @@ int CServer::startServer(){
     
     cout<<"...koncim srver"<<endl;
     stopServer();
+    return 0;
 }
- 
-
 void CServer::stopServer() {
 
     send ( cliSocket1, "EXIT", 5, 0 );
@@ -124,6 +125,7 @@ void CServer::closeClient(int & cliSocket){
     }
   
 }
+
 int CServer::theOtherSocket(int sock) const{
     
     return (sock == cliSocket1 ? cliSocket2 : cliSocket1);
@@ -152,6 +154,7 @@ void CServer::setPlayerSocket(int sock) {
         return;
     }
 }
+
 
 void CServer::waitForPlayers() {
     

@@ -1,0 +1,10 @@
+<map id="CController::showMenus" name="CController::showMenus">
+<area shape="rect" id="node2" href="$classCAbstractMenuScreen.html#a395d44282a4e99338eb9d19e68fbe532" title="Fisplays whole menu. " alt="" coords="229,70,384,111"/>
+<area shape="rect" id="node5" href="$classCAbstractMenuScreen.html#a3baf551d772d04ddcb9575f9880188e5" title="Reads input from user. " alt="" coords="229,135,384,177"/>
+<area shape="rect" id="node7" href="$classCAbstractMenuScreen.html#a80b30e7230d6a0285cfda53124471479" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="229,201,384,242"/>
+<area shape="rect" id="node8" href="$classCAbstractMenuScreen.html#abe97fec393443114fd9a85b2d23d8349" title="Sets pointer to next menu. " alt="" coords="229,266,384,307"/>
+<area shape="rect" id="node9" href="$classCController.html#aba94c26bcf29ef10f57db4443c396c87" title="Vymaže menu obrazovky. " alt="" coords="221,332,392,359"/>
+<area shape="rect" id="node3" href="$classCAbstractMenuScreen.html#afe39f2406a98c48adc06a728702ebeff" title="Shows title of the current menu. " alt="" coords="440,5,595,46"/>
+<area shape="rect" id="node4" href="$classCAbstractMenuScreen.html#a5786ed4023db23224060b644f1e489f1" title="Displays a single item from menu. " alt="" coords="440,70,595,111"/>
+<area shape="rect" id="node6" href="$classCAbstractMenuScreen.html#af86c55c4cac61097ba5bcdd06c065c64" title="Checks if the given index is withing range of options in this menu. " alt="" coords="440,135,595,177"/>
+</map>

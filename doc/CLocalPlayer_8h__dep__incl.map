@@ -1,0 +1,7 @@
+<map id="CLocalPlayer.h" name="CLocalPlayer.h">
+<area shape="rect" id="node2" href="$CGameSession_8cpp.html" title="CGameSession.cpp" alt="" coords="5,80,144,107"/>
+<area shape="rect" id="node3" href="$CHostJoinMenu_8cpp.html" title="CHostJoinMenu.cpp" alt="" coords="168,80,308,107"/>
+<area shape="rect" id="node4" href="$CLoadGameMenu_8cpp.html" title="CLoadGameMenu.cpp" alt="" coords="333,80,485,107"/>
+<area shape="rect" id="node5" href="$CLocalPlayer_8cpp.html" title="CLocalPlayer.cpp" alt="" coords="509,80,635,107"/>
+<area shape="rect" id="node6" href="$COpponentMenu_8cpp.html" title="COpponentMenu.cpp" alt="" coords="659,80,804,107"/>
+</map>

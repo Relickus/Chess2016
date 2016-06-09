@@ -1,0 +1,8 @@
+<map id="CFilePersistence::load" name="CFilePersistence::load">
+<area shape="rect" id="node2" href="$classCPiece.html#ab2a8bb24723ef93ce49e89ea152e7bd7" title="CPiece::getPieceByLetter" alt="" coords="208,5,381,32"/>
+<area shape="rect" id="node4" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="232,56,357,83"/>
+<area shape="rect" id="node6" href="$classCBoard.html#aff72116648a3ce86cd4e489331c24051" title="CBoard::setField" alt="" coords="235,107,355,133"/>
+<area shape="rect" id="node3" href="$classCPiece.html#acb1abe4debf559a77790371d9e99c220" title="CPiece::validLetter" alt="" coords="433,5,567,32"/>
+<area shape="rect" id="node5" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="429,56,571,83"/>
+<area shape="rect" id="node7" href="$classCSlot.html#a11fcc439d4fa3c462b59399ffe22932e" title="Sets given figure to the slot. " alt="" coords="429,107,571,133"/>
+</map>

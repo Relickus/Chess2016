@@ -1,0 +1,5 @@
+<map id="CAbstractMenuScreen::validChoice" name="CAbstractMenuScreen::validChoice">
+<area shape="rect" id="node2" href="$classCAbstractMenuScreen.html#a3baf551d772d04ddcb9575f9880188e5" title="Reads input from user. " alt="" coords="208,5,363,46"/>
+<area shape="rect" id="node3" href="$classCController.html#af933682c06c49fa6d6fd9f3c39ecd7d0" title="Zavolá zobrazení aktuálního menu. " alt="" coords="411,12,578,39"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="627,12,677,39"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="CNetworking::recvPlayerColor" name="CNetworking::recvPlayerColor">
+<area shape="rect" id="node2" href="$classCGameSession.html#ab94b776d517bcd8975816d673f054f87" title="CGameSession::netGameInit" alt="" coords="254,5,447,32"/>
+<area shape="rect" id="node3" href="$classCHostJoinMenu.html#a5edadbb731e40f4643e542a935bbc03d" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="496,5,667,32"/>
+</map>

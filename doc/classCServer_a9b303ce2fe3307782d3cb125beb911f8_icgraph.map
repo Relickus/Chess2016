@@ -1,0 +1,4 @@
+<map id="CServer::startServer" name="CServer::startServer">
+<area shape="rect" id="node2" href="$classCController.html#a3131db475bdc526b8dcb3db8acf9b7f9" title="Zavolá inicializaci serveru. " alt="" coords="197,5,357,32"/>
+<area shape="rect" id="node3" href="$classCHostJoinMenu.html#a5edadbb731e40f4643e542a935bbc03d" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="405,5,576,32"/>
+</map>

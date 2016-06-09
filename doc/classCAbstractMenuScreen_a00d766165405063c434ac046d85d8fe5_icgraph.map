@@ -1,0 +1,8 @@
+<map id="CAbstractMenuScreen::setNumMenuItems" name="CAbstractMenuScreen::setNumMenuItems">
+<area shape="rect" id="node2" href="$classCColorMenu.html#a53a1df68827db5b93911148838053b5a" title="Initializes a menu. " alt="" coords="233,5,409,32"/>
+<area shape="rect" id="node3" href="$classCDifficultyMenu.html#af5c62a311009eb793ee55d310f034e8c" title="Initializes a menu. " alt="" coords="212,56,431,83"/>
+<area shape="rect" id="node4" href="$classCHostJoinMenu.html#afc47919026bbe1788ed4bf6cf4fa198f" title="Initializes a menu. " alt="" coords="212,107,431,133"/>
+<area shape="rect" id="node5" href="$classCMainMenu.html#a77ebfacfa25b19c55b01be62047f6c04" title="Initializes a menu. " alt="" coords="236,157,407,184"/>
+<area shape="rect" id="node6" href="$classCMultiplayerLocalMenu.html#ac924b9f3a18b7b545e6b9c5ae301b029" title="CMultiplayerLocalMenu\l::CMultiplayerLocalMenu" alt="" coords="238,209,405,250"/>
+<area shape="rect" id="node7" href="$classCOpponentMenu.html#a44b55b963cdf93c18d1410690b7db1d0" title="Initializes a menu. " alt="" coords="208,275,435,301"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="CPlayer::kingIsChecked" name="CPlayer::kingIsChecked">
+<area shape="rect" id="node2" href="$classCKing.html#a16946d6973149a82fb9a7080d3f84cd9" title="CKing::isChecked" alt="" coords="243,132,371,159"/>
+<area shape="rect" id="node12" href="$classCGameSession.html#a79377377ae34656ff4e08a5ebeab617c" title="CGameSession::getBoard" alt="" coords="219,183,394,209"/>
+<area shape="rect" id="node3" href="$classCPiece.html#a568170ade16d97665bda8687b5466bd9" title="Vrátí řádek figurky. " alt="" coords="459,5,578,32"/>
+<area shape="rect" id="node4" href="$classCPiece.html#a43402773984ff68b9056a5f5a2760805" title="Vrátí sloupec figurky. " alt="" coords="463,56,574,83"/>
+<area shape="rect" id="node5" href="$classCBoard.html#a4661312b5193b143d0c856c3f50958ae" title="CBoard::outOfBoard" alt="" coords="449,107,589,133"/>
+<area shape="rect" id="node6" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="456,157,581,184"/>
+<area shape="rect" id="node8" href="$classCPiece.html#ae3b4d45a0dcce19f6ab63141e1ac4e2b" title="zjistí zda zadaná figurka je přátelská " alt="" coords="443,208,595,235"/>
+<area shape="rect" id="node10" href="$classCPiece.html#a120157637b9503bf41a7fe0c3f7f112e" title="Zjistí typ figurky. " alt="" coords="463,259,574,285"/>
+<area shape="rect" id="node7" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="643,157,784,184"/>
+<area shape="rect" id="node9" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="652,208,775,235"/>
+<area shape="rect" id="node11" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="650,259,777,285"/>
+</map>

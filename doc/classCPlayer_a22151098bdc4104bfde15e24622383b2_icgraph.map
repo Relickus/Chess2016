@@ -1,0 +1,18 @@
+<map id="CPlayer::getPlayerColor" name="CPlayer::getPlayerColor">
+<area shape="rect" id="node2" href="$classCBoard.html#a5f0f6a71a74f9d46b1c31ca433441687" title="CBoard::initBoard" alt="" coords="251,5,376,32"/>
+<area shape="rect" id="node6" href="$classCBoard.html#a645a6f7ae910711654c658ec70b60c15" title="CBoard::tryMove" alt="" coords="253,183,374,209"/>
+<area shape="rect" id="node9" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="977,132,1133,159"/>
+<area shape="rect" id="node14" href="$classCGameSession.html#a54e1d50627caf17b46a648d7486fd61a" title="CGameSession::assignKings" alt="" coords="217,56,410,83"/>
+<area shape="rect" id="node16" href="$classCPlayer.html#aa075347110486ddfd27fe4c6efa8a21d" title="CPlayer::printPlayerColor" alt="" coords="228,292,399,319"/>
+<area shape="rect" id="node3" href="$classCGameSession.html#ab3b7fd58569c2eb0269cbead738ec3eb" title="CGameSession::start" alt="" coords="485,5,633,32"/>
+<area shape="rect" id="node4" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="1195,69,1352,96"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1400,69,1451,96"/>
+<area shape="rect" id="node7" href="$classCCommand.html#a81ce6e521a5e72a85f64e69129cb6591" title="Performs a move stored in move variable. " alt="" coords="459,157,658,184"/>
+<area shape="rect" id="node10" href="$classCGameSession.html#a89bfd10ec4dac41f6e5bb0e355b31a91" title="CGameSession::isCheckMate" alt="" coords="711,208,910,235"/>
+<area shape="rect" id="node11" href="$classCIntelligence.html#a3c08e688716a03c720cda32041ace495" title="Removes all faulty (check) moves from the list of all possible moves. " alt="" coords="471,259,647,301"/>
+<area shape="rect" id="node8" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="707,157,914,184"/>
+<area shape="rect" id="node12" href="$classCIntelligence.html#ad7376ed80dd34513cac0c7c73ca98689" title="Gets move from AI. " alt="" coords="733,267,889,293"/>
+<area shape="rect" id="node13" href="$classCIntelligence.html#a4c0e370bdd530600470d811568c71703" title="Gets command from AI. " alt="" coords="963,267,1147,293"/>
+<area shape="rect" id="node15" href="$classCGameSession.html#ac5a72d6cd686b82b3fa94eb0748ad6d2" title="CGameSession::updateKings" alt="" coords="461,56,656,83"/>
+<area shape="rect" id="node17" href="$classCFilePersistence.html#a0500cf5512c9283977b2f1e72d1a47fd" title="CFilePersistence::save" alt="" coords="479,325,638,352"/>
+</map>

@@ -9,16 +9,14 @@
 #include "CPlayer.h"
 
 
-CCommand::CCommand() {
-    command = UNKNOWN;
+CCommand::CCommand() : command(UNKNOWN) {
 }
 CCommand::CCommand(COMMAND com) {
     command = com;
 }
 
-CCommand::CCommand(const MyMove& mv) {
+CCommand::CCommand(const MyMove& mv) : command(MAKEMOVE) {
     move = mv;
-    command = MAKEMOVE;
 }
 
 

@@ -1,0 +1,4 @@
+<map id="MyMove::printMove" name="MyMove::printMove">
+<area shape="rect" id="node2" href="$classCIntelligence.html#a4c0e370bdd530600470d811568c71703" title="Gets command from AI. " alt="" coords="201,5,385,32"/>
+<area shape="rect" id="node3" href="$classCRemotePlayer.html#aeba537b713457ed92ab0a4a64fc380c0" title="CRemotePlayer::getCommand" alt="" coords="193,56,394,83"/>
+</map>

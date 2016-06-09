@@ -1,0 +1,13 @@
+<map id="CFilePersistence" name="CFilePersistence">
+<area shape="rect" id="node2" href="$classCPersistence.html" title="{CPersistence\n||+ CPersistence()\l+ CPersistence()\l+ save()\l+ load()\l}" alt="" coords="669,1038,789,1159"/>
+<area shape="rect" id="node3" href="$classCGameSession.html" title="{CGameSession\n|+ currentPlayer\l+ ipHost\l+ fileName\l+ ready_flag\l+ whosTurn\l+ exitRequest\l+ movePerformed\l+ onlineGame\l|+ CGameSession()\l+ ~CGameSession()\l+ start()\l+ end()\l+ getBoard()\l+ setGameReady()\l+ gameReady()\l+ setPlayerColors()\l+ setTurn()\l+ performMove()\land 6 more...\l+ validateMove()\l+ validatePos()\l}" alt="" coords="401,1363,543,1719"/>
+<area shape="rect" id="node4" href="$classCNetworking.html" title="{CNetworking\n||+ getMove()\l+ sendCommand()\l+ getSocket()\l+ waitForStart()\l+ recvPlayerColor()\l}" alt="" coords="187,1031,321,1167"/>
+<area shape="rect" id="node5" href="$classCPlayer.html" title="{CPlayer\n|# playerColor\l# figuresVec\l# CGameSession\l|+ CPlayer()\l+ getMove()\l+ getPlayerColor()\l+ printPlayerColor()\l+ setPlayerColor()\l+ findAllFigures()\l+ getCommand()\l+ kingIsChecked()\l+ setKing()\l+ getSocket()\l}" alt="" coords="346,979,480,1218"/>
+<area shape="rect" id="node6" href="$classCKing.html" title="{CKing\n||+ CKing()\l+ CKing()\l+ ~CKing()\l+ isChecked()\l+ getLegalMoves()\l+ checkField()\l+ copyPiece()\l}" alt="" coords="243,699,372,864"/>
+<area shape="rect" id="node7" href="$classCPiece.html" title="Abstraktní nadtřída pro figurku. " alt="" coords="233,323,375,635"/>
+<area shape="rect" id="node10" href="$classCSlot.html" title="Class reprezenting a slot of a chessboard. " alt="" coords="80,699,200,864"/>
+<area shape="rect" id="node8" href="$classMoveList.html" title="Kontejner na tahy. " alt="" coords="313,5,415,259"/>
+<area shape="rect" id="node9" href="$classCBoard.html" title="{CBoard\n|+ INIT_ROW_UP\l+ INIT_ROW_DOWN\l+ LAST_ROW_UP\l+ LAST_ROW_DOWN\l&#45; width\l&#45; height\l|+ CBoard()\l+ ~CBoard()\l+ CBoard()\l+ copy()\l+ printBoard()\l+ printDebug()\l+ printRotate()\l+ printPossibleMoves()\l+ initBoard()\l+ getPiece()\land 8 more...\l&#45; createPieces()\l&#45; promotePawn()\l&#45; translateMove()\l}" alt="" coords="5,928,163,1269"/>
+<area shape="rect" id="node12" href="$structTGameLoad.html" title="A structure containing data used in game load. " alt="" coords="132,1495,225,1587"/>
+<area shape="rect" id="node11" href="$classCServer.html" title="Class performing all server operations. " alt="" coords="505,979,644,1218"/>
+</map>

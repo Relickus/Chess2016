@@ -1,0 +1,12 @@
+<map id="CCommand::movesQuery" name="CCommand::movesQuery">
+<area shape="rect" id="node2" href="$classCGameSession.html#a79377377ae34656ff4e08a5ebeab617c" title="CGameSession::getBoard" alt="" coords="237,5,411,32"/>
+<area shape="rect" id="node3" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="261,107,387,133"/>
+<area shape="rect" id="node5" href="$classCPiece.html#ae3b4d45a0dcce19f6ab63141e1ac4e2b" title="zjistí zda zadaná figurka je přátelská " alt="" coords="248,56,400,83"/>
+<area shape="rect" id="node7" href="$classCPiece.html#afa32e14ab50a1c9a7ccfd4ae16cec722" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="243,157,405,184"/>
+<area shape="rect" id="node8" href="$classCBoard.html#af71060bd5e5db1e4e7353e9188494aab" title="CBoard::printPossibleMoves" alt="" coords="230,208,418,235"/>
+<area shape="rect" id="node4" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="467,119,608,145"/>
+<area shape="rect" id="node6" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="476,56,599,83"/>
+<area shape="rect" id="node9" href="$classMoveList.html#aa4d88e0ffd12ebe5fd6380bdf40be4fc" title="Checks whether the list of moves contains a move given by parameter. " alt="" coords="471,195,603,221"/>
+<area shape="rect" id="node10" href="$classCPiece.html#a5fba9e836aeb692798c7934508c64265" title="Vytiskne figurku do zadaného ostreamu. " alt="" coords="472,245,603,272"/>
+<area shape="rect" id="node11" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="657,245,783,272"/>
+</map>

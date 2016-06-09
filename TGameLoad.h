@@ -4,6 +4,9 @@
 #include "CBoard.h"
 #include "COLOR.h"
 
+/**
+ * A structure containing data used in game load
+ */
 struct TGameLoad {
     
     CBoard board;

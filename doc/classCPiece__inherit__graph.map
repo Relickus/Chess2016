@@ -1,0 +1,8 @@
+<map id="CPiece" name="CPiece">
+<area shape="rect" id="node2" href="$classCBishop.html" title="{CBishop\n||+ CBishop()\l+ CBishop()\l+ ~CBishop()\l+ getLegalMoves()\l+ copyPiece()\l}" alt="" coords="5,404,135,540"/>
+<area shape="rect" id="node3" href="$classCKing.html" title="{CKing\n||+ CKing()\l+ CKing()\l+ ~CKing()\l+ isChecked()\l+ getLegalMoves()\l+ checkField()\l+ copyPiece()\l}" alt="" coords="160,389,289,555"/>
+<area shape="rect" id="node4" href="$classCKnight.html" title="{CKnight\n||+ CKnight()\l+ CKnight()\l+ ~CKnight()\l+ getLegalMoves()\l+ copyPiece()\l}" alt="" coords="315,404,444,540"/>
+<area shape="rect" id="node5" href="$classCPawn.html" title="{CPawn\n||+ CPawn()\l+ CPawn()\l+ ~CPawn()\l+ getLegalMoves()\l+ getLegalMovesUp()\l+ getLegalMovesDown()\l+ checkField()\l+ copyPiece()\l}" alt="" coords="470,382,633,562"/>
+<area shape="rect" id="node6" href="$classCQueen.html" title="{CQueen\n||+ CQueen()\l+ CQueen()\l+ ~CQueen()\l+ getLegalMoves()\l+ copyPiece()\l}" alt="" coords="659,404,788,540"/>
+<area shape="rect" id="node7" href="$classCTower.html" title="{CTower\n||+ CTower()\l+ CTower()\l+ ~CTower()\l+ getLegalMoves()\l+ copyPiece()\l}" alt="" coords="813,404,943,540"/>
+</map>

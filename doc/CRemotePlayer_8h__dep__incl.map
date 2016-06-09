@@ -1,0 +1,7 @@
+<map id="CRemotePlayer.h" name="CRemotePlayer.h">
+<area shape="rect" id="node2" href="$CGameSession_8cpp.html" title="CGameSession.cpp" alt="" coords="5,80,144,107"/>
+<area shape="rect" id="node3" href="$CHostJoinMenu_8cpp.html" title="CHostJoinMenu.cpp" alt="" coords="168,80,308,107"/>
+<area shape="rect" id="node4" href="$COpponentMenu_8cpp.html" title="COpponentMenu.cpp" alt="" coords="334,80,479,107"/>
+<area shape="rect" id="node5" href="$CRemotePlayer_8cpp.html" title="CRemotePlayer.cpp" alt="" coords="503,80,643,107"/>
+<area shape="rect" id="node6" href="$CServer_8cpp.html" title="CServer.cpp" alt="" coords="667,80,761,107"/>
+</map>

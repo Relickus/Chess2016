@@ -1,0 +1,7 @@
+<map id="CQueen::copyPiece" name="CQueen::copyPiece">
+<area shape="rect" id="node2" href="$classCQueen.html#ad2eb0592e63b172efb73bcdfd829f1c2" title="CQueen::CQueen" alt="" coords="193,5,319,32"/>
+<area shape="rect" id="node4" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="195,56,317,83"/>
+<area shape="rect" id="node5" href="$classCPiece.html#a568170ade16d97665bda8687b5466bd9" title="Vrátí řádek figurky. " alt="" coords="197,107,315,133"/>
+<area shape="rect" id="node6" href="$classCPiece.html#a43402773984ff68b9056a5f5a2760805" title="Vrátí sloupec figurky. " alt="" coords="201,157,311,184"/>
+<area shape="rect" id="node3" href="$classMoveList.html#a8afc573008a3b82782192bfe21dac119" title="MoveList::reserve" alt="" coords="369,5,495,32"/>
+</map>

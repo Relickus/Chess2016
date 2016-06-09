@@ -1,0 +1,10 @@
+<map id="MyMove::tocstring" name="MyMove::tocstring">
+<area shape="rect" id="node2" href="$classCNetworking.html#a633ac995adfe291050c8a58d187a9cb2" title="CNetworking::sendCommand" alt="" coords="184,93,379,119"/>
+<area shape="rect" id="node3" href="$classCCommand.html#a7f0f386213ae7d8b0e6a2e0d255d75f7" title="Exit game call. " alt="" coords="427,54,583,81"/>
+<area shape="rect" id="node5" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="1126,93,1282,119"/>
+<area shape="rect" id="node4" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="870,54,1077,81"/>
+<area shape="rect" id="node8" href="$classCCommand.html#a8024cfd6bbf41e3e09b14c17559b4439" title="Checkmate reached &#45; call for surrender of the caller . " alt="" coords="632,29,821,55"/>
+<area shape="rect" id="node9" href="$classCCommand.html#a487d3b7d0219f332e628deb08af5b4a5" title="Informs players about a tie. " alt="" coords="652,79,801,106"/>
+<area shape="rect" id="node6" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="1331,93,1488,119"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1536,93,1587,119"/>
+</map>

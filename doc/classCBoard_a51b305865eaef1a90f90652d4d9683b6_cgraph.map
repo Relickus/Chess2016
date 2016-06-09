@@ -1,0 +1,4 @@
+<map id="CBoard::findKing" name="CBoard::findKing">
+<area shape="rect" id="node2" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="176,5,301,32"/>
+<area shape="rect" id="node3" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="349,5,491,32"/>
+</map>

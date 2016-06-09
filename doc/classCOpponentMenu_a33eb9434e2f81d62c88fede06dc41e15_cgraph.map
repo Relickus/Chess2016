@@ -1,0 +1,4 @@
+<map id="COpponentMenu::setStuff" name="COpponentMenu::setStuff">
+<area shape="rect" id="node2" href="$classCController.html#a26c98a1256f3710ec148fe87736180bb" title="Vrátí referenci na instanci hry. " alt="" coords="247,5,425,32"/>
+<area shape="rect" id="node3" href="$classCGameSession.html#adfd6ce6c7872e8a6ed88e02c095018c1" title="CGameSession::setGameReady" alt="" coords="229,56,443,83"/>
+</map>

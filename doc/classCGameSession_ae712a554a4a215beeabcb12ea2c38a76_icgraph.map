@@ -1,0 +1,5 @@
+<map id="CGameSession::setPlayerColors" name="CGameSession::setPlayerColors">
+<area shape="rect" id="node2" href="$classCGameSession.html#ab94b776d517bcd8975816d673f054f87" title="CGameSession::netGameInit" alt="" coords="270,5,463,32"/>
+<area shape="rect" id="node4" href="$classCLoadGameMenu.html#af07d1bc6a6d127e5c82dcced68495d3a" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="276,56,457,83"/>
+<area shape="rect" id="node3" href="$classCHostJoinMenu.html#a5edadbb731e40f4643e542a935bbc03d" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="512,5,683,32"/>
+</map>

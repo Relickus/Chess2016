@@ -3,7 +3,7 @@
 
 enum DIFFICULTY{
     
-    EASY,MEDIUM,HARD,EXTREME
+    EASY,MEDIUM,HARD
     
 };
 

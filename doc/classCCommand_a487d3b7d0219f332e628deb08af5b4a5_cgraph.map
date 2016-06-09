@@ -1,0 +1,9 @@
+<map id="CCommand::tieQuery" name="CCommand::tieQuery">
+<area shape="rect" id="node2" href="$classCCommand.html#a7f0f386213ae7d8b0e6a2e0d255d75f7" title="Exit game call. " alt="" coords="203,56,359,83"/>
+<area shape="rect" id="node3" href="$classCNetworking.html#a633ac995adfe291050c8a58d187a9cb2" title="CNetworking::sendCommand" alt="" coords="408,31,603,57"/>
+<area shape="rect" id="node8" href="$classCPlayer.html#ac853e2cefd674cb2423b7984092281ef" title="CPlayer::getSocket" alt="" coords="437,81,573,108"/>
+<area shape="rect" id="node4" href="$classCCommand.html#a53caf89e344a45dbe74b88fb571aa114" title="Returns reference to the move stored in the command. " alt="" coords="651,5,821,32"/>
+<area shape="rect" id="node5" href="$structMyMove.html#a20b4648386af9bbcb608d1a7fbdfde4a" title="Transforms the move to a c string. " alt="" coords="671,56,801,83"/>
+<area shape="rect" id="node6" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="872,31,995,57"/>
+<area shape="rect" id="node7" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="870,81,997,108"/>
+</map>

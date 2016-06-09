@@ -1,0 +1,8 @@
+<map id="CBoard::printBoard" name="CBoard::printBoard">
+<area shape="rect" id="node2" href="$classCCommand.html#a81ce6e521a5e72a85f64e69129cb6591" title="Performs a move stored in move variable. " alt="" coords="187,5,386,32"/>
+<area shape="rect" id="node7" href="$classCGameSession.html#ab3b7fd58569c2eb0269cbead738ec3eb" title="CGameSession::start" alt="" coords="465,56,613,83"/>
+<area shape="rect" id="node3" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="435,5,642,32"/>
+<area shape="rect" id="node4" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="691,5,847,32"/>
+<area shape="rect" id="node5" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="896,31,1053,57"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1101,31,1152,57"/>
+</map>

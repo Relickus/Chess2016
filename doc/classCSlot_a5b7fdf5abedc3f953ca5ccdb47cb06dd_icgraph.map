@@ -1,0 +1,6 @@
+<map id="CSlot::getValue" name="CSlot::getValue">
+<area shape="rect" id="node2" href="$classCBoard.html#a3f236edbf7ef1d857ab04295a6c4dde0" title="CBoard::getSlotValue" alt="" coords="169,5,317,32"/>
+<area shape="rect" id="node3" href="$classCIntelligence.html#a5202db31f83bf0cc8959bae3a9b204af" title="Gets index of the best move in the list of possible moves. " alt="" coords="366,5,535,32"/>
+<area shape="rect" id="node4" href="$classCIntelligence.html#ad7376ed80dd34513cac0c7c73ca98689" title="Gets move from AI. " alt="" coords="585,5,741,32"/>
+<area shape="rect" id="node5" href="$classCIntelligence.html#a4c0e370bdd530600470d811568c71703" title="Gets command from AI. " alt="" coords="789,5,973,32"/>
+</map>

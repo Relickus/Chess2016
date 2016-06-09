@@ -1,0 +1,7 @@
+<map id="CPiece::getValue" name="CPiece::getValue">
+<area shape="rect" id="node2" href="$classCBoard.html#a79e02042acf883a83aa293ffd60d6a5c" title="CBoard::swapFigures" alt="" coords="190,5,338,32"/>
+<area shape="rect" id="node4" href="$classCIntelligence.html#a5202db31f83bf0cc8959bae3a9b204af" title="Gets index of the best move in the list of possible moves. " alt="" coords="179,56,349,83"/>
+<area shape="rect" id="node3" href="$classCBoard.html#a041c6df3ca59490fc20205ff4278b355" title="CBoard::rotateBoard" alt="" coords="405,5,547,32"/>
+<area shape="rect" id="node5" href="$classCIntelligence.html#ad7376ed80dd34513cac0c7c73ca98689" title="Gets move from AI. " alt="" coords="398,56,554,83"/>
+<area shape="rect" id="node6" href="$classCIntelligence.html#a4c0e370bdd530600470d811568c71703" title="Gets command from AI. " alt="" coords="603,56,787,83"/>
+</map>

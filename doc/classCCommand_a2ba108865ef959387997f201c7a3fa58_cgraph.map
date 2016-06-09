@@ -1,0 +1,7 @@
+<map id="CCommand::rotateQuery" name="CCommand::rotateQuery">
+<area shape="rect" id="node2" href="$classCGameSession.html#a79377377ae34656ff4e08a5ebeab617c" title="CGameSession::getBoard" alt="" coords="222,5,397,32"/>
+<area shape="rect" id="node3" href="$classCBoard.html#ab87849bb760a34c7735f876cb505e34b" title="CBoard::printRotate" alt="" coords="240,56,379,83"/>
+<area shape="rect" id="node4" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="445,31,587,57"/>
+<area shape="rect" id="node5" href="$classCPiece.html#a5fba9e836aeb692798c7934508c64265" title="Vytiskne figurku do zadaného ostreamu. " alt="" coords="451,81,581,108"/>
+<area shape="rect" id="node6" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="635,81,762,108"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="CGameSession::start" name="CGameSession::start">
+<area shape="rect" id="node2" href="$classCBoard.html#a5f0f6a71a74f9d46b1c31ca433441687" title="CBoard::initBoard" alt="" coords="237,56,363,83"/>
+<area shape="rect" id="node6" href="$classCGameSession.html#a54e1d50627caf17b46a648d7486fd61a" title="CGameSession::assignKings" alt="" coords="203,107,397,133"/>
+<area shape="rect" id="node11" href="$classCBoard.html#a3eef678314b1f58138cd65ee6326b468" title="CBoard::printBoard" alt="" coords="233,208,367,235"/>
+<area shape="rect" id="node3" href="$classCBoard.html#aa0664f5faa1248e368f0e4a09bfd749e" title="CBoard::createPieces" alt="" coords="451,5,602,32"/>
+<area shape="rect" id="node5" href="$classCPlayer.html#a22151098bdc4104bfde15e24622383b2" title="CPlayer::getPlayerColor" alt="" coords="445,56,608,83"/>
+<area shape="rect" id="node4" href="$classCSlot.html#a11fcc439d4fa3c462b59399ffe22932e" title="Sets given figure to the slot. " alt="" coords="656,5,797,32"/>
+<area shape="rect" id="node7" href="$classCPlayer.html#ab8c7bcf9cf00657eb9ea5e2cd6f0007f" title="CPlayer::setKing" alt="" coords="466,107,587,133"/>
+<area shape="rect" id="node8" href="$classCBoard.html#a51b305865eaef1a90f90652d4d9683b6" title="CBoard::findKing" alt="" coords="466,157,587,184"/>
+<area shape="rect" id="node9" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="664,157,789,184"/>
+<area shape="rect" id="node10" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="845,183,987,209"/>
+<area shape="rect" id="node12" href="$classCPiece.html#a5fba9e836aeb692798c7934508c64265" title="Vytiskne figurku do zadaného ostreamu. " alt="" coords="461,259,592,285"/>
+<area shape="rect" id="node13" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="663,259,790,285"/>
+</map>

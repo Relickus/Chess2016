@@ -1,0 +1,19 @@
+<map id="CPlayer.h" name="CPlayer.h">
+<area shape="rect" id="node2" href="$CBoard_8cpp.html" title="CBoard.cpp" alt="" coords="157,80,248,107"/>
+<area shape="rect" id="node3" href="$CCommand_8cpp.html" title="CCommand.cpp" alt="" coords="272,80,388,107"/>
+<area shape="rect" id="node4" href="$CController_8cpp.html" title="CController.cpp" alt="" coords="414,80,527,107"/>
+<area shape="rect" id="node5" href="$CIntelligence_8h.html" title="CIntelligence.h" alt="" coords="552,80,661,107"/>
+<area shape="rect" id="node10" href="$CFilePersistence_8cpp.html" title="CFilePersistence.cpp" alt="" coords="1023,80,1169,107"/>
+<area shape="rect" id="node11" href="$CGameSession_8cpp.html" title="CGameSession.cpp" alt="" coords="979,155,1117,181"/>
+<area shape="rect" id="node12" href="$CLocalPlayer_8h.html" title="CLocalPlayer.h" alt="" coords="686,80,796,107"/>
+<area shape="rect" id="node15" href="$CRemotePlayer_8h.html" title="CRemotePlayer.h" alt="" coords="821,80,947,107"/>
+<area shape="rect" id="node18" href="$CPlayer_8cpp.html" title="CPlayer.cpp" alt="" coords="1194,80,1288,107"/>
+<area shape="rect" id="node6" href="$CDifficultyMenu_8cpp.html" title="CDifficultyMenu.cpp" alt="" coords="152,155,292,181"/>
+<area shape="rect" id="node7" href="$CIntelligence_8cpp.html" title="CIntelligence.cpp" alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node8" href="$CLoadGameMenu_8cpp.html" title="CLoadGameMenu.cpp" alt="" coords="317,155,469,181"/>
+<area shape="rect" id="node9" href="$COpponentMenu_8cpp.html" title="COpponentMenu.cpp" alt="" coords="643,155,788,181"/>
+<area shape="rect" id="node13" href="$CHostJoinMenu_8cpp.html" title="CHostJoinMenu.cpp" alt="" coords="813,155,953,181"/>
+<area shape="rect" id="node14" href="$CLocalPlayer_8cpp.html" title="CLocalPlayer.cpp" alt="" coords="493,155,619,181"/>
+<area shape="rect" id="node16" href="$CRemotePlayer_8cpp.html" title="CRemotePlayer.cpp" alt="" coords="1142,155,1281,181"/>
+<area shape="rect" id="node17" href="$CServer_8cpp.html" title="CServer.cpp" alt="" coords="1306,155,1400,181"/>
+</map>

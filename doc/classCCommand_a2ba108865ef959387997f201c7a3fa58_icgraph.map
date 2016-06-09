@@ -1,0 +1,6 @@
+<map id="CCommand::rotateQuery" name="CCommand::rotateQuery">
+<area shape="rect" id="node2" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="222,5,429,32"/>
+<area shape="rect" id="node3" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="478,5,634,32"/>
+<area shape="rect" id="node4" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="683,5,840,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="888,5,939,32"/>
+</map>

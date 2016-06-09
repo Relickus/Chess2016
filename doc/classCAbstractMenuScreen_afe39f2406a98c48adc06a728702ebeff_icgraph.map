@@ -1,0 +1,6 @@
+<map id="CAbstractMenuScreen::showTitle" name="CAbstractMenuScreen::showTitle">
+<area shape="rect" id="node2" href="$classCAbstractMenuScreen.html#a395d44282a4e99338eb9d19e68fbe532" title="Fisplays whole menu. " alt="" coords="215,5,369,46"/>
+<area shape="rect" id="node5" href="$classCLoadGameMenu.html#ac627ca230de78e67cbbc09db813fac9e" title="Fisplays whole menu. " alt="" coords="209,71,375,97"/>
+<area shape="rect" id="node3" href="$classCController.html#af933682c06c49fa6d6fd9f3c39ecd7d0" title="Zavolá zobrazení aktuálního menu. " alt="" coords="425,12,591,39"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="640,12,691,39"/>
+</map>

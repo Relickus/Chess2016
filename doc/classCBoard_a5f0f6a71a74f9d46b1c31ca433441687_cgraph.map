@@ -1,0 +1,5 @@
+<map id="CBoard::initBoard" name="CBoard::initBoard">
+<area shape="rect" id="node2" href="$classCBoard.html#aa0664f5faa1248e368f0e4a09bfd749e" title="CBoard::createPieces" alt="" coords="185,5,335,32"/>
+<area shape="rect" id="node4" href="$classCPlayer.html#a22151098bdc4104bfde15e24622383b2" title="CPlayer::getPlayerColor" alt="" coords="179,56,341,83"/>
+<area shape="rect" id="node3" href="$classCSlot.html#a11fcc439d4fa3c462b59399ffe22932e" title="Sets given figure to the slot. " alt="" coords="389,5,531,32"/>
+</map>

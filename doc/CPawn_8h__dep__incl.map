@@ -1,0 +1,8 @@
+<map id="CPawn.h" name="CPawn.h">
+<area shape="rect" id="node2" href="$CBoard_8cpp.html" title="CBoard.cpp" alt="" coords="5,80,96,107"/>
+<area shape="rect" id="node3" href="$CCommand_8cpp.html" title="CCommand.cpp" alt="" coords="120,80,236,107"/>
+<area shape="rect" id="node4" href="$CIntelligence_8cpp.html" title="CIntelligence.cpp" alt="" coords="261,80,384,107"/>
+<area shape="rect" id="node5" href="$CLocalPlayer_8cpp.html" title="CLocalPlayer.cpp" alt="" coords="408,80,533,107"/>
+<area shape="rect" id="node6" href="$CPawn_8cpp.html" title="CPawn.cpp" alt="" coords="557,80,648,107"/>
+<area shape="rect" id="node7" href="$CPiece_8cpp.html" title="CPiece.cpp" alt="" coords="672,80,763,107"/>
+</map>

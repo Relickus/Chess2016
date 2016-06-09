@@ -1,0 +1,46 @@
+<map id="CPiece::getColor" name="CPiece::getColor">
+<area shape="rect" id="node2" href="$classCBishop.html#a236947ed503e8bedfd3a97d6af343d1f" title="Zkopíruje instanci figurky. " alt="" coords="185,119,327,146"/>
+<area shape="rect" id="node3" href="$classCBoard.html#a617fed51116ec94b2b225c06b12decee" title="CBoard::printDebug" alt="" coords="187,170,325,196"/>
+<area shape="rect" id="node4" href="$classCBoard.html#afa5237480a0f40baaa858304928c0835" title="CBoard::promotePawn" alt="" coords="179,220,333,247"/>
+<area shape="rect" id="node18" href="$classCFilePersistence.html#a0500cf5512c9283977b2f1e72d1a47fd" title="CFilePersistence::save" alt="" coords="177,271,335,298"/>
+<area shape="rect" id="node19" href="$classCKing.html#a8c635fc307f5b47af39f430bd407b3a0" title="Zkopíruje instanci figurky. " alt="" coords="193,322,319,348"/>
+<area shape="rect" id="node20" href="$classCKnight.html#a7ea23f2bb2f6e1118941735a84eb6457" title="Zkopíruje instanci figurky. " alt="" coords="187,372,325,399"/>
+<area shape="rect" id="node21" href="$classCPawn.html#a77dd8f3727a6db1d8b31abbb1ef1191f" title="Zkopíruje instanci figurky. " alt="" coords="189,423,323,450"/>
+<area shape="rect" id="node22" href="$classCPiece.html#ae3b4d45a0dcce19f6ab63141e1ac4e2b" title="zjistí zda zadaná figurka je přátelská " alt="" coords="180,474,332,500"/>
+<area shape="rect" id="node39" href="$classCQueen.html#a69460c43e42e43416ea156ea187af662" title="Zkopíruje instanci figurky. " alt="" coords="187,524,325,551"/>
+<area shape="rect" id="node40" href="$classCTower.html#aa3dcbd44e65fd4642fd0a3cad7bb0f03" title="Zkopíruje instanci figurky. " alt="" coords="187,575,325,602"/>
+<area shape="rect" id="node41" href="$structMyMove.html#a20b4648386af9bbcb608d1a7fbdfde4a" title="Transforms the move to a c string. " alt="" coords="191,676,321,703"/>
+<area shape="rect" id="node5" href="$classCBoard.html#a73a19e1342c51fca65b22476be65a1d2" title="CBoard::moveFigure" alt="" coords="410,144,553,171"/>
+<area shape="rect" id="node6" href="$classCBoard.html#a645a6f7ae910711654c658ec70b60c15" title="CBoard::tryMove" alt="" coords="666,119,787,146"/>
+<area shape="rect" id="node16" href="$classCGameSession.html#a1b2bea8b21eabd70f75d6951ec610ecc" title="CGameSession::performMove" alt="" coords="627,170,826,196"/>
+<area shape="rect" id="node17" href="$classCPiece.html#aeff9e366bfa7a2f2140ee4fc2a11cce3" title="Pohne figurkou na zadané místo. " alt="" coords="667,68,787,95"/>
+<area shape="rect" id="node7" href="$classCCommand.html#a81ce6e521a5e72a85f64e69129cb6591" title="Performs a move stored in move variable. " alt="" coords="875,372,1074,399"/>
+<area shape="rect" id="node12" href="$classCGameSession.html#a89bfd10ec4dac41f6e5bb0e355b31a91" title="CGameSession::isCheckMate" alt="" coords="1127,170,1326,196"/>
+<area shape="rect" id="node13" href="$classCIntelligence.html#a3c08e688716a03c720cda32041ace495" title="Removes all faulty (check) moves from the list of all possible moves. " alt="" coords="887,53,1063,94"/>
+<area shape="rect" id="node8" href="$classCCommand.html#a4ce0241da1463344a3cc71236f0a0a55" title="Executes command specified by ENUM_COMMAND inside command. " alt="" coords="1123,575,1330,602"/>
+<area shape="rect" id="node9" href="$classCController.html#a97be66d086878e89aee632e429973f49" title="Hlavní herní smyčka. " alt="" coords="1393,220,1549,247"/>
+<area shape="rect" id="node10" href="$classCController.html#ac3330b24413e039d551896a81360aeff" title="Zavolá inicializaci hry. " alt="" coords="1611,220,1768,247"/>
+<area shape="rect" id="node11" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1816,220,1867,247"/>
+<area shape="rect" id="node14" href="$classCIntelligence.html#ad7376ed80dd34513cac0c7c73ca98689" title="Gets move from AI. " alt="" coords="1149,64,1305,91"/>
+<area shape="rect" id="node15" href="$classCIntelligence.html#a4c0e370bdd530600470d811568c71703" title="Gets command from AI. " alt="" coords="1379,64,1563,91"/>
+<area shape="rect" id="node23" href="$classCCommand.html#abb6c2cf35710ab85b09f3e83830cb6b4" title="Performs move stored in command. " alt="" coords="887,524,1062,551"/>
+<area shape="rect" id="node24" href="$classCKing.html#a7f12beabaef82d62151746455cdf7f8a" title="Ověří zda se dá táhnou na toto políčko. " alt="" coords="417,575,546,602"/>
+<area shape="rect" id="node26" href="$classCKing.html#a16946d6973149a82fb9a7080d3f84cd9" title="CKing::isChecked" alt="" coords="417,220,545,247"/>
+<area shape="rect" id="node28" href="$classCPawn.html#a5b0438eee7c386a506860f42e29feb16" title="CPawn::checkField" alt="" coords="413,626,549,652"/>
+<area shape="rect" id="node32" href="$classCPiece.html#ae51336ab8fb2ad0f7ab1f71024d96d57" title="Ověří zda se dá táhnou na toto políčko. " alt="" coords="413,372,549,399"/>
+<area shape="rect" id="node37" href="$classCPlayer.html#a434322e24ed1ddd2d4f21b0ee30ab9b4" title="CPlayer::findAllFigures" alt="" coords="897,119,1053,146"/>
+<area shape="rect" id="node25" href="$classCKing.html#a265927532ae98eccfd355ffd433218dd" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="649,575,804,602"/>
+<area shape="rect" id="node27" href="$classCPlayer.html#a4f38b586ae6470d24b30555899200804" title="CPlayer::kingIsChecked" alt="" coords="1145,220,1309,247"/>
+<area shape="rect" id="node29" href="$classCPawn.html#ac90a0b73d6f0f2558cdba6d6dfcbf110" title="CPawn::getLegalMovesDown" alt="" coords="629,626,824,652"/>
+<area shape="rect" id="node31" href="$classCPawn.html#a1dea2f417ad1b6948f321aae7a347b40" title="CPawn::getLegalMovesUp" alt="" coords="637,676,816,703"/>
+<area shape="rect" id="node30" href="$classCPawn.html#aa6bd04ee2f351f7d29b9facf58ac935e" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="894,575,1055,602"/>
+<area shape="rect" id="node33" href="$classCBishop.html#ad046b015fa527cfd92ade2b84fcde255" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="643,271,811,298"/>
+<area shape="rect" id="node34" href="$classCKnight.html#a8e0161ebd926aed60bee72b54e4ea9d7" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="644,322,809,348"/>
+<area shape="rect" id="node35" href="$classCQueen.html#a2332321ad42f08713b699bd8eacd372c" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="643,372,810,399"/>
+<area shape="rect" id="node36" href="$classCTower.html#ada23bbc3683a66ba1ccc5bfbd60ae1b0" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="645,423,809,450"/>
+<area shape="rect" id="node38" href="$classCGameSession.html#adfdd26cb1ef25a67dca62980c735feea" title="CGameSession::isTie" alt="" coords="1151,119,1302,146"/>
+<area shape="rect" id="node42" href="$classCNetworking.html#a633ac995adfe291050c8a58d187a9cb2" title="CNetworking::sendCommand" alt="" coords="384,727,579,754"/>
+<area shape="rect" id="node43" href="$classCCommand.html#a7f0f386213ae7d8b0e6a2e0d255d75f7" title="Exit game call. " alt="" coords="649,727,805,754"/>
+<area shape="rect" id="node44" href="$classCCommand.html#a8024cfd6bbf41e3e09b14c17559b4439" title="Checkmate reached &#45; call for surrender of the caller . " alt="" coords="880,676,1069,703"/>
+<area shape="rect" id="node45" href="$classCCommand.html#a487d3b7d0219f332e628deb08af5b4a5" title="Informs players about a tie. " alt="" coords="900,727,1049,754"/>
+</map>

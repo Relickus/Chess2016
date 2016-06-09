@@ -1,0 +1,9 @@
+<map id="CAbstractMenuScreen" name="CAbstractMenuScreen">
+<area shape="rect" id="node2" href="$classCColorMenu.html" title="{CColorMenu\n||+ CColorMenu()\l+ ~CColorMenu()\l+ setNextMenu()\l+ setStuff()\l}" alt="" coords="5,403,128,525"/>
+<area shape="rect" id="node3" href="$classCDifficultyMenu.html" title="{CDifficultyMenu\n||+ CDifficultyMenu()\l+ ~CDifficultyMenu()\l+ setNextMenu()\l+ setStuff()\l}" alt="" coords="152,403,296,525"/>
+<area shape="rect" id="node4" href="$classCHostJoinMenu.html" title="{CHostJoinMenu\n||+ CHostJoinMenu()\l+ ~CHostJoinMenu()\l+ setStuff()\l+ setNextMenu()\l}" alt="" coords="320,403,464,525"/>
+<area shape="rect" id="node5" href="$classCLoadGameMenu.html" title="{CLoadGameMenu\n|&#45; fileGame\l&#45; loadSuccessful\l&#45; persistence\l|+ CLoadGameMenu()\l+ ~CLoadGameMenu()\l+ setNextMenu()\l+ readInput()\l+ loadFromFile()\l+ confirmLoad()\l+ setStuff()\l+ findFile()\l+ show()\l}" alt="" coords="488,352,641,576"/>
+<area shape="rect" id="node6" href="$classCMainMenu.html" title="{CMainMenu\n||+ CMainMenu()\l+ ~CMainMenu()\l+ setNextMenu()\l+ setStuff()\l}" alt="" coords="667,403,787,525"/>
+<area shape="rect" id="node7" href="$classCMultiplayerLocalMenu.html" title="{CMultiplayerLocalMenu\n||+ CMultiplayerLocalMenu()\l+ CMultiplayerLocalMenu()\l+ ~CMultiplayerLocalMenu()\l+ setNextMenu()\l}" alt="" coords="811,403,997,525"/>
+<area shape="rect" id="node8" href="$classCOpponentMenu.html" title="{COpponentMenu\n||+ COpponentMenu()\l+ ~COpponentMenu()\l+ setNextMenu()\l+ setStuff()\l}" alt="" coords="1022,403,1169,525"/>
+</map>

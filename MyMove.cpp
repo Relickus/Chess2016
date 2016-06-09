@@ -92,11 +92,6 @@ void MyMove::rotateMove() {
     toY = 7- toY;
 }
 
-void MyMove::setFigure(CPiece * fig){
-    
-    figure = fig;
-}
-
 bool MyMove::operator==(const MyMove& oth) const {
     return (fromX == oth.fromX) && (fromY == oth.fromY) && (toX == oth.toX) && (toY==oth.toY);
 }

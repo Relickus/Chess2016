@@ -1,0 +1,6 @@
+<map id="TGameLoad" name="TGameLoad">
+<area shape="rect" id="node2" href="$classCBoard.html" title="{CBoard\n|+ INIT_ROW_UP\l+ INIT_ROW_DOWN\l+ LAST_ROW_UP\l+ LAST_ROW_DOWN\l&#45; width\l&#45; height\l|+ CBoard()\l+ ~CBoard()\l+ CBoard()\l+ copy()\l+ printBoard()\l+ printDebug()\l+ printRotate()\l+ printPossibleMoves()\l+ initBoard()\l+ getPiece()\land 8 more...\l&#45; createPieces()\l&#45; promotePawn()\l&#45; translateMove()\l}" alt="" coords="5,928,163,1269"/>
+<area shape="rect" id="node3" href="$classCSlot.html" title="Class reprezenting a slot of a chessboard. " alt="" coords="24,699,144,864"/>
+<area shape="rect" id="node4" href="$classCPiece.html" title="Abstraktní nadtřída pro figurku. " alt="" coords="13,323,155,635"/>
+<area shape="rect" id="node5" href="$classMoveList.html" title="Kontejner na tahy. " alt="" coords="33,5,135,259"/>
+</map>

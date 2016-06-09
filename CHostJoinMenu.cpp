@@ -2,8 +2,6 @@
 #include <unistd.h>
 
 #include "CHostJoinMenu.h"
-#include "CMultiplayerJoinMenu.h"
-#include "CMultiplayerHostMenu.h"
 #include "CColorMenu.h"
 #include "CController.h"
 #include "CLocalPlayer.h"

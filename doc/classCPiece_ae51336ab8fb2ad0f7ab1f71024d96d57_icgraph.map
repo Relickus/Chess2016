@@ -1,0 +1,6 @@
+<map id="CPiece::checkField" name="CPiece::checkField">
+<area shape="rect" id="node2" href="$classCBishop.html#ad046b015fa527cfd92ade2b84fcde255" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="189,5,357,32"/>
+<area shape="rect" id="node3" href="$classCKnight.html#a8e0161ebd926aed60bee72b54e4ea9d7" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="191,56,356,83"/>
+<area shape="rect" id="node4" href="$classCQueen.html#a2332321ad42f08713b699bd8eacd372c" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="190,107,357,133"/>
+<area shape="rect" id="node5" href="$classCTower.html#ada23bbc3683a66ba1ccc5bfbd60ae1b0" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="191,157,355,184"/>
+</map>

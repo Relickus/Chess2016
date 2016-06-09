@@ -173,4 +173,6 @@ bool CPiece::validLetter(char c){
  int CPiece::getValue() const {
      return value;
 }
- 
+ void CPiece::setValue(int val) {
+     value = val;
+}

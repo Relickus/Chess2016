@@ -1,0 +1,5 @@
+<map id="CPawn::checkField" name="CPawn::checkField">
+<area shape="rect" id="node2" href="$classCPawn.html#ac90a0b73d6f0f2558cdba6d6dfcbf110" title="CPawn::getLegalMovesDown" alt="" coords="189,5,384,32"/>
+<area shape="rect" id="node4" href="$classCPawn.html#a1dea2f417ad1b6948f321aae7a347b40" title="CPawn::getLegalMovesUp" alt="" coords="197,56,376,83"/>
+<area shape="rect" id="node3" href="$classCPawn.html#aa6bd04ee2f351f7d29b9facf58ac935e" title="Zjistí dostupné tahy pro tuto figurku. " alt="" coords="433,31,594,57"/>
+</map>

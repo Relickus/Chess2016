@@ -1,0 +1,12 @@
+<map id="CRemotePlayer::getCommand" name="CRemotePlayer::getCommand">
+<area shape="rect" id="node2" href="$classCRemotePlayer.html#a826ed1ba787ddf80820efc60aa9bb0d6" title="CRemotePlayer::getMove" alt="" coords="257,5,431,32"/>
+<area shape="rect" id="node4" href="$structMyMove.html#a12e5e2bd0f0e7920477a7aee16b375a8" title="Checks whether the move is a ficture move Ficture is a special instance of the move (dummy object)..." alt="" coords="279,56,409,83"/>
+<area shape="rect" id="node5" href="$structMyMove.html#a4aa7bcdb909cd7e1f8d926fec56f7f1f" title="Recalculates received move to a move from the other side of a chessboard. " alt="" coords="271,107,417,133"/>
+<area shape="rect" id="node6" href="$structMyMove.html#a773a0754282481c6ee42d87e3a5a833d" title="Prints a move. " alt="" coords="275,157,413,184"/>
+<area shape="rect" id="node9" href="$classCGameSession.html#a79377377ae34656ff4e08a5ebeab617c" title="CGameSession::getBoard" alt="" coords="257,208,431,235"/>
+<area shape="rect" id="node10" href="$classCBoard.html#a077516b9e719b869baf267e6dfd5bdda" title="CBoard::getPiece" alt="" coords="281,259,407,285"/>
+<area shape="rect" id="node3" href="$classCNetworking.html#abef6ce53f1e84a80c90b602e0a887041" title="CNetworking::getMove" alt="" coords="481,5,637,32"/>
+<area shape="rect" id="node7" href="$classCPiece.html#a5fba9e836aeb692798c7934508c64265" title="Vytiskne figurku do zadaného ostreamu. " alt="" coords="493,157,624,184"/>
+<area shape="rect" id="node8" href="$classCPiece.html#ac440475650729b0c72b292b8e374c839" title="Vrátí jméno figurky. " alt="" coords="686,157,813,184"/>
+<area shape="rect" id="node11" href="$classCSlot.html#ae1b2ff488c9f842359156fec3154315a" title="Returns a figure on the slot. " alt="" coords="488,259,629,285"/>
+</map>

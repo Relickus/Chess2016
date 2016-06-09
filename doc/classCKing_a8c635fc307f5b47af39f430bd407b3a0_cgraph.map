@@ -1,0 +1,7 @@
+<map id="CKing::copyPiece" name="CKing::copyPiece">
+<area shape="rect" id="node2" href="$classCKing.html#a5d69801616a1f8246bb5936376572b17" title="CKing::CKing" alt="" coords="191,5,294,32"/>
+<area shape="rect" id="node4" href="$classCPiece.html#ae4c2eb474cfc962f42224b569cc4cc34" title="Vrátí barvu figurky. " alt="" coords="181,56,304,83"/>
+<area shape="rect" id="node5" href="$classCPiece.html#a568170ade16d97665bda8687b5466bd9" title="Vrátí řádek figurky. " alt="" coords="183,107,302,133"/>
+<area shape="rect" id="node6" href="$classCPiece.html#a43402773984ff68b9056a5f5a2760805" title="Vrátí sloupec figurky. " alt="" coords="187,157,298,184"/>
+<area shape="rect" id="node3" href="$classMoveList.html#a8afc573008a3b82782192bfe21dac119" title="MoveList::reserve" alt="" coords="353,5,479,32"/>
+</map>

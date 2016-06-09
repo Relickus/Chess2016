@@ -1,0 +1,5 @@
+<map id="CPiece::copyPiece" name="CPiece::copyPiece">
+<area shape="rect" id="node2" href="$classCBoard.html#a82d2661d0c9fd4b78df51edf59e11398" title="CBoard::CBoard" alt="" coords="190,5,309,32"/>
+<area shape="rect" id="node3" href="$classCBoard.html#a6f1046129b6b8a7701cf64a29356eb63" title="CBoard::copy" alt="" coords="198,56,301,83"/>
+<area shape="rect" id="node4" href="$classCLoadGameMenu.html#af07d1bc6a6d127e5c82dcced68495d3a" title="Sets whatever there is to be set from this menu that is needed for game initialization. " alt="" coords="357,56,539,83"/>
+</map>

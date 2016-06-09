@@ -1,0 +1,6 @@
+<map id="CLocalPlayer::getCommand" name="CLocalPlayer::getCommand">
+<area shape="rect" id="node2" href="$classCLocalPlayer.html#ab08a3960922cc4bfa5f405533887df4d" title="CLocalPlayer::readInput" alt="" coords="255,5,417,32"/>
+<area shape="rect" id="node3" href="$classCCommand.html#a0de8c2052fa681c05400a12c7449c5c6" title="Creates command from user input. " alt="" coords="240,56,432,83"/>
+<area shape="rect" id="node4" href="$classCGameSession.html#a5af27a1748de5ee5a0d4d20af246c4a0" title="CGameSession::validatePos" alt="" coords="729,56,919,83"/>
+<area shape="rect" id="node5" href="$classCGameSession.html#a62dc273c472054974f9f9e68226b96c9" title="CGameSession::validateMove" alt="" coords="481,81,679,108"/>
+</map>

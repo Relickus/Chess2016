@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classCPiece.html" title="Abstraktní nadtřída pro figurku. " alt="" coords="6,132,71,159"/>
+<area shape="rect" id="node2" href="$classCBishop.html" title="CBishop" alt="" coords="120,5,192,32"/>
+<area shape="rect" id="node3" href="$classCKing.html" title="CKing" alt="" coords="127,56,185,83"/>
+<area shape="rect" id="node4" href="$classCKnight.html" title="CKnight" alt="" coords="121,107,191,133"/>
+<area shape="rect" id="node5" href="$classCPawn.html" title="CPawn" alt="" coords="123,157,189,184"/>
+<area shape="rect" id="node6" href="$classCQueen.html" title="CQueen" alt="" coords="121,208,191,235"/>
+<area shape="rect" id="node7" href="$classCTower.html" title="CTower" alt="" coords="122,259,190,285"/>
+</map>

@@ -85,23 +85,26 @@ void CBoard::swapFigures(int r1, int c1, int r2, int c2){
         
     int tmpr = r1;
     int tmpc = c1;
-    int tmpval = 0;
+    int tmpval1 = 0;
+    int tmpval2 = 0;
     
     if(slotsArr[r1][c1].getHeldPiece() != NULL){
-        tmpval = slotsArr[r1][c1].getHeldPiece()->getValue();
+        tmpval1 = slotsArr[r1][c1].getHeldPiece()->getValue();
         //slotsArr[r1][c1].getHeldPiece().copyData(slotsArr[r2][c2].getHeldPiece())
     }
     
     if(slotsArr[r2][c2].getHeldPiece() != NULL){
+        int tmpval2 = slotsArr[r2][c2].getHeldPiece()->getValue();
         slotsArr[r2][c2].getHeldPiece()->setRow(tmpr);
         slotsArr[r2][c2].getHeldPiece()->setCol(tmpc);
-        // '''''''''''' TODO SET VALUE
     }
     
     CPiece * tmp = slotsArr[r1][c1].getHeldPiece();
     slotsArr[r1][c1].setHeldPiece( slotsArr[r2][c2].getHeldPiece() );
     slotsArr[r2][c2].setHeldPiece(tmp);    
     
+    slotsArr[r1][c1].getHeldPiece()->setValue(tmpval2);
+    slotsArr[r2][c2].getHeldPiece()->setValue(tmpval1);
 }
 
 void CBoard::rotateBoard(){
