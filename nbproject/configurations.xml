@@ -75,7 +75,6 @@
       <itemPath>CCommand.cpp</itemPath>
       <itemPath>CController.cpp</itemPath>
       <itemPath>CFilePersistence.cpp</itemPath>
-      <itemPath>CGUI.cpp</itemPath>
       <itemPath>CGameSession.cpp</itemPath>
       <itemPath>CIntelligence.cpp</itemPath>
       <itemPath>CLocalPlayer.cpp</itemPath>
@@ -150,8 +149,6 @@
       <item path="CFilePersistence.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CFilePersistence.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CGUI.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CGameSession.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -303,8 +300,6 @@
       <item path="CFilePersistence.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CFilePersistence.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CGUI.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="CGameSession.cpp" ex="false" tool="1" flavor2="0">
       </item>

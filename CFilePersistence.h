@@ -10,6 +10,7 @@
 class CFilePersistence : public CPersistence {
 public:
     CFilePersistence();
+    ~CFilePersistence();
     CFilePersistence(CGameSession * gamePtr);
     /**
      * Saves a game to a file specified by user

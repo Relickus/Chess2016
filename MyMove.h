@@ -10,7 +10,9 @@ class CPiece;
 /**
  * Class representing a move from one slot to another 
  */
-struct MyMove{
+class MyMove{
+    
+public:
     
     MyMove();
     /**
@@ -58,10 +60,10 @@ struct MyMove{
     void tocstring(char * buffer) const;
     
     
-    int fromX;
-    int fromY;
-    int toX;
-    int toY;
+    int fromX;  ///< An origin row 
+    int fromY;  ///< An origin colum 
+    int toX;    ///< A destination row 
+    int toY;    ///< A destination column 
     CPiece * figure;    ///< A figure sebraná tahem
 };
 

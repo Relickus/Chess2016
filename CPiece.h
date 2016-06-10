@@ -13,7 +13,7 @@ class MyMove;
 
 /**
  * 
- * Abstraktní nadtřída pro figurku
+ * Parent class for a piece
  * 
  */
 class CPiece {
@@ -21,134 +21,134 @@ public:
     
     /**
      * 
-     * @param c Písmeno identifikující figurku
-     * @param row Řádek kde se nachází figurka
-     * @param col Sloupec kde se nachází figurka
-     * @return Ukazatel na figurku z šachovnice
+     * @param c A letter identifying a piece
+     * @param row A row of origin of a piece
+     * @param col A column  of origin of the piece
+     * @return Pointer to a piece on a chessboard
      */
     static CPiece * getPieceByLetter(char c, int row, int col);
     
     /**
-     * 
-     * @param c Zjistí zda zadané písmeno je validní písmeno pro figurku
+     * Checks whether a given letter is a valid piece letter
+     * @param c letter to be checked
      */
     static bool validLetter(char c); 
     
     CPiece();
     /**
-     * 
-     * @param color Barva nové figurky
-     * @param row Řádek kam umístít figurku
-     * @param col Sloupec kam umístít figurku
+     * Initiates a piece with given parameters
+     * @param color A color of the piece
+     * @param row A row of the piece on a chessboard
+     * @param col A column of the piece on a chessboard
      */
     CPiece(COLOR color,int row, int col);
+    
     virtual ~CPiece();
     
     /**
-     * @brief Vytiskne figurku do zadaného ostreamu
+     *  Prints out the piece into a given ostream
      * 
-     * @param os Ostream kam se vypíše figurka
+     * @param os Ostream to be written into
      */
     void printPiece(ostream & os) const;
     
     /**
-     * @brief Vrátí jméno figurky
-     * @return enum FIGURNAME identifikující figurku
+     *  Returns a name of a piece
+     * @return enum FIGURNAME indentifying the piece - see @ref ENUM_FIGURENAME
      */
     FIGURENAME getName() const;
      /**
-     * @brief Vrátí barvu figurky
-     * @return enum COLOR značící barvu figurky
+     *  Returns a color of a piece
+     * @return enum COLOR specifying a color of the piece
      */
     COLOR getColor() const;
      /**
-     * @brief Vrátí řádek figurky
-     * @return int řádek figurky
+     *  Returns a row of the piece
+     * @return int a row of the piece
      */
     int getRow() const;
-         /**
-     * @brief Vrátí sloupec figurky
-     * @return int sloupec figurky
+     /**
+     *  Returns a column of the piece
+     * @return int a colum n of the piece
      */
     int getCol() const;
     /**
-     * @brief Vrátí hodnotu figurky
-     * @return int hodnota figurky
+     *  Returns a value of the piece
+     * @return int a value of the piece
      */
     int getValue() const;
     
     /**
-     * @brief Nastaví hodnotu figurky
-     * @param value hodnota figurky
+     *  Sets a value of the piece
+     * @param val a value of the piece
      */
     void setValue(int val);
        
     /**
-     * @brief Nastaví řádek figurky
-     * @param r řádek figurky
+     *  Sets a row of the piece
+     * @param r a row of the piece
      */
     void setRow(int r);
     /**
-     * @brief Nastaví sloupec figurky
-     * @param c sloupec figurky
+     *  Sets a column of the piece
+     * @param c a column of the piece
      */
     void setCol(int c);
     
     /**
-     * @brief Zjistí dostupné tahy pro tuto figurku
-     * @param gS Reference na instanci hry
-     * @return Reference na MoveList všech možných pohybů této figurky
+     *  Checks available moves for this piece
+     * @param gS Reference to the instance of a game
+     * @return Reference to a list of all possible moves of this piece
      */
     virtual MoveList & getLegalMoves(const CGameSession & gS) = 0;
     
     /**
-     * @brief Zjistí typ figurky 
-     * @param fig Jméno figurky
-     * @return typ figurky se rovná parametru nebo ne
+     *  Checks if the piece equals another piece
+     * @param fig A name of the piece
      */
     bool equals(FIGURENAME fig) const;
     
     /**
-     * @brief zjistí zda zadaná figurka je přátelská 
-     * @param tmp ukazatel na porovnávanou figurku
+     *  Checks if a given piece is a friend piece
+     * @param tmp a pointer to compared piece
      */
     bool isFriendPiece(const CPiece * tmp) const;
     /**
-     * @brief zjistí zda je figurka stejné barvy jako parametr
-     * @param col porovnávaná barva
+     *  Checks if the piece is the same color as parameter
+     * @param col compared color 
      */
     bool isFriendPiece(COLOR col) const;
     /**
-     * @brief Ověří zda se dá táhnou na toto políčko
-     * @param row řádek nového políčka
-     * @param col sloupec nového políčka 
-     * @param board reference na instanci šachovnice
-     * @return 0 pro kladnou odpověď , 1 pro zápornou
+     *  Checks if the piece can move to given field
+     * @param row a row of the new field
+     * @param col a column of the new field 
+     * @param board reference to the instance of a chessboard
+     * @return 0 for positive answer, 1 for negative
      */
     virtual int checkField(int row, int col, const CBoard & board);
     /**
-     * @brief Pohne figurkou na zadané místo
-     * @param move Určuje souřadnice tahu
-     * @param board reference na instanci šachovnice
-     * @return značí zda se zdařil přesun
+     *  Moves a piece to a given field
+     * @param move Specifies coordinates of the move
+     * @param board reference to the instance of a chessboard
+     * @return if the move was successful
      */
     bool moveTo(const MyMove & move, CBoard & board );    
     /**
-     * @brief Zkopíruje instanci figurky
-     * @param pcs ukazatel na figurku, která se má zkopírovat
-     * @return nová instance figurky
+     *  Copies an instance of the piece
+     * @param pcs a pointer to the piece, to be copied
+     * @return a new instance of this piece
      */
     virtual CPiece * copyPiece(const CPiece * pcs) const = 0;
     
-    MoveList moveList;
+    MoveList moveList;  ///< An aid list of possible moves of this piece
     
 protected:
 
-    int rowPos;
-    int colPos;
-    COLOR color;
-    FIGURENAME name;
-    int value;
+    int rowPos; ///< A row of the piece
+    int colPos; ///< A column of the piece
+    COLOR color;    ///< A color of the piece
+    FIGURENAME name;    ///< A name of the piece
+    int value;  ///< A value of the piece
     
 };
 

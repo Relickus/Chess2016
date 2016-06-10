@@ -11,13 +11,9 @@
 #include <iostream>
 #include <fstream>
 
-#define WIDTH 8   // get rid of this ?
-#define HEIGHT 8
-
 using namespace std;
 
-CBoard::CBoard() : width(WIDTH), height(HEIGHT), 
-                LAST_ROW_DOWN(0),LAST_ROW_UP(7),INIT_ROW_DOWN(1),INIT_ROW_UP(6){
+CBoard::CBoard() : INIT_ROW_UP(6),INIT_ROW_DOWN(1),LAST_ROW_UP(7),LAST_ROW_DOWN(0) {
         
     for(int i = 0; i < 8; ++i){
         for (int j = 0; j < 8; j++) {
@@ -27,7 +23,7 @@ CBoard::CBoard() : width(WIDTH), height(HEIGHT),
     }
 }
 
-CBoard::CBoard(const CBoard& oth) : width(WIDTH), height(HEIGHT)  {
+CBoard::CBoard(const CBoard& oth)  {
 
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
@@ -88,7 +84,7 @@ void CBoard::swapFigures(int r1, int c1, int r2, int c2){
     }
     
     if(slotsArr[r2][c2].getHeldPiece() != NULL){
-        int tmpval2 = slotsArr[r2][c2].getHeldPiece()->getValue();
+        tmpval2 = slotsArr[r2][c2].getHeldPiece()->getValue();
         slotsArr[r2][c2].getHeldPiece()->setRow(tmpr);
         slotsArr[r2][c2].getHeldPiece()->setCol(tmpc);
     }
@@ -408,6 +404,7 @@ bool CBoard::tryMove(const MyMove & move,const CGameSession & gS) const {
 
 CKing * CBoard::findKing(COLOR col) const{    
     
+    CKing * tmpking = NULL;
     for(int i=0; i < 8 ;++i){
         for (int j = 0; j < 8; j++) {
             if(getPiece(i,j) == NULL)
@@ -415,11 +412,11 @@ CKing * CBoard::findKing(COLOR col) const{
                     
             if(getPiece(i,j)->getName() == KING && getPiece(i,j)->getColor() == col){
                 CPiece * tmp = getPiece(i,j);
-                CKing * tmpking = dynamic_cast<CKing*>(tmp);
+                tmpking = dynamic_cast<CKing*>(tmp);
                 return tmpking;
             }
         }
     }
     
-    
+    return tmpking;
 }

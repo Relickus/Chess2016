@@ -18,6 +18,11 @@ CRemotePlayer::CRemotePlayer(int socket) : cliSocket(socket) {
 
 }
 
+CRemotePlayer::~CRemotePlayer() {
+
+}
+
+
 CCommand CRemotePlayer::getCommand(const CGameSession& gS) {
 
     MyMove m = getMove(gS,cliSocket);

@@ -9,6 +9,10 @@ CPlayer::CPlayer() : playersKing(NULL){
     
 }
 
+CPlayer::~CPlayer() {
+
+}
+
 COLOR CPlayer::getPlayerColor() const {
     return playerColor;
 }
@@ -18,7 +22,7 @@ void CPlayer::printPlayerColor(ostream & os) const {
     os << c;
 }
 
-COLOR CPlayer::setPlayerColor(COLOR col) {
+void CPlayer::setPlayerColor(COLOR col) {
     playerColor = col;
 }
 
@@ -52,5 +56,5 @@ void CPlayer::setKing(CKing* k) {
 }
 
 int CPlayer::getSocket() const {
-
+    return 0;
 }

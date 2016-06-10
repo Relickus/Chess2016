@@ -11,6 +11,7 @@
 class CIntelligence : public CPlayer {
 public:
     CIntelligence();
+    virtual ~CIntelligence();
     /**
      * 
      * @param d A desired level of difficulty
@@ -27,7 +28,7 @@ public:
      * @param cliSocket socket to be read from
      * @return Received move
      */
-    virtual MyMove getMove(const CGameSession & gS,int cliSocket=-1);
+    MyMove getMove(const CGameSession & gS);
     /**
      * @brief Gets command from AI
      * @param gS reference to instance of the game

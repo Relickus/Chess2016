@@ -47,9 +47,9 @@ public:
 
 private:
     
-    string fileGame;
-    bool loadSuccessful;
-    CFilePersistence * persistence;
+    string fileGame;    ///< name of the file loadede from
+    bool loadSuccessful;    ///< was the load succesful?
+    CFilePersistence * persistence; ///< pointer to an instance of persistence performing the save/load operations
 
 };
 

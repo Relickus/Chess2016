@@ -11,13 +11,13 @@ class CServer {
 public:
     CServer();
     /**
- * @brief Waits for players to connect
+ *  Waits for players to connect
  *
  */
     void waitForPlayers();
     
 /**
- * @brief Sets a socket to a socket of a connected player
+ *  Sets a socket to a socket of a connected player
  *
  * @param socket of a connected player
  *
@@ -25,13 +25,13 @@ public:
     void setPlayerSocket(int sock);
     
 /**
- * @brief Sends a signal to the players to start a their game
+ *  Sends a signal to the players to start a their game
  *
  */
     void sendGoSignal() const; 
    
     /**
- * @brief Returns a socket of the second player
+ *  Returns a socket of the second player
  *
  * @param socket of one of the players
  * 
@@ -42,12 +42,12 @@ public:
     
  
 /**
- * @brief Stops the server and closes clients
+ *  Stops the server and closes clients
  */
     void stopServer();
     
     /**
-     * @brief Initialization of the server
+     *  Initialization of the server
      *
      *
      * @retval returns -1 for fail and 0 for successful completion
@@ -55,7 +55,7 @@ public:
     int startServer();
     
     /**
-     * @brief Services the client (player)
+     *  Services the client (player)
      *
      * @param socket of the client being served
      *
@@ -64,9 +64,9 @@ public:
     int serveClient(int fromSock);
     
     /**
-     * @brief Opens a server socket
+     * Opens a server socket
      *
-     * This function is borrowed from network code snippet on website edux.fit.cvut.cz
+     * NOTE: This function is borrowed from network code snippet on website edux.fit.cvut.cz
      *
      * @param IP adress of a server read from user
      * @param port read from user
@@ -78,11 +78,11 @@ public:
 
 private:
     
-    int cliSocket1;
-    int cliSocket2;
-    int srvSocket;
+    int cliSocket1; ///< socket of the first connected player
+    int cliSocket2; ///< socket of the second connected player
+    int srvSocket;  ///< socket of the server
     
-    bool playersConnected;    
+    bool playersConnected;   ///< both players have connected?
 };
 
 

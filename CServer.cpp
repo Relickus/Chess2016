@@ -73,6 +73,8 @@ int CServer::serveClient ( int fromSock )
     
     
     send ( theOtherSocket(fromSock) , buffer, l, 0 );
+    
+    return 0;
 }
 // ===============================================================
 

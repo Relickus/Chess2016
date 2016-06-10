@@ -155,8 +155,8 @@ bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
                 break;
         }
         
-        newRow = newRow++;
-        newCol = newCol--;
+        newRow++;
+        newCol--;
     }
     
     // right up
@@ -200,8 +200,8 @@ bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
                 break;
         }
         
-        newRow = newRow++;
-        newCol = newCol++;
+        newRow++;
+        newCol++;
     }
      
      // left down
@@ -239,8 +239,8 @@ bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
                 break;
         }
         
-        newRow = newRow--;
-        newCol = newCol--;
+        newRow--;
+        newCol--;
     }
      
      // right down
@@ -279,8 +279,8 @@ bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
                 break;
         }
         
-        newRow = newRow--;
-        newCol = newCol++;
+        newRow--;
+        newCol++;
     }
      
       // right
@@ -312,7 +312,7 @@ bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
                 break;
         }
         
-        newCol = newCol++;
+        newCol++;
     }
      
       // left
@@ -343,7 +343,7 @@ bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
                 break;
         }
         
-        newCol = newCol--;
+        newCol--;
     }
       // down
     
@@ -374,7 +374,7 @@ bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
                 break;
         }
         
-        newRow = newRow--;
+        newRow--;
     }
     
       // up
@@ -406,7 +406,7 @@ bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
                 break;
         }
         
-        newRow = newRow++;
+        newRow++;
     }
     return false;
     

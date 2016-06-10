@@ -13,36 +13,36 @@ class CController {
 public:
     CController();
     /**
-     * @brief Calls for a deletion of menu screens
+     *  Calls for a deletion of menu screens
      */
     virtual ~CController();
     /**
-     * @brief Calls a current menu to display itself
+     *  Calls a current menu to display itself
      */
     void showMenus();
     /**
-     * @brief Calls for a game initalization
+     *  Calls for a game initalization
      */
     void startGame();
         /**
-     * @brief Calls for a game termination
+     *  Calls for a game termination
      */
     void endGame();
      /**
-     * @brief Returns a reference to the instance of a game
+     *  Returns a reference to the instance of a game
      */
     CGameSession & getGameSess();
         /**
-     * @brief The main game loop where everything happens
+     *  The main game loop where everything happens
      */
     void gameLoop();
      /**
-     * @brief Calls initialization of a game server (online play only)
+     *  Calls initialization of a game server (online play only)
      */
     
 private:
     /**
-     * @brief Deletes a linked list of menu screens
+     *  Deletes a linked list of menu screens
      */
     void deleteMenus();
 

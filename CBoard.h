@@ -113,6 +113,7 @@ public:
     CKing * findKing(COLOR col) const;
 
     
+        
     int INIT_ROW_UP;    ///< The starting row of the pawns on the upper side of the board
     int INIT_ROW_DOWN;  ///< The starting row of the pawns on the lower side of the board
 
@@ -141,9 +142,6 @@ private:
     void promotePawn(const MyMove & move);
     
     CSlot slotsArr[8][8];   ///< 2D array of the slots holding the figures
-    const int width;
-    const int height;
-    
     
 };
 

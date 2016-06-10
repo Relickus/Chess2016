@@ -75,6 +75,6 @@ MyMove MoveList::getMove(int idx) const{
     return moveVec.at(idx);
 }
 
-int MoveList::size() const {
+size_t MoveList::size() const {
     return moveVec.size();
 }

@@ -30,7 +30,7 @@ MyMove::MyMove(const char* buffer){
     // o napojeni figure se stara az teprve CRemotePlayer::getMove protoze tam znam podobu CBoard, tady ji neznam
 }
 
-MyMove::MyMove(int tX, int tY, int frX/*=-1*/, int frY/*=-1*/ ,CPiece * tmp/*=NULL*/) : toX(tX), toY(tY),fromX(frX),fromY(frY), figure(tmp){
+MyMove::MyMove(int tX, int tY, int frX/*=-1*/, int frY/*=-1*/ ,CPiece * tmp/*=NULL*/) : fromX(frX),fromY(frY),toX(tX), toY(tY), figure(tmp){
 }
 
 MyMove::MyMove(const MyMove& oth){

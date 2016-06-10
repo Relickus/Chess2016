@@ -5,8 +5,8 @@
 #include "CCommand.h"
 #include <climits>
 
-MyMove CLocalPlayer::getMove(const CGameSession& gS, int cliSocket){
-}
+//MyMove CLocalPlayer::getMove(const CGameSession& gS, int cliSocket){
+//}
 
 
 void CLocalPlayer::badInput() const{
@@ -17,8 +17,6 @@ void CLocalPlayer::badInput() const{
 string CLocalPlayer::readInput() const{
                    
     string tmpstr;
-    MyMove fict(-1,-1,-1,-1);
-    CCommand com;
     
     getline(cin,tmpstr);
         

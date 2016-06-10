@@ -16,6 +16,10 @@ using namespace std;
  */
 class MoveList {
 public:
+    /**
+     * 
+     * @param MAXMOVES initial length of the inner vector to reserve
+     */
     MoveList(int MAXMOVES=30);    
     virtual ~MoveList();
     
@@ -59,9 +63,9 @@ public:
     MyMove getMove(int idx) const;
     /**
      * Returns size of the list of moves
-     * @return int size of the list of moves
+     * @return size_t size of the list of moves
      */
-    int size() const;
+    size_t size() const;
     
     vector<MyMove> moveVec;
     int numMoves;

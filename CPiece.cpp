@@ -15,11 +15,11 @@
 
 using namespace std;
 
-CPiece::CPiece() : rowPos(-1),colPos(-1){
+CPiece::CPiece() : rowPos(-1),colPos(-1), color(WHITE){
 
 }
 
-CPiece::CPiece(COLOR clr, int row, int col) : color(clr), rowPos(row), colPos(col) {
+CPiece::CPiece(COLOR clr, int row, int col) : rowPos(row), colPos(col),color(clr) {
 
 }
 
@@ -160,6 +160,7 @@ bool CPiece::validLetter(char c){
              return new CKing(clr,row,col);         
      }
      
+     return NULL;
  }
 
  

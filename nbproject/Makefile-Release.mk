@@ -43,7 +43,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/CController.o \
 	${OBJECTDIR}/CDifficultyMenu.o \
 	${OBJECTDIR}/CFilePersistence.o \
-	${OBJECTDIR}/CGUI.o \
 	${OBJECTDIR}/CGameSession.o \
 	${OBJECTDIR}/CHostJoinMenu.o \
 	${OBJECTDIR}/CIntelligence.o \
@@ -131,11 +130,6 @@ ${OBJECTDIR}/CFilePersistence.o: CFilePersistence.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CFilePersistence.o CFilePersistence.cpp
-
-${OBJECTDIR}/CGUI.o: CGUI.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CGUI.o CGUI.cpp
 
 ${OBJECTDIR}/CGameSession.o: CGameSession.cpp 
 	${MKDIR} -p ${OBJECTDIR}

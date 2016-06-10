@@ -11,12 +11,10 @@
 
 CGameSession::CGameSession() 
     
-    : player1(NULL),player2(NULL), whosTurn(WHITE),
-    fileName(""), ready_flag(false),exitRequest(false),onlineGame(false) {
+    :  fileName(""),ready_flag(false),exitRequest(false),onlineGame(false),movePerformed(false),
+        whosTurn(WHITE),currentPlayer(WHITE), player1(NULL),player2(NULL), currPlayerPtr(NULL), persistence(NULL){
 
     persistence = new CFilePersistence(this);
-    currentPlayer = whosTurn = WHITE;
-    movePerformed = false;
 }
 
 CGameSession::~CGameSession() {
@@ -103,10 +101,7 @@ void CGameSession::setTurn(COLOR col) {
 }
 
 bool CGameSession::performMove(const MyMove& move){
-            
-    CPiece * tmp = gameBoard.getPiece(move.fromX,move.fromY);
-    
-    
+                
     gameBoard.moveFigure(move);
     
     return true;

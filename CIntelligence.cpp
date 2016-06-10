@@ -12,6 +12,11 @@ CIntelligence::CIntelligence(int d) : difficulty(d) {
     
 }
 
+CIntelligence::~CIntelligence() {
+
+}
+
+
 void CIntelligence::changeDifficulty(int d) {
     difficulty = d;
 }
@@ -37,7 +42,7 @@ void CIntelligence::eraseCheckMoves(MoveList & l, const CGameSession & gS){
 }   
 
 
-MyMove CIntelligence::getMove(const CGameSession & gS,int cliSocket) {
+MyMove CIntelligence::getMove(const CGameSession & gS) {
     
     allMoves.clear();
     MoveList l;
@@ -91,7 +96,7 @@ int CIntelligence::getBestIdx(MoveList& list,const CBoard & board) const {
     int bestValueTotal = 0;
     
     
-    for (int i = 0; i < list.size(); i++) {
+    for (size_t i = 0; i < list.size(); i++) {
         CPiece * pcs = list.getMove(i).figure;
         if(pcs == NULL)
             continue;
@@ -103,7 +108,7 @@ int CIntelligence::getBestIdx(MoveList& list,const CBoard & board) const {
         }
     }
     
-    for (int i = 0; i < list.size(); i++) {
+    for (size_t i = 0; i < list.size(); i++) {
         
         MyMove tmp = list.getMove(i);
         int v = board.getSlotValue(tmp.toX,tmp.toY);

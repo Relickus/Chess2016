@@ -13,6 +13,11 @@ using namespace std;
 CFilePersistence::CFilePersistence(CGameSession* gamePtr) : CPersistence(gamePtr){
 }
 
+CFilePersistence::~CFilePersistence() {
+
+}
+
+
 CFilePersistence::CFilePersistence() : CPersistence() {
 }
 

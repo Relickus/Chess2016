@@ -93,13 +93,15 @@ public:
     void netGameInit();
 
     
-    COLOR currentPlayer;    ///< Current player's color
     string fileName;        ///< name of the loaded file
+    
     bool ready_flag;        
-    COLOR whosTurn;
     bool exitRequest;       
-    bool movePerformed;     
     bool onlineGame;
+    bool movePerformed;     
+    
+    COLOR whosTurn;
+    COLOR currentPlayer;    ///< Current player's color
     
     CPlayer * player1;      ///< A pointer to player 1
     CPlayer * player2;      ///< A pointer to player 2

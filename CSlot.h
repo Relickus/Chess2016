@@ -9,7 +9,9 @@ class CPiece;
 class CSlot {
 public:
     CSlot();
-    CSlot(CPiece * &);
+    /**
+     * deletes piece held on the slot
+     */
     virtual ~CSlot();    
     /**
      * Returns a figure on the slot
