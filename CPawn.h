@@ -4,6 +4,9 @@
 #include "CPiece.h"
 #include "COLOR.h"
 
+/**
+ * Class representing pawn piece
+ */
 class CPawn : public CPiece{
 public:
     CPawn();

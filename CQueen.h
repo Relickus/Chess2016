@@ -4,6 +4,9 @@
 #include "CPiece.h"
 #include "COLOR.h"
 
+/**
+ * Class representing queen piece
+ */
 class CQueen : public CPiece {
 public:
     CQueen();

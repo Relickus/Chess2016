@@ -49,5 +49,4 @@ void CMainMenu::setNextMenu() {
 
 void CMainMenu::setStuff(CController* ctrler) {
     
-    
 }

@@ -5,7 +5,6 @@
 #include "FIGURENAME.h"
 #include "MoveList.h"
 
-#include <iostream>
 
 class CBoard;
 class CGameSession;
@@ -13,7 +12,7 @@ class MyMove;
 
 /**
  * 
- * Parent class for a piece
+ * Parent class for an abstract piece
  * 
  */
 class CPiece {
@@ -50,7 +49,7 @@ public:
      * 
      * @param os Ostream to be written into
      */
-    void printPiece(ostream & os) const;
+    void printPiece(std::ostream & os) const;
     
     /**
      *  Returns a name of a piece

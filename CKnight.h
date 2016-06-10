@@ -4,6 +4,9 @@
 #include "CPiece.h"
 #include "COLOR.h"
 
+/**
+ * Class representing knight piece
+ */
 class CKnight : public CPiece{
 public:
     CKnight();

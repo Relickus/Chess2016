@@ -67,7 +67,7 @@ public:
      */
     virtual int getSocket() const;
     
-protected:
+//protected: 
     
     COLOR playerColor;  ///< color of the player
     vector<CPiece*>figuresVec;      ///< vector of all figures belonging to this user

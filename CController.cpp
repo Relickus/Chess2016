@@ -7,6 +7,7 @@
 
 #include "CAbstractMenuScreen.h"
 #include "CGameSession.h"
+#include "CKing.h"
 
 CController::CController(){
     
@@ -74,9 +75,20 @@ void CController::startGame(){
 
 void CController::gameLoop(){
                 
-    cin.ignore();
-    game.currentPlayer = WHITE; 
-   game.currPlayerPtr = (game.player1->getPlayerColor() == WHITE ? game.player1 : game.player2); 
+    cin.ignore(); 
+           
+   if(game.whosTurn == WHITE){
+       if(game.player1->getPlayerColor() == WHITE)
+           game.currPlayerPtr = game.player1;       
+       else
+           game.currPlayerPtr = game.player2;
+   }
+   else{
+       if(game.player1->getPlayerColor() == BLACK)
+           game.currPlayerPtr = game.player1;
+       else
+           game.currPlayerPtr = game.player2;    
+   }
    
     while(true){
         
@@ -91,16 +103,12 @@ void CController::gameLoop(){
             command.command = SURRENDER;
             command.executeCommand(game);
              
-            //if(game.currPlayerPtr == game.player1)  // hral jsem ja, poslu svuj tah druhymu
-            //    game.player2-> sendMove(command.move);
-            
+            game.currPlayerPtr->playersKing->getLegalMoves(game).print();
             return;
         }
         else if(game.isTie()){
             command.command = TIE;
             command.executeCommand(game);
-          //  if(game.currPlayerPtr == game.player1)  // hral jsem ja, poslu svuj tah druhymu
-          //      game.player2-> sendMove(command.move);
             return;
         }
         else if(game.currPlayerPtr->kingIsChecked(game)){

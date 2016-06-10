@@ -26,8 +26,9 @@ CLoadGameMenu::~CLoadGameMenu() {
 void CLoadGameMenu::setNextMenu() {
     if(loadSuccessful)
         nextMenu = NULL;
-    else
+    else{
         nextMenu = prevMenu;
+    }
 }
 
 bool CLoadGameMenu::findFile(const string & file) const {
@@ -78,8 +79,7 @@ int CLoadGameMenu::readInput() {
             break;
         }
         else{
-            delete nextMenu;
-            return 0;
+            return 1;
         }
     }
 
@@ -117,7 +117,6 @@ bool CLoadGameMenu::confirmLoad() {
 void CLoadGameMenu::setStuff(CController* ctrler) {
 
     if(!loadSuccessful){
-        delete persistence;
         return;
     }
     
@@ -179,7 +178,6 @@ void CLoadGameMenu::loadFromFile(const string & filename) {
 
     if( ! persistence->load(filename)){
         
-        delete nextMenu;
         loadSuccessful = false;
         return;
     }

@@ -4,6 +4,9 @@
 #include "CPiece.h"
 #include "COLOR.h"
 
+/**
+ * Class representing bishop piece
+ */
 class CBishop : public CPiece {
 public:
     CBishop();

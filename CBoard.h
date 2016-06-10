@@ -58,9 +58,9 @@ public:
     
     /**
      * Fills the chessboard with pieces
-     * @param gameSess pointer to instance of the game
+     * @param color of player 1 (on the bottom of the chessboard)
      */
-    void initBoard(const CGameSession * gameSess);    
+    void initBoard(COLOR player1col);    
     
     /**
      * Returns a piece stored on a given slot

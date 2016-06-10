@@ -408,9 +408,99 @@ bool CKing::isChecked(const CBoard & board, bool currentPlayerDown) const {
         
         newRow++;
     }
-    return false;
     
+    // check for check from knights (8 positions)
     
+     newRow = getRow()+2;
+     newCol = getCol()-1;
+     
+     if(!board.outOfBoard(newRow,newCol)){         
+         if(board.getPiece(newRow,newCol) != NULL){
+             if( ! (board.getPiece(newRow,newCol)->isFriendPiece(this))) 
+                 if(board.getPiece(newRow,newCol)->getName() == KNIGHT)
+                    return true;             
+        }
+     }
+     
+     newRow = getRow()+2;
+     newCol = getCol()+1;
+     
+     if(!board.outOfBoard(newRow,newCol)){         
+         if(board.getPiece(newRow,newCol) != NULL){
+             if( ! (board.getPiece(newRow,newCol)->isFriendPiece(this)))   
+                 if(board.getPiece(newRow,newCol)->getName() == KNIGHT)
+                    return true;                   
+        }
+     }
+     
+     newRow = getRow()-2;
+     newCol = getCol()-1;
+     
+     if(!board.outOfBoard(newRow,newCol)){         
+         if(board.getPiece(newRow,newCol) != NULL){
+             if( ! (board.getPiece(newRow,newCol)->isFriendPiece(this)))   
+                 if(board.getPiece(newRow,newCol)->getName() == KNIGHT)
+                    return true;                  
+        }
+     }
+     
+     newRow = getRow()-2;
+     newCol = getCol()+1;
+     
+     if(!board.outOfBoard(newRow,newCol)){         
+         if(board.getPiece(newRow,newCol) != NULL){
+             if( ! (board.getPiece(newRow,newCol)->isFriendPiece(this)))   
+                 if(board.getPiece(newRow,newCol)->getName() == KNIGHT)
+                    return true;                 
+        }
+     }
+    
+     newRow = getRow()+1;
+     newCol = getCol()-2;
+     
+     if(!board.outOfBoard(newRow,newCol)){         
+         if(board.getPiece(newRow,newCol) != NULL){
+             if( ! (board.getPiece(newRow,newCol)->isFriendPiece(this)))   
+                 if(board.getPiece(newRow,newCol)->getName() == KNIGHT)
+                    return true;                  
+        }
+     }
+    
+     newRow = getRow()+1;
+     newCol = getCol()+2;
+     
+     if(!board.outOfBoard(newRow,newCol)){         
+         if(board.getPiece(newRow,newCol) != NULL){
+             if( ! (board.getPiece(newRow,newCol)->isFriendPiece(this)))   
+                 if(board.getPiece(newRow,newCol)->getName() == KNIGHT)
+                    return true;                   
+        }
+     }
+     
+     newRow = getRow()-1;
+     newCol = getCol()+2;
+     
+     if(!board.outOfBoard(newRow,newCol)){         
+         if(board.getPiece(newRow,newCol) != NULL){
+             if( ! (board.getPiece(newRow,newCol)->isFriendPiece(this)))   
+                 if(board.getPiece(newRow,newCol)->getName() == KNIGHT)
+                    return true;                 
+        }
+     }
+     newRow = getRow()-1;
+     newCol = getCol()-2;
+     
+     if(!board.outOfBoard(newRow,newCol)){         
+         if(board.getPiece(newRow,newCol) != NULL){
+             if( ! (board.getPiece(newRow,newCol)->isFriendPiece(this)))   
+                 if(board.getPiece(newRow,newCol)->getName() == KNIGHT)
+                    return true;                 
+        }
+     }
+     
+     
+     
+     return false;
 }
 
 CPiece* CKing::copyPiece(const CPiece* pcs) const{

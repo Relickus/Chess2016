@@ -4,6 +4,9 @@
 #include "COLOR.h"
 #include "CPiece.h"
 
+/**
+ * Class representing tower piece
+ */
 class CTower : public CPiece{
 public:
     CTower();

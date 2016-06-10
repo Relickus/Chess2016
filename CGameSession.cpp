@@ -50,11 +50,11 @@ void CGameSession::switchPlayers(){
 void CGameSession::start() {
 
     if (fileName.empty())
-        gameBoard.initBoard(this);
-    
+        gameBoard.initBoard(player1->getPlayerColor());
+       
     //else - game already loaded from the file
         
-    assignKings();    
+    assignKings(); 
     gameBoard.printBoard();
     
     exitRequest = false;
@@ -88,12 +88,13 @@ void CGameSession::setPlayerColors(COLOR col) {
 
     if(col == WHITE){
         player2->setPlayerColor(BLACK);
-        currPlayerPtr = player1;
+        currPlayerPtr = player1;        
     }
     else{
         player2->setPlayerColor(WHITE); 
         currPlayerPtr = player2;
     }
+    currentPlayer = WHITE;
 }
 
 void CGameSession::setTurn(COLOR col) {

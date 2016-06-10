@@ -6,6 +6,9 @@
 
 class CGameSession;
 
+/**
+ * Class representing king piece
+ */
 class CKing : public CPiece{
 public:
     CKing();

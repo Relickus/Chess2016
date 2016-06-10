@@ -93,8 +93,10 @@ void CBoard::swapFigures(int r1, int c1, int r2, int c2){
     slotsArr[r1][c1].setHeldPiece( slotsArr[r2][c2].getHeldPiece() );
     slotsArr[r2][c2].setHeldPiece(tmp);    
     
-    slotsArr[r1][c1].getHeldPiece()->setValue(tmpval2);
-    slotsArr[r2][c2].getHeldPiece()->setValue(tmpval1);
+    if( slotsArr[r1][c1].getHeldPiece() != NULL)
+        slotsArr[r1][c1].getHeldPiece()->setValue(tmpval2);
+    if( slotsArr[r2][c2].getHeldPiece() != NULL)
+        slotsArr[r2][c2].getHeldPiece()->setValue(tmpval1);
 }
 
 void CBoard::rotateBoard(){
@@ -184,13 +186,13 @@ void CBoard::translateMove(MyMove & move){
     move.toY = 7-move.toY;
 }
 
-void CBoard::initBoard(const CGameSession * gameSess) {
+void CBoard::initBoard(COLOR player1col) {
     
     
     // CYKLI TO PRI SACHU - UDELAT INIT TAK ABYCH SE RYCHLE DOSTAL DO SACHU - osetrit cykleni
     // fixnout aby kral mohl vzit figurku kdyz je v sachu ale nesmi pri tom zase do sachu
     
-   createPieces(gameSess->player1->getPlayerColor());    
+   createPieces(player1col);    
 }
 
 void CBoard::printPossibleMoves(const MoveList & list) const{
