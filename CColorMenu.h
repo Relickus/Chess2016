@@ -3,10 +3,13 @@
 
 #include "CAbstractMenuScreen.h"
 
+/**
+ * Subclass of CAbstractMenuScreen for choosing a player's color
+ */
 class CColorMenu : public CAbstractMenuScreen{
 public:
      /**
-     * @brief Initializes a menu
+     * @brief Initializes the menu
      * 
      * @param Pointer to the previous menu
      */

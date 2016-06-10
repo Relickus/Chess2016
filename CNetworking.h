@@ -9,11 +9,13 @@ class CRemotePlayer;
 class CNetworking {
 public:
     
+    CNetworking();
     MyMove getMove(const int sock) const;
     void sendCommand(const CCommand & command,int FromSock) const;
     int getSocket() const;
     bool waitForStart(const int socket) const;
     COLOR recvPlayerColor(const int socket) const;    
+    void inputServerInfo();
 
     friend int openCliSocket ( const char * srvName, int srvPort );    
     
@@ -22,6 +24,8 @@ public:
     
 private:
     
+    string host_ip;
+    int host_port;
 };
 
 

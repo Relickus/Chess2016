@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-#define MAXITEMS 5
+#define MAXITEMS 5      ///< maximum number of items in single menu
 
 class CController;
 
@@ -51,8 +51,8 @@ public:
     virtual void setStuff(CController * ctrler) = 0;
 
     
-    CAbstractMenuScreen * nextMenu;
-    CAbstractMenuScreen * prevMenu;
+    CAbstractMenuScreen * nextMenu;     ///< pointer to the next menu(NULL if it is the last menu before entering the game)
+    CAbstractMenuScreen * prevMenu;     ///< pointer to the previous menu
     
 protected:
      
@@ -81,10 +81,10 @@ protected:
      */
     void showTitle() const;
     
-    string menuItems[MAXITEMS];
-    int numItems;
-    int chosenOption;
-    string title;
+    string menuItems[MAXITEMS];     ///< array of items in the menu
+    int numItems;                   ///< number of items in the menu
+    int chosenOption;               ///<index of the option chosen by user
+    string title;                   ///< title of current menu
 };
 
 #endif	/* CABSTRACTCMENUSCREEN_H */

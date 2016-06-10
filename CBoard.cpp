@@ -50,12 +50,6 @@ CBoard::CBoard(const CBoard& oth) : width(WIDTH), height(HEIGHT)  {
 }
 
 
-CBoard::~CBoard(){
-    
-    // není potřeba - sachovnice je staticky alokovane 2D pole CSlotu a pri jeho destrukci se volaji destruktory jednotlivych policek
-    // tedy volaj se destruktor CSlot na kazdy policko
-}
-
 void CBoard::moveFigure(const MyMove & move){
     
     if(getPiece(move.fromX,move.fromY)->getName() == PAWN){        

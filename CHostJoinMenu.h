@@ -4,10 +4,13 @@
 #include "CAbstractMenuScreen.h"
 #include "CNetworking.h"
 
+/**
+ * Subclass of CAbstractMenuScreen for hosting a game server and joining it
+ */
 class CHostJoinMenu : public CAbstractMenuScreen{
 public:
  /**
-     * @brief Initializes a menu
+     *  Initializes the menu
      * 
      * @param Pointer to the previous menu
      */
@@ -15,13 +18,13 @@ public:
     virtual ~CHostJoinMenu();
    
       /**
-     * @brief Sets whatever there is to be set from this menu that is needed for game initialization
+     *  Sets whatever there is to be set from this menu that is needed for game initialization or starts a game server
      * 
      */
     virtual void setStuff(CController* ctrler);
      
     /**
-     * @brief Sets pointer to next menu
+     *  Sets pointer to next menu
      * 
      */
     virtual void setNextMenu();

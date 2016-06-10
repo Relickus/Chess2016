@@ -5,10 +5,13 @@
 #include "CBoard.h"
 #include "CFilePersistence.h"
 
+/**
+ * Subclass of CAbstractMenuScreen for loading a saved game
+ */
 class CLoadGameMenu : public CAbstractMenuScreen {
 public:
      /**
-     * @brief Initializes a menu
+     * @brief Initializes the menu
      * 
      * @param Pointer to the previous menu
      */

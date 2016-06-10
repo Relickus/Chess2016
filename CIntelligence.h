@@ -53,7 +53,7 @@ private:
     void eraseCheckMoves(MoveList & l, const CGameSession & gS);
     
     
-    int difficulty;
+    int difficulty; ///< The difficulty level
 };
 
 

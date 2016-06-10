@@ -143,13 +143,3 @@ CGameSession& CController::getGameSess() {
     return game;
 }
 
-int CController::startServer() {
-    
-    if( game.server.startServer() == -1)    // server bezi
-        return -1;    
-    
-    //game.networking.createSockets();
-    
-    return 0;
-}
-

@@ -87,11 +87,11 @@ public:
      */
     const MyMove & getMoveRef() const;
     
-    COMMAND command;    ///< type of command - see @ref ENUM_COMMAND
+    COMMAND command;    ///< A type of command - see @ref ENUM_COMMAND
     
 private:
-    int x;
-    int y;
+    int x;  ///< An aid variable storing a row
+    int y;  ///< An aid variable storing a column
     MyMove move; ///< Move to be executed if MAKEMOVE is selected
     
     friend CController;

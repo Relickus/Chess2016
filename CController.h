@@ -7,48 +7,47 @@ class CAbstractMenuScreen;
 
 /**
  * 
- * Třída obstarávající propojení ostatních tříd
+ * Class performing high-level functionality (should resemble a controller as in the MVC design pattern)
  */
 class CController {
 public:
     CController();
     /**
-     * @brief Smaže spojový seznam menu obrazovek
+     * @brief Calls for a deletion of menu screens
      */
     virtual ~CController();
     /**
-     * @brief Zavolá zobrazení aktuálního menu
+     * @brief Calls a current menu to display itself
      */
     void showMenus();
     /**
-     * @brief Zavolá inicializaci hry
+     * @brief Calls for a game initalization
      */
     void startGame();
         /**
-     * @brief Zavolá ukončení hry a uvolnění dyn. struktur
+     * @brief Calls for a game termination
      */
     void endGame();
      /**
-     * @brief Vrátí referenci na instanci hry
+     * @brief Returns a reference to the instance of a game
      */
     CGameSession & getGameSess();
         /**
-     * @brief Hlavní herní smyčka
+     * @brief The main game loop where everything happens
      */
     void gameLoop();
      /**
-     * @brief Zavolá inicializaci serveru
+     * @brief Calls initialization of a game server (online play only)
      */
-    int startServer();
     
 private:
     /**
-     * @brief Vymaže menu obrazovky
+     * @brief Deletes a linked list of menu screens
      */
     void deleteMenus();
 
-    CAbstractMenuScreen * menu;
-    CGameSession game;
+    CAbstractMenuScreen * menu; ///< The head of the linked list of menu screens
+    CGameSession game;  ///< the instance of a game containing all important data and functionality
     //CGUI gui;
 };
 

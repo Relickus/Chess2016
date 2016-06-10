@@ -5,10 +5,13 @@
 #include "CAbstractMenuScreen.h"
 class CPlayer;
 
+/**
+ * Subclass of CAbstractMenuScreen for choosing a type of opponent (Local human,Remote human, AI) in Multiplayer game
+ */
 class COpponentMenu : public CAbstractMenuScreen{
 public:
      /**
-     * @brief Initializes a menu
+     * @brief Initializes the menu
      * 
      * @param Pointer to the previous menu
      */

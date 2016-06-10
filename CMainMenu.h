@@ -3,10 +3,13 @@
 
 #include "CAbstractMenuScreen.h"
 
+/**
+ * Main menu - user chooses New game, Load game or Exit
+ */
 class CMainMenu : public CAbstractMenuScreen{
 public:
      /**
-     * @brief Initializes a menu
+     * @brief Initializes the menu
      * 
      * @param Pointer to the previous menu
      */

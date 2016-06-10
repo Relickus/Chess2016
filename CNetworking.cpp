@@ -7,11 +7,15 @@
 #include <netdb.h>
 #include <unistd.h>
 #include <iostream>
+#include <climits>
 using namespace std;
 
 #include "MyMove.h"
 #include "CCommand.h"
 #include "CNetworking.h"
+
+CNetworking::CNetworking() : host_ip(""),host_port(0) {
+}
 
 
 int openCliSocket ( const char * srvName, int srvPort )
@@ -98,8 +102,8 @@ void CNetworking::sendCommand(const CCommand & command, int FromSock ) const {
 
 
 int CNetworking::getSocket() const{
-
-    return openCliSocket ( "localhost", 2666 );
+    
+    return openCliSocket ( host_ip.c_str(), host_port );
 }
 
 
@@ -144,4 +148,40 @@ COLOR CNetworking::recvPlayerColor(const int socket) const{
         }
     }
     
+}
+
+void CNetworking::inputServerInfo() {
+ 
+    string host;
+    while(host != "localhost"){
+        cout <<"Zadejte IP serveru:"<<endl;
+        cin >> host;
+        if(!cin.good()){
+            cin.clear();
+            cin.ignore();
+            cout<<"Špatný vstup."<<endl;
+        }
+        if(host != "localhost")
+            cout << "Momentálně lze zadat pouze localhost." << endl;
+    }
+    
+    host_ip = host;
+    
+    int port = 0;
+    cout<<"Zadejte port pro hru na serveru:"<<endl;
+            while( !(port >= 2000 && port <= 3000) ){
+            cin>>port;
+                if(!cin.good()){
+                    cin.clear();
+                    cin.ignore(INT_MAX,'\n');
+                    cout<<"Vstup je číslo."<<endl;
+                    port = 0;
+                }
+                if(!(port >= 2000 && port <= 3000)){
+                    cout<<"Zadejte port v rozmezí 2000-3000."<<endl;
+                    port = 0;
+                }
+            }
+    
+    host_port = port;
 }

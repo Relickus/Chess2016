@@ -11,7 +11,7 @@
 
 CGameSession::CGameSession() 
     
-    : ipHost(""), player1(NULL),player2(NULL), whosTurn(WHITE),
+    : player1(NULL),player2(NULL), whosTurn(WHITE),
     fileName(""), ready_flag(false),exitRequest(false),onlineGame(false) {
 
     persistence = new CFilePersistence(this);
@@ -54,7 +54,7 @@ void CGameSession::start() {
     if (fileName.empty())
         gameBoard.initBoard(this);
     
-        //loadgame
+    //else - game already loaded from the file
         
     assignKings();    
     gameBoard.printBoard();
@@ -146,9 +146,9 @@ void CGameSession::assignKings() {
     
 }
 
-void CGameSession::updateKings(){
+/*void CGameSession::updateKings(){
     assignKings();
-}
+}*/
 
 bool CGameSession::isTie() const {
     player1->findAllFigures(gameBoard);
@@ -164,19 +164,27 @@ bool CGameSession::isTie() const {
 
 void CGameSession::netGameInit() {
     
-            onlineGame = true;
-            player1 = new CLocalPlayer();
-            
-            int sock = networking.getSocket();
-            player2 = new CRemotePlayer(sock);
-                       
-            COLOR col = networking.recvPlayerColor(sock);
-            cout << "Vase barva je "<< (col==WHITE?"BILA":"CERNA") << endl;
-            
-            setPlayerColors(col);
-            //networking.clientReady(sock);           
-            networking.waitForStart(sock);
-            
-              //wait for GO
-            setGameReady();
+    int sock = -1;
+    
+    while(sock == -1){        
+        networking.inputServerInfo();
+        sock = networking.getSocket();
+        if(sock == -1)
+            cout << "Klientsky socket se nepodarilo otevrit." << endl;
+    }
+    
+    onlineGame = true;
+    player1 = new CLocalPlayer();
+
+    player2 = new CRemotePlayer(sock);
+
+    COLOR col = networking.recvPlayerColor(sock);
+    cout << "Vase barva je "<< (col==WHITE?"BILA":"CERNA") << endl;
+
+    setPlayerColors(col);
+    //networking.clientReady(sock);           
+    networking.waitForStart(sock);
+
+      //wait for GO
+    setGameReady();
 }

@@ -54,9 +54,8 @@ CHostJoinMenu::~CHostJoinMenu(){
 
 void CHostJoinMenu::setStuff(CController* ctrler) {
  
-    int sock = -1;
     int ret;
-    COLOR col;
+    CServer server;
     
     switch(chosenOption){
         
@@ -64,13 +63,13 @@ void CHostJoinMenu::setStuff(CController* ctrler) {
         
         case(OPT_HOST) :  
             
-            ret = ctrler->startServer();
+            ret = server.startServer();
                if(ret == -1){
                    cout<<"SERVER SE NEPODARILO SPUSTIT!"<<endl;
                    ctrler->endGame();
                    return;
                }
-               // pote co skonci server na signal
+               // pote co skonci server
         ctrler->endGame();
         return;
      //---------------------------------------------------------  
