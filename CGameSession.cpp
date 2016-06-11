@@ -4,8 +4,8 @@
 #include "CLocalPlayer.h"
 #include "CRemotePlayer.h"
 #include "CPiece.h"
-#include "MyMove.h"
-#include "MoveList.h"
+#include "CMyMove.h"
+#include "CMoveList.h"
 #include <climits>
 #include <fstream>
 
@@ -101,7 +101,7 @@ void CGameSession::setTurn(COLOR col) {
     currentPlayer = whosTurn = col;
 }
 
-bool CGameSession::performMove(const MyMove& move){
+bool CGameSession::performMove(const CMyMove& move){
                 
     gameBoard.moveFigure(move);
     
@@ -113,10 +113,10 @@ bool CGameSession::performMove(const MyMove& move){
 bool CGameSession::isCheckMate() const {
     
     currPlayerPtr->findAllFigures(gameBoard);
-    MoveList l;
+    CMoveList l;
     
     for(size_t i = 0; i < currPlayerPtr->figuresVec.size(); ++i){
-        MoveList tmp = currPlayerPtr->figuresVec.at(i)->getLegalMoves(*this);
+        CMoveList tmp = currPlayerPtr->figuresVec.at(i)->getLegalMoves(*this);
         l.concat(tmp);
     }
     
@@ -166,7 +166,7 @@ void CGameSession::netGameInit() {
         networking.inputServerInfo();
         sock = networking.getSocket();
         if(sock == -1)
-            cout << "Klientsky socket se nepodarilo otevrit." << endl;
+            cout << "Klientský socket se nepodařilo otevřít." << endl;
     }
     
     onlineGame = true;
@@ -175,10 +175,9 @@ void CGameSession::netGameInit() {
     player2 = new CRemotePlayer(sock);
 
     COLOR col = networking.recvPlayerColor(sock);
-    cout << "Vase barva je "<< (col==WHITE?"BILA":"CERNA") << endl;
+    cout << "Vaše barva je "<< (col==WHITE?"BÍLÁ":"ČERNÁ") << endl;
 
     setPlayerColors(col);
-    //networking.clientReady(sock);           
     networking.waitForStart(sock);
 
       //wait for GO

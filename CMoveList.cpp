@@ -1,41 +1,41 @@
 
 //#include "CPiece.h"
 class CPiece;
-#include "MoveList.h"
+#include "CMoveList.h"
 #include "CPiece.h"
 
-MoveList::MoveList(int MAXMOVES) : numMoves(0){
+CMoveList::CMoveList(int MAXMOVES) : numMoves(0){
     
     moveVec.reserve(MAXMOVES);
     moveVec.clear();
 }
 
-void MoveList::add(MyMove move,CPiece * tmp){
+void CMoveList::add(CMyMove move,CPiece * tmp){
     move.figure = tmp;
     moveVec.push_back(move);
     numMoves++;
 }
 
-void MoveList::add(int x, int y,int fx,int fy,CPiece * tmp){
+void CMoveList::add(int x, int y,int fx,int fy,CPiece * tmp){
     
-   moveVec.push_back( MyMove(x,y,fx,fy,tmp) ); 
+   moveVec.push_back( CMyMove(x,y,fx,fy,tmp) ); 
     numMoves++;
 }
 
-bool MoveList::isEmpty() const{
+bool CMoveList::isEmpty() const{
     return numMoves==0;
 }
 
-void MoveList::clear(){
+void CMoveList::clear(){
     numMoves=0;
     moveVec.clear();
 }
 
-void MoveList::reserve(int x){
+void CMoveList::reserve(int x){
     moveVec.reserve(x);
 }
 
-bool MoveList::contains(const MyMove& move) const {
+bool CMoveList::contains(const CMyMove& move) const {
 
     for(size_t i = 0; i < moveVec.size(); ++i){        
         if(moveVec.at(i).toX == move.toX && moveVec.at(i).toY == move.toY )
@@ -45,12 +45,12 @@ bool MoveList::contains(const MyMove& move) const {
     return false;    
 }
 
-MoveList::~MoveList() {
+CMoveList::~CMoveList() {
 
 }
 
 
-void MoveList::print() const{
+void CMoveList::print() const{
     
     for(auto & i : moveVec){
         cout << "[" <<i.fromX<<","<<i.fromY<<"] -> [" << i.toX << ","<<i.toY<<"], ";
@@ -62,7 +62,7 @@ void MoveList::print() const{
     }
 }
 
-void MoveList::concat(const MoveList& list) {
+void CMoveList::concat(const CMoveList& list) {
 
     for(size_t i = 0; i < list.moveVec.size(); ++i){
         add(list.getMove(i),list.getMove(i).figure);
@@ -70,11 +70,11 @@ void MoveList::concat(const MoveList& list) {
     numMoves = moveVec.size();
 }
 
-MyMove MoveList::getMove(int idx) const{
+CMyMove CMoveList::getMove(int idx) const{
     
     return moveVec.at(idx);
 }
 
-size_t MoveList::size() const {
+size_t CMoveList::size() const {
     return moveVec.size();
 }

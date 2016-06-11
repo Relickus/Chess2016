@@ -2,7 +2,7 @@
 #define	COPPONENT_H
 
 #include "COLOR.h"
-#include "MoveList.h"
+#include "CMoveList.h"
 #include <vector>
 
 using namespace std;
@@ -13,6 +13,9 @@ class CPiece;
 class CKing;
 class CBoard;
 
+/**
+ * Class representing an abstract player
+ */
 class CPlayer {
 public:
     CPlayer();
@@ -23,7 +26,7 @@ public:
      * @param cliSocket Socket to read move from
      * @return Move received from player
      */
-    //virtual MyMove getMove(const CGameSession & gS,int cliSocket=-1) = 0;
+    //virtual CMyMove getMove(const CGameSession & gS,int cliSocket=-1) = 0;
     /**
      * Returns this player's color
      * @return Color of the player
@@ -71,7 +74,7 @@ public:
     
     COLOR playerColor;  ///< color of the player
     vector<CPiece*>figuresVec;      ///< vector of all figures belonging to this user
-    MoveList allMoves;  ///< All possible moves to be done by the player
+    CMoveList allMoves;  ///< All possible moves to be done by the player
     CKing * playersKing;    ///< pointer to player's king
     
     friend CGameSession;

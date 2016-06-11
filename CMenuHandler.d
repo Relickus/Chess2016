@@ -1,1 +1,0 @@
-CMenuHandler.o: CMenuHandler.cpp

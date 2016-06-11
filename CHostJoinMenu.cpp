@@ -65,7 +65,7 @@ void CHostJoinMenu::setStuff(CController* ctrler) {
             
             ret = server.startServer();
                if(ret == -1){
-                   cout<<"SERVER SE NEPODARILO SPUSTIT!"<<endl;
+                   cout<<"Server se nepodařilo spustit."<<endl;
                    ctrler->endGame();
                    return;
                }
@@ -81,7 +81,7 @@ void CHostJoinMenu::setStuff(CController* ctrler) {
             
          break;  
        default:
-           cout<<"nevalidni moznost v hostjoinmenu"<<endl;
+           cout<<"Nevalidní možnost menu."<<endl;
            break;
              
     }

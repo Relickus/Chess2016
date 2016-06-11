@@ -2,7 +2,7 @@
 #include "CCommand.h"
 #include "CPawn.h"
 
-#include "MyMove.h"
+#include "CMyMove.h"
 #include "CPersistence.h"
 #include "CGameSession.h"
 #include "AllExceptions.h"
@@ -15,7 +15,7 @@ CCommand::CCommand(COMMAND com) {
     command = com;
 }
 
-CCommand::CCommand(const MyMove& mv) : command(MAKEMOVE) {
+CCommand::CCommand(const CMyMove& mv) : command(MAKEMOVE) {
     move = mv;
 }
 
@@ -80,7 +80,7 @@ void CCommand::makeCommand(const string & str) {
     else if(str.size() == 5){
         if(CGameSession::validateMove(str)){
             command = MAKEMOVE;
-            MyMove m(str);
+            CMyMove m(str);
             move = m;
         }
         else{
@@ -102,7 +102,7 @@ void CCommand::exitQuery(CGameSession & gS) const{
             gS.networking.sendCommand(com,gS.player2->getSocket());
         }
         else{
-            cout << "Prijat EXIT pozadavek."<<endl<<"Konec hry." << endl;
+            cout << "Přijat EXIT požadavek."<<endl<<"Konec hry." << endl;
         }
     }
     gS.exitRequest = true;
@@ -127,7 +127,7 @@ void CCommand::movesQuery(CGameSession & gS) const{
         return;
     }
 
-    MoveList l = tmp->getLegalMoves(gS);
+    CMoveList l = tmp->getLegalMoves(gS);
 
     gS.getBoard().printPossibleMoves(l);
         
@@ -135,7 +135,7 @@ void CCommand::movesQuery(CGameSession & gS) const{
 
 void CCommand::makeMoveQuery(CGameSession & gS) const{          
 
-    MoveList l;
+    CMoveList l;
     CPiece * tmp = gS.getBoard().getPiece(move.fromX,move.fromY);
     
     if(tmp == NULL){
@@ -191,7 +191,7 @@ void CCommand::tieQuery(CGameSession& gS) const {
     exitQuery(gS);
 }
 
-const MyMove& CCommand::getMoveRef() const{
+const CMyMove& CCommand::getMoveRef() const{
 
     return move;
 }

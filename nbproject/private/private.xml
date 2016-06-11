@@ -8,10 +8,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/vojta/NetBeansProjects/Chess/CQueen.cpp</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CDifficultyMenu.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CColorMenu.h</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CAbstractMenuScreen.cpp</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CBoard.cpp</file>
+            <file>file:/home/vojta/NetBeansProjects/Chess/CMyMove.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/main.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/COpponentMenu.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CLocalPlayer.h</file>
@@ -21,10 +19,8 @@
             <file>file:/home/vojta/NetBeansProjects/Chess/CTower.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CSlot.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CTower.h</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CGameSession.h</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/MoveList.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CPlayer.cpp</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CDifficultyMenu.h</file>
+            <file>file:/home/vojta/NetBeansProjects/Chess/CMoveList.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CRemotePlayer.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CNetworking.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CKing.h</file>
@@ -32,22 +28,25 @@
             <file>file:/home/vojta/NetBeansProjects/Chess/CBishop.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CIntelligence.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CFilePersistence.h</file>
+            <file>file:/home/vojta/NetBeansProjects/Chess/CMoveList.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CServer.h</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CMenuHandler.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CLoadGameMenu.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/COpponentMenu.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CColorMenu.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CPawn.cpp</file>
+            <file>file:/home/vojta/NetBeansProjects/Chess/CMyMove.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CHostJoinMenu.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CPersistence.cpp</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CLoadGameMenu.h</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CFilePersistence.cpp</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CServer.cpp</file>
+            <file>file:/home/vojta/NetBeansProjects/Chess/CLocalPlayer.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/DIFFICULTY.h</file>
+            <file>file:/home/vojta/NetBeansProjects/Chess/CServer.cpp</file>
+            <file>file:/home/vojta/NetBeansProjects/Chess/CFilePersistence.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CPlayer.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CBishop.h</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/MyMove.h</file>
+            <file>file:/home/vojta/NetBeansProjects/Chess/CNetworking.cpp</file>
+            <file>file:/home/vojta/NetBeansProjects/Chess/CRemotePlayer.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CPersistence.h</file>
+            <file>file:/home/vojta/NetBeansProjects/Chess/CKnight.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CIntelligence.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CQueen.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/TGameLoad.h</file>
@@ -55,12 +54,10 @@
             <file>file:/home/vojta/NetBeansProjects/Chess/CPiece.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CPawn.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/TGameLoad.cpp</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CSlot.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/AllExceptions.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/COLOR.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CMainMenu.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CController.h</file>
-            <file>file:/home/vojta/NetBeansProjects/Chess/CBoard.h</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CHostJoinMenu.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CController.cpp</file>
             <file>file:/home/vojta/NetBeansProjects/Chess/CAbstractMenuScreen.h</file>

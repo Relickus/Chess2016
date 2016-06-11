@@ -1,9 +1,9 @@
-#ifndef MOVELIST_H
-#define	MOVELIST_H
+#ifndef CMoveList_H
+#define	CMoveList_H
 
 #include <vector>
 #include <iostream>
-#include "MyMove.h"
+#include "CMyMove.h"
 
 
 class CPiece;
@@ -14,14 +14,14 @@ using namespace std;
 /**
  * Kontejner na tahy  
  */
-class MoveList {
+class CMoveList {
 public:
     /**
      * 
      * @param MAXMOVES initial length of the inner vector to reserve
      */
-    MoveList(int MAXMOVES=30);    
-    virtual ~MoveList();
+    CMoveList(int MAXMOVES=30);    
+    virtual ~CMoveList();
     
     /**
      * Adds a move given explicitly by parameters
@@ -33,9 +33,9 @@ public:
      */
     void add(int x,int y,int fx,int fy,CPiece * tmp);   
     /**
-     *Adds a move given by MyMove object
+     *Adds a move given by CMyMove object
      */
-    void add(MyMove move,CPiece * tmp = NULL);  
+    void add(CMyMove move,CPiece * tmp = NULL);  
     /**
      * Checks whether the list of moves is empty
      */
@@ -49,25 +49,25 @@ public:
      * Checks whether the list of moves contains a move given by parameter
      * @param move Given move
      */
-    bool contains(const MyMove& move) const;
+    bool contains(const CMyMove& move) const;
     /**
      * Concatenates the list of moves with another list
      * @param list Given reference to the list of moves
      */
-    void concat(const MoveList & list);
+    void concat(const CMoveList & list);
     /**
      * Returns a move to a given position in the list of moves
      * @param idx index of the move
      * @return Move to a given position in the list of moves
      */
-    MyMove getMove(int idx) const;
+    CMyMove getMove(int idx) const;
     /**
      * Returns size of the list of moves
      * @return size_t size of the list of moves
      */
     size_t size() const;
     
-    vector<MyMove> moveVec;
+    vector<CMyMove> moveVec;
     int numMoves;
     
     /**
@@ -78,5 +78,5 @@ public:
 
 
 
-#endif	/* MOVELIST_H */
+#endif	/* CMoveList_H */
 

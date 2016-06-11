@@ -4,6 +4,9 @@
 #include "CNetworking.h"
 #include "CPlayer.h"
 
+/**
+ * A class representing a remote player connected over Internet
+ */
 class CRemotePlayer : public CPlayer{
 public:
     /**
@@ -25,7 +28,7 @@ public:
      * @param cliSocket Socket to read move from
      * @return Move received from player
      */
-    MyMove getMove(const CGameSession& gS, int cliSocket=-1);
+    CMyMove getMove(const CGameSession& gS, int cliSocket=-1);
     
     /**
      *returns this player's socket

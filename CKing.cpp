@@ -26,7 +26,7 @@ CKing::CKing(COLOR clr , int row, int col) : CPiece(clr,row,col) {
 
 }
 
-MoveList & CKing::getLegalMoves(const CGameSession & gS) {
+CMoveList & CKing::getLegalMoves(const CGameSession & gS) {
 
     moveList.clear();
 

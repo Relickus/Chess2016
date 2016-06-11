@@ -27,7 +27,7 @@ bool CFilePersistence::load(const string & filename) {
 ifstream ifs(filename);
 
     if (!ifs.is_open()) {
-        cout << "stream failed to open or file not found" << endl;
+        cout << "Stream se nepovedlo otevřít." << endl;
 
         return false;
     }
@@ -45,13 +45,12 @@ ifstream ifs(filename);
             try {
                 tmp = CPiece::getPieceByLetter(rowstr.at(j), i, j);
             } catch (InvalidFileCharacterException & ex) {
-                cout << "Nonvalid character read. Cancelling loadfile." << endl;
+                cout << "Nevalidní znak v souboru. Končím načítání." << endl;
 
                 ifs.close();
                 return false;
             }
-            if(tLoad.board.getPiece(i,j) != NULL)
-                cout << " NECO TAM BYLO TED SEM TO PREPSAL"<<endl;            
+            
             tLoad.board.setField(i, j, tmp);
         }
     }
@@ -60,7 +59,7 @@ ifstream ifs(filename);
     string meta;
     
     if (!(ifs >> meta)) {
-        cout << "nepovedlo se precist barvu hrace nebo turn" << endl;
+        cout << "Nepovedlo se přečíst barvu hráče nebo tah." << endl;
         ifs.close();
         return false;
     } 
@@ -74,7 +73,7 @@ ifstream ifs(filename);
             tLoad.player1col = BLACK;
         }
         else{
-             cout << "Chybny format metadat." << endl;
+             cout << "Chybný formát metadat souboru." << endl;
              ifs.close();
             return false;
         }
@@ -91,13 +90,13 @@ ifstream ifs(filename);
             return true;
         }
         else{
-             cout << "Chybny format metadat." << endl;
+             cout << "Chybný formát metadat souboru." << endl;
              ifs.close();
             return false;
         }
     }
     
-    cout << "Chybny format metadat." << endl;        
+    cout << "Chybný formát metadat souboru." << endl;        
     ifs.close();
     return false;
 }
@@ -106,7 +105,7 @@ void CFilePersistence::save() const {
      
     string savefile;
     
-    cout << "Zadejte nazev souboru:"<<endl;
+    cout << "Zadejte název souboru:"<<endl;
     
     ofstream ofs;
     while(true){
@@ -120,7 +119,7 @@ void CFilePersistence::save() const {
             ofs.clear();
             cin.clear();
             savefile.clear();
-            cout << "Nepovedlo se vytvorit soubor, zadejte jiny nazev:" << endl;
+            cout << "Nepovedlo se vytvořit soubor, zadejte jiný název:" << endl;
         }
         else
             break;
@@ -153,6 +152,6 @@ void CFilePersistence::save() const {
     gamePtr->player1->printPlayerColor(ofs);    // ulozi tam jakou barvu ma hrac 1
     gamePtr->currPlayerPtr->printPlayerColor(ofs);  // ulozi tam znak kdo je na rade
     
-    cout << "Hra uspesne ulozena."<<endl;
+    cout << "Hra úspěšně uložena."<<endl;
     ofs.close();
 }

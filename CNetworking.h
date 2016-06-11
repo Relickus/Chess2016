@@ -1,11 +1,14 @@
 #ifndef CNETWORKING_H
 #define	CNETWORKING_H
 #include "COLOR.h"
-#include "MyMove.h"
+#include "CMyMove.h"
 
 class CCommand;
 class CRemotePlayer;
 
+/**
+ * Performs client operations for an online game
+ */
 class CNetworking {
 public:
     
@@ -15,7 +18,7 @@ public:
      * @param sock Socket to read from
      * @return Move read from socket
      */
-    MyMove getMove(const int sock) const;
+    CMyMove getMove(const int sock) const;
     /**
      * Sends made command to the other player
      * @param command command to be sent - SURRENDER,EXIT or MAKEMOVE only
@@ -55,8 +58,8 @@ public:
     
 private:
     
-    string host_ip;
-    int host_port;
+    string host_ip; ///< IP address of a game server
+    int host_port; ///< Game port on the game server
 };
 
 

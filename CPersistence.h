@@ -7,6 +7,9 @@ class CGameSession;
 
 using namespace std;
 
+/**
+ * An abstract parent class for concrete subclasses handling different save/load techniques
+ */
 class CPersistence {
 public:
     CPersistence();

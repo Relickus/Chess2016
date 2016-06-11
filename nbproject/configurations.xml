@@ -42,8 +42,8 @@
       <itemPath>CRemotePlayer.h</itemPath>
       <itemPath>CServer.h</itemPath>
       <itemPath>CSlot.h</itemPath>
-      <itemPath>MoveList.h</itemPath>
-      <itemPath>MyMove.h</itemPath>
+      <itemPath>CMoveList.h</itemPath>
+      <itemPath>CMyMove.h</itemPath>
       <itemPath>TGameLoad.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -84,8 +84,8 @@
       <itemPath>CRemotePlayer.cpp</itemPath>
       <itemPath>CServer.cpp</itemPath>
       <itemPath>CSlot.cpp</itemPath>
-      <itemPath>MoveList.cpp</itemPath>
-      <itemPath>MyMove.cpp</itemPath>
+      <itemPath>CMoveList.cpp</itemPath>
+      <itemPath>CMyMove.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -234,13 +234,13 @@
       </item>
       <item path="FIGURENAME.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="MoveList.cpp" ex="false" tool="1" flavor2="0">
+      <item path="CMoveList.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="MoveList.h" ex="false" tool="3" flavor2="0">
+      <item path="CMoveList.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="MyMove.cpp" ex="false" tool="1" flavor2="0">
+      <item path="CMyMove.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="MyMove.h" ex="false" tool="3" flavor2="0">
+      <item path="CMyMove.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TGameLoad.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -385,13 +385,13 @@
       </item>
       <item path="FIGURENAME.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="MoveList.cpp" ex="false" tool="1" flavor2="0">
+      <item path="CMoveList.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="MoveList.h" ex="false" tool="3" flavor2="0">
+      <item path="CMoveList.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="MyMove.cpp" ex="false" tool="1" flavor2="0">
+      <item path="CMyMove.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="MyMove.h" ex="false" tool="3" flavor2="0">
+      <item path="CMyMove.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TGameLoad.h" ex="false" tool="3" flavor2="0">
       </item>

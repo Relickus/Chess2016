@@ -103,7 +103,6 @@ void CController::gameLoop(){
             command.command = SURRENDER;
             command.executeCommand(game);
              
-            game.currPlayerPtr->playersKing->getLegalMoves(game).print();
             return;
         }
         else if(game.isTie()){
@@ -119,7 +118,7 @@ void CController::gameLoop(){
         
         while(command.command == UNKNOWN){   
             if(game.currPlayerPtr == game.player2)
-                cout << "Cekam na tah protihrace..." << endl;
+                cout << "Čekám na tah protihráče..." << endl;
             command = game.currPlayerPtr-> getCommand(game);
         }
         

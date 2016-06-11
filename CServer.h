@@ -11,7 +11,7 @@ class CServer {
 public:
     CServer();
     /**
- *  Waits for players to connect
+ *  Waits for players to connect. The game starts when both players have connected.
  *
  */
     void waitForPlayers();
@@ -66,7 +66,7 @@ public:
     /**
      * Opens a server socket
      *
-     * NOTE: This function is borrowed from network code snippet on website edux.fit.cvut.cz
+     * NOTE: This function is borrowed from network code snippet on a website of subject BI-PA2. <a href="https://edux.fit.cvut.cz/courses/BI-PA2/semestralka">edux.fit.cvut.cz</a>
      *
      * @param IP adress of a server read from user
      * @param port read from user

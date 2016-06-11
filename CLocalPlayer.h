@@ -3,6 +3,9 @@
 
 #include "CPlayer.h"
 
+/**
+ * Class representing a local player on this PC
+ */
 class CLocalPlayer : public CPlayer{
 public:
     CLocalPlayer();
@@ -13,7 +16,7 @@ public:
      * @param cliSocket socket of the client
      * @return Move made by user
      */
-    //virtual MyMove getMove(const CGameSession & gS,int cliSocket=-1); 
+    //virtual CMyMove getMove(const CGameSession & gS,int cliSocket=-1); 
     /**
      * Reads command from local user 
      * @return command from user in a form of string

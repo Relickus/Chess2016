@@ -25,8 +25,8 @@ CRemotePlayer::~CRemotePlayer() {
 
 CCommand CRemotePlayer::getCommand(const CGameSession& gS) {
 
-    MyMove m = getMove(gS,cliSocket);
-    MyMove exitm(-2,-2,-2,-2);
+    CMyMove m = getMove(gS,cliSocket);
+    CMyMove exitm(-2,-2,-2,-2);
     if(m.isFicture()){
         return CCommand(SURRENDER);
     }
@@ -40,7 +40,7 @@ CCommand CRemotePlayer::getCommand(const CGameSession& gS) {
     return CCommand(m);
 }
 
-MyMove CRemotePlayer::getMove(const CGameSession& gS,int cliSocket) {
+CMyMove CRemotePlayer::getMove(const CGameSession& gS,int cliSocket) {
 
     return gS.networking.getMove(cliSocket);
 }

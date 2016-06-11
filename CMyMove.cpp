@@ -1,12 +1,12 @@
-#include "MyMove.h"
+#include "CMyMove.h"
 #include "CPiece.h"
 #include "CGameSession.h"
 
 
-MyMove::MyMove() : figure (NULL) {
+CMyMove::CMyMove() : figure (NULL) {
 
 }
-MyMove::MyMove(const string & movestr){
+CMyMove::CMyMove(const string & movestr){
 
     fromX = movestr.at(0) - 48;
     fromY = movestr.at(1) - 49 - 48;
@@ -17,7 +17,7 @@ MyMove::MyMove(const string & movestr){
     figure = NULL;
 }
 
-MyMove::MyMove(const char* buffer){
+CMyMove::CMyMove(const char* buffer){
       
     fromX = (int)(buffer[0]-48);
     fromY = (int)(buffer[1]-48);
@@ -30,10 +30,10 @@ MyMove::MyMove(const char* buffer){
     // o napojeni figure se stara az teprve CRemotePlayer::getMove protoze tam znam podobu CBoard, tady ji neznam
 }
 
-MyMove::MyMove(int tX, int tY, int frX/*=-1*/, int frY/*=-1*/ ,CPiece * tmp/*=NULL*/) : fromX(frX),fromY(frY),toX(tX), toY(tY), figure(tmp){
+CMyMove::CMyMove(int tX, int tY, int frX/*=-1*/, int frY/*=-1*/ ,CPiece * tmp/*=NULL*/) : fromX(frX),fromY(frY),toX(tX), toY(tY), figure(tmp){
 }
 
-MyMove::MyMove(const MyMove& oth){
+CMyMove::CMyMove(const CMyMove& oth){
     
     fromX = oth.fromX;
     fromY = oth.fromY;
@@ -43,15 +43,15 @@ MyMove::MyMove(const MyMove& oth){
     figure = oth.figure;
 }
 
-bool MyMove::isFicture() const{
+bool CMyMove::isFicture() const{
     
     if(fromX == -1)
         return true;
     return false;
 }
 
-void MyMove::printMove() const {
-    cout<< "*** Protivnik tahne z ["<<fromX<<","<<fromY<<"] na ["<<toX<<","<<toY<<"]";
+void CMyMove::printMove() const {
+    cout<< "*** Protivník táhne z ["<<fromX<<","<<fromY<<"] na ["<<toX<<","<<toY<<"]";
     if(figure != NULL){
         cout<<" a bere figurku: ";
         figure->printPiece(cout);
@@ -60,7 +60,7 @@ void MyMove::printMove() const {
         cout<<endl;
 }
 
-void MyMove::tocstring(char* buffer) const {
+void CMyMove::tocstring(char* buffer) const {
 
     
     buffer[0] = char(fromX+48);
@@ -84,7 +84,7 @@ void MyMove::tocstring(char* buffer) const {
     buffer[5] = '\0';
 }
 
-void MyMove::rotateMove() {
+void CMyMove::rotateMove() {
 
     fromX = 7- fromX;
     fromY = 7- fromY;
@@ -92,6 +92,6 @@ void MyMove::rotateMove() {
     toY = 7- toY;
 }
 
-bool MyMove::operator==(const MyMove& oth) const {
+bool CMyMove::operator==(const CMyMove& oth) const {
     return (fromX == oth.fromX) && (fromY == oth.fromY) && (toX == oth.toX) && (toY==oth.toY);
 }

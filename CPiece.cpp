@@ -49,14 +49,10 @@ void CPiece::printPiece(ostream & os) const {
 }
 
 int CPiece::getRow() const {
-    if(rowPos >7 || rowPos < 0)
-        cout << "SPATNEJ ROW"<<endl;
     return rowPos;
 }
 
 int CPiece::getCol() const {
-    if(colPos >7 || colPos < 0)
-        cout << "SPATNEJ COL"<<endl;
     return colPos;
 }
 
@@ -164,7 +160,7 @@ bool CPiece::validLetter(char c){
  }
 
  
- bool CPiece::moveTo(const MyMove & move, CBoard & board ){
+ bool CPiece::moveTo(const CMyMove & move, CBoard & board ){
      
      
      board.moveFigure(move);

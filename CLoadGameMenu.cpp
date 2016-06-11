@@ -56,7 +56,7 @@ int CLoadGameMenu::readInput() {
             filestr.clear();
             cin.clear();
             cin.ignore(INT_MAX, '\n');
-            cout << "Nezdarilo se cteni vstupu, znovu prosim:" << endl;
+            cout << "Nezdařilo se čtení vstupu, znovu prosím:" << endl;
             continue;
         }
 
@@ -65,10 +65,10 @@ int CLoadGameMenu::readInput() {
             return 0;
         }
 
-        cout << "ZADANO: " << filestr << endl;
+        //cout << "ZADANO: " << filestr << endl;
 
         if (!findFile(filestr)) {
-            cout << "File \"" << filestr << "\" not found, try again." << endl;
+            cout << "Soubor \"" << filestr << "\" nenalezen, zkuste to znvu." << endl;
             cin.clear();
             cin.ignore(INT_MAX, '\n');
             continue;
@@ -90,7 +90,7 @@ int CLoadGameMenu::readInput() {
 
 bool CLoadGameMenu::confirmLoad() {
     cout << "Soubor nalezen."<< endl;
-    cout << "Chcete jej nacist? (A/N)" << endl;
+    cout << "Chcete jej načíst? (A/N)" << endl;
 
     char c;
 
@@ -102,13 +102,13 @@ bool CLoadGameMenu::confirmLoad() {
         else if (c == 'N') {
             return false;
         } else {
-            cout << "Prosim zadejte A, nebo N." << endl;
+            cout << "Prosím zadejte A, nebo N." << endl;
             cin.clear();
             cin.ignore(INT_MAX, '\n');
         }
     }
 
-    cout << "Akce zrusena..." << endl;
+    cout << "Akce zrušena..." << endl;
     cin.ignore(INT_MAX, '\n');
     cin.clear();
     return false;
@@ -125,7 +125,7 @@ void CLoadGameMenu::setStuff(CController* ctrler) {
     
      ctrler->getGameSess().player1 = new CLocalPlayer();
      
-    cout << "Ma druhym hracem byt AI nebo clovek?"<<endl;
+    cout << "Má druhým hráčem být AI nebo človek?"<<endl;
     cout << "Zadejte \"AI\", nebo \"HUMAN\"" << endl;
     
     string pl;
@@ -141,14 +141,14 @@ void CLoadGameMenu::setStuff(CController* ctrler) {
     }
             
     if(pl == "AI"){
-        cout << "Jakou chcete obtiznost? (1-3)"<<endl;
+        cout << "Jakou chcete obtížnost AI? (1-3)"<<endl;
         int dif = 0;
         cin >> dif;
         while(!cin.good() || dif < 1 || dif > 3){            
             cin.clear();
             cin.ignore(INT_MAX,'\n');
             
-            cout << "Zadejte 1 az 3 a potvrdte!"<<endl;
+            cout << "Zadejte 1 az 3 a potvrďte!"<<endl;
             cin >> dif;
         }
         delete ctrler->getGameSess().player2;
@@ -168,7 +168,7 @@ void CLoadGameMenu::setStuff(CController* ctrler) {
         ctrler->getGameSess().setGameReady();
 
     } else {
-        cout << "Load wasnt successful." << endl;
+        cout << "Načtení hry se nezdařilo." << endl;
     }
 }
 

@@ -2,7 +2,7 @@
 #define	CCOMMAND_H
 
 #include "COMMAND.h"
-#include "MyMove.h"
+#include "CMyMove.h"
 #include "CController.h"
 
 class CGameSession;
@@ -17,10 +17,10 @@ class CCommand {
 public:
     CCommand();
     /**
-     * Construct CComand from MyMove
+     * Construct CComand from CMyMove
      * @param mv
      */
-    CCommand(const MyMove & mv);
+    CCommand(const CMyMove & mv);
     /**
      * Copyconstructor
      * @param com copied CComand
@@ -85,14 +85,14 @@ public:
      * Returns reference to the move stored in the command
      * @return stored move
      */
-    const MyMove & getMoveRef() const;
+    const CMyMove & getMoveRef() const;
     
     COMMAND command;    ///< A type of command - see @ref ENUM_COMMAND
     
 private:
     int x;  ///< An aid variable storing a row
     int y;  ///< An aid variable storing a column
-    MyMove move; ///< Move to be executed if MAKEMOVE is selected
+    CMyMove move; ///< Move to be executed if MAKEMOVE is selected
     
     friend CController;
     

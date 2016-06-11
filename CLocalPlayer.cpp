@@ -5,13 +5,13 @@
 #include "CCommand.h"
 #include <climits>
 
-//MyMove CLocalPlayer::getMove(const CGameSession& gS, int cliSocket){
+//CMyMove CLocalPlayer::getMove(const CGameSession& gS, int cliSocket){
 //}
 
 
 void CLocalPlayer::badInput() const{
     
-    cout << "Bad input, read manual before playing." << endl;        
+    cout << "Špatný vstup, přečtěte si manuál ke hře." << endl;        
 }
 
 string CLocalPlayer::readInput() const{
@@ -41,19 +41,19 @@ CCommand CLocalPlayer::getCommand(const CGameSession & gS){
     
     try{
     
-    cout<<"Na tahu je "<< (gS.currentPlayer == WHITE ? "BILY" : "CERNY") <<endl;
-    cout<<"Zadejte prikaz:"<<endl;        
+    cout<<"Na tahu je "<< (gS.currentPlayer == WHITE ? "BÍLÝ" : "ČERNÝ") <<endl;
+    cout<<"Zadejte příkaz:"<<endl;        
     tmp = readInput(); 
     
     }catch(BadInputException & ex){
-        cout << "Bad input exc." << endl;
+        cout << "Vyhozena vyjímka BadInput." << endl;
         return CCommand(UNKNOWN);
     }
      
     try{
     com.makeCommand(tmp);   // naplni com zadanym commandem od uzivatele
     }catch(BadCommandException & ex){
-        cout << "Neplatny command" << endl;
+        cout << "Neplatný příkaz." << endl;
         return CCommand(UNKNOWN);
     }
     return com;

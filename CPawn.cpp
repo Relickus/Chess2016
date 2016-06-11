@@ -24,7 +24,7 @@ CPawn::CPawn(COLOR clr , int row, int col) : CPiece(clr,row,col) {
 
 }
 
-MoveList & CPawn::getLegalMovesDown(const CBoard & board) {
+CMoveList & CPawn::getLegalMovesDown(const CBoard & board) {
     
     moveList.clear();
     
@@ -45,7 +45,7 @@ MoveList & CPawn::getLegalMovesDown(const CBoard & board) {
     return moveList;
 }
 
-MoveList & CPawn::getLegalMovesUp(const CBoard & board) {
+CMoveList & CPawn::getLegalMovesUp(const CBoard & board) {
     
     moveList.clear();
     
@@ -66,7 +66,7 @@ MoveList & CPawn::getLegalMovesUp(const CBoard & board) {
     return moveList;
 }
 
-MoveList & CPawn::getLegalMoves(const CGameSession & gS) {
+CMoveList & CPawn::getLegalMoves(const CGameSession & gS) {
     if(gS.currPlayerPtr == gS.player1)
         return getLegalMovesUp(gS.getBoard());
     else

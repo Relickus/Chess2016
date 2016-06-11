@@ -3,12 +3,12 @@
 
 #include "COLOR.h"
 #include "FIGURENAME.h"
-#include "MoveList.h"
+#include "CMoveList.h"
 
 
 class CBoard;
 class CGameSession;
-class MyMove;
+class CMyMove;
 
 /**
  * 
@@ -99,7 +99,7 @@ public:
      * @param gS Reference to the instance of a game
      * @return Reference to a list of all possible moves of this piece
      */
-    virtual MoveList & getLegalMoves(const CGameSession & gS) = 0;
+    virtual CMoveList & getLegalMoves(const CGameSession & gS) = 0;
     
     /**
      *  Checks if the piece equals another piece
@@ -131,7 +131,7 @@ public:
      * @param board reference to the instance of a chessboard
      * @return if the move was successful
      */
-    bool moveTo(const MyMove & move, CBoard & board );    
+    bool moveTo(const CMyMove & move, CBoard & board );    
     /**
      *  Copies an instance of the piece
      * @param pcs a pointer to the piece, to be copied
@@ -139,7 +139,7 @@ public:
      */
     virtual CPiece * copyPiece(const CPiece * pcs) const = 0;
     
-    MoveList moveList;  ///< An aid list of possible moves of this piece
+    CMoveList moveList;  ///< An aid list of possible moves of this piece
     
 protected:
 

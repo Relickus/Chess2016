@@ -23,7 +23,7 @@ public:
      * @param gS Reference to the instance of a game
      * @return Reference to a list of all possible moves of this queen
      */
-    virtual MoveList & getLegalMoves(const CGameSession & gS);
+    virtual CMoveList & getLegalMoves(const CGameSession & gS);
         /**
      *  Copies an instance of the queen
      * @param pcs a pointer to the queen, to be copied

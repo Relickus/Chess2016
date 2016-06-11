@@ -27,7 +27,7 @@ CBishop::CBishop(COLOR clr, int row, int col) : CPiece(clr,row,col) {
 
 }
 
-MoveList & CBishop::getLegalMoves(const CGameSession & gS) {
+CMoveList & CBishop::getLegalMoves(const CGameSession & gS) {
 
     moveList.clear();
 

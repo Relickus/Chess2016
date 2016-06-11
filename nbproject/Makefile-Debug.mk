@@ -51,6 +51,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/CLoadGameMenu.o \
 	${OBJECTDIR}/CLocalPlayer.o \
 	${OBJECTDIR}/CMainMenu.o \
+	${OBJECTDIR}/CMoveList.o \
+	${OBJECTDIR}/CMyMove.o \
 	${OBJECTDIR}/CNetworking.o \
 	${OBJECTDIR}/COpponentMenu.o \
 	${OBJECTDIR}/CPawn.o \
@@ -62,8 +64,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/CServer.o \
 	${OBJECTDIR}/CSlot.o \
 	${OBJECTDIR}/CTower.o \
-	${OBJECTDIR}/MoveList.o \
-	${OBJECTDIR}/MyMove.o \
 	${OBJECTDIR}/main.o
 
 
@@ -171,6 +171,16 @@ ${OBJECTDIR}/CMainMenu.o: CMainMenu.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMainMenu.o CMainMenu.cpp
 
+${OBJECTDIR}/CMoveList.o: CMoveList.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMoveList.o CMoveList.cpp
+
+${OBJECTDIR}/CMyMove.o: CMyMove.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMyMove.o CMyMove.cpp
+
 ${OBJECTDIR}/CNetworking.o: CNetworking.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -225,16 +235,6 @@ ${OBJECTDIR}/CTower.o: CTower.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CTower.o CTower.cpp
-
-${OBJECTDIR}/MoveList.o: MoveList.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MoveList.o MoveList.cpp
-
-${OBJECTDIR}/MyMove.o: MyMove.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MyMove.o MyMove.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

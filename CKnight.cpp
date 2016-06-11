@@ -24,7 +24,7 @@ CKnight::CKnight(COLOR clr , int row, int col) : CPiece(clr,row,col) {
 
 }
 
-MoveList & CKnight::getLegalMoves(const CGameSession & gS) {
+CMoveList & CKnight::getLegalMoves(const CGameSession & gS) {
 
     moveList.clear();
 

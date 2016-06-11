@@ -46,7 +46,7 @@ CBoard::CBoard(const CBoard& oth)  {
 }
 
 
-void CBoard::moveFigure(const MyMove & move){
+void CBoard::moveFigure(const CMyMove & move){
     
     if(getPiece(move.fromX,move.fromY)->getName() == PAWN){        
         if(move.toX == LAST_ROW_UP || move.toX == LAST_ROW_DOWN ){
@@ -178,7 +178,7 @@ void CBoard::createPieces(COLOR colorDown){
     
 }
 
-void CBoard::translateMove(MyMove & move){
+void CBoard::translateMove(CMyMove & move){
     
     move.fromX = 7-move.fromX;
     move.fromY = 7-move.fromY;
@@ -195,7 +195,7 @@ void CBoard::initBoard(COLOR player1col) {
    createPieces(player1col);    
 }
 
-void CBoard::printPossibleMoves(const MoveList & list) const{
+void CBoard::printPossibleMoves(const CMoveList & list) const{
     
     
     ///get possible moves - ziskej pole coordinates kam se figurka muze pohnout
@@ -216,13 +216,13 @@ void CBoard::printPossibleMoves(const MoveList & list) const{
             tmp  = slotsArr[i][j].getHeldPiece();
             
             if( tmp == NULL ){
-                if(list.contains(MyMove(i,j)))
+                if(list.contains(CMyMove(i,j)))
                     cout<<"*";
                 else
                     cout << " ";
             }
             else{
-                if(!list.contains(MyMove(i,j)))
+                if(!list.contains(CMyMove(i,j)))
                     tmp->printPiece(cout);
                 else
                     cout<<"#";
@@ -367,7 +367,7 @@ void CBoard::copy(const CBoard & oth){
     }
 }
 
-void CBoard::promotePawn(const MyMove& move) {
+void CBoard::promotePawn(const CMyMove& move) {
 
     COLOR col = slotsArr[move.fromX][move.fromY].getHeldPiece()->getColor();
     
@@ -385,7 +385,7 @@ int CBoard::getSlotValue(int x, int y) const {
     return 0;
 }
 
-bool CBoard::tryMove(const MyMove & move,const CGameSession & gS) const {
+bool CBoard::tryMove(const CMyMove & move,const CGameSession & gS) const {
 
     CBoard ficture(gS.getBoard());
     

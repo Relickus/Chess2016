@@ -10,27 +10,27 @@ class CPiece;
 /**
  * Class representing a move from one slot to another 
  */
-class MyMove{
+class CMyMove{
     
 public:
     
-    MyMove();
+    CMyMove();
     /**
      * Copyconstructor
      * @param oth An instance of a move to be copied
      */
-    MyMove(const MyMove & oth);
+    CMyMove(const CMyMove & oth);
     /**
      * Creates a move from string
      * @param movestr String s tahem
      */
-    MyMove(const string & movestr);
+    CMyMove(const string & movestr);
     /**
      * Creates a move from cstring
      * @param buffer Array with cstringe reprezenting the move
      */
-    MyMove(const char * buffer);
-    bool operator==(const MyMove & oth) const;
+    CMyMove(const char * buffer);
+    bool operator==(const CMyMove & oth) const;
     /**
      *  
      * @param tX A destination row 
@@ -39,7 +39,7 @@ public:
      * @param frY An origin column
      * @param tmp A figure taken by the move
      */
-    MyMove(int tX, int tY,int frX=-1,int frY=-1,CPiece * tmp=NULL);       // POZOR, nejdrive TO , pak FROM souradnice
+    CMyMove(int tX, int tY,int frX=-1,int frY=-1,CPiece * tmp=NULL);       // POZOR, nejdrive TO , pak FROM souradnice
     /**
      * Recalculates received move to a move from the other side of a chessboard
      */

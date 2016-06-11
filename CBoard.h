@@ -7,8 +7,8 @@ class CGameSession;
 class CPiece;
 class CKing;
 class CSlot;
-class MoveList;
-class MyMove;
+class CMoveList;
+class CMyMove;
 
 using namespace std;
 
@@ -19,9 +19,9 @@ class CBoard {
     
     /**
      * Static method rotating given move as if it was made from the other side of the board
-     * @param MyMove given move to rotate
+     * @param CMyMove given move to rotate
      */
-    static void translateMove(MyMove & move);
+    static void translateMove(CMyMove & move);
     
 public:
     CBoard();
@@ -54,7 +54,7 @@ public:
      *  (DEV FEATURE) Prints all possible moves that have been found for current player
      * @param list List of the moves
      */
-    void printPossibleMoves(const MoveList & list) const;
+    void printPossibleMoves(const CMoveList & list) const;
     
     /**
      * Fills the chessboard with pieces
@@ -90,7 +90,7 @@ public:
      * Performs a move given by a parameter
      * @param move Move to be performed
      */
-    void moveFigure(const MyMove & move);
+    void moveFigure(const CMyMove & move);
     /**
      * Returns a value of a given slot on the chessboard
      * @param x Row of the slot 
@@ -104,7 +104,7 @@ public:
      * @param gS reference to the game instance
      * @return bool Indicator if the move is valid (Not resulting with a check of the current player's king)
      */
-    bool tryMove(const MyMove & move,const CGameSession & gS) const;
+    bool tryMove(const CMyMove & move,const CGameSession & gS) const;
     /**
      * Finds a king specified by a its color on the chessboard
      * @param col Color of the king to be found
@@ -139,7 +139,7 @@ private:
      * When a pawn reaches the other side of the board it gets exchanged for a queen figure
      * @param move The move of a pawn to the edge of the board
      */
-    void promotePawn(const MyMove & move);
+    void promotePawn(const CMyMove & move);
     
     CSlot slotsArr[8][8];   ///< 2D array of the slots holding the figures
     

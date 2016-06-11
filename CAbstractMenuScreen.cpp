@@ -40,7 +40,7 @@ bool CAbstractMenuScreen::validChoice(int i) const{
         
     if( i < 1 || i > numItems ){
         
-        cout << "CHYBA: "<< i << " neni validni moznost menu."<<endl;
+        cout << "CHYBA: "<< i << " není validníí možnost tohoto menu."<<endl;
         return false;
     }
         
@@ -63,12 +63,12 @@ int CAbstractMenuScreen::readInput(){
              cin.clear();
              cin.ignore(INT_MAX,'\n');
              
-             cout << "Spatny vstup, znova"<<endl;
+             cout << "Špatný vstup, zkuste to znovu."<<endl;
              continue;
          }
          
          if(!validChoice(choice)){
-             cout << "Moznost mimo rozsah,znova"<<endl;
+             cout << "Možnost je mimo rozsah menu, zkuste to znovu."<<endl;
              continue;
          }
          else

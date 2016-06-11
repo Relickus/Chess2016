@@ -24,7 +24,7 @@ CTower::CTower(COLOR clr , int row, int col) : CPiece(clr,row,col) {
 
 }
 
-MoveList & CTower::getLegalMoves(const CGameSession & gS) {
+CMoveList & CTower::getLegalMoves(const CGameSession & gS) {
 
     moveList.clear();
 

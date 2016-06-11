@@ -27,7 +27,7 @@ public:
      * @param gS Reference to the instance of a game
      * @return Reference to a list of all possible moves of the king
      */
-    virtual MoveList & getLegalMoves(const CGameSession & gS);
+    virtual CMoveList & getLegalMoves(const CGameSession & gS);
      /**
      *  Checks if the king can move to given field
      * @param row a row of the new field

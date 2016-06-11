@@ -28,7 +28,7 @@ public:
      * @param cliSocket socket to be read from
      * @return Received move
      */
-    MyMove getMove(const CGameSession & gS);
+    CMyMove getMove(const CGameSession & gS);
     /**
      * @brief Gets command from AI
      * @param gS reference to instance of the game
@@ -45,13 +45,13 @@ private:
      * @param board reference to the chessboard
      * @return index of the best move in list of moves
      */
-    int getBestIdx(MoveList & list,const CBoard & board) const;
+    int getBestIdx(CMoveList & list,const CBoard & board) const;
     /**
      * @brief Removes all faulty (check) moves from the list of all possible moves
      * @param list reference to list moves
      * @param board reference to the chessboard
      */
-    void eraseCheckMoves(MoveList & l, const CGameSession & gS);
+    void eraseCheckMoves(CMoveList & l, const CGameSession & gS);
     
     
     int difficulty; ///< The difficulty level

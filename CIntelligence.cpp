@@ -22,12 +22,12 @@ void CIntelligence::changeDifficulty(int d) {
 }
 
 
-void CIntelligence::eraseCheckMoves(MoveList & l, const CGameSession & gS){
+void CIntelligence::eraseCheckMoves(CMoveList & l, const CGameSession & gS){
         
-    MoveList tmplist;
+    CMoveList tmplist;
     
     for(size_t i = 0; i < l.size();++i){
-        MyMove m = l.getMove(i);
+        CMyMove m = l.getMove(i);
         
         if( ! gS.getBoard().tryMove(m,gS)){
         }
@@ -42,10 +42,10 @@ void CIntelligence::eraseCheckMoves(MoveList & l, const CGameSession & gS){
 }   
 
 
-MyMove CIntelligence::getMove(const CGameSession & gS) {
+CMyMove CIntelligence::getMove(const CGameSession & gS) {
     
     allMoves.clear();
-    MoveList l;
+    CMoveList l;
     
     findAllFigures(gS.getBoard());    
     
@@ -61,7 +61,7 @@ MyMove CIntelligence::getMove(const CGameSession & gS) {
     //allMoves.print();
 
     if(allMoves.isEmpty()){
-        return MyMove(-1,-1,-1,-1);
+        return CMyMove(-1,-1,-1,-1);
     }    
     
     // minimax vyhodi nejakej move a vrati ho...
@@ -73,7 +73,7 @@ MyMove CIntelligence::getMove(const CGameSession & gS) {
 
 CCommand CIntelligence::getCommand(const CGameSession & gS){
     
-    MyMove m = getMove(gS);
+    CMyMove m = getMove(gS);
     if(m.isFicture()){
         return CCommand(SURRENDER);
     }
@@ -81,7 +81,7 @@ CCommand CIntelligence::getCommand(const CGameSession & gS){
     return CCommand(m);
 }
 
-int CIntelligence::getBestIdx(MoveList& list,const CBoard & board) const {
+int CIntelligence::getBestIdx(CMoveList& list,const CBoard & board) const {
 
     if(difficulty == 0){
         srand(time(NULL));
@@ -110,7 +110,7 @@ int CIntelligence::getBestIdx(MoveList& list,const CBoard & board) const {
     
     for (size_t i = 0; i < list.size(); i++) {
         
-        MyMove tmp = list.getMove(i);
+        CMyMove tmp = list.getMove(i);
         int v = board.getSlotValue(tmp.toX,tmp.toY);
         if(v > bestValSlot){
             bestValSlot = v;
@@ -130,6 +130,8 @@ int CIntelligence::getBestIdx(MoveList& list,const CBoard & board) const {
     //cout << "BESTidxpcs/idxslot/idxtotal:"<< bestIdxPcs<<","<<bestIdxSlot<<","<<bestIdxTotal<<endl;
     if(difficulty == 1)
         return bestValPcs > bestValSlot ? bestIdxPcs : bestIdxSlot;
+    
+    // difficulty == 2
     
     if( (bestValueTotal >= bestValPcs && bestValPcs >= bestValSlot)
      || (bestValueTotal >= bestValSlot && bestValSlot >= bestValPcs ) )

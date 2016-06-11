@@ -68,7 +68,7 @@ public:
      * @param move A move to be performed
      * @return Success or failure of the operation
      */
-    bool performMove(const MyMove & move);
+    bool performMove(const CMyMove & move);
     /**
      * Switches current player pointer to the other player. Used in game loop.
      */

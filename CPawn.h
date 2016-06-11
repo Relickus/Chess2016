@@ -25,16 +25,16 @@ public:
      * @param gS Reference to the instance of a game
      * @return Reference to a list of all possible moves of this pawn
      */
-    virtual MoveList & getLegalMoves(const CGameSession & gS);
+    virtual CMoveList & getLegalMoves(const CGameSession & gS);
     
     /**
      *An aid method called if the current pawn is going from the top to the bottom of the chessboard
      */
-    MoveList & getLegalMovesUp(const CBoard &  board);
+    CMoveList & getLegalMovesUp(const CBoard &  board);
     /**
      *An aid method called if the current pawn is going from the bottom to the top of the chessboard
      */
-    MoveList & getLegalMovesDown(const CBoard &  board);
+    CMoveList & getLegalMovesDown(const CBoard &  board);
     virtual int checkField(int x, int y, const CBoard& board, bool sidestep);
 
         /**

@@ -10,7 +10,7 @@
 #include <climits>
 using namespace std;
 
-#include "MyMove.h"
+#include "CMyMove.h"
 #include "CCommand.h"
 #include "CNetworking.h"
 
@@ -50,21 +50,21 @@ int openCliSocket ( const char * srvName, int srvPort )
   return s;
 }
 
-MyMove CNetworking::getMove(const int cliSocket) const {
+CMyMove CNetworking::getMove(const int cliSocket) const {
 
     char buffer[10] = { 0 };
     int l = recv ( cliSocket, buffer, sizeof ( buffer ), 0 );
     if(l<=0){
-        cout << "SPATNY PRIJATY MOVE!" << endl;
-        return MyMove(-1,-1,-1,-1);
+        cout << "Přijat špatný move." << endl;
+        return CMyMove(-1,-1,-1,-1);
     }
     
     if(strcmp(buffer,"EXIT")==0)
-        return MyMove(-2,-2,-2,-2);
+        return CMyMove(-2,-2,-2,-2);
     
-    printf("prijal jsem move: %s|\n",buffer);
+    printf("Přijat následující move: %s|\n",buffer);
     
-    MyMove m(buffer);
+    CMyMove m(buffer);
     
     return m;
 }
@@ -86,12 +86,12 @@ void CNetworking::sendCommand(const CCommand & command, int FromSock ) const {
      
       if(command.command==MAKEMOVE){        
         command.getMoveRef().tocstring(buffer);
-        printf("ODESILAM MOVE: %s|\n",buffer);
+        printf("Odesílám tento move: %s|\n",buffer);
       
         send ( FromSock, buffer, 5+1, 0 );
      }
       else if(command.command==EXIT){
-          cout << "Odeslan EXIT pozadavek."<<endl<<"Konec hry." << endl;
+          cout << "Odeslán EXIT požadavek."<<endl<<"Konec hry." << endl;
           strcpy(buffer,"EXIT");
           send ( FromSock, buffer, 4+1, 0 );
       }
@@ -111,15 +111,15 @@ bool CNetworking::waitForStart(const int socket) const {
 
     char buffer[10] = {0};    
     
-    cout << "Waiting for opponent to connect." << endl;
+    cout << "Čekám na připojení protivníka..." << endl;
     int l = recv ( socket, buffer, sizeof ( buffer ), 0 );
     if(l<0){
-        cout << "NEJAKA CHYBA VE WAITFORSTART" << endl;
-        printf("obdrzeno: |%s|\n",buffer);
+        cout << "Ve funkci waitForStart nastala chyba." << endl;
+        printf("Obdržen řetězec: |%s|\n",buffer);
         return false;
     }   
     else if(buffer[0]=='G' && buffer[1]=='0' && buffer[2]==0 ){
-        cout << "SERVER SENT GO" << endl;
+        cout << "Přijatý GO signál od serveru." << endl;
         return true;
     }
     
@@ -132,7 +132,7 @@ COLOR CNetworking::recvPlayerColor(const int socket) const{
     
     int l = recv ( socket, buffer, sizeof ( buffer ), 0 );
     if(l<=0){
-        cout << "Chyba ve cteni barvy!" << endl;
+        cout << "Chyba ve čtení barvy!" << endl;
         return WHITE;
     }
     
@@ -143,7 +143,7 @@ COLOR CNetworking::recvPlayerColor(const int socket) const{
         else if(buffer[0] == 'B' && buffer[1] == 0)
             return BLACK;
         else {
-            cout << "RECEIVED UNKNOWN COLOR" << endl;
+            cout << "Přijata neznámá barva." << endl;
             return WHITE;
         }
     }
